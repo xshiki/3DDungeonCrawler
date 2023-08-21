@@ -24,13 +24,13 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     ""name"": ""PlayerInput"",
     ""maps"": [
         {
-            ""name"": ""Main"",
-            ""id"": ""cd93eaba-4f5e-4d45-b152-9afee2c7b8cb"",
+            ""name"": ""Player"",
+            ""id"": ""ef65590f-d14a-48d3-9e6d-0215346e4f39"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Move"",
                     ""type"": ""Value"",
-                    ""id"": ""2503a44e-de01-494d-a849-f819ab1103a1"",
+                    ""id"": ""8bd0cef5-42a0-4190-9ed4-16fbf14ee43c"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -39,90 +39,243 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
-                    ""id"": ""93c06cbe-8f24-4b7d-acdb-eb72b4ed006e"",
+                    ""id"": ""3f12a759-f7ea-4946-ad5e-21b35795d41a"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Look"",
+                    ""name"": ""Run"",
+                    ""type"": ""Button"",
+                    ""id"": ""20128440-98ac-4cee-b5b2-d4ab14a7656d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""New action3"",
+                    ""type"": ""Button"",
+                    ""id"": ""0971b768-a6c0-4630-9a8a-b03a6b772b2a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""2d303014-f98c-485e-8695-0f05134835ea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mouse"",
                     ""type"": ""Value"",
-                    ""id"": ""4f8bbe7d-fdff-4601-b38e-34a23a6800a3"",
+                    ""id"": ""d532f793-46d7-4ff5-8388-f753e75673b8"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Attack"",
+                    ""name"": ""Crouch"",
                     ""type"": ""Button"",
-                    ""id"": ""0ed6cbfe-8698-4dff-b5ff-5488d3e73074"",
+                    ""id"": ""e23b6b91-064d-4116-a85b-54c5ede84419"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": ""Press(behavior=2)"",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar1"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""647f1623-2250-4b81-a842-f3b854983358"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar2"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""ad466520-0203-49a9-ad25-bb3ea62dd5a2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar3"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""5589e5d3-9d9c-4a6f-a822-a82d476394c0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar4"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""77ba0e3f-0aa2-4ad6-b9fb-a03d59faf23c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar5"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""313d4a76-5f60-4bcb-833e-22c92d96c7c6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar6"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""bfa97fbc-e385-4b23-82ed-ce0de9e76aeb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar7"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""49962ffa-57e5-43e6-91e8-4273960a14ec"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar8"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""2ab501af-1b92-4b3c-807f-be4145434fac"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar9"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""09db48e9-90fe-47d9-9df4-1c47d566fc32"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Hotbar10"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""39123a63-ad0e-4d58-8ad6-38b09d090129"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseWheel"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""cae1040e-0ba3-4e7b-9ad0-3a8d74053906"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Use Item"",
+                    ""type"": ""Button"",
+                    ""id"": ""12c8823f-a864-4857-8ad7-e46091416aa4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ChangeCamera"",
+                    ""type"": ""Button"",
+                    ""id"": ""835cd2e3-6edb-411e-bbee-d1af02bee6d7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""0a7bab18-a22c-4991-9fe4-284cd96ce3e1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": ""WASD"",
-                    ""id"": ""539dcec5-4f20-4996-91ff-715bb47a2fe5"",
+                    ""id"": ""71ec2fa5-9be7-48fc-b3a2-94894f415d0e"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""9059d33e-7ecf-41d5-a8ea-8744eba9d733"",
+                    ""id"": ""b71e8cda-fb03-4c79-9fd6-c33e15795fdd"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""f1dd73ba-6f52-4832-9419-4953a83bbf83"",
+                    ""id"": ""803deb63-747f-4662-a4dc-9d4bf5e38f06"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""f1243b97-0d4e-43ef-8d3d-011de4b45aa8"",
+                    ""id"": ""95873077-9511-48dd-af05-8d56787851d5"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""ace151be-e29c-466f-b336-bd8c268e6808"",
+                    ""id"": ""243c7dde-a52d-4cc4-b14d-582c62f380f1"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
-                    ""id"": ""3ad306a0-9d9d-4cb8-8741-c2f4ccd1e35d"",
+                    ""id"": ""f6658952-f6f7-4a04-8666-4d9e2af468c2"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -133,43 +286,241 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""83ebc543-b827-4e1e-9b72-02ac0fb5ac52"",
-                    ""path"": ""<Mouse>/delta"",
+                    ""id"": ""4b842cd8-4a50-485f-81a5-f96dc3febef2"",
+                    ""path"": ""<Keyboard>/shift"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Look"",
+                    ""action"": ""Run"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""08d4175c-c961-428f-99ec-1aa63f4ba34b"",
+                    ""id"": ""e472c7fe-e8ab-4021-b801-77038f731442"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""New action3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ed5681e2-cbb0-4a58-833f-4f804c403b92"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6591af26-3cdb-4989-8137-e61e7778da88"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4d3d9f6f-1991-4755-a70a-13f7d439bbee"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8d542427-f79d-43d3-a8e2-df1ae63862cd"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""28a59a36-ec60-422b-83ad-ab191f3cd4aa"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9336e596-e114-4bff-b3da-ad7836b53aa8"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4b3c5e62-db64-424e-aa77-1423f2bb68fa"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e3e308c9-50ab-4381-bb44-8538b163ecd8"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c43d6765-c0fb-4c26-8510-a18f5bd9e885"",
+                    ""path"": ""<Keyboard>/6"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar6"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9b354bb7-442f-43b4-b0df-6d5b5ab7bbd1"",
+                    ""path"": ""<Keyboard>/7"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar7"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d766f101-c405-468f-b34e-1208eeb85cae"",
+                    ""path"": ""<Keyboard>/8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar8"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e5f4402-b838-4d0f-9a01-618f391a40a1"",
+                    ""path"": ""<Keyboard>/9"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar9"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""893d71f8-4009-4d68-8e4d-ed290ecb0b5b"",
+                    ""path"": ""<Keyboard>/0"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hotbar10"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""30f6ff39-f1e2-4b01-8e3f-c538fac815a3"",
+                    ""path"": ""<Mouse>/scroll/y"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseWheel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52056ab7-0aee-4ff3-acbc-750a15e9de17"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Attack"",
+                    ""action"": ""Use Item"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b560779e-0fe3-4403-af54-b5ca587514e0"",
+                    ""path"": ""<Keyboard>/f5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ChangeCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5d02d2cc-1191-4bd4-9c6a-9baef2255032"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": [
-        {
-            ""name"": ""Main"",
-            ""bindingGroup"": ""Main"",
-            ""devices"": []
-        }
-    ]
+    ""controlSchemes"": []
 }");
-        // Main
-        m_Main = asset.FindActionMap("Main", throwIfNotFound: true);
-        m_Main_Movement = m_Main.FindAction("Movement", throwIfNotFound: true);
-        m_Main_Jump = m_Main.FindAction("Jump", throwIfNotFound: true);
-        m_Main_Look = m_Main.FindAction("Look", throwIfNotFound: true);
-        m_Main_Attack = m_Main.FindAction("Attack", throwIfNotFound: true);
+        // Player
+        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
+        m_Player_Newaction3 = m_Player.FindAction("New action3", throwIfNotFound: true);
+        m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
+        m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
+        m_Player_Hotbar1 = m_Player.FindAction("Hotbar1", throwIfNotFound: true);
+        m_Player_Hotbar2 = m_Player.FindAction("Hotbar2", throwIfNotFound: true);
+        m_Player_Hotbar3 = m_Player.FindAction("Hotbar3", throwIfNotFound: true);
+        m_Player_Hotbar4 = m_Player.FindAction("Hotbar4", throwIfNotFound: true);
+        m_Player_Hotbar5 = m_Player.FindAction("Hotbar5", throwIfNotFound: true);
+        m_Player_Hotbar6 = m_Player.FindAction("Hotbar6", throwIfNotFound: true);
+        m_Player_Hotbar7 = m_Player.FindAction("Hotbar7", throwIfNotFound: true);
+        m_Player_Hotbar8 = m_Player.FindAction("Hotbar8", throwIfNotFound: true);
+        m_Player_Hotbar9 = m_Player.FindAction("Hotbar9", throwIfNotFound: true);
+        m_Player_Hotbar10 = m_Player.FindAction("Hotbar10", throwIfNotFound: true);
+        m_Player_MouseWheel = m_Player.FindAction("MouseWheel", throwIfNotFound: true);
+        m_Player_UseItem = m_Player.FindAction("Use Item", throwIfNotFound: true);
+        m_Player_ChangeCamera = m_Player.FindAction("ChangeCamera", throwIfNotFound: true);
+        m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -228,89 +579,233 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Main
-    private readonly InputActionMap m_Main;
-    private List<IMainActions> m_MainActionsCallbackInterfaces = new List<IMainActions>();
-    private readonly InputAction m_Main_Movement;
-    private readonly InputAction m_Main_Jump;
-    private readonly InputAction m_Main_Look;
-    private readonly InputAction m_Main_Attack;
-    public struct MainActions
+    // Player
+    private readonly InputActionMap m_Player;
+    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+    private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_Run;
+    private readonly InputAction m_Player_Newaction3;
+    private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_Mouse;
+    private readonly InputAction m_Player_Crouch;
+    private readonly InputAction m_Player_Hotbar1;
+    private readonly InputAction m_Player_Hotbar2;
+    private readonly InputAction m_Player_Hotbar3;
+    private readonly InputAction m_Player_Hotbar4;
+    private readonly InputAction m_Player_Hotbar5;
+    private readonly InputAction m_Player_Hotbar6;
+    private readonly InputAction m_Player_Hotbar7;
+    private readonly InputAction m_Player_Hotbar8;
+    private readonly InputAction m_Player_Hotbar9;
+    private readonly InputAction m_Player_Hotbar10;
+    private readonly InputAction m_Player_MouseWheel;
+    private readonly InputAction m_Player_UseItem;
+    private readonly InputAction m_Player_ChangeCamera;
+    private readonly InputAction m_Player_Dash;
+    public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
-        public MainActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Main_Movement;
-        public InputAction @Jump => m_Wrapper.m_Main_Jump;
-        public InputAction @Look => m_Wrapper.m_Main_Look;
-        public InputAction @Attack => m_Wrapper.m_Main_Attack;
-        public InputActionMap Get() { return m_Wrapper.m_Main; }
+        public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_Player_Move;
+        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Run => m_Wrapper.m_Player_Run;
+        public InputAction @Newaction3 => m_Wrapper.m_Player_Newaction3;
+        public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @Mouse => m_Wrapper.m_Player_Mouse;
+        public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
+        public InputAction @Hotbar1 => m_Wrapper.m_Player_Hotbar1;
+        public InputAction @Hotbar2 => m_Wrapper.m_Player_Hotbar2;
+        public InputAction @Hotbar3 => m_Wrapper.m_Player_Hotbar3;
+        public InputAction @Hotbar4 => m_Wrapper.m_Player_Hotbar4;
+        public InputAction @Hotbar5 => m_Wrapper.m_Player_Hotbar5;
+        public InputAction @Hotbar6 => m_Wrapper.m_Player_Hotbar6;
+        public InputAction @Hotbar7 => m_Wrapper.m_Player_Hotbar7;
+        public InputAction @Hotbar8 => m_Wrapper.m_Player_Hotbar8;
+        public InputAction @Hotbar9 => m_Wrapper.m_Player_Hotbar9;
+        public InputAction @Hotbar10 => m_Wrapper.m_Player_Hotbar10;
+        public InputAction @MouseWheel => m_Wrapper.m_Player_MouseWheel;
+        public InputAction @UseItem => m_Wrapper.m_Player_UseItem;
+        public InputAction @ChangeCamera => m_Wrapper.m_Player_ChangeCamera;
+        public InputAction @Dash => m_Wrapper.m_Player_Dash;
+        public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MainActions set) { return set.Get(); }
-        public void AddCallbacks(IMainActions instance)
+        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public void AddCallbacks(IPlayerActions instance)
         {
-            if (instance == null || m_Wrapper.m_MainActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_MainActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
+            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
-            @Look.started += instance.OnLook;
-            @Look.performed += instance.OnLook;
-            @Look.canceled += instance.OnLook;
-            @Attack.started += instance.OnAttack;
-            @Attack.performed += instance.OnAttack;
-            @Attack.canceled += instance.OnAttack;
+            @Run.started += instance.OnRun;
+            @Run.performed += instance.OnRun;
+            @Run.canceled += instance.OnRun;
+            @Newaction3.started += instance.OnNewaction3;
+            @Newaction3.performed += instance.OnNewaction3;
+            @Newaction3.canceled += instance.OnNewaction3;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
+            @Mouse.started += instance.OnMouse;
+            @Mouse.performed += instance.OnMouse;
+            @Mouse.canceled += instance.OnMouse;
+            @Crouch.started += instance.OnCrouch;
+            @Crouch.performed += instance.OnCrouch;
+            @Crouch.canceled += instance.OnCrouch;
+            @Hotbar1.started += instance.OnHotbar1;
+            @Hotbar1.performed += instance.OnHotbar1;
+            @Hotbar1.canceled += instance.OnHotbar1;
+            @Hotbar2.started += instance.OnHotbar2;
+            @Hotbar2.performed += instance.OnHotbar2;
+            @Hotbar2.canceled += instance.OnHotbar2;
+            @Hotbar3.started += instance.OnHotbar3;
+            @Hotbar3.performed += instance.OnHotbar3;
+            @Hotbar3.canceled += instance.OnHotbar3;
+            @Hotbar4.started += instance.OnHotbar4;
+            @Hotbar4.performed += instance.OnHotbar4;
+            @Hotbar4.canceled += instance.OnHotbar4;
+            @Hotbar5.started += instance.OnHotbar5;
+            @Hotbar5.performed += instance.OnHotbar5;
+            @Hotbar5.canceled += instance.OnHotbar5;
+            @Hotbar6.started += instance.OnHotbar6;
+            @Hotbar6.performed += instance.OnHotbar6;
+            @Hotbar6.canceled += instance.OnHotbar6;
+            @Hotbar7.started += instance.OnHotbar7;
+            @Hotbar7.performed += instance.OnHotbar7;
+            @Hotbar7.canceled += instance.OnHotbar7;
+            @Hotbar8.started += instance.OnHotbar8;
+            @Hotbar8.performed += instance.OnHotbar8;
+            @Hotbar8.canceled += instance.OnHotbar8;
+            @Hotbar9.started += instance.OnHotbar9;
+            @Hotbar9.performed += instance.OnHotbar9;
+            @Hotbar9.canceled += instance.OnHotbar9;
+            @Hotbar10.started += instance.OnHotbar10;
+            @Hotbar10.performed += instance.OnHotbar10;
+            @Hotbar10.canceled += instance.OnHotbar10;
+            @MouseWheel.started += instance.OnMouseWheel;
+            @MouseWheel.performed += instance.OnMouseWheel;
+            @MouseWheel.canceled += instance.OnMouseWheel;
+            @UseItem.started += instance.OnUseItem;
+            @UseItem.performed += instance.OnUseItem;
+            @UseItem.canceled += instance.OnUseItem;
+            @ChangeCamera.started += instance.OnChangeCamera;
+            @ChangeCamera.performed += instance.OnChangeCamera;
+            @ChangeCamera.canceled += instance.OnChangeCamera;
+            @Dash.started += instance.OnDash;
+            @Dash.performed += instance.OnDash;
+            @Dash.canceled += instance.OnDash;
         }
 
-        private void UnregisterCallbacks(IMainActions instance)
+        private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
-            @Look.started -= instance.OnLook;
-            @Look.performed -= instance.OnLook;
-            @Look.canceled -= instance.OnLook;
-            @Attack.started -= instance.OnAttack;
-            @Attack.performed -= instance.OnAttack;
-            @Attack.canceled -= instance.OnAttack;
+            @Run.started -= instance.OnRun;
+            @Run.performed -= instance.OnRun;
+            @Run.canceled -= instance.OnRun;
+            @Newaction3.started -= instance.OnNewaction3;
+            @Newaction3.performed -= instance.OnNewaction3;
+            @Newaction3.canceled -= instance.OnNewaction3;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
+            @Mouse.started -= instance.OnMouse;
+            @Mouse.performed -= instance.OnMouse;
+            @Mouse.canceled -= instance.OnMouse;
+            @Crouch.started -= instance.OnCrouch;
+            @Crouch.performed -= instance.OnCrouch;
+            @Crouch.canceled -= instance.OnCrouch;
+            @Hotbar1.started -= instance.OnHotbar1;
+            @Hotbar1.performed -= instance.OnHotbar1;
+            @Hotbar1.canceled -= instance.OnHotbar1;
+            @Hotbar2.started -= instance.OnHotbar2;
+            @Hotbar2.performed -= instance.OnHotbar2;
+            @Hotbar2.canceled -= instance.OnHotbar2;
+            @Hotbar3.started -= instance.OnHotbar3;
+            @Hotbar3.performed -= instance.OnHotbar3;
+            @Hotbar3.canceled -= instance.OnHotbar3;
+            @Hotbar4.started -= instance.OnHotbar4;
+            @Hotbar4.performed -= instance.OnHotbar4;
+            @Hotbar4.canceled -= instance.OnHotbar4;
+            @Hotbar5.started -= instance.OnHotbar5;
+            @Hotbar5.performed -= instance.OnHotbar5;
+            @Hotbar5.canceled -= instance.OnHotbar5;
+            @Hotbar6.started -= instance.OnHotbar6;
+            @Hotbar6.performed -= instance.OnHotbar6;
+            @Hotbar6.canceled -= instance.OnHotbar6;
+            @Hotbar7.started -= instance.OnHotbar7;
+            @Hotbar7.performed -= instance.OnHotbar7;
+            @Hotbar7.canceled -= instance.OnHotbar7;
+            @Hotbar8.started -= instance.OnHotbar8;
+            @Hotbar8.performed -= instance.OnHotbar8;
+            @Hotbar8.canceled -= instance.OnHotbar8;
+            @Hotbar9.started -= instance.OnHotbar9;
+            @Hotbar9.performed -= instance.OnHotbar9;
+            @Hotbar9.canceled -= instance.OnHotbar9;
+            @Hotbar10.started -= instance.OnHotbar10;
+            @Hotbar10.performed -= instance.OnHotbar10;
+            @Hotbar10.canceled -= instance.OnHotbar10;
+            @MouseWheel.started -= instance.OnMouseWheel;
+            @MouseWheel.performed -= instance.OnMouseWheel;
+            @MouseWheel.canceled -= instance.OnMouseWheel;
+            @UseItem.started -= instance.OnUseItem;
+            @UseItem.performed -= instance.OnUseItem;
+            @UseItem.canceled -= instance.OnUseItem;
+            @ChangeCamera.started -= instance.OnChangeCamera;
+            @ChangeCamera.performed -= instance.OnChangeCamera;
+            @ChangeCamera.canceled -= instance.OnChangeCamera;
+            @Dash.started -= instance.OnDash;
+            @Dash.performed -= instance.OnDash;
+            @Dash.canceled -= instance.OnDash;
         }
 
-        public void RemoveCallbacks(IMainActions instance)
+        public void RemoveCallbacks(IPlayerActions instance)
         {
-            if (m_Wrapper.m_MainActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
-        public void SetCallbacks(IMainActions instance)
+        public void SetCallbacks(IPlayerActions instance)
         {
-            foreach (var item in m_Wrapper.m_MainActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_MainActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
-    public MainActions @Main => new MainActions(this);
-    private int m_MainSchemeIndex = -1;
-    public InputControlScheme MainScheme
+    public PlayerActions @Player => new PlayerActions(this);
+    public interface IPlayerActions
     {
-        get
-        {
-            if (m_MainSchemeIndex == -1) m_MainSchemeIndex = asset.FindControlSchemeIndex("Main");
-            return asset.controlSchemes[m_MainSchemeIndex];
-        }
-    }
-    public interface IMainActions
-    {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnLook(InputAction.CallbackContext context);
-        void OnAttack(InputAction.CallbackContext context);
+        void OnRun(InputAction.CallbackContext context);
+        void OnNewaction3(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
+        void OnMouse(InputAction.CallbackContext context);
+        void OnCrouch(InputAction.CallbackContext context);
+        void OnHotbar1(InputAction.CallbackContext context);
+        void OnHotbar2(InputAction.CallbackContext context);
+        void OnHotbar3(InputAction.CallbackContext context);
+        void OnHotbar4(InputAction.CallbackContext context);
+        void OnHotbar5(InputAction.CallbackContext context);
+        void OnHotbar6(InputAction.CallbackContext context);
+        void OnHotbar7(InputAction.CallbackContext context);
+        void OnHotbar8(InputAction.CallbackContext context);
+        void OnHotbar9(InputAction.CallbackContext context);
+        void OnHotbar10(InputAction.CallbackContext context);
+        void OnMouseWheel(InputAction.CallbackContext context);
+        void OnUseItem(InputAction.CallbackContext context);
+        void OnChangeCamera(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
     }
 }
