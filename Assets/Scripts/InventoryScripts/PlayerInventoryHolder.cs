@@ -16,7 +16,7 @@ public class PlayerInventoryHolder : InventoryHolder
     //public static UnityAction<InventorySystem> OnPlayerBackpackDisplayRequested;
     private void Start()
     {
-        SaveGameManager.data.playerInventory = new InventorySaveData(primaryInventorySystem);
+        //SaveGameManager.data.playerInventory = new InventorySaveData(primaryInventorySystem);
     }
 
     public static UnityAction OnPlayerInventoryChanged;

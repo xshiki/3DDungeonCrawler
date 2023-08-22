@@ -14,7 +14,7 @@ public class HotbarDisplay : StaticInventoryDisplay
     private int _currentIndex = 0;
     private int _previousIndex = -1;
     private PlayerInput _playerInput;
-    [SerializeField] private EquipItemSystem PlayerEquipItemSystem;
+    //[SerializeField] private EquipItemSystem PlayerEquipItemSystem;
     [NonSerialized] private InventoryItemData highlightedItemData;
     public InventoryItemData HighlightedItemData => highlightedItemData;
     //Check if current selected slot has been changed due to pickup
@@ -134,10 +134,6 @@ public class HotbarDisplay : StaticInventoryDisplay
 
         }
 
-        if(PlayerEquipItemSystem.ItemInHand && slots[_currentIndex].AssignedInventorySlot.ItemData == null)
-        {
-            OnHotbarSlotChanged?.Invoke();
-        }
 
        
     }
@@ -146,6 +142,7 @@ public class HotbarDisplay : StaticInventoryDisplay
     {
         highlightedItemData = slots[_currentIndex].AssignedInventorySlot.ItemData;
 
+        /*
         if ((PlayerEquipItemSystem.ItemInHand && _previousIndex == _currentIndex) || highlightedItemData == null)
         {
             PlayerEquipItemSystem.UnEquipItem();
@@ -155,7 +152,8 @@ public class HotbarDisplay : StaticInventoryDisplay
             _previousIndex = _currentIndex;
             PlayerEquipItemSystem.UnEquipItem();
             PlayerEquipItemSystem.EquipItem();
-        }
+        } 
+        */
     }
     private void UseItem(InputAction.CallbackContext obj)
     {
@@ -163,8 +161,8 @@ public class HotbarDisplay : StaticInventoryDisplay
         if (slots[_currentIndex].AssignedInventorySlot.ItemData!= null)
         {
             //highlightedItemData = slots[_currentIndex].AssignedInventorySlot.ItemData;
-            if (PlayerEquipItemSystem.ItemInHand)
-            {
+            //if (PlayerEquipItemSystem.ItemInHand)
+            //{
                 if (slots[_currentIndex].AssignedInventorySlot.StackSize >=  1 && slots[_currentIndex].AssignedInventorySlot.ItemData.Consumable)
                 {
                     slots[_currentIndex].AssignedInventorySlot.ItemData.UseItem();
@@ -174,7 +172,7 @@ public class HotbarDisplay : StaticInventoryDisplay
                     {
                         slots[_currentIndex].AssignedInventorySlot.ClearSlot();
                         PlayerInventoryHolder.OnPlayerInventoryChanged?.Invoke();
-                        PlayerEquipItemSystem.UnEquipItem();
+                        //PlayerEquipItemSystem.UnEquipItem();
                         OnHotbarSlotChanged?.Invoke();
                     }
                 }else
@@ -186,7 +184,7 @@ public class HotbarDisplay : StaticInventoryDisplay
                 }
 
                
-            }
+            //}
             
         }
 
