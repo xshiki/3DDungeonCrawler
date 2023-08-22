@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour, IInteractable
 {
@@ -19,6 +20,7 @@ public class Door : MonoBehaviour, IInteractable
     public void Interact(InteractScript interactor, out bool interactSucessfull)
     {
         throw new System.NotImplementedException();
+        //SceneManager.LoadScene(scene)
     }
 
     bool IInteractable.Interact(InteractScript interactor)
