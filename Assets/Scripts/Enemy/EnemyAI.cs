@@ -45,7 +45,7 @@ public class EnemyAI : MonoBehaviour
             attackTimer = 0f;
 
             // Reduce the player's health
-            player.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+            player.GetComponent<PlayerRessource>().TakeDamage(attackDamage);
 
             // Get the player's Rigidbody component
             Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
