@@ -7,17 +7,20 @@ using UnityEngine.Events;
 public abstract class InventoryHolder : MonoBehaviour
 {
     [SerializeField] private int inventorySize;
-    [SerializeField] private int equipmentSize = 5;
+    [SerializeField] private int equipmentSize;
     [SerializeField] protected InventorySystem primaryInventorySystem;
+    [SerializeField] protected InventorySystem equipmentInventorySystem;
     [SerializeField] protected int offset = 10;
     public int Offset => offset;
     public static UnityAction<InventorySystem, int> OnDynamicInventoryDisplayRequested; //Inv System to Display, amount to offset display by
     public InventorySystem PrimaryInventorySystem => primaryInventorySystem;
+    public InventorySystem EquipmentInventorySystem => equipmentInventorySystem;
 
     protected virtual void Awake()
     {
         SaveLoad.OnLoadGame += LoadInventory;
         primaryInventorySystem = new InventorySystem(inventorySize);   
+        equipmentInventorySystem = new InventorySystem(equipmentSize);
     }
 
 

@@ -22,9 +22,9 @@ public class DynamicInventoryDisplay : InventoryDisplay
         slotDictionary = new Dictionary<InventorySlot_UI, InventorySlot>();
 
         if(invToDisplay == null ) { return; }
-
+        
         for (int i = offset; i < invToDisplay.InventorySize; i++)
-        {
+        {   
             var uiSLot = Instantiate(slotPrefab, transform);
             slotDictionary.Add(uiSLot, invToDisplay.InventorySlots[i]);
             uiSLot.Init(invToDisplay.InventorySlots[i]);

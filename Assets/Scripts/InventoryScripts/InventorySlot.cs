@@ -12,7 +12,7 @@ public class InventorySlot: ISerializationCallbackReceiver
     [NonSerialized] private InventoryItemData itemData;
     [SerializeField] private int stackSize; //Current stack size
     [SerializeField] private int _itemID = -1;
-    [SerializeField] private InventorySlotTag slotTag = InventorySlotTag.None; 
+    [SerializeField] public InventorySlotTag slotTag; 
     public InventoryItemData ItemData => itemData;
     public int StackSize => stackSize;  
 
@@ -23,12 +23,29 @@ public class InventorySlot: ISerializationCallbackReceiver
         itemData= source;
         Debug.Log(itemData.ID); 
         _itemID = itemData.ID;
+        slotTag = InventorySlotTag.None;
         stackSize= amount;  
+
+    }
+
+    public InventorySlot(InventoryItemData source, int amount, InventorySlotTag tag)
+    {
+        itemData = source;
+        Debug.Log(itemData.ID);
+        _itemID = itemData.ID;
+        slotTag = tag;
+        stackSize = amount;
 
     }
 
     public InventorySlot() { //Constructor empty inventory slot
         ClearSlot();
+    }
+
+    public InventorySlot(InventorySlotTag tag)
+    { //Constructor empty inventory slot
+        ClearSlot();
+        slotTag = tag;
     }
 
     public void ClearSlot()
@@ -58,6 +75,7 @@ public class InventorySlot: ISerializationCallbackReceiver
         }
         else
         {
+           
           
         }
        
