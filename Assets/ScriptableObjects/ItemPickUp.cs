@@ -6,8 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(UniqueID))]
 public class ItemPickUp : MonoBehaviour
 {
-    [SerializeField ]private float PickUpRadius = 0.25f;
-    [SerializeField] private float _rotationSpeed  = 10f;
+    [SerializeField] private float PickUpRadius = 0.25f;
+    [SerializeField] private float _rotationSpeed = 10f;
     public InventoryItemData ItemData;
 
     private SphereCollider myCollider;
@@ -16,15 +16,15 @@ public class ItemPickUp : MonoBehaviour
 
     private void Awake()
     {
-       
+
         SaveLoad.OnLoadGame += LoadGame;
-        itemSaveData = new ItemPickUpSaveData(ItemData, transform.position, transform.rotation);    
-        myCollider = GetComponent<SphereCollider>();   
-        myCollider.radius = PickUpRadius;   
-        myCollider.isTrigger= true;
-    
-       
-   }
+        itemSaveData = new ItemPickUpSaveData(ItemData, transform.position, transform.rotation);
+        myCollider = GetComponent<SphereCollider>();
+        myCollider.radius = PickUpRadius;
+        myCollider.isTrigger = true;
+
+
+    }
     private void Start()
     {
         id = GetComponent<UniqueID>().ID;
@@ -59,9 +59,9 @@ public class ItemPickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var inventory= other.GetComponent<PlayerInventoryHolder>();
-        if(!inventory) return;
-        if(inventory.AddToInventory(ItemData, 1))
+        var inventory = other.GetComponent<PlayerInventoryHolder>();
+        if (!inventory) return;
+        if (inventory.AddToInventory(ItemData, 1))
         {
             //SaveGameManager.data.collectedItems.Add(id);
             Destroy(this.gameObject); //destroy item in overworld
@@ -80,8 +80,8 @@ public struct ItemPickUpSaveData
     public ItemPickUpSaveData(InventoryItemData _data, Vector3 _position, Quaternion _rotation)
     {
         itemData = _data;
-        position = _position;  
-        rotation= _rotation;
+        position = _position;
+        rotation = _rotation;
     }
 
 }

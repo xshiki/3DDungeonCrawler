@@ -163,7 +163,7 @@ public class HotbarDisplay : StaticInventoryDisplay
             //highlightedItemData = slots[_currentIndex].AssignedInventorySlot.ItemData;
             //if (PlayerEquipItemSystem.ItemInHand)
             //{
-                if (slots[_currentIndex].AssignedInventorySlot.StackSize >=  1 && slots[_currentIndex].AssignedInventorySlot.ItemData.Consumable)
+                if (slots[_currentIndex].AssignedInventorySlot.StackSize >=  1)
                 {
                     slots[_currentIndex].AssignedInventorySlot.ItemData.UseItem();
                     slots[_currentIndex].AssignedInventorySlot.AddToStack(-1);

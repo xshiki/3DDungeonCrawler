@@ -73,4 +73,28 @@ public class PlayerRessource : MonoBehaviour
     }
 
 
+    public void ReplenshHealthMana(float healthAmount, float manaAmount)
+    {
+        if(currentHealth + healthAmount >= 100)
+        {
+            currentHealth = maxHealth;
+        }
+        else
+        {
+            currentHealth += healthAmount;
+        }
+
+
+        if (currentMana + manaAmount >= 100)
+        {
+            currentMana = maxMana;
+        }
+        else
+        {
+            currentMana += manaAmount;
+        }
+
+    }
+
+
 }

@@ -8,10 +8,9 @@ public class WeaponItemData : InventoryItemData
 {
 
 
-    public enum Weapons { Sword, Axe, Polearm, Zweihander };
+    public enum Weapons { Sword, Axe, Polearm, Zweihander, Staff };
     public Weapons WeaponType;
     public int WeaponDamage;
-    public GameObject WeaponPrefab;
     public UnityAction OnWeaponUsed;
     
     public override void UseItem()
@@ -32,6 +31,7 @@ public class WeaponItemData : InventoryItemData
     }
 
 
-  
+
+
 
 }
