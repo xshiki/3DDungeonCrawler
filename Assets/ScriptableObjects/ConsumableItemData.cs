@@ -5,7 +5,6 @@ using UnityEngine;
 public class ConsumableItemData : InventoryItemData
 {
     [SerializeField] private float _healthToReplenish, _manaToReplenish;
-    [SerializeField] private PlayerRessource playerRessource;
     //[SerializeField] private Animator playerAnimator;
  
 
@@ -13,7 +12,8 @@ public class ConsumableItemData : InventoryItemData
     public override void UseItem()
     {
         //change that so not only the player can drink/eat 
-        playerRessource = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerRessource>();
+        PlayerRessource playerRessource = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerRessource>();
+        Debug.Log(playerRessource);
         //playerAnimator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
 
         if (playerRessource is null) return;

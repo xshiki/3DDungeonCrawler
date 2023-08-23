@@ -34,7 +34,7 @@ public class HotbarDisplay : StaticInventoryDisplay
         _currentIndex = 0;
         _maxIndexSize = slots.Length - 1;
 
-        slots[_currentIndex].ToggleHighlight();
+        //slots[_currentIndex].ToggleHighlight();
     }
     
     protected override void OnEnable()
@@ -82,42 +82,52 @@ public class HotbarDisplay : StaticInventoryDisplay
     private void Hotbar1(InputAction.CallbackContext obj)
     {
         SetIndex(0);
+        UseItem(obj);
     }
     private void Hotbar2(InputAction.CallbackContext obj)
     {
         SetIndex(1);
+        UseItem(obj);
     }
     private void Hotbar3(InputAction.CallbackContext obj)
     {
         SetIndex(2);
+        UseItem(obj);
     }
     private void Hotbar4(InputAction.CallbackContext obj)
     {
         SetIndex(3);
+        UseItem(obj);
     }
     private void Hotbar5(InputAction.CallbackContext obj)
     {
         SetIndex(4);
+        UseItem(obj);
     }
     private void Hotbar6(InputAction.CallbackContext obj)
     {
         SetIndex(5);
+        UseItem(obj);
     }
     private void Hotbar7(InputAction.CallbackContext obj)
     {
         SetIndex(6);
+        UseItem(obj);
     }
     private void Hotbar8(InputAction.CallbackContext obj)
     {
         SetIndex(7);
+        UseItem(obj);
     }
     private void Hotbar9(InputAction.CallbackContext obj)
     {
         SetIndex(8);
+        UseItem(obj);
     }
     private void Hotbar10(InputAction.CallbackContext obj)
     {
         SetIndex(9);
+        UseItem(obj);
     }
     #endregion
 

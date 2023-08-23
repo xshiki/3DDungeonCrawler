@@ -21,6 +21,16 @@ public class ChestInventory : InventoryHolder, IInteractable
     }
     protected override void LoadInventory(SaveData data)
     {
+
+
+
+
+
+
+
+        //TODO Rewrite this code so it contains random items from a given rule
+
+
         Debug.Log("attempt to load inventory chest");
         //check the save for specific chests inventory, if it exists, load it in.
         if (data.chestDictionary.TryGetValue(GetComponent<UniqueID>().ID, out InventorySaveData chestData)){

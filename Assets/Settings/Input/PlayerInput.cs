@@ -28,15 +28,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             ""id"": ""ef65590f-d14a-48d3-9e6d-0215346e4f39"",
             ""actions"": [
                 {
-                    ""name"": ""New action3"",
-                    ""type"": ""Button"",
-                    ""id"": ""0971b768-a6c0-4630-9a8a-b03a6b772b2a"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""2d303014-f98c-485e-8695-0f05134835ea"",
@@ -172,15 +163,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ChangeCamera"",
-                    ""type"": ""Button"",
-                    ""id"": ""835cd2e3-6edb-411e-bbee-d1af02bee6d7"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Dash"",
                     ""type"": ""Button"",
                     ""id"": ""0a7bab18-a22c-4991-9fe4-284cd96ce3e1"",
@@ -200,17 +182,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""e472c7fe-e8ab-4021-b801-77038f731442"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""New action3"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""ed5681e2-cbb0-4a58-833f-4f804c403b92"",
@@ -378,17 +349,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""b560779e-0fe3-4403-af54-b5ca587514e0"",
-                    ""path"": ""<Keyboard>/f5"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ChangeCamera"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""5d02d2cc-1191-4bd4-9c6a-9baef2255032"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
@@ -427,7 +387,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Newaction3 = m_Player.FindAction("New action3", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Mouse = m_Player.FindAction("Mouse", throwIfNotFound: true);
         m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
@@ -443,7 +402,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Hotbar10 = m_Player.FindAction("Hotbar10", throwIfNotFound: true);
         m_Player_MouseWheel = m_Player.FindAction("MouseWheel", throwIfNotFound: true);
         m_Player_UseItem = m_Player.FindAction("Use Item", throwIfNotFound: true);
-        m_Player_ChangeCamera = m_Player.FindAction("ChangeCamera", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_SpellCast = m_Player.FindAction("Spell Cast", throwIfNotFound: true);
     }
@@ -507,7 +465,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Newaction3;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Mouse;
     private readonly InputAction m_Player_Crouch;
@@ -523,14 +480,12 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Hotbar10;
     private readonly InputAction m_Player_MouseWheel;
     private readonly InputAction m_Player_UseItem;
-    private readonly InputAction m_Player_ChangeCamera;
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_SpellCast;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Newaction3 => m_Wrapper.m_Player_Newaction3;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
         public InputAction @Mouse => m_Wrapper.m_Player_Mouse;
         public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
@@ -546,7 +501,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Hotbar10 => m_Wrapper.m_Player_Hotbar10;
         public InputAction @MouseWheel => m_Wrapper.m_Player_MouseWheel;
         public InputAction @UseItem => m_Wrapper.m_Player_UseItem;
-        public InputAction @ChangeCamera => m_Wrapper.m_Player_ChangeCamera;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @SpellCast => m_Wrapper.m_Player_SpellCast;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -558,9 +512,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Newaction3.started += instance.OnNewaction3;
-            @Newaction3.performed += instance.OnNewaction3;
-            @Newaction3.canceled += instance.OnNewaction3;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
@@ -606,9 +557,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @UseItem.started += instance.OnUseItem;
             @UseItem.performed += instance.OnUseItem;
             @UseItem.canceled += instance.OnUseItem;
-            @ChangeCamera.started += instance.OnChangeCamera;
-            @ChangeCamera.performed += instance.OnChangeCamera;
-            @ChangeCamera.canceled += instance.OnChangeCamera;
             @Dash.started += instance.OnDash;
             @Dash.performed += instance.OnDash;
             @Dash.canceled += instance.OnDash;
@@ -619,9 +567,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Newaction3.started -= instance.OnNewaction3;
-            @Newaction3.performed -= instance.OnNewaction3;
-            @Newaction3.canceled -= instance.OnNewaction3;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
@@ -667,9 +612,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @UseItem.started -= instance.OnUseItem;
             @UseItem.performed -= instance.OnUseItem;
             @UseItem.canceled -= instance.OnUseItem;
-            @ChangeCamera.started -= instance.OnChangeCamera;
-            @ChangeCamera.performed -= instance.OnChangeCamera;
-            @ChangeCamera.canceled -= instance.OnChangeCamera;
             @Dash.started -= instance.OnDash;
             @Dash.performed -= instance.OnDash;
             @Dash.canceled -= instance.OnDash;
@@ -695,7 +637,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     public PlayerActions @Player => new PlayerActions(this);
     public interface IPlayerActions
     {
-        void OnNewaction3(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnMouse(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
@@ -711,7 +652,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnHotbar10(InputAction.CallbackContext context);
         void OnMouseWheel(InputAction.CallbackContext context);
         void OnUseItem(InputAction.CallbackContext context);
-        void OnChangeCamera(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnSpellCast(InputAction.CallbackContext context);
     }

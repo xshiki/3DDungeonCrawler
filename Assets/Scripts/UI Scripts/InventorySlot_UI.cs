@@ -39,7 +39,7 @@ public class InventorySlot_UI : MonoBehaviour
 
     public void ToggleHighlight()
     {
-        _slotHighlight.SetActive(!_slotHighlight.activeInHierarchy);
+        //_slotHighlight.SetActive(!_slotHighlight.activeInHierarchy);
     }
     public void UpdateUISlot(InventorySlot slot)
     {

@@ -6,7 +6,7 @@ using UnityEngine;
 ///  This is a scriptable object, what defines what an item is in our game
 ///  it could be inherited to have brachned ersions of items
 /// </summary>
-
+public enum InventoryItemType { none, Head, Chest, Pants, Boots, Weapon, Weapon2}
 [CreateAssetMenu(menuName = "Inventory System/Inventory Item")]
 public class InventoryItemData : ScriptableObject
 {
@@ -17,15 +17,12 @@ public class InventoryItemData : ScriptableObject
     [TextArea(4, 4)]
     public string Description;
     public GameObject ItemPrefab;
+    public RuntimeAnimatorController RigAnimatorController;
 
     //Make new Script that inherites from inventory item data example weapons
     public virtual void UseItem()
     {
         Debug.Log($"Using {DisplayName}");
-
-    }
-    public virtual void UseItem(PlayerRessource player)
-    {
 
     }
 

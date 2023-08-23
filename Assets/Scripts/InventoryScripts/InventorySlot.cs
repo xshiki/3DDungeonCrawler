@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using System.Drawing.Printing;
 using UnityEngine;
 
+
+public enum InventorySlotTag { None, Head, Chest, Pants, Boots, Weapon}
 [System.Serializable]
 public class InventorySlot: ISerializationCallbackReceiver
 {
     [NonSerialized] private InventoryItemData itemData;
     [SerializeField] private int stackSize; //Current stack size
     [SerializeField] private int _itemID = -1;
+    [SerializeField] private InventorySlotTag slotTag = InventorySlotTag.None; 
     public InventoryItemData ItemData => itemData;
     public int StackSize => stackSize;  
 
@@ -38,17 +41,26 @@ public class InventorySlot: ISerializationCallbackReceiver
 
     public void AssignItem(InventorySlot invSlot) //Assign Item to the slot
     {
-        if(itemData == invSlot.ItemData) //does the slot contain the same item? then add to stack
+        if(slotTag == InventorySlotTag.None)
         {
-            AddToStack(invSlot.stackSize);
+            Debug.Log("true");
+            if (itemData == invSlot.ItemData) //does the slot contain the same item? then add to stack
+            {
+                AddToStack(invSlot.stackSize);
+            }
+            else //Overwrite the slot with ivnentory slot that're passing in
+            {
+                itemData = invSlot.ItemData;
+                _itemID = itemData.ID;
+                stackSize = 0;
+                AddToStack(invSlot.stackSize);
+            }
         }
-        else //Overwrite the slot with ivnentory slot that're passing in
+        else
         {
-            itemData = invSlot.ItemData;
-            _itemID = itemData.ID;
-            stackSize = 0;
-            AddToStack(invSlot.stackSize);  
+          
         }
+       
     }
   
     public void UpdateInventorySlot(InventoryItemData data, int amount)//Update slot directly

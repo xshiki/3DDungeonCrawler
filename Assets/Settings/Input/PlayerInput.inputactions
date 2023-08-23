@@ -6,15 +6,6 @@
             "id": "ef65590f-d14a-48d3-9e6d-0215346e4f39",
             "actions": [
                 {
-                    "name": "New action3",
-                    "type": "Button",
-                    "id": "0971b768-a6c0-4630-9a8a-b03a6b772b2a",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "2d303014-f98c-485e-8695-0f05134835ea",
@@ -150,15 +141,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ChangeCamera",
-                    "type": "Button",
-                    "id": "835cd2e3-6edb-411e-bbee-d1af02bee6d7",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Dash",
                     "type": "Button",
                     "id": "0a7bab18-a22c-4991-9fe4-284cd96ce3e1",
@@ -178,17 +160,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "e472c7fe-e8ab-4021-b801-77038f731442",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "New action3",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "",
                     "id": "ed5681e2-cbb0-4a58-833f-4f804c403b92",
@@ -351,17 +322,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Use Item",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b560779e-0fe3-4403-af54-b5ca587514e0",
-                    "path": "<Keyboard>/f5",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ChangeCamera",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

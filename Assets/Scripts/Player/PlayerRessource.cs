@@ -6,8 +6,6 @@ using UnityEngine;
 public class PlayerRessource : MonoBehaviour
 {
 
-
-
     [Header("Health")]
     public float maxHealth = 100f; 
     public float currentHealth;

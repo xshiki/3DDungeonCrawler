@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Spell", menuName = "Spells")]
-public class SpellScriptableObject : ScriptableObject
+public class SpellScriptableObject : InventoryItemData
 {
     // Start is called before the first frame update
     public float ManaCost = 5f;

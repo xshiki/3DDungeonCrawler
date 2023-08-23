@@ -6,7 +6,6 @@ public class DynamicInventoryDisplay : InventoryDisplay
 {
 
     [SerializeField] protected InventorySlot_UI slotPrefab;
-   
 
     public void RefreshDynamicInventory(InventorySystem invToDisplay, int offset)
     {
