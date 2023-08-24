@@ -33,6 +33,7 @@ public class EnemyHealth : MonoBehaviour
     {
         // Add code here to handle death
         //Instantiate(, transform.position, transform.rotation);
+        GetComponent<LootTable>().InstantiateLoot(transform.position);
         Destroy(gameObject);
     }
 }

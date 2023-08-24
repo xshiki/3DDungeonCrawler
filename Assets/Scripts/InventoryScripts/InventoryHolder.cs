@@ -13,6 +13,7 @@ public abstract class InventoryHolder : MonoBehaviour
     [SerializeField] protected int offset = 10;
     public int Offset => offset;
     public static UnityAction<InventorySystem, int> OnDynamicInventoryDisplayRequested; //Inv System to Display, amount to offset display by
+    public static UnityAction<InventorySystem, int> OnStaticInventoryDisplayRequested; //Inv System to Display, amount to offset display by
     public InventorySystem PrimaryInventorySystem => primaryInventorySystem;
     public InventorySystem EquipmentInventorySystem => equipmentInventorySystem;
 
@@ -20,7 +21,7 @@ public abstract class InventoryHolder : MonoBehaviour
     {
         SaveLoad.OnLoadGame += LoadInventory;
         primaryInventorySystem = new InventorySystem(inventorySize);   
-        equipmentInventorySystem = new InventorySystem(equipmentSize);
+
     }
 
 

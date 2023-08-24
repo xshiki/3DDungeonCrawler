@@ -101,7 +101,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventorySize: 20
+  equipmentSize: 0
   primaryInventorySystem:
+    inventorySlots: []
+  equipmentInventorySystem:
     inventorySlots: []
   offset: 5
   _prompt: Open Chest

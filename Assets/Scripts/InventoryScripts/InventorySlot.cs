@@ -14,6 +14,7 @@ public class InventorySlot: ISerializationCallbackReceiver
     [SerializeField] private int _itemID = -1;
     [SerializeField] public InventorySlotTag slotTag; 
     public InventoryItemData ItemData => itemData;
+
     public int StackSize => stackSize;  
 
 
@@ -60,7 +61,6 @@ public class InventorySlot: ISerializationCallbackReceiver
     {
         if(slotTag == InventorySlotTag.None)
         {
-            Debug.Log("true");
             if (itemData == invSlot.ItemData) //does the slot contain the same item? then add to stack
             {
                 AddToStack(invSlot.stackSize);
@@ -75,8 +75,43 @@ public class InventorySlot: ISerializationCallbackReceiver
         }
         else
         {
-           
-          
+            if (slotTag == InventorySlotTag.Head && invSlot.ItemData.ItemType == InventoryItemType.Head)
+            {
+                itemData = invSlot.ItemData;
+                _itemID = itemData.ID;
+                stackSize = 0;
+                AddToStack(invSlot.stackSize);
+            }
+
+            if (slotTag == InventorySlotTag.Chest && invSlot.ItemData.ItemType == InventoryItemType.Chest)
+            {
+                itemData = invSlot.ItemData;
+                _itemID = itemData.ID;
+                stackSize = 0;
+                AddToStack(invSlot.stackSize);
+            }
+            if (slotTag == InventorySlotTag.Pants && invSlot.ItemData.ItemType == InventoryItemType.Pants)
+            {
+                itemData = invSlot.ItemData;
+                _itemID = itemData.ID;
+                stackSize = 0;
+                AddToStack(invSlot.stackSize);
+            }
+            if (slotTag == InventorySlotTag.Boots && invSlot.ItemData.ItemType == InventoryItemType.Boots)
+            {
+                itemData = invSlot.ItemData;
+                _itemID = itemData.ID;
+                stackSize = 0;
+                AddToStack(invSlot.stackSize);
+            }
+            if (slotTag == InventorySlotTag.Weapon && invSlot.ItemData.ItemType == InventoryItemType.Weapon)
+            {
+                itemData = invSlot.ItemData;
+                _itemID = itemData.ID;
+                stackSize = 0;
+                AddToStack(invSlot.stackSize);
+            }
+
         }
        
     }

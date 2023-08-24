@@ -16,7 +16,7 @@ public class InventorySystem
     public InventorySystem(int size)
     {
         inventorySlots= new List<InventorySlot>(size);
-        for(int i = 0; i < size; i++)
+        for(int i = 0; i < size-5; i++)
         {
             inventorySlots.Add(new InventorySlot());
         }

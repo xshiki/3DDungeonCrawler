@@ -9,17 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ebe390d6f0a45f44934eaf2efdc0112, type: 3}
-  m_Name: Simple_Potion
+  m_Script: {fileID: 11500000, guid: 78c4c93500ea2204f874e46d03fe49fb, type: 3}
+  m_Name: New Inventory Item Data
   m_EditorClassIdentifier: 
   Icon: {fileID: 0}
-  MaxStackSize: 3
-  ID: 1
+  MaxStackSize: 0
+  ID: -1
   DisplayName: 
   Description: 
-  ItemPrefab: {fileID: 5879215179458826242, guid: 174e0c5903d7cb94c94027d6526999fb, type: 3}
+  ItemPrefab: {fileID: 0}
   ItemType: 0
   RigAnimatorController: {fileID: 0}
-  dropChance: 100
-  _healthToReplenish: 50
-  _manaToReplenish: 0
