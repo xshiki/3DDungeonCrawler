@@ -11,7 +11,7 @@ public class MouseItemData : MonoBehaviour
 {
     public Image ItemSprite;
     public TextMeshProUGUI ItemCount;
-    public InventorySlot AssignedInventorySlot;
+   
 
 
     private Transform _playerTransform;
@@ -25,55 +25,23 @@ public class MouseItemData : MonoBehaviour
         _playerTransform= GameObject.Find("Orientation").GetComponent<Transform>(); 
         if (_playerTransform == null) Debug.Log("Player not found!");
     }
-    public void UpdateMouseSlot(InventorySlot invSlot) {
-
-        AssignedInventorySlot.AssignItem(invSlot);
-        UpdateMouseSlot();
-
-    }
+   
 
     public void UpdateMouseSlot()
     {
       
-        ItemSprite.sprite = AssignedInventorySlot.ItemData.Icon;
-        ItemCount.text = AssignedInventorySlot.StackSize.ToString();
-        ItemSprite.color = Color.white;
+       
 
     }
 
     private void Update()
     {
-        if(AssignedInventorySlot.ItemData != null) {
-            
-            transform.position = Mouse.current.position.ReadValue();
-           
-            if (Mouse.current.leftButton.wasPressedThisFrame && !IsPointerOverUIObject())
-            {
-                if(AssignedInventorySlot.ItemData.ItemPrefab!= null) { 
-                    GameObject prefabInstance=  Instantiate(AssignedInventorySlot.ItemData.ItemPrefab, _playerTransform.position + _playerTransform.forward * _dropOffset, Quaternion.identity);
-                    prefabInstance.AddComponent<Rigidbody>();   
-                }
-                    
-              
-                if(AssignedInventorySlot.StackSize > 1)
-                {
-
-                    AssignedInventorySlot.AddToStack(-1);
-                    UpdateMouseSlot();
-                }
-                else
-                {
-                  ClearSlot();
-                }
-            }
-        
-        }
     }
 
     public void ClearSlot()
     {
         
-        AssignedInventorySlot.ClearSlot();
+      
         ItemCount.text = "";
         ItemSprite.color = Color.clear;
         ItemSprite.sprite = null;

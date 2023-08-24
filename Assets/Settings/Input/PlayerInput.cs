@@ -179,6 +179,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Open Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""82b9fec8-088c-4822-8ca7-77a9aabe85b6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -379,6 +388,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Spell Cast"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c84bfabe-8065-4285-95c0-d4e0eab5735d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Open Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -404,6 +424,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_UseItem = m_Player.FindAction("Use Item", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_SpellCast = m_Player.FindAction("Spell Cast", throwIfNotFound: true);
+        m_Player_OpenInventory = m_Player.FindAction("Open Inventory", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -482,6 +503,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_UseItem;
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_SpellCast;
+    private readonly InputAction m_Player_OpenInventory;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -503,6 +525,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @UseItem => m_Wrapper.m_Player_UseItem;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @SpellCast => m_Wrapper.m_Player_SpellCast;
+        public InputAction @OpenInventory => m_Wrapper.m_Player_OpenInventory;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -563,6 +586,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpellCast.started += instance.OnSpellCast;
             @SpellCast.performed += instance.OnSpellCast;
             @SpellCast.canceled += instance.OnSpellCast;
+            @OpenInventory.started += instance.OnOpenInventory;
+            @OpenInventory.performed += instance.OnOpenInventory;
+            @OpenInventory.canceled += instance.OnOpenInventory;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -618,6 +644,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @SpellCast.started -= instance.OnSpellCast;
             @SpellCast.performed -= instance.OnSpellCast;
             @SpellCast.canceled -= instance.OnSpellCast;
+            @OpenInventory.started -= instance.OnOpenInventory;
+            @OpenInventory.performed -= instance.OnOpenInventory;
+            @OpenInventory.canceled -= instance.OnOpenInventory;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -654,5 +683,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnUseItem(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnSpellCast(InputAction.CallbackContext context);
+        void OnOpenInventory(InputAction.CallbackContext context);
     }
 }

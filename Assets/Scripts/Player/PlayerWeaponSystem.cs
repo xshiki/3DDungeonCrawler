@@ -34,7 +34,7 @@ public class PlayerWeaponSystem : MonoBehaviour
     void Update()
     {
        
-       
+       /*
             if (!swingingWeapon) {
             swingingWeapon = true;
             currentSwingTimer = 0;
@@ -51,6 +51,7 @@ public class PlayerWeaponSystem : MonoBehaviour
                 swingingWeapon = false;
             }
         }
+       */
     }
 
 

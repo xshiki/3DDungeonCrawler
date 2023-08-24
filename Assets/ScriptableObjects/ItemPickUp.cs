@@ -17,8 +17,6 @@ public class ItemPickUp : MonoBehaviour
     private void Awake()
     {
 
-        SaveLoad.OnLoadGame += LoadGame;
-        itemSaveData = new ItemPickUpSaveData(ItemData, transform.position, transform.rotation);
         myCollider = GetComponent<SphereCollider>();
         myCollider.radius = PickUpRadius;
         myCollider.isTrigger = true;
@@ -40,14 +38,7 @@ public class ItemPickUp : MonoBehaviour
     {
         transform.Rotate(Vector3.up * _rotationSpeed * Time.deltaTime);
     }
-    private void LoadGame(SaveData data)
-    {
-        //if (data.collectedItems.Contains(id))
-        //{
-        //    Destroy(this.gameObject);
-        //}
-
-    }
+    
     private void OnDestroy()
     {
         //if (SaveGameManager.data.activeItems.ContainsKey(id))
@@ -59,14 +50,18 @@ public class ItemPickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        var inventory = other.GetComponent<PlayerInventoryHolder>();
+        var inventory = other.GetComponentInChildren<InventoryManager>();
+        Debug.Log("triggered");
         if (!inventory) return;
-        if (inventory.AddToInventory(ItemData, 1))
+        Debug.Log("didnt return");
+        if (inventory.AddItem(ItemData))
         {
-            //SaveGameManager.data.collectedItems.Add(id);
-            Destroy(this.gameObject); //destroy item in overworld
-
+            Debug.Log("item added");
+            Destroy(this.gameObject);
         }
+      
+       
+        
     }
 }
 

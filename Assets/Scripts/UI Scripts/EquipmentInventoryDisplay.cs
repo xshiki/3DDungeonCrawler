@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class EquipmentInventoryDisplay : DynamicInventoryDisplay
-{
-    [SerializeField] protected GameObject playerProtrait;
+public class EquipmentInventoryDisplay {
 
 }
 

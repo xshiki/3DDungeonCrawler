@@ -19,7 +19,8 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact(InteractScript interactor, out bool interactSucessfull)
     {
-        throw new System.NotImplementedException();
+        Debug.Log("Opening door!");
+        interactSucessfull = true;
         //SceneManager.LoadScene(scene)
     }
 

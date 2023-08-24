@@ -8,7 +8,7 @@ using UnityEngine.InputSystem.XR.Haptics;
 public class EquipItemSystem : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private HotbarDisplay currentItem;
+    
     [SerializeField] GameObject weaponHolder;
 
     public bool ItemInHand => currentItemInHand != null;
@@ -21,21 +21,7 @@ public class EquipItemSystem : MonoBehaviour
     public void EquipItem()
     {
       
-            // Check if currentItem.HighlightedItemData.ItemPrefab is not null
-            if (currentItem.HighlightedItemData.ItemPrefab != null)
-            {
-                // Instantiate the prefab as a child of weaponHolder 
-                
-                currentItemInHand = Instantiate(currentItem.HighlightedItemData.ItemPrefab, weaponHolder.transform);
-               
-                if (currentItem.HighlightedItemData is WeaponItemData)
-                {   
-                    currentItemInHandSO =  currentItem.HighlightedItemData as WeaponItemData;
-                   
-                    equippedItem?.Invoke();
-                }
-                            
-            }
+          
         
     }
 
@@ -45,13 +31,7 @@ public class EquipItemSystem : MonoBehaviour
         if (currentItemInHand != null)
         {
             
-            Destroy(currentItemInHand);
-            if (currentItem.HighlightedItemData is WeaponItemData)
-            {
-              
-                equippedItem?.Invoke();
-             
-            }
+         
             
            
         }

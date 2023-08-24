@@ -28,7 +28,7 @@ public class InteractScript : MonoBehaviour
         {
             if(hitInfo.collider.GetComponent<IInteractable>() != null)
             {
-                Debug.Log(hitInfo.collider.GetComponent<IInteractable>().InterActionPrompt);
+              
                 _interactable = hitInfo.collider.GetComponent<IInteractable>();
                 if (!_interactionPromptUI.IsDisplayed)
                 {
