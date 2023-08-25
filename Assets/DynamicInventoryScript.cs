@@ -10,13 +10,7 @@ public class DynamicInventoryScript : InventoryManager
 
     void createInventory(ChestInventoryManager invToDisplay)
     {
-        
-        Debug.Log("destroy chidlren");
-        foreach (Transform child in transform)
-        {
-            Destroy(child.gameObject);
-        }
-        inventorySlots = invToDisplay.inventorySlots;
+     
         for(int i =0; i<inventorySlots.Length; i++)
         {
             Instantiate(inventorySlots[i], transform);

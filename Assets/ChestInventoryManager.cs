@@ -11,6 +11,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     [SerializeField] public DynamicInventoryScript dynamicInventoryScript;
     [SerializeField] public GameObject PlayerInventory;
     public string InterActionPrompt => _prompt;
+    [SerializeField] public GameObject dynamicInventoryUI;
 
     public UnityAction<IInteractable> OnInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
@@ -28,8 +29,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     {
         if (!DynamicInventoryDisplay.activeInHierarchy)
         {
-            DynamicInventoryDisplay.SetActive(true);
-            OnDynamicDisplayRequested?.Invoke(this);
+            dynamicInventoryUI.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
 
@@ -37,19 +37,21 @@ public class ChestInventoryManager : InventoryManager, IInteractable
         else
         {
             Debug.Log("turn off");
-            //copy changed values back to treasure
-          
-            inventorySlots = dynamicInventoryScript.inventorySlots;
-            foreach (InventorySlot slot in inventorySlots)
+            //copy changed values back to treasuref
+            for(int i = 0;  i< inventorySlots.Length; i++)
             {
-                Destroy(slot.transform.GetChild(0).gameObject);
+                InventoryItem itemInSlot = dynamicInventoryScript.inventorySlots[i].GetComponentInChildren<InventoryItem>();
+                InventoryItem oldItemInSlot = inventorySlots[i].transform.GetComponent<InventoryItem>();
+             
+                if(itemInSlot != null)
+                {
+                    Destroy(oldItemInSlot);
+                   
+                }
+              
             }
-            for (int i = 0; i < inventorySlots.Length; i++)
-            {
-                Instantiate(inventorySlots[i], transform);
-            }
-            DynamicInventoryDisplay.SetActive(false);
-            OnDynamicDisplayRequested?.Invoke(this);
+ 
+            dynamicInventoryUI.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
         }

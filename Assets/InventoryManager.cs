@@ -5,8 +5,7 @@ using UnityEngine.Events;
 
 public class InventoryManager : MonoBehaviour
 {
-
-    public InventorySlot[] inventorySlots;
+    [SerializeField] public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
     public static UnityAction<ChestInventoryManager> OnDynamicDisplayRequested;
     public bool AddItem(InventoryItemData item)
