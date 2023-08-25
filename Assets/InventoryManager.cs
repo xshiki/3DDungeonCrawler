@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InventoryManager : MonoBehaviour
 {
 
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
+    public static UnityAction<ChestInventoryManager> OnDynamicDisplayRequested;
     public bool AddItem(InventoryItemData item)
     {
 

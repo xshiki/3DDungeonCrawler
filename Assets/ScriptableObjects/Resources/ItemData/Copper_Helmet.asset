@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22efe6289b0a3f8469efe0d50714b4b0, type: 3}
   m_Name: Copper_Helmet
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 9750605eda4502f459aee3d7d631797b, type: 3}
   MaxStackSize: 1
   ID: -1
   DisplayName: 
   Description: 
-  ItemPrefab: {fileID: 0}
+  ItemPrefab: {fileID: 2448519507931542538, guid: 491e2d121964e4e40ae1f2d16976f72a, type: 3}
   ItemType: 1
   RigAnimatorController: {fileID: 0}
   dropChance: 0
