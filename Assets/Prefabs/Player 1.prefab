@@ -927,7 +927,6 @@ GameObject:
   - component: {fileID: 1534207524656294976}
   - component: {fileID: 7491279166092738467}
   - component: {fileID: 5330583317190611099}
-  - component: {fileID: 2239384798268538941}
   - component: {fileID: 6997791428763886410}
   m_Layer: 0
   m_Name: Player 1
@@ -1277,20 +1276,6 @@ MonoBehaviour:
   weaponToUse: {fileID: 2888009308177617576, guid: cd1507feb21eaaa42b199cb57778667a, type: 3}
   _castPoint: {fileID: 9009513281075283290}
   timeBetweenSwing: 0.25
---- !u!114 &2239384798268538941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3100319315524529836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1543c40c040e9747a182faeddf37a71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  RigSocket: {fileID: 5131845556922806019}
-  RigAnimator: {fileID: 7922491129773521485}
 --- !u!114 &6997791428763886410
 MonoBehaviour:
   m_ObjectHideFlags: 0

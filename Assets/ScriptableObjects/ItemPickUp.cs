@@ -2,25 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SphereCollider))]
+[RequireComponent(typeof(BoxCollider))]
 [RequireComponent(typeof(UniqueID))]
 public class ItemPickUp : MonoBehaviour
 {
     [SerializeField] private float PickUpRadius = 0.25f;
-    [SerializeField] private float _rotationSpeed = 10f;
+    [SerializeField] private float _rotationSpeed = 0f;
     public InventoryItemData ItemData;
 
-    private SphereCollider myCollider;
+    private BoxCollider myCollider;
+    private BoxCollider myCollider2;
     [SerializeField] private ItemPickUpSaveData itemSaveData;
     private string id;
 
     private void Awake()
     {
 
-        myCollider = GetComponent<SphereCollider>();
-        myCollider.radius = PickUpRadius;
+        myCollider = gameObject.AddComponent<BoxCollider>();
         myCollider.isTrigger = true;
 
+        myCollider2= gameObject.AddComponent<BoxCollider>();
+    
 
     }
     private void Start()

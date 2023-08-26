@@ -16,7 +16,16 @@ MonoBehaviour:
   MaxStackSize: 3
   ID: 1
   DisplayName: 
-  Description: 
+  Description: 'Item Level 20
+
+    Binds when picked up
+
+    Use: Drink Me. (3
+    Sec Cooldown)
+
+    Max Stack: 200
+
+    Sell Price: 1 75'
   ItemPrefab: {fileID: 5879215179458826242, guid: 174e0c5903d7cb94c94027d6526999fb, type: 3}
   ItemType: 0
   RigAnimatorController: {fileID: 0}

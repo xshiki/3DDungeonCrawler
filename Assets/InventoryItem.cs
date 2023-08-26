@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 
 
-public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEndDragHandler
 {
     [Header("UI")]
     public Image image;
@@ -17,13 +17,23 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public InventoryItemType myType;
     public int count = 1;
     public int maxStacks = 1;
+    public GameObject itemToolTipPanel;
     [HideInInspector] public Transform parentAfterDrag;
+    private Transform playerTransform;
+    public float dropOffset = 2f;
+
+    private void Awake()
+    {
+        this.itemToolTipPanel = GameObject.Find("ItemToolTip");
+    }
     public void InitialiseItem(InventoryItemData newItem)
     {   
         item = newItem;
         myType = newItem.ItemType;
         maxStacks = item.MaxStackSize;
         image.sprite = newItem.Icon;
+        playerTransform = GameObject.Find("Orientation").GetComponent<Transform>();
+        if (playerTransform == null) Debug.Log("Player not found!");
         Refresh();
     }
 
@@ -47,9 +57,25 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        image.raycastTarget = true;
-        transform.SetParent(parentAfterDrag);
+
+
+        //Drop item out of inventory
+        GameObject dropTarget = eventData.pointerEnter;
+        if (dropTarget.CompareTag("OutSideInventory"))
+        {
+            Debug.Log("destroying dragged item");
+            GameObject prefabInstance = Instantiate(this.item.ItemPrefab, playerTransform.position + playerTransform.forward * dropOffset, Quaternion.identity);
+            prefabInstance.AddComponent<Rigidbody>();
+            Destroy(gameObject); // Destroy the dragged item if dropped outside
+        }
+        else
+        {
+            // Item was dropped inside the inventory, reset position
+            image.raycastTarget = true;
+            transform.SetParent(parentAfterDrag);
+        }
     }
 
-  
+
+   
 }

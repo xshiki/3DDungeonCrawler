@@ -95,7 +95,9 @@ MonoBehaviour:
   myType: 0
   count: 1
   maxStacks: 1
+  itemToolTipPanel: {fileID: 0}
   parentAfterDrag: {fileID: 0}
+  dropOffset: 2
 --- !u!1 &6374850328511002941
 GameObject:
   m_ObjectHideFlags: 0
