@@ -54,10 +54,7 @@ public class UI_CharacterEquipment : MonoBehaviour
 
     public void InitializeEquipment()
     {   
-        foreach(Transform child in socket)
-        {
-            Destroy(child.gameObject);
-        }
+    
         InventoryItemData weaponItem = playerEquipment.GetWeaponItem();
         if(weaponItem!=null) { 
             GameObject weaponObject = Instantiate(weaponItem.ItemPrefab, socket);
