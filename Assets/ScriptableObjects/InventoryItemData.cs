@@ -20,6 +20,7 @@ public class InventoryItemData : ScriptableObject
     public InventoryItemType ItemType;
     public RuntimeAnimatorController RigAnimatorController;
     public int dropChance;
+    public bool consumable;
 
 
     //Make new Script that inherites from inventory item data example weapons

@@ -14,6 +14,18 @@ public class UI_CharacterEquipment : MonoBehaviour
     public PlayerEquipment playerEquipment;
     public Transform socket; //
 
+
+    private void Update()
+    {
+        if (!weaponSlot.GetComponentInChildren<InventoryItem>())
+        {
+            foreach (Transform child in socket)
+            {
+                Destroy(child.gameObject);
+                playerEquipment.SetWeaponItem(null);
+            }
+        }
+    }
     private void Awake()
     {
 
@@ -47,7 +59,9 @@ public class UI_CharacterEquipment : MonoBehaviour
             Destroy(child.gameObject);
         }
         InventoryItemData weaponItem = playerEquipment.GetWeaponItem();
-        if(weaponItem!=null) { Instantiate(weaponItem.ItemPrefab, socket);
+        if(weaponItem!=null) { 
+            GameObject weaponObject = Instantiate(weaponItem.ItemPrefab, socket);
+            weaponObject.layer = 6;
             Debug.Log("weapon instantiated");
         }
     }

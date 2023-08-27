@@ -21,7 +21,7 @@ public class PlayerRessource : MonoBehaviour
 
     void Start()
     {
-        currentHealth =maxHealth; 
+        currentHealth = maxHealth; 
         currentMana = maxMana;
 
     }

@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
     public float followRange = 10f; // Distance at which the enemy starts following the player
     public float attackRange = 1f; // Distance at which the enemy attacks the player
     public float moveSpeed = 3f; // Speed at which the enemy moves towards the player
+    public float pushForce = 5f;
     public int attackDamage = 10; // Amount of damage the enemy deals to the player when attacking
     float attackTimer = 0f; // Timer to track elapsed time between attacks
     float attackInterval = 1f; // Time interval between attacks
@@ -24,11 +25,12 @@ public class EnemyAI : MonoBehaviour
             // Move towards the player
             transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
 
-            // If the distance to the player is less than the attack range, attack the player
-            if (distanceToPlayer < attackRange)
-            {
-                AttackPlayer();
-            }
+        }
+
+        // If the distance to the player is less than the attack range, attack the player
+        else if (distanceToPlayer < attackRange)
+        {
+            AttackPlayer();
         }
     }
 
@@ -49,9 +51,10 @@ public class EnemyAI : MonoBehaviour
 
             // Get the player's Rigidbody component
             Rigidbody playerRigidbody = player.GetComponent<Rigidbody>();
-
+            Vector3 pushDirection = (transform.position - player.position).normalized;
+            Vector3 pushForceVector = pushDirection * pushForce;
             // Apply a force to the player in the opposite direction of the enemy
-            playerRigidbody.AddForce(-player.transform.forward * 1f);
+            playerRigidbody.AddForce(pushForceVector, ForceMode.Impulse);
         }
     }
 }

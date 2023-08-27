@@ -41,6 +41,7 @@ public class Spell : MonoBehaviour
             other.GetComponent<EnemyHealth>().TakeDamage((int) SpellToCast.DamageAmount);
             Destroy(this.gameObject);
         }
+       
 
     }
 }

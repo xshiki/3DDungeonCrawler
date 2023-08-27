@@ -17,15 +17,11 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     public InventoryItemType myType;
     public int count = 1;
     public int maxStacks = 1;
-    public GameObject itemToolTipPanel;
     [HideInInspector] public Transform parentAfterDrag;
     private Transform playerTransform;
+    private Transform playerSocket;
     public float dropOffset = 2f;
-
-    private void Awake()
-    {
-        this.itemToolTipPanel = GameObject.Find("ItemToolTip");
-    }
+  
     public void InitialiseItem(InventoryItemData newItem)
     {   
         item = newItem;
@@ -33,6 +29,7 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
         maxStacks = item.MaxStackSize;
         image.sprite = newItem.Icon;
         playerTransform = GameObject.Find("Orientation").GetComponent<Transform>();
+ 
         if (playerTransform == null) Debug.Log("Player not found!");
         Refresh();
     }
@@ -48,6 +45,8 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
+      
+      
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -57,8 +56,6 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
 
     public void OnEndDrag(PointerEventData eventData)
     {
-
-
         //Drop item out of inventory
         GameObject dropTarget = eventData.pointerEnter;
         if (dropTarget.CompareTag("OutSideInventory"))

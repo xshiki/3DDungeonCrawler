@@ -8,10 +8,15 @@ public class PlayerEquipment : MonoBehaviour
 
 
     public event EventHandler OnEquipmentChanged;
+    [SerializeField]
     private InventoryItemData weaponItem;
+    [SerializeField]
     private InventoryItemData helmetItem;
+    [SerializeField]
     private InventoryItemData chestItem;
+    [SerializeField]
     private InventoryItemData pantsItem;
+    [SerializeField]
     private InventoryItemData bootsItem;
    
 
@@ -22,9 +27,11 @@ public class PlayerEquipment : MonoBehaviour
     public InventoryItemData GetBootsItem() {  return bootsItem; }  
     
 
-    public void SetWeaponItem(InventoryItemData weaponItem) { 
+    public void SetWeaponItem(InventoryItemData weaponItem) {
+    
         this.weaponItem = weaponItem;
         OnEquipmentChanged?.Invoke(this, EventArgs.Empty);
+        Debug.Log("weapon changed");
     }
     public void SetHelmetItem(InventoryItemData helmetItem) {
         this.helmetItem = helmetItem;

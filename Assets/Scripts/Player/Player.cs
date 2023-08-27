@@ -11,24 +11,19 @@ public class Player : MonoBehaviour
     public GameObject playerInventory;
     public Button exitInventoryButton;
     public FirstPersonController firstPersonController;
+
     // Start is called before the first frame update
     [SerializeField]
-    private InputActionReference openInventory;
-    void Start()
+    private InputActionReference openInventory, hotbarSelection;
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-        
+      
     }
 
     private void OnEnable()
     {
         openInventory.action.performed += OpenInventory;
+        hotbarSelection.action.performed += UseItem;
         
     }
 
@@ -37,9 +32,24 @@ public class Player : MonoBehaviour
     private void OnDisable()
     {
         openInventory.action.performed -= OpenInventory;
+        hotbarSelection.action.performed -= UseItem;
     }
 
-  
+    private void UseItem(InputAction.CallbackContext context)
+    {
+        /*
+        
+        InventoryItemData selectedItem = InventoryManager.Instance.GetSelectedItem(true);
+        if(selectedItem != null)
+        {
+            if (selectedItem.consumable)
+            {
+                selectedItem.UseItem();
+            }
+        }
+        */
+
+    }
     private void OpenInventory(InputAction.CallbackContext context)
     {
         if (playerInventory.activeInHierarchy)
