@@ -12,14 +12,5 @@ public class SpellScriptableObject : InventoryItemData
     public float DamageAmount = 10f;
     public float timeBetweenCast = 1f;
     public float SpellRadius = 0.5f;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

@@ -53,12 +53,10 @@ public class ItemPickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var inventory = other.GetComponentInChildren<InventoryManager>();
-        Debug.Log("triggered");
         if (!inventory) return;
-        Debug.Log("didnt return");
         if (inventory.AddItem(ItemData))
         {
-            Debug.Log("item added");
+            Debug.Log(ItemData.DisplayName +" added to inventory");
             Destroy(this.gameObject);
         }
       

@@ -1222,6 +1222,7 @@ Transform:
   - {fileID: 5142424477826790454}
   - {fileID: 3899235297148745259}
   - {fileID: 7864509724216668033}
+  - {fileID: 49169103220623208}
   m_Father: {fileID: 3559502355978472821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4071075499176215203
@@ -2265,12 +2266,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6977475161004107462}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.013, y: 0.051, z: -0.064}
+  m_LocalRotation: {x: -0.014907645, y: 0.446849, z: -0.46175116, w: 0.76608723}
+  m_LocalPosition: {x: -0.011561626, y: 0.09158692, z: -0.051902696}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7864509724216668033}
+  m_Father: {fileID: 4771940062719650353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7376316970115208294
 GameObject:
@@ -2365,7 +2366,6 @@ Transform:
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 49169103220623208}
   - {fileID: 4058611639733220607}
   m_Father: {fileID: 4771940062719650353}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2451,7 +2451,6 @@ GameObject:
   - component: {fileID: 7102124634174402953}
   - component: {fileID: 5968339110479365163}
   - component: {fileID: 2337099822115510216}
-  - component: {fileID: 1036773602192144624}
   - component: {fileID: 2775470175213947681}
   - component: {fileID: 3455261981277726761}
   - component: {fileID: 1859365142829128462}
@@ -2776,21 +2775,6 @@ MonoBehaviour:
   _playerRessource: {fileID: 7102124634174402953}
   _castPoint: {fileID: 4220275039775698225}
   timeBetweenCast: 0.5
---- !u!114 &1036773602192144624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7827219508009895623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 338c1c0f81c48da409c69001ed34c489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weaponToUse: {fileID: 0}
-  _castPoint: {fileID: 4220275039775698225}
-  timeBetweenSwing: 0.25
 --- !u!114 &2775470175213947681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2863,6 +2847,8 @@ MonoBehaviour:
   firstPersonController: {fileID: 1907379281537677220}
   openInventory: {fileID: -8058832391077122349, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
   hotbarSelection: {fileID: -6332451638518686388, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
+  playerEquipment: {fileID: 0}
+  weaponHolderPosition: {fileID: 0}
 --- !u!114 &1859365142829128462
 MonoBehaviour:
   m_ObjectHideFlags: 0

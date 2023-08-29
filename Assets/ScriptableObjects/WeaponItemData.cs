@@ -11,7 +11,9 @@ public class WeaponItemData : InventoryItemData
     public enum Weapons { Sword, Axe, Polearm, Zweihander, Staff };
     public Weapons WeaponType;
     public int DamageAmount;
-    
+    public float WeaponRange = 1f;
+    [SerializeField]
+    public WeaponController weaponController;
     public override void UseItem()
     {
        

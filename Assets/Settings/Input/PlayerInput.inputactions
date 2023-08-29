@@ -51,15 +51,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Use Item",
-                    "type": "Button",
-                    "id": "12c8823f-a864-4857-8ad7-e46091416aa4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Dash",
                     "type": "Button",
                     "id": "0a7bab18-a22c-4991-9fe4-284cd96ce3e1",
@@ -81,6 +72,15 @@
                     "name": "Open Inventory",
                     "type": "Button",
                     "id": "82b9fec8-088c-4822-8ca7-77a9aabe85b6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "238cfc5b-3d7f-485c-8d45-8ae1131e36e8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -233,17 +233,6 @@
                 },
                 {
                     "name": "",
-                    "id": "52056ab7-0aee-4ff3-acbc-750a15e9de17",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Use Item",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "5d02d2cc-1191-4bd4-9c6a-9baef2255032",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
@@ -283,6 +272,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Open Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bdb43e12-c3ea-4680-ac8d-74720dd9be9a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

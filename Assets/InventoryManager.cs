@@ -89,7 +89,6 @@ public class InventoryManager : MonoBehaviour
 
         if (itemInSlot != null)
         {
-            Debug.Log(itemInSlot.item.DisplayName);
             if (use == true && itemInSlot.item.consumable)
             {            
                 itemInSlot.item.UseItem();

@@ -24,13 +24,13 @@ public class EnemyAI : MonoBehaviour
         {
             // Move towards the player
             transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-
+            AttackPlayer();
         }
 
         // If the distance to the player is less than the attack range, attack the player
         else if (distanceToPlayer < attackRange)
         {
-            AttackPlayer();
+           
         }
     }
 

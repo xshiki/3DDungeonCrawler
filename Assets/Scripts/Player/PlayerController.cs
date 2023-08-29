@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public GameObject playerInventory;
     public Button exitInventoryButton;
@@ -15,26 +15,51 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private InputActionReference openInventory, hotbarSelection;
+    [SerializeField]
+    private PlayerInput playerInput;
+    PlayerInput.PlayerActions input;
+
+    [Header("Equipment")]
+    public PlayerEquipment playerEquipment;
+
+    [Header("Weapon")]
+    public Transform weaponHolderPosition;
+    public WeaponController currentWeapon;
     private void Awake()
     {
-      
+      playerInput = new PlayerInput();
+      input = playerInput.Player;
+      AssignInputs();
     }
 
     private void OnEnable()
-    {
-        openInventory.action.performed += OpenInventory;
-        hotbarSelection.action.performed += UseItem;
-        
+    {   
+        input.Enable();
+ 
     }
 
-   
 
     private void OnDisable()
     {
+        input.Disable();
         openInventory.action.performed -= OpenInventory;
         hotbarSelection.action.performed -= UseItem;
+        input.Attack.performed -= OnAttackPerformed;
+    }
+    void AssignInputs()
+    {
+        openInventory.action.performed += OpenInventory;
+        hotbarSelection.action.performed += UseItem;
+        input.Attack.performed += OnAttackPerformed;
     }
 
+
+    public void SetCurrentWeapon(WeaponController equippedWeapon)
+    {
+
+        this.currentWeapon = equippedWeapon;
+    }
+  
     private void UseItem(InputAction.CallbackContext context)
     {
         /*
@@ -49,6 +74,26 @@ public class Player : MonoBehaviour
         }
         */
 
+    }
+
+
+    private void OnAttackPerformed(InputAction.CallbackContext context)
+    {
+        if (currentWeapon != null)
+        {   if(currentWeapon is WeaponController)
+            {
+                currentWeapon.swingWeapon();
+            }
+            if (currentWeapon is MagicWeaponController)
+            {
+                MagicWeaponController magicWeapon = currentWeapon as MagicWeaponController;
+                magicWeapon.CastSpell();
+            }
+        }
+        else
+        {
+            Debug.Log("No weapon equipped!");
+        }
     }
     private void OpenInventory(InputAction.CallbackContext context)
     {

@@ -15,7 +15,7 @@ public class PlayerWeaponSystem : MonoBehaviour
 
     private bool swingingWeapon = false;
     private PlayerInput playerInput;
-
+    
     void Awake()
     {
         playerInput = new PlayerInput();

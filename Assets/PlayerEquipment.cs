@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerEquipment : MonoBehaviour
 {
-
-
     public event EventHandler OnEquipmentChanged;
     [SerializeField]
     private InventoryItemData weaponItem;
@@ -24,8 +22,8 @@ public class PlayerEquipment : MonoBehaviour
     public InventoryItemData GetHelmetItem() {  return helmetItem; }   
     public InventoryItemData GetChestItem() {  return chestItem; }  
     public InventoryItemData GetPantsItem() {  return pantsItem; }  
-    public InventoryItemData GetBootsItem() {  return bootsItem; }  
-    
+    public InventoryItemData GetBootsItem() {  return bootsItem; }
+
 
     public void SetWeaponItem(InventoryItemData weaponItem) {
     
