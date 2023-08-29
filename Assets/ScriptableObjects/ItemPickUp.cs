@@ -57,6 +57,7 @@ public class ItemPickUp : MonoBehaviour
         if (inventory.AddItem(ItemData))
         {
             Debug.Log(ItemData.DisplayName +" added to inventory");
+            NotificationManager.Instance.SetNewNotification("Picked up "+ItemData.DisplayName);
             Destroy(this.gameObject);
         }
       

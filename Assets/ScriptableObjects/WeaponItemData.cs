@@ -12,8 +12,7 @@ public class WeaponItemData : InventoryItemData
     public Weapons WeaponType;
     public int DamageAmount;
     public float WeaponRange = 1f;
-    [SerializeField]
-    public WeaponController weaponController;
+
     public override void UseItem()
     {
        
