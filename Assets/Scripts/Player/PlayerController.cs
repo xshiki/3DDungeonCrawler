@@ -19,6 +19,14 @@ public class PlayerController : MonoBehaviour
     private PlayerInput playerInput;
     PlayerInput.PlayerActions input;
 
+    [Header("Animation")]
+    public Animator animator;
+    public const string IDLE = "Idle";
+    public const string WALK = "Walk";
+
+    string currentAnimationState;
+
+
     [Header("Equipment")]
     public PlayerEquipment playerEquipment;
 
@@ -28,9 +36,20 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
       playerInput = new PlayerInput();
+      animator = GetComponentInChildren<Animator>();
       input = playerInput.Player;
       AssignInputs();
     }
+
+
+    private void Update()
+    {
+        SetAnimations();
+    }
+
+
+
+
 
     private void OnEnable()
     {   
@@ -43,13 +62,66 @@ public class PlayerController : MonoBehaviour
     {
         input.Disable();
         openInventory.action.performed -= OpenInventory;
-        hotbarSelection.action.performed -= UseItem;
+        //hotbarSelection.action.performed -= UseItem;
         input.Attack.performed -= OnAttackPerformed;
     }
+
+
+    void SetAnimations()
+    { 
+
+        
+        Rigidbody playerRb = GetComponent<Rigidbody>();
+        Vector3 velocity = playerRb.velocity;
+        if (currentWeapon == null)
+        {
+             if (velocity.magnitude == 0)
+            {
+                ChangeAnimationState(IDLE);
+            }
+            else
+            {
+                ChangeAnimationState(WALK);
+            }
+        }else if(!currentWeapon.isAttacking)
+        {
+            if (velocity.magnitude == 0)
+            {
+                ChangeAnimationState(IDLE);
+            }
+            else
+            {
+                ChangeAnimationState(WALK);
+            }
+        }
+       
+
+
+
+    }
+
+    public void ChangeAnimationState(string newState)
+    {
+        // STOP THE SAME ANIMATION FROM INTERRUPTING WITH ITSELF //
+        if (currentAnimationState == newState) return;
+
+        // PLAY THE ANIMATION //
+        currentAnimationState = newState;
+        animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
+    }
+
+
+
+
+
+
+
+
+
     void AssignInputs()
     {
         openInventory.action.performed += OpenInventory;
-        hotbarSelection.action.performed += UseItem;
+        //hotbarSelection.action.performed += UseItem;
         input.Attack.performed += OnAttackPerformed;
     }
 
@@ -59,23 +131,9 @@ public class PlayerController : MonoBehaviour
 
         this.currentWeapon = equippedWeapon;
     }
-  
-    private void UseItem(InputAction.CallbackContext context)
-    {
-        /*
-        
-        InventoryItemData selectedItem = InventoryManager.Instance.GetSelectedItem(true);
-        if(selectedItem != null)
-        {
-            if (selectedItem.consumable)
-            {
-                selectedItem.UseItem();
-            }
-        }
-        */
 
-    }
-
+    public void PlayAnimation(string newState)
+    { animator.Play(newState); }
 
     private void OnAttackPerformed(InputAction.CallbackContext context)
     {
@@ -83,6 +141,7 @@ public class PlayerController : MonoBehaviour
         {   if(currentWeapon is WeaponController)
             {
                 currentWeapon.swingWeapon();
+              
             }
             if (currentWeapon is MagicWeaponController)
             {

@@ -15,9 +15,9 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 285a2a385312d8d4096e02523eb7e8e0, type: 3}
   MaxStackSize: 1
   ID: -1
-  DisplayName: Iron_Sword
+  DisplayName: Iron Sword
   Description: 
-  ItemPrefab: {fileID: 7062418476363713865, guid: 1baf1109884e7f346a04d7398183cf73, type: 3}
+  ItemPrefab: {fileID: 7062418476363713865, guid: 3b8c20bfba007c5469cdd582865ce4f7, type: 3}
   ItemType: 5
   RigAnimatorController: {fileID: 0}
   dropChance: 0
@@ -25,4 +25,6 @@ MonoBehaviour:
   WeaponType: 0
   DamageAmount: 20
   WeaponRange: 1
-  weaponController: {fileID: 1099358919869512210, guid: 1baf1109884e7f346a04d7398183cf73, type: 3}
+  weaponSwingSound: {fileID: 8300000, guid: 7923190c5e80b4d4d9396acc5d0b48cf, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: 11245d3945c564b45a1bafad5ecb70e5, type: 3}
+  hitEffect: {fileID: 0}

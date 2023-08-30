@@ -12,7 +12,6 @@ public class SceneLoader : MonoBehaviour
     public Image LoadingBarFill;
     public void LoadScene()
     {
-        Debug.Log("was here");
         StartCoroutine(LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1));
 
     }

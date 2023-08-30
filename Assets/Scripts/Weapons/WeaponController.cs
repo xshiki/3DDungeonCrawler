@@ -15,8 +15,12 @@ public class WeaponController : MonoBehaviour
     public PlayerEquipment playerEquipment;
 
     [SerializeField] private Transform playerOrientation;
-    [SerializeField] private float timeBetweenSwing = 0.25f;
-    private bool swingingWeapon = false;
+    [SerializeField] private float timeBetweenSwing = 0.5f;
+    private bool attacking = false;
+    public bool isAttacking => attacking;
+
+    public const string ATTACK1 = "Attack 1";
+    public const string ATTACK2 = "Attack 2";
 
     private void Awake()
     {
@@ -34,12 +38,22 @@ public class WeaponController : MonoBehaviour
     {
 
         Debug.Log("swinging WEapon");
+        if(attacking) { return; }
+        attacking = true;
         playerOrientation = GameObject.Find("Orientation").transform;
+        Invoke(nameof(ResetAttack), timeBetweenSwing);
         AttackRaycast();
+        audioSource.PlayOneShot(weaponData.weaponSwingSound);
+        playerController.PlayAnimation(ATTACK1);
+        playerController.PlayAnimation(ATTACK2);
 
     }
-    
 
+    void ResetAttack()
+    {
+        attacking = false;
+     
+    }
     public void AttackRaycast()
     {
         RaycastHit[] hits;
@@ -64,6 +78,7 @@ public class WeaponController : MonoBehaviour
         if (hit.collider.GetComponent<EnemyHealth>())
         {
             hit.collider.GetComponent<EnemyHealth>().TakeDamage(weaponData.DamageAmount);
+            audioSource.PlayOneShot(weaponData.weaponHitSound);
         }
     }
 }

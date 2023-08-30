@@ -11,13 +11,17 @@ public class PlayerRessource : MonoBehaviour
     public float currentHealth;
     public float healthPercent => currentHealth / maxHealth;
 
+
+    [Header("Mana")]
     public float maxMana = 100; // Maximum ressource of the player
     public float currentMana; // Current ressource of the player
     public float currentManaPercent => currentMana / maxMana;
     [SerializeField] private float manaRechargeRate = 2f;
     [SerializeField] private float manaRechargeDelay = 1f;
-
     private float currentManaDelayCounter;
+
+
+   
 
     void Start()
     {

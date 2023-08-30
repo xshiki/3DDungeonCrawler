@@ -8,11 +8,21 @@ public class WeaponItemData : InventoryItemData
 {
 
 
-    public enum Weapons { Sword, Axe, Polearm, Zweihander, Staff };
+
+    [Header("Weapon Attributes")]
     public Weapons WeaponType;
     public int DamageAmount;
     public float WeaponRange = 1f;
+    public enum Weapons { Sword, Axe, Polearm, Staff };
+   
 
+    [Header("Audio")]
+    public AudioClip weaponSwingSound;
+    public AudioClip weaponHitSound;
+
+
+    [Header("Effects")]
+    public GameObject hitEffect;
     public override void UseItem()
     {
        

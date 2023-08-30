@@ -15,10 +15,11 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public void OnPointerEnter(PointerEventData eventData)
     {
         InventoryItem hoveredItem = eventData.pointerEnter.GetComponent<InventoryItem>();  
-      
+        
             if (hoveredItem != null)
             {
-                itemToolTipPanel.SetActive(false);
+            Debug.Log("hovered over item");
+                itemToolTipPanel.SetActive(true);
                 itemToolTipPanel.transform.position = hoveredItem.transform.position + toolTipOffset;
                 var tooltip = itemToolTipPanel.GetComponent<ItemToolTipDescription>();
                 tooltip.SetItemName(hoveredItem.item.DisplayName);

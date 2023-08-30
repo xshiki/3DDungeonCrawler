@@ -7,9 +7,15 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100; // Maximum health of the player
     public int currentHealth; // Current health of the player
- 
 
 
+    [SerializeField] public ExperienceManager experienceManager;
+
+
+    private void Awake()
+    {
+      
+    }
     void Start()
     {
         currentHealth = maxHealth; // Set the current health to the maximum health on start
@@ -34,6 +40,8 @@ public class EnemyHealth : MonoBehaviour
         // Add code here to handle death
         //Instantiate(, transform.position, transform.rotation);
         GetComponent<LootTable>().InstantiateLoot(transform.position);
+        experienceManager.AddExperience(10);
+        
         Destroy(gameObject);
     }
 }
