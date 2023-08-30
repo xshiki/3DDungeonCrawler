@@ -21,7 +21,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         Debug.Log("Opening door!");
         interactSucessfull = true;
-        //SceneManager.LoadScene(scene)
+        SceneManager.LoadScene("NewLevel");
     }
 
     bool IInteractable.Interact(InteractScript interactor)

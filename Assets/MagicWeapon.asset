@@ -15,7 +15,7 @@ MonoBehaviour:
   Icon: {fileID: 0}
   MaxStackSize: 0
   ID: -1
-  DisplayName: 
+  DisplayName: Wand
   Description: 
   ItemPrefab: {fileID: 1803715905490690208, guid: 666233e8ab8c8a143824fd8d0ff5ba26, type: 3}
   ItemType: 5
@@ -25,4 +25,6 @@ MonoBehaviour:
   WeaponType: 4
   DamageAmount: 0
   WeaponRange: 1
-  weaponController: {fileID: 5691147692126188201, guid: 666233e8ab8c8a143824fd8d0ff5ba26, type: 3}
+  weaponSwingSound: {fileID: 0}
+  weaponHitSound: {fileID: 0}
+  hitEffect: {fileID: 0}
