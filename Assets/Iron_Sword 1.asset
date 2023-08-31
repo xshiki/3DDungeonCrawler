@@ -17,7 +17,7 @@ MonoBehaviour:
   ID: -1
   DisplayName: Iron Sword
   Description: 
-  ItemPrefab: {fileID: 7062418476363713865, guid: 3b8c20bfba007c5469cdd582865ce4f7, type: 3}
+  ItemPrefab: {fileID: 3241562272574962770, guid: 04be0db222ad81d48a6dbb88a841423e, type: 3}
   ItemType: 5
   RigAnimatorController: {fileID: 0}
   dropChance: 0

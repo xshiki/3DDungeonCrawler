@@ -67,7 +67,7 @@ public class InventoryManager : MonoBehaviour
             if(itemInSlot == null)
             {
                 fillInventorySlot(item,slot);
-                Debug.Log("added" + item.name);
+                //Debug.Log("added" + item.name);
                 return true;
             }
         }

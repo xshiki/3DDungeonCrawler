@@ -26,10 +26,8 @@ public class PlayerEquipment : MonoBehaviour
 
 
     public void SetWeaponItem(InventoryItemData weaponItem) {
-    
         this.weaponItem = weaponItem;
         OnEquipmentChanged?.Invoke(this, EventArgs.Empty);
-        Debug.Log("weapon changed");
     }
     public void SetHelmetItem(InventoryItemData helmetItem) {
         this.helmetItem = helmetItem;

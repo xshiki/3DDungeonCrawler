@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22efe6289b0a3f8469efe0d50714b4b0, type: 3}
+  m_Name: Iron Boots
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: 36277f708c703144a9e4c38c97a361c1, type: 3}
+  MaxStackSize: 0
+  ID: -1
+  DisplayName: 
+  Description: 
+  ItemPrefab: {fileID: 17107275844360107, guid: ff4c5d69bfd655f41840cc94f2faae34, type: 3}
+  ItemType: 4
+  RigAnimatorController: {fileID: 0}
+  dropChance: 0
+  consumable: 0
+  armourAmount: 0
+  healthUp: 0
+  manaUp: 0
+  speedUp: 0
