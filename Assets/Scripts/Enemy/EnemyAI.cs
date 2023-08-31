@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class EnemyAI : MonoBehaviour
     public int attackDamage = 10; // Amount of damage the enemy deals to the player when attacking
     float attackTimer = 0f; // Timer to track elapsed time between attacks
     float attackInterval = 1f; // Time interval between attacks
+
+
+
 
     void Update()
     {
