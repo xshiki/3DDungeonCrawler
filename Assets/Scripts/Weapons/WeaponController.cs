@@ -56,6 +56,8 @@ public class WeaponController : MonoBehaviour
     }
     public void AttackRaycast()
     {
+
+        /*
         RaycastHit[] hits;
 
         hits = Physics.RaycastAll(playerOrientation.transform.position, playerOrientation.transform.forward,weaponData.WeaponRange);
@@ -68,7 +70,29 @@ public class WeaponController : MonoBehaviour
                 HitTarget(hits[i]);
             }
         }
+        */
 
+
+        // Assuming you have a GameObject with BoxCollider components as the weapon's attack hitboxes
+        // Adjust this part according to your setup
+        BoxCollider[] hitboxes = this.GetComponentsInChildren<BoxCollider>();
+
+        foreach (BoxCollider hitbox in hitboxes)
+        {
+            // Perform overlap check with the hitbox
+            Collider[] colliders = Physics.OverlapBox(hitbox.bounds.center, hitbox.bounds.extents, Quaternion.identity);
+
+            foreach (Collider collider in colliders)
+            {
+                if (collider.CompareTag("Enemy"))
+                {
+                    // Assuming you have a script on the enemy objects that handles damage
+                    EnemyHealth enemyHealth = collider.GetComponent<EnemyHealth>();
+                    enemyHealth.TakeDamage(weaponData.DamageAmount); // Call a method on the enemy to apply damage
+                    
+                }
+            }
+        }
     }
 
 

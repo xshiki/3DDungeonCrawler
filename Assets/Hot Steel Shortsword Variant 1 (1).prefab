@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 767215301066432884}
   - component: {fileID: 2301229634319128076}
   - component: {fileID: 6026112587404591865}
-  - component: {fileID: 1670587616100514698}
   - component: {fileID: 3767087115661256894}
   - component: {fileID: 4162697436157114842}
   - component: {fileID: 7662019228780856648}
   - component: {fileID: 2779824855405398747}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hot Steel Shortsword Variant 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,27 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1670587616100514698
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2259618728022246517}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.08591315, y: 0.70050704, z: 0.048273705}
-  m_Center: {x: -0.00000011920929, y: 0.2645697, z: -0.000024930574}
 --- !u!114 &3767087115661256894
 MonoBehaviour:
   m_ObjectHideFlags: 0

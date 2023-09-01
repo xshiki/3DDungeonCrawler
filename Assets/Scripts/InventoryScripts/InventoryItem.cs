@@ -58,11 +58,16 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     {
         //Drop item out of inventory
         GameObject dropTarget = eventData.pointerEnter;
-        if (dropTarget.CompareTag("OutSideInventory"))
+      
+        if (dropTarget != null && dropTarget.CompareTag("OutSideInventory"))
         {
             Debug.Log("destroying dragged item");
-            GameObject prefabInstance = Instantiate(this.item.ItemPrefab, playerTransform.position + playerTransform.forward * dropOffset, Quaternion.identity);
-            prefabInstance.AddComponent<Rigidbody>();
+            for(int i = 0; i < this.count; i++)
+            {
+                GameObject prefabInstance = Instantiate(this.item.ItemPrefab, playerTransform.position + playerTransform.forward * dropOffset, Quaternion.identity);
+                prefabInstance.AddComponent<Rigidbody>();
+            }
+            
             Destroy(gameObject); // Destroy the dragged item if dropped outside
         }
         else

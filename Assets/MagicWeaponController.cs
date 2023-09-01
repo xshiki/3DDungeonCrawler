@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MagicWeaponController : WeaponController
+public class MagicWeaponController : MonoBehaviour
 {
 
-    [SerializeField] private Spell spellToCast;
-    // Start is called before the first frame update
+    public MagicWeaponItemData weaponData;
+    public PlayerController playerController;
+    public PlayerEquipment playerEquipment;
     public PlayerRessource playerRessource;
-    [SerializeField] private Transform _castPoint;
-    [SerializeField] private float timeBetweenCast = 0.25f;
+    public Transform playerTransform;
+    public Spell spellToCast;
+    [SerializeField] public Transform _castPoint;
+    [SerializeField] private float timeBetweenCast = 2.5f;
     private float currentCastTimer;
 
     private bool castingMagic = false;
+    public bool isCasting => castingMagic;
     private PlayerInput playerInput;
 
 
@@ -24,6 +28,9 @@ public class MagicWeaponController : WeaponController
         playerEquipment = FindObjectOfType<PlayerEquipment>();
         playerInput = new PlayerInput();
         playerRessource = FindObjectOfType<PlayerRessource>();
+        spellToCast = weaponData.spellToCast;
+        playerTransform= GameObject.Find("SpellCastPoint").GetComponent<Transform>();
+        _castPoint = playerTransform;
     }
 
     private void OnEnable()
@@ -42,24 +49,25 @@ public class MagicWeaponController : WeaponController
         bool hasEnoughMana = playerRessource.currentMana - spellToCast.SpellToCast.ManaCost > 0f;
         if (!castingMagic && hasEnoughMana)
         {
+           
             castingMagic = true;
             playerRessource.currentMana -= spellToCast.SpellToCast.ManaCost;
             currentCastTimer = 0;
             InstantiateSpell();
             Debug.Log("casting spell");
         }
-        if (castingMagic)
-        {
-            currentCastTimer += Time.deltaTime;
-            if (currentCastTimer > timeBetweenCast)
-            {
-                castingMagic = false;
-            }
+        else { NotificationManager.Instance.SetNewNotification("The ability isn't ready yet.", new Color(255,0,0));
+            return;
         }
+        Invoke(nameof(ResetAttack), timeBetweenCast);
 
     }
 
+    void ResetAttack()
+    {
+        castingMagic = false;
 
+    }
     void InstantiateSpell()
     {
         Instantiate(spellToCast, _castPoint.position, _castPoint.rotation);

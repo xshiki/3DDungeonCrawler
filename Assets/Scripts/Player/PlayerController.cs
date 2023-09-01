@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     [Header("Weapon")]
     public Transform weaponHolderPosition;
     public WeaponController currentWeapon;
+    public MagicWeaponController currentMagicWeapon;
     private void Awake()
     {
       playerInput = new PlayerInput();
@@ -132,24 +133,25 @@ public class PlayerController : MonoBehaviour
         this.currentWeapon = equippedWeapon;
     }
 
+    public void SetCurrentMagicWeapon(MagicWeaponController equippedWeapon)
+    {
+
+        this.currentMagicWeapon = equippedWeapon;
+    }
+
     public void PlayAnimation(string newState)
     { animator.Play(newState); }
 
     private void OnAttackPerformed(InputAction.CallbackContext context)
     {
         if (currentWeapon != null)
-        {   if(currentWeapon is WeaponController)
-            {
-                currentWeapon.swingWeapon();
-              
-            }
-            if (currentWeapon is MagicWeaponController)
-            {
-                MagicWeaponController magicWeapon = currentWeapon as MagicWeaponController;
-                magicWeapon.CastSpell();
-            }
+        {  
+            currentWeapon.swingWeapon();        
         }
-        else
+        else if (currentMagicWeapon != null)
+        {
+            currentMagicWeapon.CastSpell();
+        }
         {
             Debug.Log("No weapon equipped!");
         }

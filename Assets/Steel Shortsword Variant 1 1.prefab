@@ -11,12 +11,11 @@ GameObject:
   - component: {fileID: 2062338850517182144}
   - component: {fileID: 3539793450387633406}
   - component: {fileID: 2295913057224125343}
-  - component: {fileID: 3183293263716706596}
   - component: {fileID: 9068784795853528334}
   - component: {fileID: 7753258415291280493}
   - component: {fileID: 1482299113675946177}
   - component: {fileID: 1902258477945959652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Steel Shortsword Variant 1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,27 +88,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3183293263716706596
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3241562272574962770}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.08591315, y: 0.70050704, z: 0.048273705}
-  m_Center: {x: -0.00000011920929, y: 0.2645697, z: -0.000024930574}
 --- !u!114 &9068784795853528334
 MonoBehaviour:
   m_ObjectHideFlags: 0

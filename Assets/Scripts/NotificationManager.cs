@@ -30,9 +30,6 @@ public class NotificationManager : MonoBehaviour
     private void Awake()
     {
         if(Instance != this) { Destroy(gameObject); }
-
-
-
     }
 
 
@@ -54,9 +51,41 @@ public class NotificationManager : MonoBehaviour
     }
 
 
-    private IEnumerator FadeOutNotification(string message)
+    public void SetNewNotification(string message, Color color)
+    {
+        if (notificationCoroutine != null)
+        {
+
+            StopCoroutine(notificationCoroutine);
+        }
+
+        notificationCoroutine = FadeOutNotification(message,color);
+        StartCoroutine(notificationCoroutine);
+    }
+
+    private IEnumerator FadeOutNotification(string message, Color color)
     {
 
+        notificationText.text = message;
+        float t = 0;
+        while (t < fadeTime)
+        {
+            t += Time.unscaledDeltaTime; //
+            notificationText.color = new Color(color.r,
+                                                color.g,
+                                               color.b,
+                                                Mathf.Lerp(1f, 0f, t / fadeTime));
+            yield return null; //do it over frames
+        }
+
+       
+
+
+
+    }
+    private IEnumerator FadeOutNotification(string message)
+    {
+        notificationText.color = Color.white;
         notificationText.text = message;
         float t = 0;
         while (t < fadeTime)

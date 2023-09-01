@@ -128,11 +128,13 @@ public class UI_CharacterEquipment : MonoBehaviour
 
     private void PlayerEquipment_OnEquipmentChanged(object sender, EventArgs e)
     {
+        Debug.Log(sender);        
         InitializeWeapon();
         InitializeHelmet();
         InitializeChest();
         InitializePants();
         InitializeBoots();
+        
     }
 
     public void InitializeWeapon()
@@ -151,7 +153,14 @@ public class UI_CharacterEquipment : MonoBehaviour
             weaponObject.layer = 6;
             ItemPickUp itemPickUp= weaponObject.GetComponent<ItemPickUp>();
             itemPickUp.enabled = false;
-            playerController.SetCurrentWeapon(weaponObject.GetComponent<WeaponController>());
+            if (weaponObject.GetComponent<WeaponController>())
+            {
+                playerController.SetCurrentWeapon(weaponObject.GetComponent<WeaponController>());
+            }else if (weaponObject.GetComponent<MagicWeaponController>())
+            {
+                playerController.SetCurrentMagicWeapon(weaponObject.GetComponent<MagicWeaponController>());
+            }
+           
             Debug.Log("weapon instantiated");
         }
     }
@@ -170,7 +179,10 @@ public class UI_CharacterEquipment : MonoBehaviour
         if (helmetItem != null)
         {
             GameObject helmetObject = Instantiate(helmetItem.ItemPrefab, helmetSocket);
-            
+            //Once instantiated equipment should only be cosmetic / change playerstats
+            SetLayerRecursively(helmetObject.transform, 9);
+            DisableColliders(helmetObject);
+            DisableScripts(helmetObject);
            
         }
     }
@@ -189,6 +201,9 @@ public class UI_CharacterEquipment : MonoBehaviour
         if (chestItem != null)
         {
             GameObject chestObject = Instantiate(chestItem.ItemPrefab, chestSocket);
+            SetLayerRecursively(chestObject.transform, 9);
+            DisableColliders(chestObject);
+            DisableScripts(chestObject);
           
         }
     }
@@ -205,6 +220,9 @@ public class UI_CharacterEquipment : MonoBehaviour
         if (pantsItem != null)
         {
             GameObject pantsObject = Instantiate(pantsItem.ItemPrefab, pantsSocket);
+            SetLayerRecursively(pantsObject.transform, 9);
+            DisableColliders(pantsObject);
+            DisableScripts (pantsObject);
 
         }
     }
@@ -223,7 +241,49 @@ public class UI_CharacterEquipment : MonoBehaviour
         if (bootsItem != null)
         {
             GameObject bootsObject = Instantiate(bootsItem.ItemPrefab, bootsSocket);
+            SetLayerRecursively(bootsObject.transform, 9);
+            DisableColliders(bootsObject);
+            DisableScripts(bootsObject);
 
         }
     }
+
+
+
+
+    private void DisableColliders(GameObject obj)
+    {
+        Collider[] colliders = obj.GetComponentsInChildren<Collider>(true);
+
+        foreach (Collider collider in colliders)
+        {
+            collider.enabled = false;
+        }
+    }
+
+    private void DisableScripts(GameObject obj)
+    {
+        Behaviour[] scripts = obj.GetComponentsInChildren<Behaviour>(true);
+
+        foreach (Behaviour script in scripts)
+        {
+            if (script != this)
+            {
+                script.enabled = false;
+            }
+        }
+    }
+
+
+
+    private void SetLayerRecursively(Transform transform, int layer)
+    {
+        transform.gameObject.layer = layer;
+
+        foreach (Transform child in transform)
+        {
+            SetLayerRecursively(child, layer);
+        }
+    }
+
 }

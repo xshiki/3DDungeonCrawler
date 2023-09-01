@@ -14,9 +14,9 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        InventoryItem hoveredItem = eventData.pointerEnter.GetComponent<InventoryItem>();  
-        
-            if (hoveredItem != null)
+        InventoryItem hoveredItem = eventData.pointerEnter.GetComponent<InventoryItem>();
+        Debug.Log(hoveredItem);
+        if (hoveredItem != null)
             {
             Debug.Log("hovered over item");
                 itemToolTipPanel.SetActive(true);
