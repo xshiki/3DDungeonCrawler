@@ -7,44 +7,95 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public Transform player; // Reference to the player's transform
-    public float followRange = 10f; // Distance at which the enemy starts following the player
-    public float attackRange = 1f; // Distance at which the enemy attacks the player
+  
     public float moveSpeed = 3f; // Speed at which the enemy moves towards the player
     public float pushForce = 5f;
     public int attackDamage = 10; // Amount of damage the enemy deals to the player when attacking
-    float attackTimer = 0f; // Timer to track elapsed time between attacks
-    float attackInterval = 1f; // Time interval between attacks
 
+    public float timeBetweenAttacks;
+    bool alreadyAttacked = false;
+    public Projectile projectile;
+    public Spell spellToCast;
 
+    public float sightRange, attackRange;
+    public bool playerInSightRange, playerInAttackRange;
+    public LayerMask playerLM;
 
-
-    void Update()
+    private void Awake()
     {
-        // Calculate the distance between the enemy and the player
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-
-        // If the distance to the player is less than the follow range, start following the player
-        if (distanceToPlayer < followRange)
-        {
-            // Move towards the player
-            transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
-            AttackPlayer();
-        }
-
-        // If the distance to the player is less than the attack range, attack the player
-        else if (distanceToPlayer < attackRange)
-        {
-           
-        }
+        player = GameObject.Find("Player").transform;
+     
     }
+
+    void FixedUpdate()
+    {   
+        Collider[] colliders = Physics.OverlapSphere(transform.position, sightRange, playerLM);
+        foreach (Collider col in colliders)
+        {
+            if (col.gameObject == player.gameObject)
+            {   
+                // Player is within detection radius, chase them
+                ChasePlayer();
+                return;
+            }
+        }
+
+
+       
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawSphere(transform.position, sightRange);
+        Gizmos.DrawSphere(transform.position, attackRange);
+
+    }
+    private void ResetAttack()
+    {
+        alreadyAttacked = false;
+    }
+
+
+    private void ChasePlayer()
+    {
+        transform.LookAt(player);
+        transform.position = Vector3.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, attackRange, playerLM);
+
+        foreach (Collider col in colliders)
+        {
+            if (col.gameObject == player.gameObject)
+            {
+                // Player is within detection radius, chase them
+                transform.position += Vector3.zero;
+                AttackPlayer();
+                return;
+            }
+        }
+
+    }
+
+
 
     // Attack the player by reducing their health and knocking them back
     void AttackPlayer()
     {
-        // Increment the attack timer
-        attackTimer += Time.deltaTime;
+       
+      
+        if (!alreadyAttacked)
+        {
 
+            Instantiate(projectile, transform.position, transform.rotation);   
+            alreadyAttacked = true;
+           
+            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+        }
+
+
+
+
+        /*
         // If the attack timer has reached the attack interval
+          attackTimer += Time.deltaTime; 
         if (attackTimer >= attackInterval)
         {
             // Reset the attack timer
@@ -60,6 +111,7 @@ public class EnemyAI : MonoBehaviour
             // Apply a force to the player in the opposite direction of the enemy
             playerRigidbody.AddForce(pushForceVector, ForceMode.Impulse);
         }
+        */
     }
 }
 
