@@ -97,6 +97,7 @@ public class DungeonGenerator : MonoBehaviour
 
     }
 
+
     void MazeGenerator()
     {
         board = new List<Cell>();
@@ -184,7 +185,6 @@ public class DungeonGenerator : MonoBehaviour
         }
         GenerateDungeon();
     }
-
     List<int> CheckNeighbors(int cell)
     {
         List<int> neighbors = new List<int>();
