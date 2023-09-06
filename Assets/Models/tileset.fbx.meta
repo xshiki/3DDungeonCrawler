@@ -1,12 +1,17 @@
 fileFormatVersion: 2
-guid: 80e8334efc426064da2aa7330a3324e7
+guid: 003634df83ecf3147af9eab1b75cabb6
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: color atlas
+    second: {fileID: 2100000, guid: dd2712d48868b4b45856edec4a33745b, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 0
+    materialName: 1
     materialSearch: 1
     materialLocation: 1
   animations:
