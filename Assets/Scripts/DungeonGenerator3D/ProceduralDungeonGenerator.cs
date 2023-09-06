@@ -44,7 +44,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     public KeyCode toggleMapKey = KeyCode.M;
     public bool useBoxColliders = false;
     public bool useLights = false;
-    public bool restoreLights;
+    public bool restoreLights = false;
 
     GameObject overheadCamera, playerCam;
     Color startLightColor = Color.white;
@@ -99,7 +99,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
         //get all connector within container that are not connected //open rooms
 
-        foreach(Connector connector in container.transform.GetComponentsInChildren<Connector>())
+        foreach(Connector connector in container.GetComponentsInChildren<Connector>())
         {
             if (!connector.isConnected)
             {
@@ -115,7 +115,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         for (int b = 0; b < branchCount; b++)
         {   if (availableConnectors.Count > 0)
             {
-                goContainer = new GameObject("Branch" + (b + 1));
+                goContainer = new GameObject("Branch " + (b + 1));
                 container = goContainer.transform;
                 container.SetParent(transform);
                 int availIndex = Random.Range(0, availableConnectors.Count);
@@ -218,7 +218,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         if(hits.Count > 0)
         {
             //hit something other than tielFrom and tileTo
-            if(hits.Exists(x => x.transform!= tileFrom && x.transform != tileTo))
+            if(hits.Exists(x => x.transform != tileFrom && x.transform != tileTo))
             {
                 attempts++;
                 int index = generatedTiles.FindIndex(x => x.tile == tileTo);
@@ -264,6 +264,10 @@ public class ProceduralDungeonGenerator : MonoBehaviour
                         availableConnectors.RemoveAt(availIndex);
                         tileFrom = tileRoot;
                     }  else { return;}
+
+
+
+
                 }else if (container.name.Contains("Main"))
                 {
                         if(myTileFrom.origin != null)
@@ -271,18 +275,20 @@ public class ProceduralDungeonGenerator : MonoBehaviour
                             tileRoot = myTileFrom.origin;
                             tileFrom = tileRoot;
                         }
-                }
-                else if(availableConnectors.Count > 0)
+
+
+
+                }else if(availableConnectors.Count > 0)
                 {
                         int availIndex = Random.Range(0, availableConnectors.Count);
                         tileRoot = availableConnectors[availIndex].transform.parent.parent;
                         availableConnectors.RemoveAt(availIndex);
                         tileFrom = tileRoot;
-                    }
+                 }
 
-
+                      else { return;}
                 }
-                else { return;}
+              
 
 
 
@@ -338,7 +344,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         if(connectFrom == null) { return; }
 
         Transform connectTo = GetRandomConnector(tileTo);
-        if(connectTo == null) { return; };
+        if(connectTo == null) { return; }
 
 
         connectTo.SetParent(connectFrom);
