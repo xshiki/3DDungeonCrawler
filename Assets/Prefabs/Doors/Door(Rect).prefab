@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8143705979756462212}
   - component: {fileID: 7940438554959633547}
   - component: {fileID: 8571342534721992485}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door(Rect)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,10 +205,39 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5688892322716455307, guid: 3200c7559f81a1b4a89f84df239a9260, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6759925178755856650}
   m_SourcePrefab: {fileID: 100100000, guid: 3200c7559f81a1b4a89f84df239a9260, type: 3}
 --- !u!4 &3639660103670222116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3417560855431598730, guid: 3200c7559f81a1b4a89f84df239a9260, type: 3}
   m_PrefabInstance: {fileID: 2157003121630060462}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5988722644585614885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5688892322716455307, guid: 3200c7559f81a1b4a89f84df239a9260, type: 3}
+  m_PrefabInstance: {fileID: 2157003121630060462}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6759925178755856650
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5988722644585614885}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5191f54d2267e9642b3754d8a091a680, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

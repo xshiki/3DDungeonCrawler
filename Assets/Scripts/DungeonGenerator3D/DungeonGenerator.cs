@@ -10,7 +10,7 @@ public class DungeonGenerator : MonoBehaviour
         public bool[] status = new bool[4];
     }
 
-    [System.Serializable]
+    //[System.Serializable]
     public class Rule
     {
         public GameObject room;

@@ -7,7 +7,14 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
+    Animator animator;
+    public bool isExitDoor = false;
 
+
+    void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     public UnityAction<IInteractable> OnInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
     string IInteractable.InterActionPrompt => _prompt;
@@ -21,7 +28,13 @@ public class Door : MonoBehaviour, IInteractable
     {
         Debug.Log("Opening door!");
         interactSucessfull = true;
-        SceneManager.LoadScene("NewLevel");
+        bool isOpen = animator.GetBool("isOpen");
+        animator.SetBool("isOpen", !isOpen);
+        if (isExitDoor)
+        {
+            SceneManager.LoadScene("NewLevel");
+        }
+
     }
 
     bool IInteractable.Interact(InteractScript interactor)

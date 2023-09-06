@@ -8,19 +8,6 @@ using UnityEngine.SceneManagement;
 
 public class ProceduralDungeonGenerator : MonoBehaviour
 {
-    [System.Serializable]
-    public class Tile
-    {
-        public Transform tile;
-        public Transform origin;
-        public Connector connector;
-
-        public Tile(Transform _tile, Transform _origin)
-        {
-            tile = _tile;
-            origin = _origin;
-        }
-    }
 
 
     [Header("Generation options")]
@@ -109,7 +96,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
                 }
             }
         }
-        Debug.Log(availableConnectors.Count);
+     
 
         //branching
         for (int b = 0; b < branchCount; b++)
@@ -145,10 +132,60 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         
         LightReset();
         DestroyBoxColliders();
+        BlockPassages();
+        SpawnDoor();
+
         playerCam.SetActive(true);
 
     }
 
+    void SpawnDoor()
+    {
+        if(doorPercent > 0)
+        {
+            Connector[] allConnectors = transform.GetComponentsInChildren<Connector>();
+            for(int i = 0; i < allConnectors.Length; i++)
+            {
+                Connector myConnector = allConnectors[i];
+                //Spawn door by change if tiles are connected
+                if(myConnector.isConnected)
+                {
+                    int roll = Random.Range(1, 101);
+                    if(roll <= doorPercent)
+                    {
+                        Vector3 halfExtents = new Vector3(myConnector.size.x, 1f, myConnector.size.x);
+                        Vector3 pos = myConnector.transform.position;
+                        Vector3 offset = Vector3.up * 0.5f;
+                        Collider[] hits = Physics.OverlapBox(pos+offset, halfExtents, Quaternion.identity, LayerMask.GetMask("Door"));
+                        if (hits.Length == 0)
+                        {
+                            int doorIndex = Random.Range(0, doorPrefabs.Length);
+                            GameObject door= Instantiate(doorPrefabs[doorIndex], pos, myConnector.transform.rotation, myConnector.transform);
+                            door.name = doorPrefabs[doorIndex].name;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    void BlockPassages()
+    {
+        foreach(Connector connector in transform.GetComponentsInChildren<Connector>())
+        {
+            if (!connector.isConnected)
+            {
+                Vector3 pos = connector.transform.position;
+                int wallIndex = Random.Range(0, blockedPrefabs.Length);
+                GameObject wall = Instantiate(blockedPrefabs[wallIndex], pos, connector.transform.rotation, connector.transform) as GameObject;
+                wall.name = blockedPrefabs[wallIndex].name;
+
+            }
+
+        }
+    }
 
     void LightReset()
     {
@@ -329,11 +366,11 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     {
         
         int index = Random.Range(0, tilePrefabs.Length);
-        Debug.Log(index);
+       
         GameObject tile = Instantiate(tilePrefabs[index], Vector3.zero, Quaternion.identity, container) as GameObject;
         tile.name = tilePrefabs[index].name;
         Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
-        Debug.Log(origin);
+       
         generatedTiles.Add(new Tile(tile.transform, origin));
         return tile.transform;
     }

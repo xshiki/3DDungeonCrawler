@@ -15887,7 +15887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6328423917126821917, guid: 45accb95ce04ff040bce263e403f60ad, type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 2231
+      value: 6327
       objectReference: {fileID: 0}
     - target: {fileID: 6328423917126821917, guid: 45accb95ce04ff040bce263e403f60ad, type: 3}
       propertyPath: m_projectionMatrixMode
@@ -16389,8 +16389,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8761556370711339025, guid: 394157a102f57a7459442df7c50f447c, type: 3}
       propertyPath: roomCount
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8761556370711339025, guid: 394157a102f57a7459442df7c50f447c, type: 3}
+      propertyPath: doorPercent
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761556370711339025, guid: 394157a102f57a7459442df7c50f447c, type: 3}
+      propertyPath: doorPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761556370711339025, guid: 394157a102f57a7459442df7c50f447c, type: 3}
+      propertyPath: doorPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 2997971498207854040, guid: cf7b3397e14b7584fa069bd858438ac1, type: 3}
+    - target: {fileID: 8761556370711339025, guid: 394157a102f57a7459442df7c50f447c, type: 3}
+      propertyPath: doorPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 2997971498207854040, guid: 1ad0f4f8f4688f24f82bea5af684a1d6, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
