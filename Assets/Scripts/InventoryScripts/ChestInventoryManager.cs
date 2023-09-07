@@ -12,7 +12,13 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     public string InterActionPrompt => _prompt;
     [SerializeField] public GameObject dynamicInventoryUI;
 
-   
+
+
+    private void Awake()
+    {
+        PlayerInventory = GameObject.Find("PlayerUI");
+        firstPersonController= GameObject.Find("Player").GetComponent<FirstPersonController>();
+    }
     public UnityAction<IInteractable> OnInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
     public void EndInteraction()
@@ -30,7 +36,8 @@ public class ChestInventoryManager : InventoryManager, IInteractable
         if (!dynamicInventoryUI.activeInHierarchy)
         {
             dynamicInventoryUI.SetActive(true);
-            PlayerInventory.SetActive(true);
+            Transform inventory = PlayerInventory.transform.Find("PlayerInventory");
+            inventory.gameObject.SetActive(true);
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             firstPersonController.enabled = false;
@@ -39,7 +46,8 @@ public class ChestInventoryManager : InventoryManager, IInteractable
         else
         {
             dynamicInventoryUI.SetActive(false);
-            PlayerInventory.SetActive(false);
+            Transform inventory = PlayerInventory.transform.Find("PlayerInventory");
+            inventory.gameObject.SetActive(false);
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             firstPersonController.enabled = true;

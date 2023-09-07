@@ -6,8 +6,19 @@ using UnityEngine;
 public class PlayerRespawn : MonoBehaviour
 {
     public Transform respawnPoint; // The location where the player will respawn
-    public PlayerHealth playerHealth; // Reference to the player's health script
+    public PlayerRessource playerHealth; // Reference to the player's health script
+    public GameObject Player;
 
+
+
+    private void Awake()
+    {
+        Player = GameObject.Find("Player");
+        respawnPoint = transform;
+        playerHealth = Player.GetComponent<PlayerRessource>();
+        Player.transform.position = respawnPoint.position;
+
+    }
     void Update()
     {
         // If the player's health is 0 or below and they are not already respawning

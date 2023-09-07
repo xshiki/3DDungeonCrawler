@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(UniqueID))]
 public class ItemPickUp : MonoBehaviour
 {
-    [SerializeField] private float PickUpRadius = 0.25f;
+    //[SerializeField] private float PickUpRadius = 0.25f;
     [SerializeField] private float _rotationSpeed = 0f;
     public InventoryItemData ItemData;
 

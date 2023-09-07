@@ -6,32 +6,36 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using UnityEngine.SceneManagement;
 
+
+public enum DungeonState { inactive, generatingMain, generatingBranches, cleanup, completed}
 public class ProceduralDungeonGenerator : MonoBehaviour
 {
 
-
+   
     [Header("Generation options")]
-    public GameObject[] startPrefabs; //Playerspawn room
-    public GameObject[] tilePrefabs;
-    public GameObject[] blockedPrefabs;
-    public GameObject[] doorPrefabs;
-    public GameObject[] exitPrefabs;
-    [Range(10,100)] public int roomCount = 10;
-    [Range(0,50)] public int branchCount = 10;
-    [Range(0,50)] public int branchLength = 5;
-    [Range(0, 100)] public int doorPercent = 25;
-    [Range(0, 1f)] public float constructionDelay = 0.1f;
+    [SerializeField]  public GameObject[] startPrefabs; //Playerspawn room
+    [SerializeField]  public GameObject[] tilePrefabs;
+    [SerializeField] public GameObject[] blockedPrefabs;
+    [SerializeField] public GameObject[] doorPrefabs;
+    [SerializeField] public GameObject[] exitPrefabs;
+    [SerializeField][Range(10,100)] public int roomCount = 10;
+    [SerializeField][Range(0,50)] public int branchCount = 10;
+    [SerializeField][Range(0,50)] public int branchLength = 5;
+    [SerializeField][Range(0, 100)] public int doorPercent = 25;
+    [SerializeField][Range(0, 1f)] public float constructionDelay = 0.1f;
 
+
+    public DungeonState dungeonState = DungeonState.inactive;
     public List<Tile> generatedTiles = new List<Tile>();
     public List<Connector> availableConnectors = new List<Connector>(); 
-
+    
     [Header("Debugging Options")]
-    public bool debugGenerate = false;
-    public KeyCode reloadKey = KeyCode.Space;
-    public KeyCode toggleMapKey = KeyCode.M;
-    public bool useBoxColliders = false;
-    public bool useLights = false;
-    public bool restoreLights = false;
+    [SerializeField] public bool debugGenerate = false;
+    [SerializeField] public KeyCode reloadKey = KeyCode.Space;
+    [SerializeField] public KeyCode toggleMapKey = KeyCode.M;
+    [SerializeField] public bool useBoxColliders = false;
+    [SerializeField] public bool useLights = false;
+    [SerializeField] public bool restoreLights = false;
 
     GameObject overheadCamera, playerCam;
     Color startLightColor = Color.white;
@@ -44,7 +48,8 @@ public class ProceduralDungeonGenerator : MonoBehaviour
   
     void Start()
     {
-        //overheadCamera = GameObject.Find("OverheadCamera");
+        overheadCamera = GameObject.Find("OverheadCamera");
+        overheadCamera.SetActive(false);
         playerCam = GameObject.FindWithTag("Player");
         StartCoroutine(DungeonGenerator());
        
@@ -64,6 +69,11 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     }
     IEnumerator DungeonGenerator()
     {
+
+
+
+
+
         //playerCam.SetActive(false);
         //overheadCamera.SetActive(true);
         GameObject goContainer = new GameObject("Main Path");
@@ -72,17 +82,31 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         tileRoot = CreateStartTile();
         DebugRoomLighting(tileRoot, Color.blue);
         tileTo = tileRoot;
-        for (int i = 0; i < roomCount-1; i++)
+        dungeonState = DungeonState.generatingMain;
+
+        while(generatedTiles.Count < roomCount)
         {
             yield return new WaitForSeconds(constructionDelay);
             tileFrom = tileTo;
-            tileTo = CreateTile();
+            if(generatedTiles.Count == roomCount-1) {
+                //create exit room as the last room in main branch
+                tileTo = CreateExitTile();
+                DebugRoomLighting(tileTo, Color.magenta);
+            }
+            else
+            {
+                tileTo = CreateTile();
+                DebugRoomLighting(tileTo, Color.yellow);
+            }
+          
 
-            DebugRoomLighting(tileTo, Color.yellow);
+            
             ConnectTiles();
             CollisionCheck();
-            if (attempts >= maxAttempts) { break; }
+           
         }
+
+      
 
         //get all connector within container that are not connected //open rooms
 
@@ -96,9 +120,10 @@ public class ProceduralDungeonGenerator : MonoBehaviour
                 }
             }
         }
-     
+
 
         //branching
+        dungeonState = DungeonState.generatingBranches;
         for (int b = 0; b < branchCount; b++)
         {   if (availableConnectors.Count > 0)
             {
@@ -129,11 +154,14 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         }
 
         //overheadCamera.SetActive(false);
-        
+        dungeonState = DungeonState.cleanup;
         LightReset();
         DestroyBoxColliders();
         BlockPassages();
         SpawnDoor();
+
+        yield return null; //wait 1 frame
+        dungeonState = DungeonState.completed;
 
         playerCam.SetActive(true);
 
@@ -336,10 +364,20 @@ public class ProceduralDungeonGenerator : MonoBehaviour
                 //retry
                 if (tileFrom != null)
                 {
+                    if (generatedTiles.Count == roomCount - 1)
+                    {
 
-                    tileTo = CreateTile();
-                    Color retryColor = container.name.Contains("Branch") ? Color.green : Color.yellow;
-                    DebugRoomLighting(tileTo, retryColor * 2f);
+                        //create exit room as the last room in main branch
+                        tileTo = CreateExitTile();
+                        DebugRoomLighting(tileTo, Color.magenta);
+                    }
+                    else
+                    {
+                        tileTo = CreateTile();
+                        Color retryColor = container.name.Contains("Branch") ? Color.green : Color.yellow;
+                        DebugRoomLighting(tileTo, retryColor * 2f);
+                    }
+            
                     ConnectTiles();
                     CollisionCheck();
                 }
@@ -371,6 +409,19 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         tile.name = tilePrefabs[index].name;
         Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
        
+        generatedTiles.Add(new Tile(tile.transform, origin));
+        return tile.transform;
+    }
+
+    Transform CreateExitTile()
+    {
+
+        int index = Random.Range(0, exitPrefabs.Length);
+
+        GameObject tile = Instantiate(exitPrefabs[index], Vector3.zero, Quaternion.identity, container) as GameObject;
+        tile.name = "Exit Room";
+        Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
+
         generatedTiles.Add(new Tile(tile.transform, origin));
         return tile.transform;
     }
