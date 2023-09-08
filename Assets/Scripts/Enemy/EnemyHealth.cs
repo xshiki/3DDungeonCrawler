@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth = 100; // Maximum health of the player
-    public int currentHealth; // Current health of the player
+    public int maxHealth = 100; // Maximum health of the enemy
+    public int currentHealth = 10; // Current health of the enemy
 
 
     [SerializeField] public ExperienceManager experienceManager;
@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Awake()
     {
-      
+      experienceManager = GameObject.Find("PlayerExpBarUI").GetComponent<ExperienceManager>();
     }
     void Start()
     {

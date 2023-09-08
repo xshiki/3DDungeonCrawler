@@ -37,6 +37,8 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     [SerializeField] public bool useLights = false;
     [SerializeField] public bool restoreLights = false;
 
+
+    public BakeNavMesh navMesh;
     GameObject overheadCamera, playerCam;
     Color startLightColor = Color.white;
 
@@ -162,7 +164,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
         yield return null; //wait 1 frame
         dungeonState = DungeonState.completed;
-
+        navMesh.BuildNavMesh();
         playerCam.SetActive(true);
 
     }

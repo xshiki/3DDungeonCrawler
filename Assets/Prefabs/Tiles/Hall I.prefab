@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Connector
       objectReference: {fileID: 0}
+    - target: {fileID: 5096416249727261372, guid: a3c32c6a1a376b94988f385373cf9b25, type: 3}
+      propertyPath: size.x
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8476877973339290520, guid: a3c32c6a1a376b94988f385373cf9b25, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
