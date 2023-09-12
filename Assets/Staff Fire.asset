@@ -20,7 +20,7 @@ MonoBehaviour:
   ItemPrefab: {fileID: 1532277902221668490, guid: 1752a269a4f105e4eb6842b98c5f5dc5, type: 3}
   ItemType: 5
   RigAnimatorController: {fileID: 0}
-  dropChance: 0
+  dropChance: 20
   consumable: 0
   WeaponType: 3
   DamageAmount: 0

@@ -11,7 +11,7 @@ public class LootTable : MonoBehaviour
         //lootList.add
     }
 
-    InventoryItemData getDroppedItem()
+    public InventoryItemData getDroppedItem()
     {
         int rndNumber = Random.Range(1, 101);
         List<InventoryItemData> possibleItems = new List<InventoryItemData>();  

@@ -111,7 +111,7 @@ public class InventoryManager : MonoBehaviour
 
         return null;
     }
-    void fillInventorySlot(InventoryItemData item, InventorySlot slot)
+    public void fillInventorySlot(InventoryItemData item, InventorySlot slot)
     {
         GameObject newItemGo = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGo.GetComponent<InventoryItem>();

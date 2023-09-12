@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
+using static UnityEditor.Progress;
 
 public class ChestInventoryManager : InventoryManager, IInteractable
 {
@@ -11,13 +13,37 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     [SerializeField] public FirstPersonController firstPersonController;
     public string InterActionPrompt => _prompt;
     [SerializeField] public GameObject dynamicInventoryUI;
+    [SerializeField] public List<InventoryItemData> lootList = new List<InventoryItemData>();
+    [SerializeField] public LootTable lootTable;
 
+    
 
 
     private void Awake()
     {
         PlayerInventory = GameObject.Find("PlayerUI");
         firstPersonController= GameObject.Find("Player").GetComponent<FirstPersonController>();
+        lootTable = GetComponent<LootTable>();  
+        lootList = lootTable.lootList;
+
+        fillChest();
+    }
+
+
+    void fillChest()
+    {
+      
+        foreach(InventorySlot slot in inventorySlots)
+        {
+            InventoryItemData randomItem = lootTable.getDroppedItem();
+
+            if(randomItem != null)
+            {
+                fillInventorySlot(randomItem, slot);
+            }
+           
+
+        }
     }
     public UnityAction<IInteractable> OnInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 

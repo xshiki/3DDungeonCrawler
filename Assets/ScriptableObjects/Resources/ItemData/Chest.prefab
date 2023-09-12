@@ -118,7 +118,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b44284d3f813d848870976aedba1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hotbarSelection: {fileID: 0}
   inventorySlots: []
   inventoryItemPrefab: {fileID: 4137360915437024575, guid: 6e557d9133b2f464e9805037439a7308, type: 3}
   InventorySize: 10
   _prompt: Open Chest
+  PlayerInventory: {fileID: 0}
+  firstPersonController: {fileID: 0}
+  dynamicInventoryUI: {fileID: 0}
+  lootList: []
+  lootTable: {fileID: 0}
