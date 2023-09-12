@@ -15,6 +15,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     [Header("Generation options")]
     [SerializeField]  public GameObject[] startPrefabs; //Playerspawn room
     [SerializeField]  public GameObject[] tilePrefabs;
+    [SerializeField] public GameObject[] hallwayPrefabs;
     [SerializeField] public GameObject[] blockedPrefabs;
     [SerializeField] public GameObject[] doorPrefabs;
     [SerializeField] public GameObject[] exitPrefabs;
@@ -203,18 +204,44 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
     void BlockPassages()
     {
+
+     
+    
+
+       
         foreach(Connector connector in transform.GetComponentsInChildren<Connector>())
         {
             if (!connector.isConnected)
             {
+
+
+                
                 Vector3 pos = connector.transform.position;
                 int wallIndex = Random.Range(0, blockedPrefabs.Length);
                 GameObject wall = Instantiate(blockedPrefabs[wallIndex], pos, connector.transform.rotation, connector.transform) as GameObject;
                 wall.name = blockedPrefabs[wallIndex].name;
-
+                
+         
+               
             }
 
         }
+        
+
+        
+    }
+
+    Transform CreateHallwayTile()
+    {
+
+        int index = Random.Range(0, hallwayPrefabs.Length);
+
+        GameObject tile = Instantiate(hallwayPrefabs[index], Vector3.zero, Quaternion.identity, container) as GameObject;
+        tile.name = hallwayPrefabs[index].name;
+        Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
+
+        generatedTiles.Add(new Tile(tile.transform, origin));
+        return tile.transform;
     }
 
     void LightReset()
