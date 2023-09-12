@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Inventory System/Item Database")]
+[CreateAssetMenu(menuName = "Inventory System/Database")]
 public class Database : ScriptableObject
 {
     [SerializeField] private List<InventoryItemData> _itemDatabase;
@@ -39,6 +39,10 @@ public class Database : ScriptableObject
     }
 
 
+    public List<InventoryItemData> GetInventoryItemData()
+    {
+        return _itemDatabase;
+    }
     public InventoryItemData GetItem(int id)
     {
 

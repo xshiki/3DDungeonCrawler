@@ -20,7 +20,7 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     [HideInInspector] public Transform parentAfterDrag;
     private Transform playerTransform;
     private Transform playerSocket;
-    public float dropOffset = 2f;
+    public float dropOffset = 3f;
   
     public void InitialiseItem(InventoryItemData newItem)
     {   

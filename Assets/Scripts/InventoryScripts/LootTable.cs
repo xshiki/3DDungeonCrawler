@@ -1,14 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class LootTable : MonoBehaviour
 {
     [SerializeField] public List<InventoryItemData> lootList = new List<InventoryItemData>();
+    [SerializeField] public GameObject databaseGO;
+
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
-        //lootList.add
+        //If no Loot List is specified, generate a loot table based on the available items in the database
+        if (lootList.Count == 0)
+        {
+            Debug.Log("empty loot list");
+            databaseGO = GameObject.Find("Database");
+            List<InventoryItemData> allItemList = databaseGO.GetComponent<LoadDatabase>().database.GetInventoryItemData();
+            Debug.Log(allItemList.Count);
+            int lootListSize = Random.Range(0, allItemList.Count);
+            lootListSize = 5;
+            if (allItemList != null)
+            {
+
+                for (int i = 0; i < lootListSize; i++)
+                {
+                    int rndNumber = Random.Range(0, allItemList.Count);
+                    lootList.Add(allItemList[rndNumber]);
+
+
+                }
+
+
+
+
+            }
+        }
+
     }
 
     public InventoryItemData getDroppedItem()
@@ -28,7 +57,6 @@ public class LootTable : MonoBehaviour
             InventoryItemData droppedItem = possibleItems[Random.Range(0, possibleItems.Count)]; //picks randomly an item from the loottable 
             return droppedItem;
         }
-        Debug.Log("no loot dropped");
         return null;
     }
 

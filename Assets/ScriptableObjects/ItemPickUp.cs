@@ -52,13 +52,17 @@ public class ItemPickUp : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         var inventory = other.GetComponentInChildren<InventoryManager>();
-        if (!inventory) return;
-        if (inventory.AddItem(ItemData))
+        if(other.CompareTag("Player"))
         {
-            //Debug.Log(ItemData.DisplayName +" added to inventory");
-            NotificationManager.Instance.SetNewNotification("Picked up "+ItemData.DisplayName);
-            Destroy(this.gameObject);
+            if (!inventory) return;
+            if (inventory.AddItem(ItemData))
+            {
+                //Debug.Log(ItemData.DisplayName +" added to inventory");
+                NotificationManager.Instance.SetNewNotification("Picked up " + ItemData.DisplayName);
+                Destroy(this.gameObject);
+            }
         }
+      
       
        
         

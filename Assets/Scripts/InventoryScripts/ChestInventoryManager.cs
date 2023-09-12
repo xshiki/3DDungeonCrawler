@@ -16,7 +16,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     [SerializeField] public List<InventoryItemData> lootList = new List<InventoryItemData>();
     [SerializeField] public LootTable lootTable;
 
-    
+ 
 
 
     private void Awake()
@@ -25,6 +25,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
         firstPersonController= GameObject.Find("Player").GetComponent<FirstPersonController>();
         lootTable = GetComponent<LootTable>();  
         lootList = lootTable.lootList;
+        Debug.Log(lootList.Count);
 
         fillChest();
     }
