@@ -22,7 +22,8 @@ MonoBehaviour:
   RigAnimatorController: {fileID: 0}
   dropChance: 0
   consumable: 0
-  armourAmount: 0
-  healthUp: 0
-  manaUp: 0
-  speedUp: 0
+  stamina: 0
+  strength: 0
+  intelligence: 0
+  armor: 1
+  speed: 0

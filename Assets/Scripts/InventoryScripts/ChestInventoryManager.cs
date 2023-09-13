@@ -25,7 +25,6 @@ public class ChestInventoryManager : InventoryManager, IInteractable
         firstPersonController= GameObject.Find("Player").GetComponent<FirstPersonController>();
         lootTable = GetComponent<LootTable>();  
         lootList = lootTable.lootList;
-        Debug.Log(lootList.Count);
 
         fillChest();
     }

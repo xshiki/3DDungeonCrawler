@@ -57,7 +57,6 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
                 Transform originalParent = draggedItem.parentAfterDrag;
                 // Swap  
-
                 Transform itemInSlot = transform.GetChild(0);
                 draggedItem.parentAfterDrag = transform;
                 itemInSlot.SetParent(originalParent);

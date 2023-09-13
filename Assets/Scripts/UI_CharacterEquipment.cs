@@ -128,7 +128,6 @@ public class UI_CharacterEquipment : MonoBehaviour
 
     private void PlayerEquipment_OnEquipmentChanged(object sender, EventArgs e)
     {
-        Debug.Log(sender);        
         InitializeWeapon();
         InitializeHelmet();
         InitializeChest();
@@ -161,7 +160,7 @@ public class UI_CharacterEquipment : MonoBehaviour
                 playerController.SetCurrentMagicWeapon(weaponObject.GetComponent<MagicWeaponController>());
             }
            
-            Debug.Log("weapon instantiated");
+         
         }
     }
 

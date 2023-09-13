@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing.Text;
@@ -7,9 +8,11 @@ public class PlayerRessource : MonoBehaviour
 {
 
     [Header("Health")]
-    public float maxHealth = 100f; 
+    public float maxHealth = 100f;
     public float currentHealth;
     public float healthPercent => currentHealth / maxHealth;
+
+
 
 
     [Header("Mana")]
@@ -20,15 +23,52 @@ public class PlayerRessource : MonoBehaviour
     [SerializeField] private float manaRechargeDelay = 1f;
     private float currentManaDelayCounter;
 
+    public PlayerEquipment playerEquipment;
+    [Header("Stats")]
+    public Stat stamina;
+    public Stat strength;
+    public Stat intelligence;
+    public Stat armor;
+    public Stat speed;
 
-   
 
-    void Start()
+    private void Awake()
     {
-        currentHealth = maxHealth; 
+        currentHealth = maxHealth;
         currentMana = maxMana;
-
+        playerEquipment.OnEquipmentChanged += ChangeStats;
     }
+
+    private void ChangeStats(object sender, PlayerEquipment.OnEquipChangedArgs e)
+    {
+        Debug.Log("change stats");
+
+        ArmorItemData newItem = e.newItem as ArmorItemData;
+        ArmorItemData oldItem = e.oldItem as ArmorItemData;
+
+
+        if (newItem != null)
+        {
+            stamina.AddModifier(newItem.stamina);
+            strength.AddModifier(newItem.strength);
+            armor.AddModifier(newItem.armor);
+            speed.AddModifier(newItem.speed);
+            intelligence.AddModifier(newItem.intelligence);
+
+        }
+
+        if (oldItem != null)
+        {
+            stamina.RemoveModifier(oldItem.stamina);
+            strength.RemoveModifier(oldItem.strength);
+            armor.RemoveModifier(oldItem.armor);
+            speed.RemoveModifier(oldItem.speed);
+            intelligence.RemoveModifier(oldItem.intelligence);
+
+        }
+    }
+
+
 
     // Function to reduce the player's ressource by a specified amount
     public void TakeDamage(int damage)

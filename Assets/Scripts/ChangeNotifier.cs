@@ -14,6 +14,7 @@ public class ChangeNotifier : MonoBehaviour
         if (transform.childCount > 0)
         {
             OnChildAdded?.Invoke(this, EventArgs.Empty);
+            Debug.Log("added as child");
         }
         else
         {

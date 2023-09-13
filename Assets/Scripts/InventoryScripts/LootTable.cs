@@ -15,10 +15,8 @@ public class LootTable : MonoBehaviour
         //If no Loot List is specified, generate a loot table based on the available items in the database
         if (lootList.Count == 0)
         {
-            Debug.Log("empty loot list");
             databaseGO = GameObject.Find("Database");
             List<InventoryItemData> allItemList = databaseGO.GetComponent<LoadDatabase>().database.GetInventoryItemData();
-            Debug.Log(allItemList.Count);
             int lootListSize = Random.Range(0, allItemList.Count);
             lootListSize = 5;
             if (allItemList != null)

@@ -14,7 +14,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Awake()
     {
-      experienceManager = GameObject.Find("PlayerExpBarUI").GetComponent<ExperienceManager>();
+      experienceManager = GameObject.Find("Player").GetComponent<ExperienceManager>();
     }
     void Start()
     {

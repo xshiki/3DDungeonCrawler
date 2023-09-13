@@ -4,8 +4,9 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Inventory System/Armor Item")]
 public class ArmorItemData : InventoryItemData
 {
-    public int armourAmount;
-    public int healthUp;
-    public int manaUp;
-    public float speedUp;
+    public int stamina;
+    public int strength;
+    public int intelligence;
+    public int armor;
+    public int speed;
 }

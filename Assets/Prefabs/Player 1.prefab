@@ -2450,7 +2450,6 @@ GameObject:
   - component: {fileID: 4355658440100366559}
   - component: {fileID: 7102124634174402953}
   - component: {fileID: 5968339110479365163}
-  - component: {fileID: 2337099822115510216}
   - component: {fileID: 2775470175213947681}
   - component: {fileID: 3455261981277726761}
   - component: {fileID: 1859365142829128462}
@@ -2737,6 +2736,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  stamina:
+    baseValue: 0
+  strength:
+    baseValue: 0
+  intelligence:
+    baseValue: 0
+  armor:
+    baseValue: 0
+  speed:
+    baseValue: 0
   maxMana: 100
   currentMana: 0
   manaRechargeRate: 2
@@ -2759,22 +2768,6 @@ MonoBehaviour:
   _interactionPromptUI: {fileID: 0}
   _playerCam: {fileID: 6328423917126821917}
   distance: 2
---- !u!114 &2337099822115510216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7827219508009895623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee78572109a2cb347958f5618aa32aee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spellToCast: {fileID: 3970265404137374070, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}
-  _playerRessource: {fileID: 7102124634174402953}
-  _castPoint: {fileID: 4220275039775698225}
-  timeBetweenCast: 0.5
 --- !u!114 &2775470175213947681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2847,8 +2840,11 @@ MonoBehaviour:
   firstPersonController: {fileID: 1907379281537677220}
   openInventory: {fileID: -8058832391077122349, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
   hotbarSelection: {fileID: -6332451638518686388, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
+  animator: {fileID: 0}
   playerEquipment: {fileID: 0}
   weaponHolderPosition: {fileID: 0}
+  currentWeapon: {fileID: 0}
+  currentMagicWeapon: {fileID: 0}
 --- !u!114 &1859365142829128462
 MonoBehaviour:
   m_ObjectHideFlags: 0
