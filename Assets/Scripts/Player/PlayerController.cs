@@ -79,6 +79,7 @@ public class PlayerController : MonoBehaviour
              if (velocity.magnitude == 0)
             {
                 ChangeAnimationState(IDLE);
+                animator.SetFloat("Speed", 0);
             }
             else
             {
@@ -108,7 +109,7 @@ public class PlayerController : MonoBehaviour
 
         // PLAY THE ANIMATION //
         currentAnimationState = newState;
-        animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
+        //animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
     }
 
 

@@ -23,6 +23,22 @@ public class PlayerRessource : MonoBehaviour
     [SerializeField] private float manaRechargeDelay = 1f;
     private float currentManaDelayCounter;
 
+
+    [Header("Stamina")]
+    [SerializeField] private float maxStamina = 100f;
+    [SerializeField] private float _staminaDepletionRate = 1f;
+    [SerializeField] private float _staminaRechargeRate = 2f;
+    [SerializeField] private float _staminaRechargeDelay = 1f;
+
+    private float currentStamina;
+    private float _currentStaminaDelayCounter;
+
+    public bool hasStamina => currentStamina != 0;
+
+    public float StaminaPercent => currentStamina / maxStamina;
+
+
+
     public PlayerEquipment playerEquipment;
     [Header("Stats")]
     public Stat stamina;
@@ -36,13 +52,13 @@ public class PlayerRessource : MonoBehaviour
     {
         currentHealth = maxHealth;
         currentMana = maxMana;
+        currentStamina = maxStamina;
         playerEquipment.OnEquipmentChanged += ChangeStats;
     }
 
     private void ChangeStats(object sender, PlayerEquipment.OnEquipChangedArgs e)
     {
-        Debug.Log("change stats");
-
+      
         ArmorItemData newItem = e.newItem as ArmorItemData;
         ArmorItemData oldItem = e.oldItem as ArmorItemData;
 
@@ -59,6 +75,7 @@ public class PlayerRessource : MonoBehaviour
 
         if (oldItem != null)
         {
+  
             stamina.RemoveModifier(oldItem.stamina);
             strength.RemoveModifier(oldItem.strength);
             armor.RemoveModifier(oldItem.armor);

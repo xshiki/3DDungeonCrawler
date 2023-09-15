@@ -13,7 +13,7 @@ public class InventoryManager : MonoBehaviour
     private InputActionReference hotbarSelection;
     [SerializeField] public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
-    public static UnityAction<ChestInventoryManager> OnDynamicDisplayRequested;
+   
 
     int selectedSlot = -1;
 

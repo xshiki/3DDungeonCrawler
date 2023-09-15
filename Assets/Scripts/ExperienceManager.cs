@@ -30,13 +30,6 @@ public class ExperienceManager : MonoBehaviour
         UpdateLevel();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
     public void AddExperience(int amount)
     {
         totalExperience += amount;
