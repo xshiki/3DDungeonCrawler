@@ -36303,6 +36303,7 @@ MonoBehaviour:
   _manaMeter: {fileID: 1282138593}
   _hungerMeterValue: {fileID: 670903146}
   _manaMeterValue: {fileID: 1354224752}
+  fadeTime: 2
   lerpSpeed: 3
 --- !u!114 &1457310882
 MonoBehaviour:
@@ -55093,6 +55094,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3936407535494444804}
     - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: walkSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: sprintBarBG
       value: 
       objectReference: {fileID: 3936407535001120080}
@@ -55101,12 +55106,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3936407535542682962}
     - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: sprintSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: crosshairObject
       value: 
       objectReference: {fileID: 3936407536210204155}
     - target: {fileID: 910575053194391726, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260224230047771003, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.34
       objectReference: {fileID: 0}
     - target: {fileID: 3354246732608171326, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: inventorySlots.Array.data[0]
@@ -55348,6 +55361,10 @@ PrefabInstance:
       propertyPath: _interactionPromptUI
       value: 
       objectReference: {fileID: 781134849}
+    - target: {fileID: 4932366698888658518, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 576
+      objectReference: {fileID: 0}
     - target: {fileID: 5240573749984859827, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -76480,6 +76497,10 @@ PrefabInstance:
       propertyPath: tilePrefabs.Array.data[10]
       value: 
       objectReference: {fileID: 6232369364849296463, guid: 66c8c55dc1a2c29449300587eabc5325, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: blockedPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8191001970776998217, guid: 846254511dda2c5499d610fb1371a34c, type: 3}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: hallwayPrefabs.Array.data[0]
       value: 
