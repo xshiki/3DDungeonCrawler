@@ -46,6 +46,8 @@ GameObject:
   - component: {fileID: 474726572214392735}
   - component: {fileID: 6110851505883529958}
   - component: {fileID: 5906377700698400119}
+  - component: {fileID: 1188012372007342902}
+  - component: {fileID: 6833648998729568066}
   m_Layer: 11
   m_Name: Room T
   m_TagString: Untagged
@@ -142,6 +144,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1996072114398378729, guid: 003634df83ecf3147af9eab1b75cabb6, type: 3}
+--- !u!114 &1188012372007342902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7595052030409930511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaf5bdae18b2284e84c62e0faa578ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
+--- !u!114 &6833648998729568066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7595052030409930511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032bd59d38868499080e707e2ac529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decorationPrefabs:
+  - {fileID: 7173021932998636536, guid: 13177bf8bb881ac419969494edcac316, type: 3}
+  numberOfDecorations: 5
 --- !u!1001 &2215498099803213467
 PrefabInstance:
   m_ObjectHideFlags: 0

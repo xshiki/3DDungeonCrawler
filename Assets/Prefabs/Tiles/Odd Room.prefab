@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3033929064925894807}
   - component: {fileID: 5026461861362813630}
   - component: {fileID: 289006950677353213}
+  - component: {fileID: 4921010824600588223}
+  - component: {fileID: 4306776923882858236}
   m_Layer: 11
   m_Name: Odd Room
   m_TagString: Untagged
@@ -107,6 +109,34 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1192434938714927830, guid: 003634df83ecf3147af9eab1b75cabb6, type: 3}
+--- !u!114 &4921010824600588223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2330474334355972967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaf5bdae18b2284e84c62e0faa578ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
+--- !u!114 &4306776923882858236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2330474334355972967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032bd59d38868499080e707e2ac529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decorationPrefabs:
+  - {fileID: 7173021932998636536, guid: 13177bf8bb881ac419969494edcac316, type: 3}
+  numberOfDecorations: 2
 --- !u!1 &8608005013637231245
 GameObject:
   m_ObjectHideFlags: 0

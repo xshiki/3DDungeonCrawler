@@ -28,7 +28,7 @@ public class PauseGame : MonoBehaviour
     private void PauseResume(InputAction.CallbackContext context)
     {
         GameIsPaused = !GameIsPaused;
-        if (!GameIsPaused)
+        if (GameIsPaused)
         {
             Debug.Log("game paused");
             Time.timeScale = 0;

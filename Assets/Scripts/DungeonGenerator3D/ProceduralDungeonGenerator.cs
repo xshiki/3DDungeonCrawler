@@ -6,15 +6,18 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using UnityEditor;
 
 public enum DungeonState { inactive, generatingMain, generatingBranches, cleanup, completed}
 public class ProceduralDungeonGenerator : MonoBehaviour
 {
 
-   
+
     [Header("Generation options")]
-    [SerializeField]  public GameObject[] startPrefabs; //Playerspawn room
-    [SerializeField]  public GameObject[] tilePrefabs;
+     public int seed;
+    [SerializeField] public bool useSeed = false;
+    [SerializeField] public GameObject[] startPrefabs; //Playerspawn room
+    [SerializeField] public GameObject[] tilePrefabs;
     [SerializeField] public GameObject[] hallwayPrefabs;
     [SerializeField] public GameObject[] blockedPrefabs;
     [SerializeField] public GameObject[] doorPrefabs;
@@ -56,7 +59,13 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         overheadCamera = GameObject.Find("OverheadCamera");
         overheadCamera.SetActive(false);
         playerCam = GameObject.FindWithTag("Player");
+        if (useSeed)
+        {
+            Random.InitState(seed);
+        }
+        
         StartCoroutine(DungeonGenerator());
+
        
     }
 

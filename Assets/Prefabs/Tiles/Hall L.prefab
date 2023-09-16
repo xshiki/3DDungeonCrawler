@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 4149822294493533940}
   - component: {fileID: 4733878897539932210}
   - component: {fileID: 3533447029018758329}
+  - component: {fileID: 9091506652517685098}
   m_Layer: 11
   m_Name: Hall L
   m_TagString: Untagged
@@ -140,6 +141,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3661407703532608806, guid: 003634df83ecf3147af9eab1b75cabb6, type: 3}
+--- !u!114 &9091506652517685098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2182779868695117443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaf5bdae18b2284e84c62e0faa578ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
 --- !u!1001 &314108002746462456
 PrefabInstance:
   m_ObjectHideFlags: 0
