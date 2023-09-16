@@ -64,7 +64,6 @@ public class PlayerUIManager : MonoBehaviour
         {
 
             OnHealthbarFull?.Invoke();
-            Debug.Log("ade waay health");
             healthFull = false;
         }
         else if(_playerRessource.healthPercent < 1) {

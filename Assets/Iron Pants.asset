@@ -17,7 +17,7 @@ MonoBehaviour:
   ID: -1
   DisplayName: 
   Description: 
-  ItemPrefab: {fileID: 6146625596869803689, guid: 4bcf53d480e6b0440b4fa57c971a1ff6, type: 3}
+  ItemPrefab: {fileID: 8406446221045228075, guid: ad50ca9ced18ed44e98acb58bd79599a, type: 3}
   ItemType: 3
   RigAnimatorController: {fileID: 0}
   dropChance: 0

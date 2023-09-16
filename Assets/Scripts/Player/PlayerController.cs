@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour
         openInventory.action.performed -= OpenInventory;
         //hotbarSelection.action.performed -= UseItem;
         input.Attack.performed -= OnAttackPerformed;
+        input.Pause.performed += OpenInventory;
     }
 
 

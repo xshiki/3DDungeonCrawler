@@ -2,24 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100; // Maximum health of the enemy
     public int currentHealth = 10; // Current health of the enemy
+    public int enemyLevel = 1;
+
 
 
     [SerializeField] public ExperienceManager experienceManager;
 
+    private ObjectPool<GameObject> _enemyPool;
 
     private void Awake()
     {
       experienceManager = GameObject.Find("Player").GetComponent<ExperienceManager>();
+      currentHealth = maxHealth;
     }
-    void Start()
+
+
+    public void SetPool(ObjectPool<GameObject> pool)
     {
-        currentHealth = maxHealth; // Set the current health to the maximum health on start
+        _enemyPool = pool;
     }
+
 
     // Function to reduce the player's health by a specified amount
     public void TakeDamage(int damage)
@@ -41,7 +49,7 @@ public class EnemyHealth : MonoBehaviour
         //Instantiate(, transform.position, transform.rotation);
         GetComponent<LootTable>().InstantiateLoot(transform.position);
         experienceManager.AddExperience(10);
-        
-        Destroy(gameObject);
+
+        _enemyPool.Release(gameObject);
     }
 }

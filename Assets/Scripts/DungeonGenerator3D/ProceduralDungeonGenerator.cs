@@ -5,7 +5,7 @@ using UnityEngine;
 using System.Linq;
 using System.Net.NetworkInformation;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.Events;
 
 public enum DungeonState { inactive, generatingMain, generatingBranches, cleanup, completed}
 public class ProceduralDungeonGenerator : MonoBehaviour
@@ -48,6 +48,8 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     int attempts = 0;
     public int maxAttempts = 50;
 
+
+    public UnityAction OnFinishBuilding;
   
     void Start()
     {
@@ -167,6 +169,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         dungeonState = DungeonState.completed;
         navMesh.BuildNavMesh();
         playerCam.SetActive(true);
+        OnFinishBuilding?.Invoke();
 
     }
 
