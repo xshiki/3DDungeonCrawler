@@ -76,25 +76,10 @@ public class PlayerController : MonoBehaviour
         Vector3 velocity = playerRb.velocity;
         if (currentWeapon == null)
         {
-             if (velocity.magnitude == 0)
-            {
-                ChangeAnimationState(IDLE);
-                animator.SetFloat("Speed", 0);
-            }
-            else
-            {
-                ChangeAnimationState(WALK);
-            }
+          
         }else if(!currentWeapon.isAttacking)
         {
-            if (velocity.magnitude == 0)
-            {
-                ChangeAnimationState(IDLE);
-            }
-            else
-            {
-                ChangeAnimationState(WALK);
-            }
+            
         }
        
 

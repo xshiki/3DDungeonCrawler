@@ -198,6 +198,7 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+
         #region Camera
 
         // Control camera movement
@@ -363,7 +364,7 @@ public class FirstPersonController : MonoBehaviour
     void FixedUpdate()
     {
         #region Movement
-
+        animator.SetFloat("Speed", 0f, 0.2f, Time.deltaTime);
         if (playerCanMove)
         {
             // Calculate how fast we should be moving
@@ -374,13 +375,14 @@ public class FirstPersonController : MonoBehaviour
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true;
-                animator.SetFloat("Speed", 0.5f);
+                animator.SetFloat("Speed", 0.5f, 0.2f, Time.deltaTime);
+                Debug.Log("was here");
 
             }
             else
             {
                 isWalking = false;
-                animator.SetFloat("Speed", 0);
+                animator.SetFloat("Speed", 0f, 0.2f, Time.deltaTime);
             }
 
             // All movement calculations shile sprint is active
@@ -400,7 +402,7 @@ public class FirstPersonController : MonoBehaviour
                 if (velocityChange.x != 0 || velocityChange.z != 0)
                 {
                     isSprinting = true;
-                    animator.SetFloat("Speed", 1f);
+                    animator.SetFloat("Speed", 1f, 0.2f, Time.deltaTime);
 
                     if (isCrouched)
                     {

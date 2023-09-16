@@ -42,6 +42,8 @@ public class UI_CharacterEquipment : MonoBehaviour
     }
     private void Awake()
     {
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerEquipment = GameObject.Find("Player").GetComponent<PlayerEquipment>();
         weaponSlot.OnItemDropped += WeaponSlot_OnItemDropped;
         helmetSlot.OnItemDropped += HelmetSlot_OnItemDropped;
         chestSlot.OnItemDropped += ChestSlot_OnItemDropped;
