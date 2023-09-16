@@ -376,7 +376,6 @@ public class FirstPersonController : MonoBehaviour
             {
                 isWalking = true;
                 animator.SetFloat("Speed", 0.5f, 0.2f, Time.deltaTime);
-                Debug.Log("was here");
 
             }
             else
