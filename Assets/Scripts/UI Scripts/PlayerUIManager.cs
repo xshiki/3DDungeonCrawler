@@ -10,8 +10,17 @@ public class PlayerUIManager : MonoBehaviour
 {
 
     [SerializeField] private PlayerRessource _playerRessource;
-    [SerializeField] private Image _hungerMeter, _manaMeter;
-    [SerializeField] private TextMeshProUGUI _hungerMeterValue, _manaMeterValue;
+    [SerializeField] private Image _healthMeter, _manaMeter;
+    [SerializeField] private TextMeshProUGUI _healthMeterValue, _manaMeterValue;
+
+
+    [Header("Player Stats UI")]
+    [SerializeField] private TextMeshProUGUI _healthValue;
+    [SerializeField] private TextMeshProUGUI _manaValue;
+    [SerializeField] private TextMeshProUGUI _strValue;  
+    [SerializeField] private TextMeshProUGUI _intValue;
+    [SerializeField] private TextMeshProUGUI _spdValue;
+    [SerializeField] private TextMeshProUGUI _armorValue;
 
 
     public UnityAction OnHealthbarFull;
@@ -43,18 +52,27 @@ public class PlayerUIManager : MonoBehaviour
 
     private void FadeAwayHealth()
     {
-        healthBarCoroutine = FadeOutBar(_hungerMeter, _hungerMeterValue);
+        healthBarCoroutine = FadeOutBar(_healthMeter, _healthMeterValue);
         StartCoroutine(healthBarCoroutine);
     }
 
     private void Update()
     {
+
+        Debug.Log("test");
       
         lerpSpeed = 3f * Time.deltaTime;
-        _hungerMeter.fillAmount = Mathf.Lerp(_hungerMeter.fillAmount, _playerRessource.currentHealth / _playerRessource.maxHealth, lerpSpeed);
+        _healthMeter.fillAmount = Mathf.Lerp(_healthMeter.fillAmount, _playerRessource.currentHealth / _playerRessource.maxHealth, lerpSpeed);
         _manaMeter.fillAmount = Mathf.Lerp(_manaMeter.fillAmount, _playerRessource.currentMana/_playerRessource.maxMana, lerpSpeed);
-        _hungerMeterValue.text = (Mathf.Round(_playerRessource.healthPercent*100)).ToString() + " %";
-        _manaMeterValue.text = (Mathf.Round(_playerRessource.currentManaPercent * 100)).ToString() + " %";  
+        _healthMeterValue.text = (Mathf.Round(_playerRessource.healthPercent*100)).ToString() + " %";
+        _manaMeterValue.text = (Mathf.Round(_playerRessource.currentManaPercent * 100)).ToString() + " %";
+
+        _healthValue.text = _playerRessource.maxHealth.ToString();
+        _manaValue.text = _playerRessource.maxMana.ToString();
+        _strValue.text = _playerRessource.strength.GetValue().ToString();
+        _intValue.text = _playerRessource.intelligence.GetValue().ToString();
+        _spdValue.text = _playerRessource.speed.GetValue().ToString();
+        _armorValue.text = _playerRessource.armor.GetValue().ToString();
     }
 
     private void FixedUpdate()
@@ -68,8 +86,8 @@ public class PlayerUIManager : MonoBehaviour
         }
         else if(_playerRessource.healthPercent < 1) {
             
-            _hungerMeter.color = new Color(_hungerMeter.color.r, _hungerMeter.color.g, _hungerMeter.color.b,255);
-            _hungerMeterValue.alpha = 255;
+            _healthMeter.color = new Color(_healthMeter.color.r, _healthMeter.color.g, _healthMeter.color.b,255);
+            _healthMeterValue.alpha = 255;
             healthFull = true;
             StopCoroutine(healthBarCoroutine);
         }
