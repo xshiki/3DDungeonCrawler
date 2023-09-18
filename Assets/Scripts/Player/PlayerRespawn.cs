@@ -19,15 +19,7 @@ public class PlayerRespawn : MonoBehaviour
         Player.transform.position = respawnPoint.position;
 
     }
-    void Update()
-    {
-        // If the player's health is 0 or below and they are not already respawning
-        if (playerHealth.currentHealth <= 0 && !IsInvoking("Respawn"))
-        {
-            // Start the respawn process
-            Invoke("Respawn", 3f);
-        }
-    }
+   
 
     // Function to respawn the player
     public void Respawn()

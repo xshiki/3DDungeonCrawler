@@ -10,9 +10,13 @@ using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
+
     private Rigidbody rb;
     [Header("Animations")]
     public Animator animator;
+    public AudioClip footSteps;
+    public AudioSource audioSource;
+
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -151,8 +155,6 @@ public class FirstPersonController : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
-
-        Debug.Log(crosshair);
         if(crosshair)
         {
             crosshairObject.sprite = crosshairImage;
@@ -198,11 +200,12 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        
 
         #region Camera
 
         // Control camera movement
-        if(cameraCanMove)
+        if (cameraCanMove)
         {
             yaw = transform.localEulerAngles.y + Input.GetAxis("Mouse X") * mouseSensitivity;
 
@@ -374,7 +377,7 @@ public class FirstPersonController : MonoBehaviour
             // Will allow head bob
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
-                isWalking = true;
+                isWalking = true;                
                 animator.SetFloat("Speed", 0.5f, 0.2f, Time.deltaTime);
 
             }

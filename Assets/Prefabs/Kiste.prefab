@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5815305474851426783}
   - component: {fileID: 5920447848605520642}
   - component: {fileID: 4572278769093458120}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 5875219350194023692}
   - component: {fileID: 1811410454079014133}
   - component: {fileID: 7428507377273496953}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -436,7 +436,7 @@ GameObject:
   - component: {fileID: 5164345704708602617}
   - component: {fileID: 4595422023914623485}
   - component: {fileID: 3228841224623963438}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 5765674303767239466}
   - component: {fileID: 3902507442511202515}
   - component: {fileID: 8840177375645493128}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,7 +756,7 @@ GameObject:
   - component: {fileID: 4378843400784286324}
   - component: {fileID: 4499068325160913605}
   - component: {fileID: 7423438007569693487}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +916,7 @@ GameObject:
   - component: {fileID: 3627148012536909245}
   - component: {fileID: 2990166407543663929}
   - component: {fileID: 5699527730872618301}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 6624312063536798278}
   - component: {fileID: 5162756818737077252}
   - component: {fileID: 832800260219349105}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1346,7 +1346,7 @@ GameObject:
   - component: {fileID: 3556857029321898247}
   - component: {fileID: 8247292452918968206}
   - component: {fileID: 7207051640408754126}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1506,7 +1506,7 @@ GameObject:
   - component: {fileID: 8154769240610182048}
   - component: {fileID: 2368979476779915841}
   - component: {fileID: 5536561977056398561}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1665,7 +1665,8 @@ GameObject:
   - component: {fileID: 4676383384160235562}
   - component: {fileID: 1149047130394808425}
   - component: {fileID: 1988890889983475523}
-  m_Layer: 0
+  - component: {fileID: 6384165740024535674}
+  m_Layer: 7
   m_Name: Kiste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1786,6 +1787,27 @@ MonoBehaviour:
   dynamicInventoryUI: {fileID: 898363973034206905}
   lootList: []
   lootTable: {fileID: 0}
+--- !u!65 &6384165740024535674
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7173021932998636536}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3855591, y: 0.6927796, z: 0.8343796}
+  m_Center: {x: -0.0076541305, y: -0.00004467368, z: -0.39054444}
 --- !u!1 &7842352244727724325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,7 +1822,7 @@ GameObject:
   - component: {fileID: 4812753271624582388}
   - component: {fileID: 3461017195533357109}
   - component: {fileID: 5025491173023232575}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: InventorySlot_UI (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

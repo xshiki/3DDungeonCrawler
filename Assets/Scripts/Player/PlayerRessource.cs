@@ -93,9 +93,16 @@ public class PlayerRessource : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        if(currentHealth <= 0) {
+            Die();
+        }
 
     }
 
+    void Die()
+    {
+        Debug.Log("ded");
+    }
     public void UseMana(int manacost) {
 
         currentMana -= manacost;
@@ -136,7 +143,7 @@ public class PlayerRessource : MonoBehaviour
 
     public void ReplenshHealthMana(float healthAmount, float manaAmount)
     {
-        if(currentHealth + healthAmount >= 100)
+        if(currentHealth + healthAmount >= maxHealth)
         {
             currentHealth = maxHealth;
         }
@@ -146,7 +153,7 @@ public class PlayerRessource : MonoBehaviour
         }
 
 
-        if (currentMana + manaAmount >= 100)
+        if (currentMana + manaAmount >= maxMana)
         {
             currentMana = maxMana;
         }
@@ -155,6 +162,7 @@ public class PlayerRessource : MonoBehaviour
             currentMana += manaAmount;
         }
 
+        Debug.Log(" was here healing");
     }
 
 

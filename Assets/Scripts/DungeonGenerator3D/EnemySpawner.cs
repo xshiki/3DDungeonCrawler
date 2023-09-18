@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     public float spawnDelay = 1f;
     ProceduralDungeonGenerator dungeonGenerator;
     public List<GameObject> enemyPrefabs = new();
-
+    int SpawnedEnemies = 0;
 
     public ObjectPool<GameObject> _enemyPool;
     public enum SpawnMethod {RoundRobin, Random};
@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
     private void Awake()
     {
         dungeonGenerator = GameObject.Find("DungeonGenerator").GetComponent<ProceduralDungeonGenerator>();
-        _enemyPool = new ObjectPool<GameObject>(CreateEnemy, null, OnPutBackInPool, defaultCapacity: 100);
+        _enemyPool = new ObjectPool<GameObject>(CreateEnemy, null, OnPutBackInPool, defaultCapacity: 50);
 
 
         dungeonGenerator.OnFinishBuilding += StartCoroutine;
@@ -66,11 +66,11 @@ public class EnemySpawner : MonoBehaviour
     {
 
         WaitForSeconds wait = new WaitForSeconds(spawnDelay);
-        int SpawnedEnemies = 0;
+        SpawnedEnemies = 0;
         while(SpawnedEnemies < numberOfEnemiesToSpawn) 
         {
-            DoSpawnEnemy();
-            SpawnedEnemies++;
+            SpawnEnemy();
+           
 
             yield return wait;
 
@@ -78,22 +78,29 @@ public class EnemySpawner : MonoBehaviour
     }
 
 
-    private void DoSpawnEnemy()
+    private void SpawnEnemy()
     {
       
             NavMeshTriangulation triangulation = NavMesh.CalculateTriangulation();
             int VertexIndex = UnityEngine.Random.Range(0, triangulation.vertices.Length);
-
+            Vector3 offset = new Vector3(rndNumber(), 0f, rndNumber());
             NavMeshHit Hit;
-            if (NavMesh.SamplePosition(triangulation.vertices[VertexIndex], out Hit, 1f, 11))
+          
+            float yRotation = UnityEngine.Random.Range(0, 4) * 90f;
+        if (NavMesh.SamplePosition(triangulation.vertices[VertexIndex] + offset, out Hit, 2f, 11))
             {
- 
+
+
                 GameObject enemy = _enemyPool.Get();
+                if (enemy == null) { return; }
+                enemy.transform.Rotate(0, yRotation, 0);
                 NavMeshAgent enemyAgent = enemy.GetComponent<NavMeshAgent>();
                 enemyAgent.Warp(Hit.position);
+                enemy.GetComponent<EnemyAI>().SetSpawnPosition(Hit.position);
                 enemyAgent.enabled = true;
-            enemy.GetComponent<EnemyHealth>().SetPool(_enemyPool);
-            
+                enemy.GetComponent<EnemyHealth>().SetPool(_enemyPool);
+                SpawnedEnemies++;
+
         }
             else
             {
@@ -103,7 +110,10 @@ public class EnemySpawner : MonoBehaviour
      
     }
 
-
+    float rndNumber()
+    {
+        return UnityEngine.Random.Range(0f, 10f);
+    }
     private void KillEnemy(GameObject enemy)
     {
         Destroy(enemy);

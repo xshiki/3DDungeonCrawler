@@ -16,7 +16,6 @@ public class BakeNavMesh : MonoBehaviour
     public void BuildNavMesh()
     {
         surface.BuildNavMesh();
-        Debug.Log("nav mesh baked");
     }
    
 }

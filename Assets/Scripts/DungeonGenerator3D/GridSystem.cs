@@ -33,6 +33,7 @@ public class GridSystem : MonoBehaviour
     }
 
 
+    /*
     private void OnDrawGizmos()
     {
         Vector3 startPosition = transform.position;
@@ -40,12 +41,12 @@ public class GridSystem : MonoBehaviour
         var renderer = GetComponent<Renderer>();
 
         /*
-         *  Debug.Log(startPosition +"startposition");
+           Debug.Log(startPosition +"startposition");
         Debug.Log(renderer.bounds.size + "s ");
         Debug.Log(renderer.bounds.min + "min ");
         Debug.Log(renderer.bounds.max + "max ");
         Debug.Log(renderer.bounds.extents + " extens");
-        */
+        
         for (float x= 0; x < width+2; x += size)
         {
             for (float z = 0; z < height+2; z += size)
@@ -59,5 +60,6 @@ public class GridSystem : MonoBehaviour
 
         
     }
+        */
 
 }

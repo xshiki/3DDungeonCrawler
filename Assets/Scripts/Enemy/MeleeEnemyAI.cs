@@ -7,69 +7,12 @@ using UnityEngine.AI;
 
 
 [RequireComponent(typeof(NavMeshAgent))]
-public class MeleeEnemyAI : MonoBehaviour
+public class MeleeEnemyAI : EnemyAI
 {
-    Transform player; // Reference to the player's transform
-    NavMeshAgent enemy;
-    public float moveSpeed = 3f; // Speed at which the enemy moves towards the player
-    public float pushForce = 5f;
-    public int attackDamage = 10; // Amount of damage the enemy deals to the player when attacking
-
-    public float timeBetweenAttacks;
-    bool alreadyAttacked = false;
-    public Projectile projectile;
-    public Spell spellToCast;
-
-    public float sightRange, attackRange;
-    public bool playerInSightRange, playerInAttackRange;
-    public LayerMask playerLM;
-
-    private void Awake()
-    {
-        player = GameObject.Find("Player").transform;
-        enemy = GetComponent<NavMeshAgent>();
-
-    }
-
-    void FixedUpdate()
-    {
-
-
-
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, playerLM);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, playerLM);
-
-        //if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-        if (playerInAttackRange && playerInSightRange) AttackPlayer();
-
-
-
-
-
-    }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(transform.position, sightRange);
-        Gizmos.DrawSphere(transform.position, attackRange);
-
-    }
-    private void ResetAttack()
-    {
-        alreadyAttacked = false;
-    }
-
-    private void ChasePlayer()
-    {
-
-        transform.LookAt(player);
-        enemy.SetDestination(player.position);
-    }
-
 
 
     // Attack the player by reducing their health and knocking them back
-    void AttackPlayer()
+    public override void AttackPlayer()
     {
         //find the vector pointing from our position to the target
         Vector3 direction = (player.position - transform.position).normalized;

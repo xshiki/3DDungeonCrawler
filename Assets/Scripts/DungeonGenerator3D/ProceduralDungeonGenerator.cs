@@ -176,9 +176,12 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
         yield return null; //wait 1 frame
         dungeonState = DungeonState.completed;
-        navMesh.BuildNavMesh();
+     
         playerCam.SetActive(true);
+        navMesh.BuildNavMesh();
         OnFinishBuilding?.Invoke();
+
+        navMesh.BuildNavMesh();
 
     }
 
