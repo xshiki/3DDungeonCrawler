@@ -10,6 +10,7 @@ public class Stat
     [SerializeField]
     private int baseValue;
 
+    public bool statModified = false;
     private List<int> modifiers = new List<int>();
 
 
@@ -20,11 +21,22 @@ public class Stat
         return finalValue;
     }
 
+    public void SetValue(int newValue)
+    {
+        baseValue = newValue;
+    }
+    public void IncreaseValue(int incrementValue)
+    {
+        baseValue += incrementValue;
+
+    }
+
     public void AddModifier(int modifier)
     {
         if(modifier != 0)
         {
             modifiers.Add(modifier);
+            statModified = true;
         }
     }
 
@@ -33,6 +45,10 @@ public class Stat
         if(modifier != 0)
         {
             modifiers.Remove(modifier);
+            if(modifiers.Count == 0)
+            {
+                statModified = false;
+            }
         }
     }
 

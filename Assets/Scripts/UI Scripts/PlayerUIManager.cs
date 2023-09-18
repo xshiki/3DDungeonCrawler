@@ -6,6 +6,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
+
+
 public class PlayerUIManager : MonoBehaviour
 {
 
@@ -59,7 +61,7 @@ public class PlayerUIManager : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log("test");
+
       
         lerpSpeed = 3f * Time.deltaTime;
         _healthMeter.fillAmount = Mathf.Lerp(_healthMeter.fillAmount, _playerRessource.currentHealth / _playerRessource.maxHealth, lerpSpeed);
@@ -73,6 +75,10 @@ public class PlayerUIManager : MonoBehaviour
         _intValue.text = _playerRessource.intelligence.GetValue().ToString();
         _spdValue.text = _playerRessource.speed.GetValue().ToString();
         _armorValue.text = _playerRessource.armor.GetValue().ToString();
+
+        _intValue.color = _playerRessource.intelligence.statModified ? Color.green : Color.white;
+        _spdValue.color = _playerRessource.speed.statModified ? Color.green : Color.white;
+        _armorValue.color = _playerRessource.armor.statModified ? Color.green : Color.white;
     }
 
     private void FixedUpdate()

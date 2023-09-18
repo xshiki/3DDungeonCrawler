@@ -26,13 +26,15 @@ public class Door : MonoBehaviour, IInteractable
 
     public void Interact(InteractScript interactor, out bool interactSucessfull)
     {
+
+
         Debug.Log("Opening door!");
         interactSucessfull = true;
         bool isOpen = animator.GetBool("isOpen");
         animator.SetBool("isOpen", !isOpen);
         if (isExitDoor)
         {
-            SceneManager.LoadScene("NewLevel");
+            SceneManager.LoadScene("LoadNewMap");
         }
 
     }

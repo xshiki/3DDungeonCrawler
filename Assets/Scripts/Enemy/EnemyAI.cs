@@ -50,6 +50,8 @@ public class EnemyAI : MonoBehaviour
    
     private void Awake()
     {
+
+        gameObject.tag = "Enemy";
         player = GameObject.Find("Player").transform;
         enemy = GetComponent<NavMeshAgent>();
         StartCoroutine(CheckForPlayer());
@@ -190,7 +192,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (playerNear)
         {
-            Debug.Log(" player nea in patroling");
+           
             if (rotateTime <= 0)
             {
                 Move(walkSpeed);
@@ -283,7 +285,7 @@ public class EnemyAI : MonoBehaviour
         //If enemy has arrived at the player position, wait, after waiting return to patroling
         if(enemy.remainingDistance <= enemy.stoppingDistance)
         {
-            Debug.Log("arrived at destination");
+           
             if(waitTime <= 0  && caughtPlayer)
             {
 
@@ -322,7 +324,7 @@ public class EnemyAI : MonoBehaviour
 
     public void NextPoint()
     {
-        Debug.Log("changing waypoints");
+       
         currentWaypointIndex = (currentWaypointIndex + 1) % wayPoints.Count;
          
         enemy.SetDestination(wayPoints[currentWaypointIndex]);

@@ -12,6 +12,7 @@ public class FirstPersonController : MonoBehaviour
 {
 
     private Rigidbody rb;
+    [SerializeField] private PlayerRessource _playerRessource;
     [Header("Animations")]
     public Animator animator;
     public AudioClip footSteps;
@@ -136,7 +137,7 @@ public class FirstPersonController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-
+        _playerRessource = GetComponent<PlayerRessource>(); 
         // Set internal variables
         playerCamera.fieldOfView = fov;
         originalScale = transform.localScale;
@@ -149,6 +150,12 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+
+    public void SetSpeed()
+    {
+        walkSpeed = _playerRessource.speed.GetValue();
+        sprintSpeed = walkSpeed + 3;
+    }
     void Start()
     {
         if(lockCursor)
@@ -200,7 +207,7 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
-        
+       
 
         #region Camera
 
@@ -366,6 +373,8 @@ public class FirstPersonController : MonoBehaviour
 
     void FixedUpdate()
     {
+
+        SetSpeed();
         #region Movement
         animator.SetFloat("Speed", 0f, 0.2f, Time.deltaTime);
         if (playerCanMove)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(UniqueID))]
+[RequireComponent(typeof(ItemPickUpInteractable))]
 public class ItemPickUp : MonoBehaviour
 {
     //[SerializeField] private float PickUpRadius = 0.25f;

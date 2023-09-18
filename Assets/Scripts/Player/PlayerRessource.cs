@@ -7,8 +7,6 @@ using UnityEngine;
 public class PlayerRessource : MonoBehaviour
 {
 
-
-
     [Header("Health")]
     public float maxHealth = 100f;
     public float currentHealth;
@@ -52,6 +50,7 @@ public class PlayerRessource : MonoBehaviour
 
     private void Awake()
     {
+     
         currentHealth = maxHealth;
         currentMana = maxMana;
         currentStamina = maxStamina;
@@ -85,13 +84,47 @@ public class PlayerRessource : MonoBehaviour
             intelligence.RemoveModifier(oldItem.intelligence);
 
         }
+
+      
+
     }
 
 
 
     // Function to reduce the player's ressource by a specified amount
-    public void TakeDamage(int damage)
+
+    public void TakeDamage(int baseDamage)
     {
+        int damage = 0;
+        if (baseDamage >= armor.GetValue())
+        {
+            damage = baseDamage * 2 - armor.GetValue();
+        }
+        else
+        {
+            damage = baseDamage * baseDamage / armor.GetValue();
+        }
+
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+
+    }
+
+    public void TakeDamage(int baseDamage, int attackStat)
+    {
+        int damage = 0;
+        if(baseDamage >= armor.GetValue())
+        {
+            damage = (attackStat/100) * baseDamage * 2 - armor.GetValue();
+        }
+        else
+        {
+            damage = (attackStat / 100) * baseDamage * baseDamage / armor.GetValue();
+        }
+
         currentHealth -= damage;
         if(currentHealth <= 0) {
             Die();
@@ -142,10 +175,13 @@ public class PlayerRessource : MonoBehaviour
 
 
     public void ReplenshHealthMana(float healthAmount, float manaAmount)
-    {
-        if(currentHealth + healthAmount >= maxHealth)
+    {   
+
+        Debug.Log(healthAmount + " -----------" + manaAmount);
+        if(currentHealth + healthAmount > maxHealth)
         {
             currentHealth = maxHealth;
+            Debug.Log("healed for max amount???");
         }
         else
         {
@@ -153,7 +189,7 @@ public class PlayerRessource : MonoBehaviour
         }
 
 
-        if (currentMana + manaAmount >= maxMana)
+        if (currentMana + manaAmount > maxMana)
         {
             currentMana = maxMana;
         }
@@ -162,7 +198,7 @@ public class PlayerRessource : MonoBehaviour
             currentMana += manaAmount;
         }
 
-        Debug.Log(" was here healing");
+
     }
 
 

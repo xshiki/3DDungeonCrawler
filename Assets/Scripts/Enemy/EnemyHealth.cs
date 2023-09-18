@@ -4,6 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Pool;
 
+
+[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(EnemyAI))]
+[RequireComponent(typeof(LootTable))]
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100; // Maximum health of the enemy
