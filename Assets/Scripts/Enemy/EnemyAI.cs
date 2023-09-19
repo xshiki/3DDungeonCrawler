@@ -77,7 +77,7 @@ public class EnemyAI : MonoBehaviour
     {
         //CheckForPlayer
 
-
+        if (player == null) { return; }
         float dstToPlayer = Vector3.Distance(transform.position, player.position);
         playerInAttackRange = dstToPlayer < attackRange ? true : false;
 

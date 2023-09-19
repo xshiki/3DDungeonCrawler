@@ -3286,7 +3286,6 @@ GameObject:
   - component: {fileID: 3985869431607598966}
   - component: {fileID: 3622678000545286128}
   - component: {fileID: 3189695041668930796}
-  - component: {fileID: 2050682408003766513}
   - component: {fileID: 8099790110684441069}
   - component: {fileID: 6428285710432940700}
   - component: {fileID: 4371612820694949579}
@@ -3424,18 +3423,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &2050682408003766513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5240573749984859827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5bede82c2a531144b13132cde278114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &8099790110684441069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3548,6 +3535,7 @@ MonoBehaviour:
   _staminaDepletionRate: 1
   _staminaRechargeRate: 2
   _staminaRechargeDelay: 1
+  GOScreen: {fileID: 0}
   playerEquipment: {fileID: 5365561731714465690}
   stamina:
     baseValue: 10
@@ -3662,6 +3650,7 @@ MonoBehaviour:
   currentMagicWeapon: {fileID: 0}
   punchDamage: 2
   punchRange: 1
+  timeBetweenAttack: 2.5
   punchAudioClip: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!114 &5365561731714465690

@@ -37,10 +37,17 @@ public class LoadInScene : MonoBehaviour
 
     void OnMainMenu(Scene scene, LoadSceneMode mode)
     {   
-
-        if(scene.name == "MainMenu" || scene.name == "LoadingScene")
+        if(instance != this)
         {
             Destroy(gameObject);
         }
+       
+        
     }
+
+    public void DestroyThis()
+    {
+        Destroy(gameObject);
+    }
+
 }
