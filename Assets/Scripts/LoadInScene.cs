@@ -5,13 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class LoadInScene : MonoBehaviour
 {
-    public static LoadInScene instance = null;
+    public static LoadInScene instance;
     private void Awake()
-    {   
-       
-       DontDestroyOnLoad(gameObject);
+    {
+        if (instance == null)
+        {
+            //if it doesnt, make it exist
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            //destroy duplicate instances
+            Destroy(gameObject);
+        }
+        //set this instance as protected
+        DontDestroyOnLoad(gameObject);
 
-     
+
+
     }
 
     private void OnEnable()

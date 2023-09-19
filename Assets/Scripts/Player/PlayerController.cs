@@ -55,6 +55,8 @@ public class PlayerController : MonoBehaviour
       audioSource = GetComponent<AudioSource>();
      
       playerOrientation = GameObject.Find("Orientation").transform;
+      playerInventory = GameObject.Find("PlayerInventory");
+       playerInventory.SetActive(false);
       animator = GetComponentInChildren<Animator>();
       input = playerInput.Player;
       AssignInputs();

@@ -34,13 +34,16 @@ public class EnemyHealth : MonoBehaviour
 
 
     // Function to reduce the player's health by a specified amount
-    public void TakeDamage(int damage)
+    public bool TakeDamage(int damage)
     {
         currentHealth -= damage;
+        
         if (currentHealth <= 0)
         {
             Die();
         }
+
+        return true;
     }
 
     // Function to trigger death
