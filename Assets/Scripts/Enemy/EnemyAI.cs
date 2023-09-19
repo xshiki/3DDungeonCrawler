@@ -116,7 +116,7 @@ public class EnemyAI : MonoBehaviour
         while(wayPoints.Count < numberOfWayPoints)
         {
             int VertexIndex = UnityEngine.Random.Range(0, triangulation.vertices.Length);
-            if (NavMesh.SamplePosition(triangulation.vertices[VertexIndex], out Hit, 1f, 11))
+            if (NavMesh.SamplePosition(triangulation.vertices[VertexIndex], out Hit, 20f, 11))
             {
                 wayPoints.Add(Hit.position);
 

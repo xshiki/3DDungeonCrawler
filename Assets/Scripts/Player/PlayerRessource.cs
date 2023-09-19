@@ -37,7 +37,7 @@ public class PlayerRessource : MonoBehaviour
 
     public float StaminaPercent => currentStamina / maxStamina;
 
-
+    public GameObject GOScreen;
 
     public PlayerEquipment playerEquipment;
     [Header("Stats")]
@@ -54,6 +54,8 @@ public class PlayerRessource : MonoBehaviour
         currentHealth = maxHealth;
         currentMana = maxMana;
         currentStamina = maxStamina;
+        GOScreen = GameObject.Find("Game Over Panel");
+        GOScreen.SetActive(false);
         playerEquipment.OnEquipmentChanged += ChangeStats;
     }
 
@@ -109,6 +111,7 @@ public class PlayerRessource : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+           
         }
 
     }
@@ -134,7 +137,10 @@ public class PlayerRessource : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("ded");
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        GOScreen.SetActive(true);
     }
     public void UseMana(int manacost) {
 
@@ -177,7 +183,7 @@ public class PlayerRessource : MonoBehaviour
     public void ReplenshHealthMana(float healthAmount, float manaAmount)
     {   
 
-        Debug.Log(healthAmount + " -----------" + manaAmount);
+        Debug.Log(healthAmount + " ----------- " + manaAmount);
         if(currentHealth + healthAmount > maxHealth)
         {
             currentHealth = maxHealth;

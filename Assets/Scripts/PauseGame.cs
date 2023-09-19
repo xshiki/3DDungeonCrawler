@@ -32,14 +32,36 @@ public class PauseGame : MonoBehaviour
         {
             Debug.Log("game paused");
             Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             pauseMenuUI.SetActive(true);
             return;
         }
         pauseMenuUI.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
 
     }
     
+
+    public void PauseResume()
+    {
+        GameIsPaused = !GameIsPaused;
+        if (GameIsPaused)
+        {
+            Debug.Log("game paused");
+            Time.timeScale = 0;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+            pauseMenuUI.SetActive(true);
+            return;
+        }
+        pauseMenuUI.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        Time.timeScale = 1f;
+    }
 
     private void OnEnable()
     {

@@ -104,7 +104,7 @@ public class EnemySpawner : MonoBehaviour
         }
             else
             {
-                Debug.Log("Unable to place enemy on NavMesh");
+                //Debug.Log("Unable to place enemy on NavMesh");
             }
         
      

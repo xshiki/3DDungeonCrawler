@@ -40,7 +40,6 @@ public class WeaponController : MonoBehaviour
         Debug.Log("swinging WEapon");
         if(attacking) { return; }
         attacking = true;
-        playerOrientation = GameObject.Find("Orientation").transform;
         Invoke(nameof(ResetAttack), timeBetweenSwing);
         AttackRaycast();
         audioSource.PlayOneShot(weaponData.weaponSwingSound);

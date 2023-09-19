@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public GameObject playerInventory;
+    public Transform playerOrientation;
     public Button exitInventoryButton;
     public FirstPersonController firstPersonController;
 
@@ -34,9 +35,26 @@ public class PlayerController : MonoBehaviour
     public Transform weaponHolderPosition;
     public WeaponController currentWeapon;
     public MagicWeaponController currentMagicWeapon;
+
+    [Header("Punch")]
+    public int punchDamage = 2;
+    public float punchRange = 1f;
+    public float timeBetweenAttack = 2.5f;
+    public AudioClip punchAudioClip;
+    public AudioSource audioSource;
+
+
+    bool attacking = false;
+
+    public const string PUNCH1 = "Punch 1";
+    public const string PUNCH2 = "Punch 2";
+
     private void Awake()
     {
       playerInput = new PlayerInput();
+      audioSource = GetComponent<AudioSource>();
+     
+      playerOrientation = GameObject.Find("Orientation").transform;
       animator = GetComponentInChildren<Animator>();
       input = playerInput.Player;
       AssignInputs();
@@ -65,7 +83,7 @@ public class PlayerController : MonoBehaviour
         openInventory.action.performed -= OpenInventory;
         //hotbarSelection.action.performed -= UseItem;
         input.Attack.performed -= OnAttackPerformed;
-        input.Pause.performed += OpenInventory;
+        input.Pause.performed -= OpenInventory;
     }
 
 
@@ -75,13 +93,7 @@ public class PlayerController : MonoBehaviour
         
         Rigidbody playerRb = GetComponent<Rigidbody>();
         Vector3 velocity = playerRb.velocity;
-        if (currentWeapon == null)
-        {
-          
-        }else if(!currentWeapon.isAttacking)
-        {
-            
-        }
+        
        
 
 
@@ -95,7 +107,7 @@ public class PlayerController : MonoBehaviour
 
         // PLAY THE ANIMATION //
         currentAnimationState = newState;
-        //animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
+        animator.CrossFadeInFixedTime(currentAnimationState, 0.2f);
     }
 
 
@@ -138,11 +150,63 @@ public class PlayerController : MonoBehaviour
         else if (currentMagicWeapon != null)
         {
             currentMagicWeapon.CastSpell();
-        }
+        }else
         {
+            Punch();
             Debug.Log("No weapon equipped!");
         }
     }
+
+
+    void Punch()
+    {
+        if (attacking) { return; }
+        attacking = true;
+        Invoke(nameof(ResetAttack), timeBetweenAttack);
+        PlayAnimation(PUNCH1);
+        PlayAnimation(PUNCH2);
+        AttackRaycast();
+    }
+
+    void ResetAttack()
+    {
+        attacking = false;
+
+    }
+    public void AttackRaycast()
+    {
+
+        RaycastHit[] hits;
+
+        hits = Physics.RaycastAll(playerOrientation.transform.position, playerOrientation.transform.forward,punchRange);
+        if (hits.Length > 0)
+        {
+            for (int i = 0; i < hits.Length; i++)
+            {
+                Debug.Log("target found");
+                HitTarget(hits[i]);
+            }
+        }
+        
+
+
+        
+    }
+
+    public void HitTarget(RaycastHit hit)
+    {
+        if (hit.collider.GetComponent<EnemyHealth>())
+        {
+            hit.collider.GetComponent<EnemyHealth>().TakeDamage(punchDamage);
+            audioSource.PlayOneShot(punchAudioClip);
+        }
+    }
+
+
+
+
+
+
     private void OpenInventory(InputAction.CallbackContext context)
     {
         if (playerInventory.activeInHierarchy)
