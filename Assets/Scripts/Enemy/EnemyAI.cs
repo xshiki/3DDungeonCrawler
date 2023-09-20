@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent (typeof(Animator))]
 public class EnemyAI : MonoBehaviour
 {
     public Transform player; // Reference to the player's transform
@@ -62,6 +63,8 @@ public class EnemyAI : MonoBehaviour
         isPatrol = true;
         enemy.isStopped = false;
         enemy.speed = walkSpeed;
+        playerLM |= 0x1 << 9;
+        obstaclesLM |= 0x1 << 11;
 
 
     }

@@ -80,6 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bc3b11a6147b94f9a8242813a509b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  seed: 0
+  useSeed: 0
   startPrefabs:
   - {fileID: 6525572508849976777, guid: fec4c5e1f4ccf934aaf2c1265c191e4b, type: 3}
   - {fileID: 1245771345307767165, guid: baaf6038745b65d459ed5695434efa3d, type: 3}
@@ -95,6 +97,9 @@ MonoBehaviour:
   - {fileID: 4555042495925897445, guid: 2bb942813c78d634981555e2eec322ad, type: 3}
   - {fileID: 7595052030409930511, guid: b82794eb7f5ed0c4f9a889da337934a0, type: 3}
   - {fileID: 6232369364849296463, guid: 66c8c55dc1a2c29449300587eabc5325, type: 3}
+  hallwayPrefabs: []
+  bossRoomPrefabs:
+  - {fileID: 6859666254558572466, guid: 56d19f7eb3a9fdd4b8b08cb3ef95c263, type: 3}
   blockedPrefabs:
   - {fileID: 3228192000102779016, guid: d0a0a683b1d558f4fbc2ff08eafd8485, type: 3}
   - {fileID: 8191001970776998217, guid: 846254511dda2c5499d610fb1371a34c, type: 3}
@@ -121,6 +126,7 @@ MonoBehaviour:
   useBoxColliders: 0
   useLights: 0
   restoreLights: 0
+  navMesh: {fileID: 0}
   maxAttempts: 50
 --- !u!1 &5711073518320009020
 GameObject:

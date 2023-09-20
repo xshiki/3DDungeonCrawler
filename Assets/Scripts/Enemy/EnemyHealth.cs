@@ -8,6 +8,7 @@ using UnityEngine.Pool;
 [RequireComponent(typeof(Collider))]
 [RequireComponent(typeof(EnemyAI))]
 [RequireComponent(typeof(LootTable))]
+[RequireComponent (typeof(Animator))]
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 10; // Maximum health of the enemy
