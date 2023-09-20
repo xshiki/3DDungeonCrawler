@@ -19,6 +19,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     [SerializeField] public GameObject[] startPrefabs; //Playerspawn room
     [SerializeField] public GameObject[] tilePrefabs;
     [SerializeField] public GameObject[] hallwayPrefabs;
+    [SerializeField] public GameObject[] bossRoomPrefabs;
     [SerializeField] public GameObject[] blockedPrefabs;
     [SerializeField] public GameObject[] doorPrefabs;
     [SerializeField] public GameObject[] exitPrefabs;
@@ -102,9 +103,16 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         {
             yield return new WaitForSeconds(constructionDelay);
             tileFrom = tileTo;
-            if(generatedTiles.Count == roomCount-1) {
+         
+
+            if (generatedTiles.Count == roomCount-1) {
                 //create exit room as the last room in main branch
                 tileTo = CreateExitTile();
+                DebugRoomLighting(tileTo, Color.magenta);
+            }else if (generatedTiles.Count == roomCount - 2)
+            {
+                //create exit room as the last room in main branch
+                tileTo = CreateBossRoomTile();
                 DebugRoomLighting(tileTo, Color.magenta);
             }
             else
@@ -244,19 +252,6 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         
 
         
-    }
-
-    Transform CreateHallwayTile()
-    {
-
-        int index = Random.Range(0, hallwayPrefabs.Length);
-
-        GameObject tile = Instantiate(hallwayPrefabs[index], Vector3.zero, Quaternion.identity, container) as GameObject;
-        tile.name = hallwayPrefabs[index].name;
-        Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
-
-        generatedTiles.Add(new Tile(tile.transform, origin));
-        return tile.transform;
     }
 
     void LightReset()
@@ -405,15 +400,24 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
 
 
-                //retry
+                //retry placing tiles
                 if (tileFrom != null)
                 {
+
+
+
                     if (generatedTiles.Count == roomCount - 1)
                     {
 
                         //create exit room as the last room in main branch
                         tileTo = CreateExitTile();
                         DebugRoomLighting(tileTo, Color.magenta);
+                    }
+                    else if (generatedTiles.Count == roomCount - 2)
+                    {
+                        //create exit room as the last room in main branch
+                        tileTo = CreateBossRoomTile();
+                        DebugRoomLighting(tileTo, Color.red);
                     }
                     else
                     {
@@ -444,6 +448,19 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     }
 
 
+    Transform CreateHallwayTile()
+    {
+
+        int index = Random.Range(0, hallwayPrefabs.Length);
+
+        GameObject tile = Instantiate(hallwayPrefabs[index], Vector3.zero, Quaternion.identity, container) as GameObject;
+        tile.name = hallwayPrefabs[index].name;
+        Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
+
+        generatedTiles.Add(new Tile(tile.transform, origin));
+        return tile.transform;
+    }
+
     Transform CreateTile()
     {
         
@@ -453,6 +470,18 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         tile.name = tilePrefabs[index].name;
         Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
        
+        generatedTiles.Add(new Tile(tile.transform, origin));
+        return tile.transform;
+    }
+
+    Transform CreateBossRoomTile()
+    {
+        int index = Random.Range(0, bossRoomPrefabs.Length);
+
+        GameObject tile = Instantiate(bossRoomPrefabs[index], Vector3.zero, Quaternion.identity, container) as GameObject;
+        tile.name = "Boss Room";
+        Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
+
         generatedTiles.Add(new Tile(tile.transform, origin));
         return tile.transform;
     }

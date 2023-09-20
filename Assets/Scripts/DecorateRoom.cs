@@ -11,6 +11,7 @@ public class DecorateRoom : MonoBehaviour
     [SerializeField] public int numberOfDecorations = 5;
     ProceduralDungeonGenerator dungeonGenerator;
 
+    public bool isBossRoom = false;
     private bool isCompleted;
  
     private GridSystem grid;
@@ -20,6 +21,10 @@ public class DecorateRoom : MonoBehaviour
         dungeonGenerator = GameObject.Find("DungeonGenerator").GetComponent<ProceduralDungeonGenerator>();
 
         dungeonGenerator.OnFinishBuilding += SpawnRandomObjects;
+        if(isBossRoom)
+        {
+            dungeonGenerator.OnFinishBuilding -= SpawnRandomObjects;
+        }
     }
 
     private void OnDestroy()

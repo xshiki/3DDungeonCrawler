@@ -64233,7 +64233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: maxHealth
-      value: 2
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: currentHealth
@@ -90764,11 +90764,11 @@ PrefabInstance:
       objectReference: {fileID: 812711708}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: useSeed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: roomCount
-      value: 19
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: branchCount
@@ -90784,7 +90784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: constructionDelay
-      value: 0
+      value: 0.261
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: tilePrefabs.Array.size
@@ -90835,6 +90835,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6232369364849296463, guid: 66c8c55dc1a2c29449300587eabc5325, type: 3}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: bossRoomPrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: tilePrefabs.Array.data[10]
       value: 
       objectReference: {fileID: 408452320408577924, guid: 8fe6c3b56a9528a40962fd9959917155, type: 3}
@@ -90862,6 +90866,14 @@ PrefabInstance:
       propertyPath: hallwayPrefabs.Array.data[4]
       value: 
       objectReference: {fileID: 5640050301694296953, guid: 43ffca5291934e74dafb1ab4a5296a74, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: bossRoomPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6859666254558572466, guid: 56d19f7eb3a9fdd4b8b08cb3ef95c263, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: bossRoomPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 4555042495925897445, guid: 2bb942813c78d634981555e2eec322ad, type: 3}
     - target: {fileID: 5711073518320009020, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: m_Layer
       value: 5
