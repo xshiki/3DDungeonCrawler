@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5806158786081137596}
   - component: {fileID: 8785341519069758735}
   - component: {fileID: 8241086857511741867}
+  - component: {fileID: 6388227685367948639}
   m_Layer: 0
   m_Name: EnemyRanged
   m_TagString: Enemy
@@ -102,7 +103,7 @@ MonoBehaviour:
   timeBetweenAttacks: 1
   alreadyAttacked: 0
   sightRange: 0
-  attackRange: 5
+  attackRange: 10
   playerInSightRange: 0
   playerInAttackRange: 0
   currentPlayerPosition: {x: 0, y: 0, z: 0}
@@ -117,6 +118,7 @@ MonoBehaviour:
   numberOfWayPoints: 2
   startWaitTime: 5
   timeToRotate: 3
+  isPatrol: 0
   projectile: {fileID: 6428798336990927947, guid: b3d2b6869f657614e9e4547130050ac7, type: 3}
   spellToCast: {fileID: 3970265404137374070, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}
 --- !u!114 &7817526707336818998
@@ -148,7 +150,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -232,6 +234,27 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 0
+--- !u!95 &6388227685367948639
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5603685559004751274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &6225024754593815027
 GameObject:
   m_ObjectHideFlags: 0

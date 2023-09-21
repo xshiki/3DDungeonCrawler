@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5392844127541880603}
   - component: {fileID: 6507894387986796061}
   - component: {fileID: 6650539781357880732}
+  - component: {fileID: 7868480125329300397}
+  - component: {fileID: 6000789526474055132}
   m_Layer: 0
   m_Name: Fire Staff
   m_TagString: Untagged
@@ -112,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca89abd58aec79429521b43d5b905b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUpRadius: 0.25
   _rotationSpeed: 0
+  dataProvider: {fileID: 0}
   ItemData: {fileID: 11400000, guid: ee44c8cb4dd351f46b9f37ebe4b57d01, type: 2}
   itemSaveData:
     itemData: {fileID: 0}
@@ -139,6 +141,32 @@ MonoBehaviour:
   spellToCast: {fileID: 3970265404137374070, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}
   _castPoint: {fileID: 0}
   timeBetweenCast: 1.5
+--- !u!114 &7868480125329300397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532277902221668490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b83df6fa5dc1a149a143b2e8240ac3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: ee44c8cb4dd351f46b9f37ebe4b57d01, type: 2}
+--- !u!114 &6000789526474055132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532277902221668490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fa4f7dbd3b7d14195ccc440bfd3f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataProvider: {fileID: 0}
 --- !u!1 &3388087847069012713
 GameObject:
   m_ObjectHideFlags: 0

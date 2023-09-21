@@ -15,7 +15,9 @@ GameObject:
   - component: {fileID: 4162697436157114842}
   - component: {fileID: 7662019228780856648}
   - component: {fileID: 2779824855405398747}
-  m_Layer: 10
+  - component: {fileID: 8558310709834937}
+  - component: {fileID: 960913949389908314}
+  m_Layer: 7
   m_Name: Hot Steel Shortsword Variant 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,8 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca89abd58aec79429521b43d5b905b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUpRadius: 0.25
   _rotationSpeed: 0
+  dataProvider: {fileID: 0}
   ItemData: {fileID: 11400000, guid: 524f523c10c0b374aaf4fd70229d0c4c, type: 2}
   itemSaveData:
     itemData: {fileID: 0}
@@ -233,3 +235,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8558310709834937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2259618728022246517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fa4f7dbd3b7d14195ccc440bfd3f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataProvider: {fileID: 0}
+--- !u!114 &960913949389908314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2259618728022246517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b83df6fa5dc1a149a143b2e8240ac3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 524f523c10c0b374aaf4fd70229d0c4c, type: 2}

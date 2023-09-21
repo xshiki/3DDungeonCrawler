@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8047619900908704903}
   - component: {fileID: 343193941896452210}
   - component: {fileID: 8892018854030757070}
+  - component: {fileID: 2567904613922211488}
+  - component: {fileID: 6252923615303735034}
   m_Layer: 0
   m_Name: Iron_Helmet
   m_TagString: Untagged
@@ -111,8 +113,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 0
+  dataProvider: {fileID: 0}
   ItemData: {fileID: 11400000, guid: 82fbec54e6882214ba8b2e95689dc0f4, type: 2}
   itemSaveData:
     itemData: {fileID: 0}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2567904613922211488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3259654094862974064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b83df6fa5dc1a149a143b2e8240ac3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 82fbec54e6882214ba8b2e95689dc0f4, type: 2}
+--- !u!114 &6252923615303735034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3259654094862974064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fa4f7dbd3b7d14195ccc440bfd3f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataProvider: {fileID: 0}

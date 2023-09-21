@@ -76,6 +76,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9713c27dccaa23840bc71e2df323d63b, type: 3}
       insertIndex: -1
       addedObject: {fileID: -4089028622674570135}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9713c27dccaa23840bc71e2df323d63b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4803045683179440580}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9713c27dccaa23840bc71e2df323d63b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3440712694542487659}
   m_SourcePrefab: {fileID: 100100000, guid: 9713c27dccaa23840bc71e2df323d63b, type: 3}
 --- !u!1 &1784617969001265050 stripped
 GameObject:
@@ -96,7 +102,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -181,3 +187,38 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &4803045683179440580
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784617969001265050}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3440712694542487659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784617969001265050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c106f38f0610df4db6982cac916a93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootList: []
+  databaseGO: {fileID: 0}

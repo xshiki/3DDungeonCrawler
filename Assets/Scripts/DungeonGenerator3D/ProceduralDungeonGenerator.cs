@@ -42,6 +42,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     [SerializeField] public bool useLights = false;
     [SerializeField] public bool restoreLights = false;
 
+    public FloorTextOverlay counter;
 
     public BakeNavMesh navMesh;
     GameObject overheadCamera, playerCam;
@@ -57,6 +58,8 @@ public class ProceduralDungeonGenerator : MonoBehaviour
   
     void Start()
     {
+        GameObject floorText = GameObject.Find("Floor Counter");
+        counter = floorText.GetComponent<FloorTextOverlay>();
         overheadCamera = GameObject.Find("OverheadCamera");
         overheadCamera.SetActive(false);
         playerCam = GameObject.FindWithTag("Player");
@@ -188,6 +191,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         playerCam.SetActive(true);
         navMesh.BuildNavMesh();
         OnFinishBuilding?.Invoke();
+        counter.SetFloorText();
 
         navMesh.BuildNavMesh();
 

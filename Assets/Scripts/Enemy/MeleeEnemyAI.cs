@@ -10,10 +10,12 @@ using UnityEngine.AI;
 public class MeleeEnemyAI : EnemyAI
 {
 
-
+    
     // Attack the player by reducing their health and knocking them back
     public override void AttackPlayer()
     {
+        enemy.speed = 0;
+        transform.LookAt(player);
         //find the vector pointing from our position to the target
         Vector3 direction = (player.position - transform.position).normalized;
 
@@ -22,8 +24,6 @@ public class MeleeEnemyAI : EnemyAI
 
         //rotate us over time according to speed until we are in the required rotation
         transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * 0.5f);
-
-        enemy.SetDestination(transform.position);
 
 
         if (!alreadyAttacked)

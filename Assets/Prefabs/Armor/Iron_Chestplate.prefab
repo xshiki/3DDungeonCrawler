@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 2106105785493321147}
   - component: {fileID: 1361175388671766697}
   - component: {fileID: 1197110266922292852}
+  - component: {fileID: 8285160134263854620}
   - component: {fileID: 8422277831013505693}
   - component: {fileID: 1888438982847280123}
+  - component: {fileID: 74533641682810087}
   m_Layer: 0
   m_Name: Iron_Chestplate
   m_TagString: Untagged
@@ -85,6 +87,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8285160134263854620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4526653460503873776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fa4f7dbd3b7d14195ccc440bfd3f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataProvider: {fileID: 0}
 --- !u!114 &8422277831013505693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,8 +126,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 0
+  dataProvider: {fileID: 0}
   ItemData: {fileID: 11400000, guid: 5ab8ad34c5bebf14682b5d2e1e484364, type: 2}
   itemSaveData:
     itemData: {fileID: 0}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &74533641682810087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4526653460503873776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b83df6fa5dc1a149a143b2e8240ac3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 5ab8ad34c5bebf14682b5d2e1e484364, type: 2}

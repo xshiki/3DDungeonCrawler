@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5453737204754847776}
   - component: {fileID: 6339257098635756205}
   - component: {fileID: 2818935139187699145}
+  - component: {fileID: 2100533140036155459}
+  - component: {fileID: 8060977395482797205}
   m_Layer: 0
   m_Name: Iron_Boots
   m_TagString: Untagged
@@ -60,11 +62,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotationSpeed: 0
+  dataProvider: {fileID: 0}
   ItemData: {fileID: 11400000, guid: eb2bc1f2c51cc4a40a99697ac4200144, type: 2}
   itemSaveData:
     itemData: {fileID: 0}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &2100533140036155459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3191114059285284996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b83df6fa5dc1a149a143b2e8240ac3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: eb2bc1f2c51cc4a40a99697ac4200144, type: 2}
+--- !u!114 &8060977395482797205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3191114059285284996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fa4f7dbd3b7d14195ccc440bfd3f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataProvider: {fileID: 0}
 --- !u!1 &8917458299435914092
 GameObject:
   m_ObjectHideFlags: 0
