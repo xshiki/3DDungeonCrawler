@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Inventory System/Armor Item")]
+[CreateAssetMenu(menuName = "Create Items/Armor Item")]
 public class ArmorItemData : InventoryItemData
 {
     public int stamina;
@@ -9,4 +9,6 @@ public class ArmorItemData : InventoryItemData
     public int intelligence;
     public int armor;
     public int speed;
+
+   
 }

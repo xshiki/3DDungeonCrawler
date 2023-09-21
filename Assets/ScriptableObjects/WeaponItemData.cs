@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "New Weapon", menuName = "Weapons")]
+[CreateAssetMenu(fileName = "New Weapon", menuName = "Create Items/Weapons")]
 public class WeaponItemData : InventoryItemData
 {
 

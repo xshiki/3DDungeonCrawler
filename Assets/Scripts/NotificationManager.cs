@@ -7,29 +7,33 @@ public class NotificationManager : MonoBehaviour
 {
 
     //Singleton
-    public static NotificationManager Instance { get { 
+    public static NotificationManager Instance
+    {
+        get
+        {
             if (instance != null)
             {
                 return instance;
             }
             instance = FindObjectOfType<NotificationManager>();
-            if(instance != null ) { return instance; }
+            if (instance != null) { return instance; }
             CreateNewInstance();
             return instance;
-        } 
-    }
-    
-    public static NotificationManager CreateNewInstance() {
-    NotificationManager notificationManagerPrefab = Resources.Load<NotificationManager>("NotificationManager");
-    instance = Instantiate(notificationManagerPrefab);
-    return instance;
         }
+    }
+
+    public static NotificationManager CreateNewInstance()
+    {
+        NotificationManager notificationManagerPrefab = Resources.Load<NotificationManager>("NotificationManager");
+        instance = Instantiate(notificationManagerPrefab);
+        return instance;
+    }
     private static NotificationManager instance;
 
 
     private void Awake()
     {
-        if(Instance != this) { Destroy(gameObject); }
+        if (Instance != this) { Destroy(gameObject); }
     }
 
 
@@ -40,7 +44,7 @@ public class NotificationManager : MonoBehaviour
     private IEnumerator notificationCoroutine;
     public void SetNewNotification(string message)
     {
-        if(notificationCoroutine != null)
+        if (notificationCoroutine != null)
         {
 
             StopCoroutine(notificationCoroutine);
@@ -59,7 +63,7 @@ public class NotificationManager : MonoBehaviour
             StopCoroutine(notificationCoroutine);
         }
 
-        notificationCoroutine = FadeOutNotification(message,color);
+        notificationCoroutine = FadeOutNotification(message, color);
         StartCoroutine(notificationCoroutine);
     }
 
@@ -78,7 +82,7 @@ public class NotificationManager : MonoBehaviour
             yield return null; //do it over frames
         }
 
-       
+
 
 
 
@@ -92,9 +96,9 @@ public class NotificationManager : MonoBehaviour
         {
             t += Time.unscaledDeltaTime; //
             notificationText.color = new Color(notificationText.color.r,
-                                                notificationText.color.g, 
+                                                notificationText.color.g,
                                                 notificationText.color.b,
-                                                Mathf.Lerp(1f,0f, t / fadeTime));
+                                                Mathf.Lerp(1f, 0f, t / fadeTime));
             yield return null; //do it over frames
         }
 

@@ -1,14 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(menuName = "Inventory System/Consumable Item")]
+[CreateAssetMenu(menuName = "Create Items/Consumable Item")]
 public class ConsumableItemData : InventoryItemData
 {
     [SerializeField] private float _healthToReplenish, _manaToReplenish;
+    public AudioClip consumSoundClip;
     //[SerializeField] private Animator playerAnimator;
  
-
-
     public override void UseItem()
     {
         //change that so not only the player can drink/eat 

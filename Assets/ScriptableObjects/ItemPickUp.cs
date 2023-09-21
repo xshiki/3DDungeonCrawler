@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(UniqueID))]
-[RequireComponent(typeof(ItemPickUpInteractable))]
 public class ItemPickUp : MonoBehaviour
 {
     //[SerializeField] private float PickUpRadius = 0.25f;
     [SerializeField] private float _rotationSpeed = 0f;
-    public InventoryItemData ItemData;
-
+    [HideInInspector]
+    [SerializeField] private ItemDataProvider dataProvider;
+    [HideInInspector]
+    [SerializeField] private InventoryItemData ItemData;
     private BoxCollider myCollider;
     private BoxCollider myCollider2;
     [SerializeField] private ItemPickUpSaveData itemSaveData;
@@ -20,13 +21,14 @@ public class ItemPickUp : MonoBehaviour
 
         myCollider = gameObject.AddComponent<BoxCollider>();
         myCollider.isTrigger = true;
-
         myCollider2= gameObject.AddComponent<BoxCollider>();
     
 
     }
     private void Start()
     {
+        dataProvider = GetComponent<ItemDataProvider>();
+        ItemData = dataProvider.Item;
         id = GetComponent<UniqueID>().ID;
         /*
         if (!SaveGameManager.data.activeItems.ContainsKey(id))
@@ -60,6 +62,7 @@ public class ItemPickUp : MonoBehaviour
             {
                 //Debug.Log(ItemData.DisplayName +" added to inventory");
                 NotificationManager.Instance.SetNewNotification("Picked up " + ItemData.DisplayName);
+      
                 Destroy(this.gameObject);
             }
         }

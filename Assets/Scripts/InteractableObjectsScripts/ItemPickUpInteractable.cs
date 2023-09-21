@@ -5,12 +5,10 @@ using UnityEngine.Events;
 
 public class ItemPickUpInteractable : MonoBehaviour, IInteractable
 {
-
-
-    [SerializeField] private string _prompt;
+    [HideInInspector]
+    [SerializeField] private ItemDataProvider dataProvider;
+     private string _prompt;
     public string InterActionPrompt => _prompt;
-
-    [SerializeField]
     private InventoryItemData _item;
 
     public UnityAction<IInteractable> OnInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
@@ -48,8 +46,14 @@ public class ItemPickUpInteractable : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-        ItemPickUp _itemPickUp = GetComponent<ItemPickUp>();
-        _item = _itemPickUp.ItemData;
+    
+      
+    }
+
+    private void Start()
+    {
+        dataProvider = GetComponent<ItemDataProvider>();
+        _item = dataProvider.Item;
         _prompt = _item.DisplayName;
         this.gameObject.layer = 7;
     }

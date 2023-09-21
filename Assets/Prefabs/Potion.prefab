@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 7857282344073553375}
   - component: {fileID: 8339917945221877142}
   - component: {fileID: 868209843113349379}
+  - component: {fileID: 5229100003734718860}
+  - component: {fileID: 1519017869532268960}
   m_Layer: 0
   m_Name: Potion
   m_TagString: Untagged
@@ -143,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbfa00fcdb731743b7637f8d0916d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _id: 40dfd6d2-9bd0-4989-b291-ffb4f7049498
+  _id: aa3a576d-4a38-4ecd-979f-738fd714167a
 --- !u!114 &868209843113349379
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,10 +158,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca89abd58aec79429521b43d5b905b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PickUpRadius: 0.25
   _rotationSpeed: 10
+  dataProvider: {fileID: 0}
   ItemData: {fileID: 11400000, guid: 7bb3d7a9e99fc3a4e86ac7ef4a062218, type: 2}
   itemSaveData:
     itemData: {fileID: 0}
     position: {x: 0, y: 0, z: 0}
     rotation: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5229100003734718860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879215179458826242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87fa4f7dbd3b7d14195ccc440bfd3f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prompt: 
+  _item: {fileID: 0}
+--- !u!114 &1519017869532268960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5879215179458826242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b83df6fa5dc1a149a143b2e8240ac3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 7bb3d7a9e99fc3a4e86ac7ef4a062218, type: 2}

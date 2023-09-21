@@ -7,7 +7,7 @@ using UnityEngine;
 ///  it could be inherited to have brachned ersions of items
 /// </summary>
 
-[CreateAssetMenu(menuName = "Inventory System/Inventory Item")]
+[CreateAssetMenu(menuName = "Create Items/Item")]
 public class InventoryItemData : ScriptableObject
 {
     public Sprite Icon;
