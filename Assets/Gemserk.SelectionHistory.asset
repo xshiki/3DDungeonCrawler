@@ -17,40 +17,40 @@ MonoBehaviour:
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-333345149-0
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-17499543753778481-1567074182853205988
+    - reference: {fileID: 4926278196937914294, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}
+      sceneName: 
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-1-1d8524e8e71733e4795a4181ed4e9486-4926278196937914294-0
     - reference: {fileID: 0}
-      sceneName: DontDestroyOnLoad
-      scenePath: DontDestroyOnLoad
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-6702798418079844695-0
+      sceneName: Hot Steel Shortsword Variant 1 (1)
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-2259618728022246517-0
     - reference: {fileID: 0}
-      sceneName: DontDestroyOnLoad
-      scenePath: DontDestroyOnLoad
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-95131715-0
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2259618728022246517-2674733043366255836
+    - reference: {fileID: 11400000, guid: ee44c8cb4dd351f46b9f37ebe4b57d01, type: 2}
+      sceneName: 
+      scenePath: 
+      globalObjectId: 
     - reference: {fileID: 0}
-      sceneName: LoadNewMap
-      scenePath: Assets/Scenes/LoadNewMap.unity
-      globalObjectId: GlobalObjectId_V1-2-78dfbf87c20e2ae46961b7101dbc9b1e-153851889-0
+      sceneName: Spell_Fireball
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-4926278196937914294-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1260611056-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-3248212121775883612-6820797582453146417
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2847350380015812649-6820797582453146417
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
       globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-483731871-0
-    - reference: {fileID: 0}
-      sceneName: MainGame
-      scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-153851889-0
-    - reference: {fileID: 102900000, guid: e511cc73c71d19147b871776a5f8b07a, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 102900000, guid: 4e58cec0d785b8d45bfee6650bfe6436, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 102900000, guid: 78dfbf87c20e2ae46961b7101dbc9b1e, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 

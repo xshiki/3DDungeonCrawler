@@ -197,8 +197,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.66, y: 2.79, z: 1.65}
+  m_Center: {x: 0, y: 1.11, z: -0.55}
 --- !u!114 &1860818505500481449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +227,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
-  enemyLevel: 1
+  attackDamage: 10
+  experiencePoints: 10
+  floor: {fileID: 0}
   experienceManager: {fileID: 0}
 --- !u!114 &867239858439345637
 MonoBehaviour:
@@ -246,10 +248,10 @@ MonoBehaviour:
   walkSpeed: 3
   runSpeed: 5
   pushForce: 5
+  attackDamage: 10
   wayPointRange: 10
   viewRadius: 15
   viewAngle: 90
-  attackDamage: 10
   timeBetweenAttacks: 5
   alreadyAttacked: 0
   sightRange: 0
