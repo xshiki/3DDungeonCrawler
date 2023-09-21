@@ -12,7 +12,7 @@ public class EnemyAI : MonoBehaviour
     public float walkSpeed = 3f; // Speed at which the enemy moves towards the player
     public float runSpeed = 5f;
     public float pushForce = 5f;
-
+    public int attackDamage;
 
 
     public float wayPointRange = 10f;
@@ -20,7 +20,6 @@ public class EnemyAI : MonoBehaviour
     public float viewRadius = 15f;
     [Range(0, 360)]
     public float viewAngle = 90;
-    public int attackDamage = 10; // Amount of damage the enemy deals to the player when attacking
     public float timeBetweenAttacks;
     public bool alreadyAttacked = false;
     public float sightRange, attackRange;
@@ -51,7 +50,7 @@ public class EnemyAI : MonoBehaviour
    
     private void Awake()
     {
-
+        attackDamage = GetComponent<EnemyManager>().attackDamage;
         gameObject.tag = "Enemy";
         player = GameObject.Find("Player").transform;
         enemy = GetComponent<NavMeshAgent>();
@@ -68,7 +67,10 @@ public class EnemyAI : MonoBehaviour
 
 
     }
-
+    public void SetBossSpawnPoint(Vector3 position)
+    {
+        wayPoints.Add(position);
+    }
     public void SetSpawnPosition(Vector3 positon)
     {
     

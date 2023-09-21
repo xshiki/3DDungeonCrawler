@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,7 +12,8 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public GameObject itemToolTipPanel;
     public Vector3 toolTipOffset;
     public RectTransform popUpObject;
-
+    
+    enum StatType { armor,stamina, strength, intelligence, speed};
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -21,7 +24,16 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 itemToolTipPanel.transform.position = hoveredItem.transform.position + toolTipOffset;
                 var tooltip = itemToolTipPanel.GetComponent<ItemToolTipDescription>();
                 tooltip.SetItemName(hoveredItem.item.DisplayName);
-                tooltip.SetItemDescription(hoveredItem.item.Description);
+                string description = hoveredItem.item.Description + "\n";
+                if (hoveredItem.item is ArmorItemData)
+                {
+                 description += SetDescriptionArmor(hoveredItem.item as ArmorItemData);
+
+                }else if(hoveredItem.item is WeaponItemData)
+            {
+                description += SetDescriptionWeapon(hoveredItem.item as WeaponItemData);
+            }
+            tooltip.SetItemDescription(description);
                 itemToolTipPanel.SetActive(true);
                 LayoutRebuilder.ForceRebuildLayoutImmediate(popUpObject);
                 
@@ -32,6 +44,43 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 
     }
+
+    string SetDescriptionWeapon(WeaponItemData weaponItem)
+    {
+
+        string description = "";
+        description += weaponItem.WeaponType.ToString() + "\n"
+                    + weaponItem.DamageAmount.ToString() + " Damage\n";
+
+        return description;
+    }
+    string SetDescriptionArmor(ArmorItemData armorItem)
+    {
+
+        string description = "";
+      
+
+        Dictionary<string, int> stats = new Dictionary<string, int>
+                {
+                    { "Armor", armorItem.armor },
+                    { "Stamina", armorItem.stamina },
+                    { "Strength", armorItem.strength },
+                    { "Intelligence", armorItem.intelligence },
+                    { "Speed", armorItem.speed }
+                };
+
+        foreach (var stat in stats)
+        {
+            if (stat.Value > 0)
+            {
+                description += $"+ {stat.Value} {stat.Key}\n";
+            }
+        }
+
+
+        return description;
+    }
+
 
     public void OnPointerExit(PointerEventData eventData)
     {

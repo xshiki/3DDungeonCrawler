@@ -38,7 +38,7 @@ public class Spell : MonoBehaviour
         //Apply sound sfx, particle effects etc
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyHealth>().TakeDamage((int) SpellToCast.DamageAmount);
+            other.GetComponent<EnemyManager>().TakeDamage((int) SpellToCast.DamageAmount);
             Destroy(this.gameObject);
         }
        

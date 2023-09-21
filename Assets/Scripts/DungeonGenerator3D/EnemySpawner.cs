@@ -19,7 +19,9 @@ public class EnemySpawner : MonoBehaviour
     public ObjectPool<GameObject> _enemyPool;
     public enum SpawnMethod {RoundRobin, Random};
     public SpawnMethod enemySpawnMethod = SpawnMethod.RoundRobin;
-
+    public LoadDatabase database;
+    public ScalingScriptableObject scaler;
+    public int floorCounter;
     public LayerMask layerMask = 11;
  
 
@@ -27,12 +29,10 @@ public class EnemySpawner : MonoBehaviour
     {
         dungeonGenerator = GameObject.Find("DungeonGenerator").GetComponent<ProceduralDungeonGenerator>();
         _enemyPool = new ObjectPool<GameObject>(CreateEnemy, null, OnPutBackInPool, defaultCapacity: 50);
-
-
+        database = GameObject.Find("Database").GetComponent<LoadDatabase>();
+        scaler = database.scaler;
+        floorCounter = GameObject.Find("Floor Counter").GetComponent<FloorTextOverlay>().floorCounter;
         dungeonGenerator.OnFinishBuilding += StartCoroutine;
-
-
-
 
     }
 
@@ -54,6 +54,7 @@ public class EnemySpawner : MonoBehaviour
             spawnIndex = UnityEngine.Random.Range(0, enemyPrefabs.Count);
         }
         var enemy = Instantiate(enemyPrefabs[spawnIndex],transform);
+        enemy.GetComponent<EnemyManager>().EnemyScaler(scaler, floorCounter);
         return enemy;
     }
 
@@ -98,7 +99,7 @@ public class EnemySpawner : MonoBehaviour
                 enemyAgent.Warp(Hit.position);
                 enemy.GetComponent<EnemyAI>().SetSpawnPosition(Hit.position);
                 enemyAgent.enabled = true;
-                enemy.GetComponent<EnemyHealth>().SetPool(_enemyPool);
+                enemy.GetComponent<EnemyManager>().SetPool(_enemyPool);
                 SpawnedEnemies++;
 
         }

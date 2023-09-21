@@ -197,9 +197,9 @@ public class PlayerController : MonoBehaviour
 
     public void HitTarget(RaycastHit hit)
     {
-        if (hit.collider.GetComponent<EnemyHealth>())
+        if (hit.collider.GetComponent<EnemyManager>())
         {
-            hit.collider.GetComponent<EnemyHealth>().TakeDamage(punchDamage);
+            hit.collider.GetComponent<EnemyManager>().TakeDamage(punchDamage);
             audioSource.PlayOneShot(punchAudioClip);
         }
     }

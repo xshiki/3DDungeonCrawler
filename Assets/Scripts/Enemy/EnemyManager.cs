@@ -9,12 +9,13 @@ using UnityEngine.Pool;
 [RequireComponent(typeof(EnemyAI))]
 [RequireComponent(typeof(LootTable))]
 [RequireComponent (typeof(Animator))]
-public class EnemyHealth : MonoBehaviour
+public class EnemyManager : MonoBehaviour
 {
     public int maxHealth = 10; // Maximum health of the enemy
     public int currentHealth = 10; // Current health of the enemy
-    public int enemyLevel = 1;
-
+    public int attackDamage = 10;
+    public int experiencePoints = 10;
+    public FloorTextOverlay floor;
 
 
     [SerializeField] public ExperienceManager experienceManager;
@@ -24,9 +25,23 @@ public class EnemyHealth : MonoBehaviour
     private void Awake()
     {
       experienceManager = GameObject.Find("Player").GetComponent<ExperienceManager>();
+      floor = GameObject.Find("Floor Counter").GetComponent<FloorTextOverlay>();
+
       currentHealth = maxHealth;
+     
     }
 
+
+
+    //Use to scale up enemy stats over a animation curve
+    public void EnemyScaler(ScalingScriptableObject Scaling, int level)
+    {
+
+        maxHealth = Mathf.FloorToInt(maxHealth * Scaling.healthCurve.Evaluate(level));
+        attackDamage = Mathf.FloorToInt(attackDamage * Scaling.damageCurve.Evaluate(level));
+        experiencePoints = Mathf.FloorToInt(attackDamage * Scaling.experienceCurve.Evaluate(level));
+        currentHealth = maxHealth;
+    }
 
     public void SetPool(ObjectPool<GameObject> pool)
     {
@@ -36,7 +51,7 @@ public class EnemyHealth : MonoBehaviour
 
     // Function to reduce the player's health by a specified amount
     public bool TakeDamage(int damage)
-    {
+    {   
         currentHealth -= damage;
         
         if (currentHealth <= 0)
@@ -52,7 +67,7 @@ public class EnemyHealth : MonoBehaviour
     {
       
         GetComponent<LootTable>().InstantiateLoot(transform.position);
-        experienceManager.AddExperience(10);
+        experienceManager.AddExperience(experiencePoints);
 
         _enemyPool.Release(gameObject);
     }

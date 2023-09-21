@@ -79,6 +79,7 @@ public class PlayerUIManager : MonoBehaviour
         _intValue.color = _playerRessource.intelligence.statModified ? Color.green : Color.white;
         _spdValue.color = _playerRessource.speed.statModified ? Color.green : Color.white;
         _armorValue.color = _playerRessource.armor.statModified ? Color.green : Color.white;
+        _strValue.color = _playerRessource.strength.statModified ? Color.green : Color.white;
     }
 
     private void FixedUpdate()

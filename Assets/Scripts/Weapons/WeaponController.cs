@@ -86,7 +86,7 @@ public class WeaponController : MonoBehaviour
                 if (collider.CompareTag("Enemy"))
                 {
                     // Assuming you have a script on the enemy objects that handles damage
-                    EnemyHealth enemyHealth = collider.GetComponent<EnemyHealth>();
+                    EnemyManager enemyHealth = collider.GetComponent<EnemyManager>();
                     enemyHealth.TakeDamage(weaponData.DamageAmount); // Call a method on the enemy to apply damage
                     
                 }
@@ -98,9 +98,9 @@ public class WeaponController : MonoBehaviour
 
     public void HitTarget(RaycastHit hit)
     {
-        if (hit.collider.GetComponent<EnemyHealth>())
+        if (hit.collider.GetComponent<EnemyManager>())
         {
-            hit.collider.GetComponent<EnemyHealth>().TakeDamage(weaponData.DamageAmount);
+            hit.collider.GetComponent<EnemyManager>().TakeDamage(weaponData.DamageAmount);
             audioSource.PlayOneShot(weaponData.weaponHitSound);
         }
     }
