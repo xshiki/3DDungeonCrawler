@@ -29,13 +29,13 @@ public class MeleeEnemyAI : EnemyAI
         if (!alreadyAttacked)
         {
 
-        
+            
             alreadyAttacked = true;
     
             Vector3 pushForceVector = direction * pushForce;
             Rigidbody playerRigidbody = player.gameObject.GetComponent<Rigidbody>();
             playerRigidbody.AddForce(pushForceVector, ForceMode.Impulse);
-
+            animator.Play("Attack");
             player.GetComponent<PlayerRessource>().TakeDamage(attackDamage);
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }

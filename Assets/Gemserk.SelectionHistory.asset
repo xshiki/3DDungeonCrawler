@@ -14,43 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionHistory:
     _history:
-    - reference: {fileID: 8301396944363179094, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
+    - reference: {fileID: 919132149155446097, guid: 26a108950e052164187c249cd2fc71a8, type: 3}
+      sceneName: 
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-1-26a108950e052164187c249cd2fc71a8-919132149155446097-0
+    - reference: {fileID: -6307555022707298467, guid: 26a108950e052164187c249cd2fc71a8, type: 3}
       sceneName: 
       scenePath: 
       globalObjectId: 
-    - reference: {fileID: -7430661520971797955, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
+    - reference: {fileID: 4532081759636266233, guid: 26a108950e052164187c249cd2fc71a8, type: 3}
       sceneName: 
       scenePath: 
       globalObjectId: 
-    - reference: {fileID: 7641588461968846980, guid: 1933b230d58b17f4d9feb9b124099053, type: 3}
+    - reference: {fileID: 6520801524007807556, guid: 26a108950e052164187c249cd2fc71a8, type: 3}
       sceneName: 
       scenePath: 
       globalObjectId: 
-    - reference: {fileID: -4506918998641915097, guid: c2a4807e239e0f9488d8ee1c43bddde6, type: 3}
+    - reference: {fileID: -678588839994105498, guid: dc12f392791410e459be6bf0b683bd25, type: 2}
       sceneName: 
       scenePath: 
       globalObjectId: 
-    - reference: {fileID: -6686262046745711477, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: -6380294241556352034, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 2018810241728932115, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 2758766341792869781, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
+    - reference: {fileID: 6143099447678993799, guid: dc12f392791410e459be6bf0b683bd25, type: 2}
       sceneName: 
       scenePath: 
       globalObjectId: 
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-681934179-0
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1326689173-0
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1023927292-0
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-153851889-0
+    - reference: {fileID: 1784617969001265050, guid: b216c60e3e0dad74ba3a6515b1d2d4ef, type: 3}
+      sceneName: 
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-1-b216c60e3e0dad74ba3a6515b1d2d4ef-1784617969001265050-0
+    - reference: {fileID: 0}
+      sceneName: Enemy_SLIME Variant
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-919132149155446097-1442653021255518923

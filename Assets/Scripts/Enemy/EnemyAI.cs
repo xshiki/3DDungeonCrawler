@@ -9,6 +9,7 @@ public class EnemyAI : MonoBehaviour
 {
     public Transform player; // Reference to the player's transform
     public NavMeshAgent enemy;
+    protected Animator animator;
     public float walkSpeed = 3f; // Speed at which the enemy moves towards the player
     public float runSpeed = 5f;
     public float pushForce = 5f;
@@ -64,7 +65,7 @@ public class EnemyAI : MonoBehaviour
         enemy.speed = walkSpeed;
         playerLM |= 0x1 << 9;
         obstaclesLM |= 0x1 << 11;
-
+        animator = GetComponent<Animator>();
 
     }
     public void SetBossSpawnPoint(Vector3 position)
@@ -85,7 +86,14 @@ public class EnemyAI : MonoBehaviour
         if (player == null) { return; }
         float dstToPlayer = Vector3.Distance(transform.position, player.position);
         playerInAttackRange = dstToPlayer < attackRange ? true : false;
-
+        if (enemy.speed == 0)
+        {
+            animator.SetFloat("Speed", 0);
+        }
+        else
+        {
+            animator.SetFloat("Speed", 1);
+        }
         //if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (!isPatrol)
         {
@@ -96,6 +104,7 @@ public class EnemyAI : MonoBehaviour
         {
             Patroling();
         }
+        
     }
 
 

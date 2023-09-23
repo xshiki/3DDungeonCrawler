@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public GameObject playerInventory;
+    public GameObject pauseScreen, gameOverScreen;
     public Transform playerOrientation;
     public Button exitInventoryButton;
     public FirstPersonController firstPersonController;
@@ -52,15 +53,17 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-      playerInput = new PlayerInput();
-      audioSource = GetComponent<AudioSource>();
-     
-      playerOrientation = GameObject.Find("Orientation").transform;
-      playerInventory = GameObject.Find("PlayerInventory");
-      playerInventory.SetActive(false);
-      animator = GetComponentInChildren<Animator>();
-      input = playerInput.Player;
-      AssignInputs();
+        playerInput = new PlayerInput();
+        audioSource = GetComponent<AudioSource>();
+
+        playerOrientation = GameObject.Find("Orientation").transform;
+        playerInventory = GameObject.Find("PlayerInventory");
+        pauseScreen = GameObject.Find("Pause Panel");
+        pauseScreen.SetActive(false);
+        playerInventory.SetActive(false);
+        animator = GetComponentInChildren<Animator>();
+        input = playerInput.Player;
+        AssignInputs();
     }
 
 
@@ -74,9 +77,9 @@ public class PlayerController : MonoBehaviour
 
 
     private void OnEnable()
-    {   
+    {
         input.Enable();
- 
+
     }
 
 
@@ -95,18 +98,18 @@ public class PlayerController : MonoBehaviour
 
         if (currentWeapon != null)
         {
-           
+
             animator.SetInteger("WeaponType", 1);
         }
         else if (currentMagicWeapon != null)
         {
-    
+
             animator.SetInteger("WeaponType", 2);
         }
         else
         {
             animator.SetInteger("WeaponType", 0);
-   
+
         }
 
 
@@ -140,7 +143,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetCurrentWeapon(WeaponController equippedWeapon)
     {
-       
+
         this.currentWeapon = equippedWeapon;
     }
 
@@ -160,6 +163,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnAttackPerformed(InputAction.CallbackContext context)
     {
+
+        //dont perform attacks when inventory is open
+        if (playerInventory.activeInHierarchy || pauseScreen.activeInHierarchy) { return; }
+
+
         if (currentWeapon != null)
         {  
             currentWeapon.swingWeapon();

@@ -127,10 +127,10 @@ MonoBehaviour:
   walkSpeed: 3
   runSpeed: 5
   pushForce: 5
+  attackDamage: 10
   wayPointRange: 10
   viewRadius: 15
   viewAngle: 90
-  attackDamage: 10
   timeBetweenAttacks: 0
   alreadyAttacked: 0
   sightRange: 10
@@ -164,7 +164,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
-  enemyLevel: 1
+  attackDamage: 10
+  experiencePoints: 10
+  floor: {fileID: 0}
   experienceManager: {fileID: 0}
 --- !u!65 &-4089028622674570135
 BoxCollider:
@@ -196,8 +198,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1784617969001265050}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 9713c27dccaa23840bc71e2df323d63b, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2f18da06b9f1d4a4a890ad66b5fa7786, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
