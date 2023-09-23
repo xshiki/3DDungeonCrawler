@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 552ba6cfa173c7d4d9a387e3196b13a2
+guid: 1933b230d58b17f4d9feb9b124099053
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -24,7 +24,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: FPS_Equip
-      takeName: Human Armature|FPS_Idle
-      internalID: 1497269072310825077
+      name: Human Armature|FPS_Melee_Walk
+      takeName: Human Armature|FPS_Melee_Walk
+      internalID: 7641588461968846980
       firstFrame: 0
-      lastFrame: 26
+      lastFrame: 49
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

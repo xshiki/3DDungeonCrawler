@@ -9,8 +9,9 @@ public class WeaponController : MonoBehaviour
     public const string SWING = "Swing";
     // Start is called before the first frame update
     AudioSource audioSource;
-    Animator weaponAnimator;
+    public Animator weaponAnimator;
     public WeaponItemData weaponData;
+
     public PlayerController playerController;
     public PlayerEquipment playerEquipment;
 
@@ -22,6 +23,8 @@ public class WeaponController : MonoBehaviour
     public const string ATTACK1 = "Attack 1";
     public const string ATTACK2 = "Attack 2";
 
+
+    int attackCount = 0;
     private void Awake()
     {
         
@@ -43,8 +46,21 @@ public class WeaponController : MonoBehaviour
         Invoke(nameof(ResetAttack), timeBetweenSwing);
         AttackRaycast();
         audioSource.PlayOneShot(weaponData.weaponSwingSound);
-        playerController.PlayAnimation(ATTACK1);
-        playerController.PlayAnimation(ATTACK2);
+
+
+        if (attackCount == 0)
+        {
+            playerController.PlayAnimation(ATTACK1);
+            attackCount++;
+        }
+        else
+        {
+            playerController.PlayAnimation(ATTACK2);
+            attackCount = 0;
+        }
+       
+      
+        //weaponAnimator.Play(ATTACK1);
 
     }
 

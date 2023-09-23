@@ -6,6 +6,7 @@ public class MagicWeaponController : MonoBehaviour
 {
 
     public MagicWeaponItemData weaponData;
+    public Animator weaponAnimator;
     public PlayerController playerController;
     public PlayerEquipment playerEquipment;
     public PlayerRessource playerRessource;
@@ -14,14 +15,14 @@ public class MagicWeaponController : MonoBehaviour
     [SerializeField] public Transform _castPoint;
     [SerializeField] private float timeBetweenCast = 2.5f;
     private bool castingMagic = false;
-    public bool isCasting => castingMagic;
+    public bool isCasting => castingMagic;  
     private PlayerInput playerInput;
 
 
 
     void Awake()
     {
-     
+        weaponAnimator = GetComponent<Animator>();
         playerController = FindObjectOfType<PlayerController>();
         playerEquipment = FindObjectOfType<PlayerEquipment>();
         playerInput = new PlayerInput();

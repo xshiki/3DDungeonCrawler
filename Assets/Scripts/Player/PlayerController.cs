@@ -45,9 +45,10 @@ public class PlayerController : MonoBehaviour
 
 
     bool attacking = false;
-
+    int attackCount = 0;
     public const string PUNCH1 = "Punch 1";
     public const string PUNCH2 = "Punch 2";
+    public const string PUNCH3 = "Punch 3";
 
     private void Awake()
     {
@@ -56,7 +57,7 @@ public class PlayerController : MonoBehaviour
      
       playerOrientation = GameObject.Find("Orientation").transform;
       playerInventory = GameObject.Find("PlayerInventory");
-       playerInventory.SetActive(false);
+      playerInventory.SetActive(false);
       animator = GetComponentInChildren<Animator>();
       input = playerInput.Player;
       AssignInputs();
@@ -90,14 +91,23 @@ public class PlayerController : MonoBehaviour
 
 
     void SetAnimations()
-    { 
+    {
 
-        
-        Rigidbody playerRb = GetComponent<Rigidbody>();
-        Vector3 velocity = playerRb.velocity;
-        
-       
-
+        if (currentWeapon != null)
+        {
+           
+            animator.SetInteger("WeaponType", 1);
+        }
+        else if (currentMagicWeapon != null)
+        {
+    
+            animator.SetInteger("WeaponType", 2);
+        }
+        else
+        {
+            animator.SetInteger("WeaponType", 0);
+   
+        }
 
 
     }
@@ -130,14 +140,19 @@ public class PlayerController : MonoBehaviour
 
     public void SetCurrentWeapon(WeaponController equippedWeapon)
     {
-
+        UnequipWeapon();
         this.currentWeapon = equippedWeapon;
     }
 
     public void SetCurrentMagicWeapon(MagicWeaponController equippedWeapon)
     {
-
+        UnequipWeapon();
         this.currentMagicWeapon = equippedWeapon;
+    }
+
+    void UnequipWeapon()
+    {
+        animator.SetTrigger("unequipWeapon");
     }
 
     public void PlayAnimation(string newState)
@@ -147,15 +162,17 @@ public class PlayerController : MonoBehaviour
     {
         if (currentWeapon != null)
         {  
-            currentWeapon.swingWeapon();        
+            currentWeapon.swingWeapon();
+           
         }
         else if (currentMagicWeapon != null)
         {
             currentMagicWeapon.CastSpell();
-        }else
+
+        }
+        else
         {
             Punch();
-            Debug.Log("No weapon equipped!");
         }
     }
 
@@ -165,8 +182,23 @@ public class PlayerController : MonoBehaviour
         if (attacking) { return; }
         attacking = true;
         Invoke(nameof(ResetAttack), timeBetweenAttack);
-        PlayAnimation(PUNCH1);
-        PlayAnimation(PUNCH2);
+
+
+        if (attackCount == 0)
+        {
+            PlayAnimation(PUNCH1);
+            attackCount++;
+        }
+        else if(attackCount == 1) 
+        {
+            PlayAnimation(PUNCH2);
+            attackCount++;
+        }else{
+                PlayAnimation(PUNCH3);
+                attackCount = 0;
+        }
+       
+       
         AttackRaycast();
     }
 

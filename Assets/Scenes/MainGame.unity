@@ -33120,8 +33120,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4379493646615741044}
+  m_Children: []
   m_Father: {fileID: 1811876855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &946869827 stripped
@@ -42005,7 +42004,7 @@ RectTransform:
   - {fileID: 252227147}
   - {fileID: 268796094}
   - {fileID: 335851396}
-  m_Father: {fileID: 1946724387}
+  m_Father: {fileID: 1811876855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -55497,11 +55496,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 95131716}
-  - {fileID: 938767750}
-  - {fileID: 1465828900}
-  - {fileID: 1946724387}
   - {fileID: 446527551}
+  - {fileID: 95131716}
+  - {fileID: 1465828900}
+  - {fileID: 938767750}
+  - {fileID: 4379493646615741044}
+  - {fileID: 1946724387}
+  - {fileID: 1449756955}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1811876856
@@ -56903,8 +56904,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1449756955}
+  m_Children: []
   m_Father: {fileID: 1811876855}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1960532305
@@ -64216,7 +64216,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 938767750}
+    m_TransformParent: {fileID: 1811876855}
     m_Modifications:
     - target: {fileID: 17499543753778481, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_Name
@@ -65365,8 +65365,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hot Steel Shortsword Variant 1 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2373587730208232676, guid: 149ab6dca88fd15408db71e4d9f2564f, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
