@@ -1,5 +1,112 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &874669238217280544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2772837344910852553}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2772837344910852553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874669238217280544}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1558132646500794347}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2842875084806052922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4594021885785340344}
+  - component: {fileID: 1769830039084491180}
+  - component: {fileID: 2229826679022392019}
+  m_Layer: 0
+  m_Name: NavMesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4594021885785340344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842875084806052922}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1558132646500794347}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769830039084491180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842875084806052922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 6144
+  m_UseGeometry: 1
+  m_DefaultArea: 0
+  m_GenerateLinks: 1
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 0}
+  m_BuildHeightMesh: 0
+--- !u!114 &2229826679022392019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842875084806052922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac3827c95d7b9a439dd9b18f05a1940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2847350380015812649
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8232049285782295173}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Boundaries
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66,6 +173,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8232049285782295173}
+  - {fileID: 4594021885785340344}
+  - {fileID: 2772837344910852553}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5260909565351691833
@@ -80,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7bc3b11a6147b94f9a8242813a509b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: 0
+  seed: 6
   useSeed: 0
   startPrefabs:
   - {fileID: 6525572508849976777, guid: fec4c5e1f4ccf934aaf2c1265c191e4b, type: 3}
@@ -97,9 +206,15 @@ MonoBehaviour:
   - {fileID: 4555042495925897445, guid: 2bb942813c78d634981555e2eec322ad, type: 3}
   - {fileID: 7595052030409930511, guid: b82794eb7f5ed0c4f9a889da337934a0, type: 3}
   - {fileID: 6232369364849296463, guid: 66c8c55dc1a2c29449300587eabc5325, type: 3}
-  hallwayPrefabs: []
+  hallwayPrefabs:
+  - {fileID: 576986064361570407, guid: 992841d53345a7e44b167f6b9398437d, type: 3}
+  - {fileID: 2182779868695117443, guid: 25442a6fc9deea240959fdd369a4ee4e, type: 3}
+  - {fileID: 2395080140121669480, guid: 2a25ed81ba754054d91e56c667fb2e56, type: 3}
+  - {fileID: 6440066946812144061, guid: 3a258e1b48ade6642877c02246df2af3, type: 3}
+  - {fileID: 5640050301694296953, guid: 43ffca5291934e74dafb1ab4a5296a74, type: 3}
   bossRoomPrefabs:
   - {fileID: 6859666254558572466, guid: 56d19f7eb3a9fdd4b8b08cb3ef95c263, type: 3}
+  - {fileID: 4555042495925897445, guid: 2bb942813c78d634981555e2eec322ad, type: 3}
   blockedPrefabs:
   - {fileID: 3228192000102779016, guid: d0a0a683b1d558f4fbc2ff08eafd8485, type: 3}
   - {fileID: 8191001970776998217, guid: 846254511dda2c5499d610fb1371a34c, type: 3}
@@ -112,10 +227,10 @@ MonoBehaviour:
   - {fileID: 6525572508849976777, guid: 234cab39b00d69a45a0abc01a5a42835, type: 3}
   - {fileID: 1245771345307767165, guid: 8916a11c332d09144ac83026a5d850bd, type: 3}
   - {fileID: 8096523472231656629, guid: 74a360f423d2ee142939309b1730b64c, type: 3}
-  roomCount: 20
-  branchCount: 5
-  branchLength: 5
-  doorPercent: 27
+  roomCount: 10
+  branchCount: 4
+  branchLength: 6
+  doorPercent: 15
   constructionDelay: 0
   dungeonState: 0
   generatedTiles: []
@@ -126,7 +241,8 @@ MonoBehaviour:
   useBoxColliders: 0
   useLights: 0
   restoreLights: 0
-  navMesh: {fileID: 0}
+  counter: {fileID: 0}
+  navMesh: {fileID: 2229826679022392019}
   maxAttempts: 50
 --- !u!1 &5711073518320009020
 GameObject:
@@ -138,7 +254,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7339735460070764966}
   - component: {fileID: 3108348995314662390}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Boundary (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -191,7 +307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2026061547951279135}
   - component: {fileID: 1306319383382127799}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Boundary (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +360,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891990321746484363}
   - component: {fileID: 7396959338088720582}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Boundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9042016193907410432}
   - component: {fileID: 7563771151954120087}
-  m_Layer: 11
+  m_Layer: 5
   m_Name: Boundary (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
