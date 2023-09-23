@@ -148,6 +148,8 @@ public class UI_CharacterEquipment : MonoBehaviour
           
         }
 
+
+        playerController.UnequipWeapon();
         InventoryItemData weaponItem = playerEquipment.GetWeaponItem();
         if(weaponItem!=null) { 
             GameObject weaponObject = Instantiate(weaponItem.ItemPrefab, weaponSocket);

@@ -140,17 +140,17 @@ public class PlayerController : MonoBehaviour
 
     public void SetCurrentWeapon(WeaponController equippedWeapon)
     {
-        UnequipWeapon();
+       
         this.currentWeapon = equippedWeapon;
     }
 
     public void SetCurrentMagicWeapon(MagicWeaponController equippedWeapon)
     {
-        UnequipWeapon();
+
         this.currentMagicWeapon = equippedWeapon;
     }
 
-    void UnequipWeapon()
+    public void UnequipWeapon()
     {
         animator.SetTrigger("unequipWeapon");
     }

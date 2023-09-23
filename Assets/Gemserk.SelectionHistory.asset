@@ -14,14 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionHistory:
     _history:
-    - reference: {fileID: -6712369620444760889, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: -234670935367615310, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
     - reference: {fileID: 8301396944363179094, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
       sceneName: 
       scenePath: 
@@ -54,3 +46,11 @@ MonoBehaviour:
       sceneName: 
       scenePath: 
       globalObjectId: 
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-681934179-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1023927292-0
