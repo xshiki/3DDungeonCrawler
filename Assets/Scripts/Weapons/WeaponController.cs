@@ -72,10 +72,10 @@ public class WeaponController : MonoBehaviour
     public void AttackRaycast()
     {
 
-        /*
+       
         RaycastHit[] hits;
 
-        hits = Physics.RaycastAll(playerOrientation.transform.position, playerOrientation.transform.forward,weaponData.WeaponRange);
+        hits = Physics.RaycastAll(playerOrientation.transform.position, playerOrientation.transform.forward,2);
         Debug.Log(hits);
         if (hits.Length > 0)
         {
@@ -85,11 +85,13 @@ public class WeaponController : MonoBehaviour
                 HitTarget(hits[i]);
             }
         }
-        */
+       
 
 
         // Assuming you have a GameObject with BoxCollider components as the weapon's attack hitboxes
         // Adjust this part according to your setup
+
+        /*
         BoxCollider[] hitboxes = this.GetComponentsInChildren<BoxCollider>();
 
         foreach (BoxCollider hitbox in hitboxes)
@@ -108,6 +110,7 @@ public class WeaponController : MonoBehaviour
                 }
             }
         }
+        */
     }
 
 
