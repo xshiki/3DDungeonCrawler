@@ -4,32 +4,39 @@ using UnityEngine;
 
 public class MagicWeaponController : MonoBehaviour
 {
-
-    public MagicWeaponItemData weaponData;
-    public Animator weaponAnimator;
-    public PlayerController playerController;
-    public PlayerEquipment playerEquipment;
-    public PlayerRessource playerRessource;
-    public Transform playerTransform;
-    public Spell spellToCast;
-    [SerializeField] public Transform _castPoint;
+    [SerializeField] public Spell spellToCast;
     [SerializeField] private float timeBetweenCast = 2.5f;
-    private bool castingMagic = false;
+
+    MagicWeaponItemData weaponData;
+    Animator weaponAnimator;
+    AudioSource audioSource;
+    PlayerController playerController;
+    PlayerRessource playerRessource;
+    Transform playerTransform;
+    PlayerInput playerInput;
+    Transform _castPoint;
+    
+    bool castingMagic = false;
     public bool isCasting => castingMagic;  
-    private PlayerInput playerInput;
+   
 
 
 
     void Awake()
     {
-        weaponAnimator = GetComponent<Animator>();
         playerController = FindObjectOfType<PlayerController>();
-        playerEquipment = FindObjectOfType<PlayerEquipment>();
         playerInput = new PlayerInput();
         playerRessource = FindObjectOfType<PlayerRessource>();
+        audioSource = GetComponent<AudioSource>();
+
+        ItemDataProvider dataProvider = GetComponent<ItemDataProvider>();
+        weaponData = dataProvider.Item as MagicWeaponItemData;
+        weaponAnimator = GetComponent<Animator>();
+      
         spellToCast = weaponData.spellToCast;
         playerTransform= GameObject.Find("SpellCastPoint").GetComponent<Transform>();
         _castPoint = playerTransform;
+       
     }
 
     private void OnEnable()
@@ -50,6 +57,8 @@ public class MagicWeaponController : MonoBehaviour
         {
            
             castingMagic = true;
+            playerController.PlayAnimation("Ranged");
+            audioSource.PlayOneShot(weaponData.weaponSwingSound);
             playerRessource.currentMana -= spellToCast.SpellToCast.ManaCost;
             InstantiateSpell();
             Debug.Log("casting spell");

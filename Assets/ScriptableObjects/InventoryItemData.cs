@@ -10,15 +10,19 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Create Items/Item")]
 public class InventoryItemData : ScriptableObject
 {
+
+    [Header("Set UI Attributes")]
     public Sprite Icon;
     public int MaxStackSize;
     public int ID = -1;
     public string DisplayName;
     [TextArea(4, 4)]
     public string Description;
+
+
+    [Header("Set Item Attributes")]
     public GameObject ItemPrefab;
     public InventoryItemType ItemType;
-    public RuntimeAnimatorController RigAnimatorController;
     public int dropChance;
     public bool consumable;
 

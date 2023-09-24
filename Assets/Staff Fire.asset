@@ -17,15 +17,14 @@ MonoBehaviour:
   ID: -1
   DisplayName: 
   Description: 
-  ItemPrefab: {fileID: 1532277902221668490, guid: 1752a269a4f105e4eb6842b98c5f5dc5, type: 3}
+  ItemPrefab: {fileID: 5196109497896617200, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
   ItemType: 5
-  RigAnimatorController: {fileID: 0}
   dropChance: 20
   consumable: 0
   WeaponType: 3
   DamageAmount: 0
   WeaponRange: 1
-  weaponSwingSound: {fileID: 8300000, guid: 7923190c5e80b4d4d9396acc5d0b48cf, type: 3}
+  weaponSwingSound: {fileID: 8300000, guid: cb63fde523926ef45b5b56079d4a338d, type: 3}
   weaponHitSound: {fileID: 8300000, guid: 11245d3945c564b45a1bafad5ecb70e5, type: 3}
   hitEffect: {fileID: 0}
   spellToCast: {fileID: 3970265404137374070, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}

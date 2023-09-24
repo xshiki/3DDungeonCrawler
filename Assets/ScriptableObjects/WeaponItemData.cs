@@ -9,7 +9,7 @@ public class WeaponItemData : InventoryItemData
 
 
 
-    [Header("Weapon Attributes")]
+    [Header("Weapon Attributes (DAMAGE IS MELEE ONLY)")]
     public Weapons WeaponType;
     public int DamageAmount;
     public float WeaponRange = 1f;

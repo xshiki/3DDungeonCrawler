@@ -16,6 +16,7 @@ public class EnemyManager : MonoBehaviour
     public int attackDamage = 10;
     public int experiencePoints = 10;
     public FloorTextOverlay floor;
+    Animator animator;
 
 
     [SerializeField] public ExperienceManager experienceManager;
@@ -26,7 +27,7 @@ public class EnemyManager : MonoBehaviour
     {
       experienceManager = GameObject.Find("Player").GetComponent<ExperienceManager>();
       floor = GameObject.Find("Floor Counter").GetComponent<FloorTextOverlay>();
-
+       animator = GetComponent<Animator>();
       currentHealth = maxHealth;
      
     }
@@ -68,7 +69,20 @@ public class EnemyManager : MonoBehaviour
       
         GetComponent<LootTable>().InstantiateLoot(transform.position);
         experienceManager.AddExperience(experiencePoints);
+        animator.SetTrigger("OnDeath");
+        //_enemyPool.Release(gameObject);
+        StartCoroutine(wait());
+    }
 
+    IEnumerator wait()
+    {
+        
+        yield return new WaitForSeconds(1.5f);
+        OnDeathAnimationFinished();
+    }
+    
+    public void OnDeathAnimationFinished()
+    {
         _enemyPool.Release(gameObject);
     }
 }
