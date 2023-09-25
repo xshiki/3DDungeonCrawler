@@ -29,7 +29,7 @@ public class PlayerSoundManager : MonoBehaviour
         
     }
 
-    void PlayFootStep()
+    void AnimationEvent_FootStep()
     {
         AudioClip clip;
 

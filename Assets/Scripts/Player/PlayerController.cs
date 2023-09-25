@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     public int punchDamage = 2;
     public float punchRange = 1f;
     public float timeBetweenAttack = 2.5f;
-    public AudioClip punchAudioClip;
+    public AudioClip punchAudioClip, punchSwingAudioClip;
     public AudioSource audioSource;
 
 

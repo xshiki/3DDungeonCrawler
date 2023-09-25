@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Pool;
 
 
@@ -17,19 +18,20 @@ public class EnemyManager : MonoBehaviour
     public int experiencePoints = 10;
     public FloorTextOverlay floor;
     Animator animator;
-
+    NavMeshAgent enemy;
 
     [SerializeField] public ExperienceManager experienceManager;
 
-    private ObjectPool<GameObject> _enemyPool;
-
+    private ObjectPool <GameObject> _enemyPool;
+    public bool IsDead => isDead;
+    bool isDead = false;
     private void Awake()
     {
       experienceManager = GameObject.Find("Player").GetComponent<ExperienceManager>();
       floor = GameObject.Find("Floor Counter").GetComponent<FloorTextOverlay>();
        animator = GetComponent<Animator>();
       currentHealth = maxHealth;
-     
+     enemy = GetComponent<NavMeshAgent>();
     }
 
 
@@ -66,10 +68,17 @@ public class EnemyManager : MonoBehaviour
     // Function to trigger death
     public void Die()
     {
-      
+
+        isDead = true;
+        enemy.isStopped = true;
+        enemy.ResetPath();
+        enemy.updateRotation = false;
+        enemy.velocity = Vector3.zero;
+        enemy.speed = 0;
         GetComponent<LootTable>().InstantiateLoot(transform.position);
         experienceManager.AddExperience(experiencePoints);
         animator.SetTrigger("OnDeath");
+      
         //_enemyPool.Release(gameObject);
         StartCoroutine(wait());
     }

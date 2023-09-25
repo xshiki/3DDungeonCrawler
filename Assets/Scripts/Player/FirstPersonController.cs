@@ -15,8 +15,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private PlayerRessource _playerRessource;
     [Header("Animations")]
     public Animator animator;
-    public AudioClip footSteps;
-    public AudioSource audioSource;
+
 
     #region Camera Movement Variables
 

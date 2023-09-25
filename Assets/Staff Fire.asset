@@ -25,6 +25,6 @@ MonoBehaviour:
   DamageAmount: 0
   WeaponRange: 1
   weaponSwingSound: {fileID: 8300000, guid: cb63fde523926ef45b5b56079d4a338d, type: 3}
-  weaponHitSound: {fileID: 8300000, guid: 11245d3945c564b45a1bafad5ecb70e5, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: 0479f784c3aecf44a8cfc5f480058f73, type: 3}
   hitEffect: {fileID: 0}
   spellToCast: {fileID: 3970265404137374070, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}

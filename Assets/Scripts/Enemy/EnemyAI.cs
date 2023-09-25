@@ -15,6 +15,7 @@ public class EnemyAI : MonoBehaviour
     public float pushForce = 5f;
     public int attackDamage;
 
+    EnemyManager enemyManager;
 
     public float wayPointRange = 10f;
 
@@ -42,6 +43,8 @@ public class EnemyAI : MonoBehaviour
     float rotateTime;
 
     bool playerNear;
+
+
     [SerializeField]
     private bool isPatrol;
     bool caughtPlayer;
@@ -51,6 +54,8 @@ public class EnemyAI : MonoBehaviour
    
     private void Awake()
     {
+
+        enemyManager = GetComponent<EnemyManager>();
         attackDamage = GetComponent<EnemyManager>().attackDamage;
         gameObject.tag = "Enemy";
         player = GameObject.Find("Player").transform;
@@ -82,7 +87,7 @@ public class EnemyAI : MonoBehaviour
     void FixedUpdate()
     {
         //CheckForPlayer
-
+        if (enemyManager.IsDead) {  return; }   
         if (player == null) { return; }
         float dstToPlayer = Vector3.Distance(transform.position, player.position);
         playerInAttackRange = dstToPlayer < attackRange ? true : false;
