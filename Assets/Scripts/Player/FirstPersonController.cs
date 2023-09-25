@@ -387,6 +387,7 @@ public class FirstPersonController : MonoBehaviour
             {
                 isWalking = true;                
                 animator.SetFloat("Speed", 0.5f, 0.2f, Time.deltaTime);
+              
 
             }
             else
@@ -413,7 +414,7 @@ public class FirstPersonController : MonoBehaviour
                 {
                     isSprinting = true;
                     animator.SetFloat("Speed", 1f, 0.2f, Time.deltaTime);
-
+ 
                     if (isCrouched)
                     {
                         Crouch();
@@ -450,6 +451,23 @@ public class FirstPersonController : MonoBehaviour
             }
         }
 
+        if(isWalking && !isSprinting)
+        {
+            FindAnyObjectByType<AudioManager>().EnableAudioSource("Footsteps");
+        }
+        else
+        {
+            FindAnyObjectByType<AudioManager>().DisableAudioSource("Footsteps");
+        }
+
+        if(isSprinting)
+        {
+            FindAnyObjectByType<AudioManager>().EnableAudioSource("Sprint");
+        }
+        else
+        {
+            FindAnyObjectByType<AudioManager>().DisableAudioSource("Sprint");
+        }
         #endregion
     }
 

@@ -150,24 +150,31 @@ public class UI_CharacterEquipment : MonoBehaviour
 
 
         playerController.UnequipWeapon();
+        Invoke("EquipWeapon", 1f);
+     
+    }
+
+    void EquipWeapon()
+    {
         InventoryItemData weaponItem = playerEquipment.GetWeaponItem();
-        if(weaponItem!=null) { 
+        if (weaponItem != null)
+        {
             GameObject weaponObject = Instantiate(weaponItem.ItemPrefab, weaponSocket);
             weaponObject.layer = 6;
-            ItemPickUp itemPickUp= weaponObject.GetComponent<ItemPickUp>();
+            ItemPickUp itemPickUp = weaponObject.GetComponent<ItemPickUp>();
             itemPickUp.enabled = false;
             if (weaponObject.GetComponent<WeaponController>())
             {
                 playerController.SetCurrentWeapon(weaponObject.GetComponent<WeaponController>());
-            }else if (weaponObject.GetComponent<MagicWeaponController>())
+            }
+            else if (weaponObject.GetComponent<MagicWeaponController>())
             {
                 playerController.SetCurrentMagicWeapon(weaponObject.GetComponent<MagicWeaponController>());
             }
-           
-         
+
+
         }
     }
-
 
     public void InitializeHelmet()
     {

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
-
+using System;
 public class InventoryManager : MonoBehaviour
 {   
 
@@ -13,20 +13,21 @@ public class InventoryManager : MonoBehaviour
     private InputActionReference hotbarSelection;
     [SerializeField] public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
-   
+    public InventorySlot weaponSlot;
 
     int selectedSlot = -1;
 
     private void Awake()
     {
         Instance = this;
+       
+
      
     }
     private void Update()
     {
         if(hotbarSelection.action.triggered)
         {
-            Debug.Log("trying to use selected item via hotbar");
             ChangeSelectedSlot((int) hotbarSelection.action.ReadValue<float>() - 1);
             
         }
@@ -89,6 +90,23 @@ public class InventoryManager : MonoBehaviour
 
         if (itemInSlot != null)
         {
+            if (itemInSlot.myType == InventoryItemType.Weapon)
+            {
+                Debug.Log("is weapon true");
+                if(weaponSlot.transform.childCount > 0)
+                {
+                    Transform child = weaponSlot.transform.GetChild(0);
+                    itemInSlot.transform.SetParent(weaponSlot.transform, false);
+                    weaponSlot.SlotChanged(itemInSlot);
+                    child.SetParent(slot.transform,false);
+                }
+                else
+                {
+                    itemInSlot.transform.SetParent(weaponSlot.transform, false);
+                    weaponSlot.SlotChanged(itemInSlot);
+                }
+             
+            }
             if (use == true && itemInSlot.item.consumable)
             {            
                 itemInSlot.item.UseItem();
@@ -104,7 +122,9 @@ public class InventoryManager : MonoBehaviour
                     itemInSlot.Refresh();
                 }
             }
-            Debug.Log("hotbar slot not used");
+
+          
+          
             return itemInSlot.item;
         }
         

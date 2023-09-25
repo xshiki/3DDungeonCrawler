@@ -23,7 +23,10 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public void Deselect() { }
 
 
+    public void SlotChanged(InventoryItem item) {
 
+        OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { item = item });
+    }
 
     public void OnDrop(PointerEventData eventData)
     {

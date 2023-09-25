@@ -183,11 +183,11 @@ public class PlayerRessource : MonoBehaviour
     public void ReplenshHealthMana(float healthAmount, float manaAmount)
     {   
 
-        Debug.Log(healthAmount + " ----------- " + manaAmount);
+        
         if(currentHealth + healthAmount > maxHealth)
         {
             currentHealth = maxHealth;
-            Debug.Log("healed for max amount???");
+            
         }
         else
         {

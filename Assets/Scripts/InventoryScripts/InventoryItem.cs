@@ -19,7 +19,6 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     public int maxStacks = 1;
     [HideInInspector] public Transform parentAfterDrag;
     private Transform playerTransform;
-    private Transform playerSocket;
     public float dropOffset = 3f;
   
     public void InitialiseItem(InventoryItemData newItem)

@@ -205,7 +205,7 @@ public class PlayerController : MonoBehaviour
                 PlayAnimation(PUNCH3);
                 attackCount = 0;
         }
-       
+        //audioSource.PlayOneShot(punchSwingAudioClip);
        
         AttackRaycast();
     }
