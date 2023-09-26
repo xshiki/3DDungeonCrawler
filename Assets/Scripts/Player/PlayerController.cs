@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public Button exitInventoryButton;
     public FirstPersonController firstPersonController;
 
+    public UnityAction OnInventoryClosed;
     // Start is called before the first frame update
     [SerializeField]
     private InputActionReference openInventory, hotbarSelection;
@@ -256,6 +258,7 @@ public class PlayerController : MonoBehaviour
         if (playerInventory.activeInHierarchy)
         {
             playerInventory.SetActive(false);
+            OnInventoryClosed?.Invoke();
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             firstPersonController.enabled = true;

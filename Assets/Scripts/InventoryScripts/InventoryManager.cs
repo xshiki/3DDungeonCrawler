@@ -13,6 +13,8 @@ public class InventoryManager : MonoBehaviour
     private InputActionReference hotbarSelection;
     [SerializeField] public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
+
+    [HideInInspector]
     public InventorySlot weaponSlot;
 
     int selectedSlot = -1;

@@ -28,8 +28,8 @@ MonoBehaviour:
     Sell Price: 1 75'
   ItemPrefab: {fileID: 5879215179458826242, guid: 174e0c5903d7cb94c94027d6526999fb, type: 3}
   ItemType: 0
-  RigAnimatorController: {fileID: 0}
-  dropChance: 10
+  dropChance: 100
   consumable: 1
   _healthToReplenish: 50
   _manaToReplenish: 0
+  consumSoundClip: {fileID: 0}

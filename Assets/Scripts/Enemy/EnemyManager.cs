@@ -19,7 +19,8 @@ public class EnemyManager : MonoBehaviour
     public FloorTextOverlay floor;
     Animator animator;
     NavMeshAgent enemy;
-
+    public bool GotHit => gotHit;
+    bool gotHit = false;
     [SerializeField] public ExperienceManager experienceManager;
 
     private ObjectPool <GameObject> _enemyPool;
@@ -31,6 +32,7 @@ public class EnemyManager : MonoBehaviour
       floor = GameObject.Find("Floor Counter").GetComponent<FloorTextOverlay>();
        animator = GetComponent<Animator>();
       currentHealth = maxHealth;
+        gotHit = false;
      enemy = GetComponent<NavMeshAgent>();
     }
 
@@ -51,12 +53,16 @@ public class EnemyManager : MonoBehaviour
         _enemyPool = pool;
     }
 
-
+    public void ResetGotGit()
+    {
+        gotHit = false;
+    }
     // Function to reduce the player's health by a specified amount
     public bool TakeDamage(int damage)
     {   
         currentHealth -= damage;
-        
+
+        gotHit = true;
         if (currentHealth <= 0)
         {
             Die();

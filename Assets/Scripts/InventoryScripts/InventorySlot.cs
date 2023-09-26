@@ -43,7 +43,6 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             {
 
                 draggedItem.parentAfterDrag = transform;
-
                 OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { item = draggedItem });
 
 

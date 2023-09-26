@@ -87,7 +87,8 @@ public class EnemyAI : MonoBehaviour
     void FixedUpdate()
     {
         //CheckForPlayer
-        if (enemyManager.IsDead) {  return; }   
+        if (enemyManager.IsDead) {  return; }
+        if (enemyManager.GotHit) { transform.LookAt(player); }
         if (player == null) { return; }
         float dstToPlayer = Vector3.Distance(transform.position, player.position);
         playerInAttackRange = dstToPlayer < attackRange ? true : false;
@@ -107,6 +108,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
+            enemyManager.ResetGotGit();
             Patroling();
         }
         

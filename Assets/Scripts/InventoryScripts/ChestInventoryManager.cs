@@ -7,22 +7,31 @@ using UnityEngine.Events;
 
 public class ChestInventoryManager : InventoryManager, IInteractable
 {
-    [SerializeField] public int InventorySize;
+    //[SerializeField] public int InventorySize;
     [SerializeField] private string _prompt;
     [SerializeField] public GameObject PlayerInventory;
+    [SerializeField] public GameObject DynamicInventory;
+    [HideInInspector]
     [SerializeField] public FirstPersonController firstPersonController;
+    PlayerController playerController;
     public string InterActionPrompt => _prompt;
-    [SerializeField] public GameObject dynamicInventoryUI;
     [SerializeField] public List<InventoryItemData> lootList = new List<InventoryItemData>();
+
     [SerializeField] public LootTable lootTable;
 
+
+    bool isOpen = false;
  
 
 
     private void Awake()
     {
         PlayerInventory = GameObject.Find("PlayerUI");
+        DynamicInventory = GameObject.Find("DynamicInventory");
+
         firstPersonController= GameObject.Find("Player").GetComponent<FirstPersonController>();
+        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        playerController.OnInventoryClosed += Close;
         lootTable = GetComponent<LootTable>();  
         lootList = lootTable.lootList;
 
@@ -40,6 +49,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
             if(randomItem != null)
             {
                 fillInventorySlot(randomItem, slot);
+             
             }
            
 
@@ -59,28 +69,65 @@ public class ChestInventoryManager : InventoryManager, IInteractable
 
     public void Interact(InteractScript interactor, out bool interactSucessful)
     {
-        if (!dynamicInventoryUI.activeInHierarchy)
+        if (!isOpen)
         {
-            dynamicInventoryUI.SetActive(true);
+        
             Transform inventory = PlayerInventory.transform.Find("PlayerInventory");
             inventory.gameObject.SetActive(true);
+            DisplayDynamicInventory();
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             firstPersonController.enabled = false;
+            isOpen = true;
 
         }
         else
         {
-            dynamicInventoryUI.SetActive(false);
-            Transform inventory = PlayerInventory.transform.Find("PlayerInventory");
-            inventory.gameObject.SetActive(false);
-            Cursor.visible = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            firstPersonController.enabled = true;
+          Close();
         }
         interactSucessful = true;
 
     }
 
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("Player is gone");
+            Close();
+          
+        }
+    }
+    void DisplayDynamicInventory()
+    {
+        foreach (InventorySlot slot in inventorySlots)
+        {
 
+            slot.transform.SetParent(DynamicInventory.transform, false);
+            slot.transform.rotation = Quaternion.identity;
+        }
+    }
+    void ClearDynamicInventory()
+    {
+        foreach (InventorySlot slot in inventorySlots)
+        {
+            slot.transform.SetParent(this.transform, false);
+        }
+
+    }
+
+
+    void Close()
+    {
+        isOpen = false;
+        ClearDynamicInventory();
+        Transform inventory = PlayerInventory.transform.Find("PlayerInventory");
+        inventory.gameObject.SetActive(false);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        firstPersonController.enabled = true;
+        isOpen = false;
+    }
 }

@@ -14,7 +14,7 @@ public class InteractScript : MonoBehaviour
     [SerializeField]
     private Camera _playerCam;
     [SerializeField]
-    private float distance = 3f;
+    private float distance = 1f;
     private void Start()
     {
        

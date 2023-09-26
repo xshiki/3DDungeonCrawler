@@ -43,7 +43,8 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     {
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
-        transform.SetParent(transform);
+        Transform playerUI = GameObject.Find("PlayerUI").transform;
+        transform.SetParent(playerUI);
       
       
     }
@@ -72,6 +73,7 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
         else
         {
             // Item was dropped inside the inventory, reset position
+            Debug.Log("dropped here");
             image.raycastTarget = true;
             transform.SetParent(parentAfterDrag);
         }
