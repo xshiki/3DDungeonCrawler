@@ -14,7 +14,7 @@ public class EnemySpawner : MonoBehaviour
     public float spawnDelay = 1f;
     ProceduralDungeonGenerator dungeonGenerator;
     public List<GameObject> enemyPrefabs = new();
-    int SpawnedEnemies = 0;
+   
 
     public ObjectPool<GameObject> _enemyPool;
     public enum SpawnMethod {RoundRobin, Random};
@@ -23,7 +23,11 @@ public class EnemySpawner : MonoBehaviour
     public ScalingScriptableObject scaler;
     public int floorCounter;
     public LayerMask layerMask = 11;
- 
+
+    public bool ContinousSpawning = false;
+
+    private int EnemiesAlive = 0;
+    private int SpawnedEnemies = 0;
 
     private void Awake()
     {
@@ -32,6 +36,7 @@ public class EnemySpawner : MonoBehaviour
         database = GameObject.Find("Database").GetComponent<LoadDatabase>();
         scaler = database.scaler;
         floorCounter = GameObject.Find("Floor Counter").GetComponent<FloorTextOverlay>().floorCounter;
+        numberOfEnemiesToSpawn += 2;
         dungeonGenerator.OnFinishBuilding += StartCoroutine;
 
     }
@@ -65,16 +70,25 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnEnemies()
     {
-
-        WaitForSeconds wait = new WaitForSeconds(spawnDelay);
         SpawnedEnemies = 0;
+        EnemiesAlive =  0;
+        WaitForSeconds wait = new WaitForSeconds(spawnDelay);
+        
         while(SpawnedEnemies < numberOfEnemiesToSpawn) 
         {
             SpawnEnemy();
            
 
             yield return wait;
+            SpawnedEnemies++;
 
+        }
+
+
+        if(ContinousSpawning)
+        {
+            StartCoroutine(SpawnEnemies());
+            Debug.Log("enemy spawned");
         }
     }
 
@@ -100,7 +114,8 @@ public class EnemySpawner : MonoBehaviour
                 enemy.GetComponent<EnemyAI>().SetSpawnPosition(Hit.position);
                 enemyAgent.enabled = true;
                 enemy.GetComponent<EnemyManager>().SetPool(_enemyPool);
-                SpawnedEnemies++;
+                enemy.GetComponent<EnemyManager>().OnDie += HandleEnemyDeath;
+                EnemiesAlive++;
 
         }
             else
@@ -111,6 +126,15 @@ public class EnemySpawner : MonoBehaviour
      
     }
 
+
+    private void HandleEnemyDeath()
+    {
+        EnemiesAlive--;
+        if(EnemiesAlive == 0 && SpawnedEnemies == numberOfEnemiesToSpawn)
+        {
+            StartCoroutine(SpawnEnemies());
+        }
+    }
     float rndNumber()
     {
         return UnityEngine.Random.Range(0f, 10f);

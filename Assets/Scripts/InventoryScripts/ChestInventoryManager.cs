@@ -94,7 +94,6 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player is gone");
             Close();
           
         }

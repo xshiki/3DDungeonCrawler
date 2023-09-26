@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Events;
 using UnityEngine.Pool;
 
 
@@ -19,11 +20,13 @@ public class EnemyManager : MonoBehaviour
     public FloorTextOverlay floor;
     Animator animator;
     NavMeshAgent enemy;
+    public UnityAction OnDie;
     public bool GotHit => gotHit;
     bool gotHit = false;
     [SerializeField] public ExperienceManager experienceManager;
 
     private ObjectPool <GameObject> _enemyPool;
+    
     public bool IsDead => isDead;
     bool isDead = false;
     private void Awake()

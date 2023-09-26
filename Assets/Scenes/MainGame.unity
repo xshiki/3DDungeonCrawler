@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfEnemiesToSpawn: 15
-  spawnDelay: 0.2
+  spawnDelay: 3
   enemyPrefabs:
   - {fileID: 3016661192569463579, guid: d2f463d6e013ea9419e3b7789e497ab2, type: 3}
   - {fileID: 7829508620188821602, guid: c8fc22a7fbc239c47b68bd9dfb0358d3, type: 3}
@@ -1642,6 +1642,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
+  ContinousSpawning: 0
 --- !u!114 &153851892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8332,7 +8333,7 @@ MonoBehaviour:
     loop: 0
     audiosource: {fileID: 0}
   - name: Hit
-    audioClip: {fileID: 8300000, guid: 875f802663c7984429d4c252cbf707cf, type: 3}
+    audioClip: {fileID: 8300000, guid: 969858ed9b3424840a7748b496f6b1ef, type: 3}
     volume: 0.406
     pitch: 0.53
     loop: 0
@@ -86085,34 +86086,14 @@ PrefabInstance:
       propertyPath: databaseGO
       value: 
       objectReference: {fileID: 1465828898}
-    - target: {fileID: 1149047130394808425, guid: 13177bf8bb881ac419969494edcac316, type: 3}
-      propertyPath: lootList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1149047130394808425, guid: 13177bf8bb881ac419969494edcac316, type: 3}
-      propertyPath: lootList.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7bb3d7a9e99fc3a4e86ac7ef4a062218, type: 2}
-    - target: {fileID: 1988890889983475523, guid: 13177bf8bb881ac419969494edcac316, type: 3}
-      propertyPath: lootTable
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 1988890889983475523, guid: 13177bf8bb881ac419969494edcac316, type: 3}
       propertyPath: PlayerInventory
       value: 
       objectReference: {fileID: 1252050119}
     - target: {fileID: 1988890889983475523, guid: 13177bf8bb881ac419969494edcac316, type: 3}
-      propertyPath: lootList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1988890889983475523, guid: 13177bf8bb881ac419969494edcac316, type: 3}
       propertyPath: firstPersonController
       value: 
       objectReference: {fileID: 4379493646615741043}
-    - target: {fileID: 1988890889983475523, guid: 13177bf8bb881ac419969494edcac316, type: 3}
-      propertyPath: lootList.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 524f523c10c0b374aaf4fd70229d0c4c, type: 2}
     - target: {fileID: 5902840530812033773, guid: 13177bf8bb881ac419969494edcac316, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
