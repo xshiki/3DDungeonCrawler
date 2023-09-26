@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -240,6 +241,7 @@ public class PlayerController : MonoBehaviour
         if (hit.collider.GetComponent<EnemyManager>())
         {
             hit.collider.GetComponent<EnemyManager>().TakeDamage(punchDamage);
+            audioSource.pitch = Random.Range(0.8f, 1.3f);
             audioSource.PlayOneShot(punchAudioClip);
         }
     }

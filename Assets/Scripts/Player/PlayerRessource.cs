@@ -108,6 +108,7 @@ public class PlayerRessource : MonoBehaviour
         }
 
         currentHealth -= damage;
+        FindAnyObjectByType<AudioManager>().Play("Hit");
         if (currentHealth <= 0)
         {
             Die();
@@ -129,7 +130,8 @@ public class PlayerRessource : MonoBehaviour
         }
 
         currentHealth -= damage;
-        if(currentHealth <= 0) {
+        FindAnyObjectByType<AudioManager>().Play("Hit");
+        if (currentHealth <= 0) {
             Die();
         }
 
@@ -140,6 +142,7 @@ public class PlayerRessource : MonoBehaviour
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        FindAnyObjectByType<AudioManager>().Play("Death");
         GOScreen.SetActive(true);
     }
     public void UseMana(int manacost) {

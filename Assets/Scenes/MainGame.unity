@@ -7364,6 +7364,14 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!81 &284498088
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284498082}
+  m_Enabled: 1
 --- !u!1 &285995565
 GameObject:
   m_ObjectHideFlags: 0
@@ -65504,7 +65512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: jumpPower
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: sprintBar
@@ -92514,6 +92522,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6659036692819755395, guid: 3c1baf798e6b54540907da69d51a274d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 284498085}
+    - targetCorrespondingSourceObject: {fileID: 6659036692819755395, guid: 3c1baf798e6b54540907da69d51a274d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 284498088}
   m_SourcePrefab: {fileID: 100100000, guid: 3c1baf798e6b54540907da69d51a274d, type: 3}
 --- !u!1001 &7028103593080080363
 PrefabInstance:
