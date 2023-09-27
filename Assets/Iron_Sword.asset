@@ -19,7 +19,11 @@ MonoBehaviour:
   Description: 
   ItemPrefab: {fileID: 4559957744521018527, guid: 2092b8020a1209c4bb5d0085ec4ab4f9, type: 3}
   ItemType: 5
-  RigAnimatorController: {fileID: 0}
   dropChance: 0
+  consumable: 0
   WeaponType: 0
   DamageAmount: 0
+  WeaponRange: 1
+  weaponSwingSound: {fileID: 0}
+  weaponHitSound: {fileID: 0}
+  hitEffect: {fileID: 5334228485563152753, guid: 0e0615180e74d1049a95cc66f1857dca, type: 3}

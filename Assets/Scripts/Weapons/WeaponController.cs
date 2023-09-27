@@ -123,6 +123,13 @@ public class WeaponController : MonoBehaviour
         {
             hit.collider.GetComponent<EnemyManager>().TakeDamage(weaponData.DamageAmount);
             audioSource.PlayOneShot(weaponData.weaponHitSound);
+            if(weaponData.hitEffect != null)
+            {
+                GameObject GO = Instantiate(weaponData.hitEffect);
+                Destroy(GO, 20);
+                Debug.Log("hiteffect created");
+            }
+           
         }
     }
 }
