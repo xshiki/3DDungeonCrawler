@@ -24,8 +24,8 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.28292987, g: 0.29363498, b: 0.3207547, a: 1}
   m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -26630,7 +26630,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &701513671
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42090,63 +42090,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5453737204754847776, guid: ca7fc4065985dbb45b052019d615c308, type: 3}
   m_PrefabInstance: {fileID: 51167001378599339}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1402312781
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5196109497896617200, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_Name
-      value: Staff_Fireball
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.131
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8456488581055772113, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7c7184d6a8825f145b01002b414b0517, type: 3}
 --- !u!1 &1412075768
 GameObject:
   m_ObjectHideFlags: 0
@@ -92181,6 +92124,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1326689174}
     m_Modifications:
+    - target: {fileID: 874669238217280544, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1558132646500794347, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -92221,14 +92168,82 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2842875084806052922, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847350380015812649, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3248212121775883612, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: m_Name
       value: DungeonGenerator
+      objectReference: {fileID: 0}
+    - target: {fileID: 3248212121775883612, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: counter
       value: 
       objectReference: {fileID: 95131717}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: doorPercent
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: doorPrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: doorPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 6680102841255842074, guid: 73a468b90f1ad064c980c2a6c31011b7, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: doorPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 6343425332303344161, guid: 8579c35e4f5f6b847b4eedfbffe219d6, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: doorPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 290987948619622028, guid: f852a07d120f8df45bc144a80f93f10c, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 3363373723070423797, guid: 792fda208189cc248bcde471d7a82f94, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 3363373723070423797, guid: 792fda208189cc248bcde471d7a82f94, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.data[10]
+      value: 
+      objectReference: {fileID: 3540560667911905319, guid: b9c9c60c74e4e8e4c832bf08931be655, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.data[11]
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: cb7079651e881f94c9d5fed4989d638b, type: 3}
+    - target: {fileID: 5711073518320009020, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7117729437540422952, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8441331728126414654, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9050509442130151030, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -111980,4 +111995,3 @@ SceneRoots:
   - {fileID: 543450651777903356}
   - {fileID: 1811876855}
   - {fileID: 6086632222344322616}
-  - {fileID: 1402312781}
