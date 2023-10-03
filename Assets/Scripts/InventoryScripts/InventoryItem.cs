@@ -65,6 +65,7 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
             for(int i = 0; i < this.count; i++)
             {
                 GameObject prefabInstance = Instantiate(this.item.ItemPrefab, playerTransform.position + playerTransform.forward * dropOffset, Quaternion.identity);
+                prefabInstance.layer = 7;
                 prefabInstance.AddComponent<Rigidbody>();
             }
             

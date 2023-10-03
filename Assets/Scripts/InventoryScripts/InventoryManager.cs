@@ -94,7 +94,7 @@ public class InventoryManager : MonoBehaviour
         {
             if (itemInSlot.myType == InventoryItemType.Weapon)
             {
-                Debug.Log("is weapon true");
+
                 if(weaponSlot.transform.childCount > 0)
                 {
                     Transform child = weaponSlot.transform.GetChild(0);
@@ -108,14 +108,15 @@ public class InventoryManager : MonoBehaviour
                     weaponSlot.SlotChanged(itemInSlot);
                 }
              
-            }
-            if (use == true && itemInSlot.item.consumable)
-            {            
+            }else
+            if (use && itemInSlot.item.consumable)
+            {
+                Debug.Log("consumed item");
+            
                 itemInSlot.item.UseItem();
                 itemInSlot.count--;
                 if(itemInSlot.count <= 0)
                 {
-                   
                     Destroy(itemInSlot.gameObject);
                     
                 }

@@ -46,8 +46,8 @@ public class ItemPickUpInteractable : MonoBehaviour, IInteractable
 
     private void Awake()
     {
-    
-      
+        this.gameObject.layer = 7;
+
     }
 
     private void Start()
@@ -55,6 +55,6 @@ public class ItemPickUpInteractable : MonoBehaviour, IInteractable
         dataProvider = GetComponent<ItemDataProvider>();
         _item = dataProvider.Item;
         _prompt = _item.DisplayName;
-        this.gameObject.layer = 7;
+        
     }
 }

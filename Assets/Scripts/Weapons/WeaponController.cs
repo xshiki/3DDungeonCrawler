@@ -32,6 +32,10 @@ public class WeaponController : MonoBehaviour
         
         audioSource = GetComponent<AudioSource>();
         weaponAnimator = GetComponent<Animator>();
+        if(weaponData == null)
+        {
+            weaponData = GetComponent<ItemDataProvider>().Item as WeaponItemData;
+        }
         playerController = FindObjectOfType<PlayerController>();
         playerEquipment = FindObjectOfType<PlayerEquipment>();
         playerOrientation = GameObject.Find("Orientation").transform;

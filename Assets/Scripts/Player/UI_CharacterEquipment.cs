@@ -160,9 +160,11 @@ public class UI_CharacterEquipment : MonoBehaviour
         if (weaponItem != null)
         {
             GameObject weaponObject = Instantiate(weaponItem.ItemPrefab, weaponSocket);
-            weaponObject.layer = 6;
+          
             ItemPickUp itemPickUp = weaponObject.GetComponent<ItemPickUp>();
             itemPickUp.enabled = false;
+            weaponObject.layer = 6;
+            Debug.Log("layer changed");
             if (weaponObject.GetComponent<WeaponController>())
             {
                 playerController.SetCurrentWeapon(weaponObject.GetComponent<WeaponController>());

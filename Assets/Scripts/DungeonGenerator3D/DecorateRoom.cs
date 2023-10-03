@@ -8,6 +8,7 @@ public class DecorateRoom : MonoBehaviour
 
 
     [SerializeField] public GameObject[] decorationPrefabs;
+    [SerializeField] public GameObject[] roomLayoutPrefabs;
     [SerializeField] public int numberOfDecorations = 5;
     ProceduralDungeonGenerator dungeonGenerator;
 
@@ -21,15 +22,18 @@ public class DecorateRoom : MonoBehaviour
         dungeonGenerator = GameObject.Find("DungeonGenerator").GetComponent<ProceduralDungeonGenerator>();
 
         dungeonGenerator.OnFinishBuilding += SpawnRandomObjects;
-        if(isBossRoom)
+        dungeonGenerator.OnFinishBuilding += SpawnRandomDecoration;
+        if (isBossRoom)
         {
             dungeonGenerator.OnFinishBuilding -= SpawnRandomObjects;
+            dungeonGenerator.OnFinishBuilding -= SpawnRandomDecoration;
         }
     }
 
     private void OnDestroy()
     {
         dungeonGenerator.OnFinishBuilding -= SpawnRandomObjects;
+        dungeonGenerator.OnFinishBuilding -= SpawnRandomDecoration;
     }
 
 
@@ -83,5 +87,15 @@ public class DecorateRoom : MonoBehaviour
         }
         
       
+    }
+    void SpawnRandomDecoration()
+    {
+        if (roomLayoutPrefabs == null) { return; }
+        if (roomLayoutPrefabs.Length <= 0) { return; }
+
+        int layoutIndex = Random.Range(0, roomLayoutPrefabs.Length);
+
+        GameObject goLayout = Instantiate(roomLayoutPrefabs[layoutIndex],transform.position, Quaternion.identity, transform) as GameObject;
+        goLayout.name = roomLayoutPrefabs[layoutIndex].name;
     }
 }

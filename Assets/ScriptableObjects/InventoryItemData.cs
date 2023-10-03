@@ -23,8 +23,9 @@ public class InventoryItemData : ScriptableObject
     [Header("Set Item Attributes")]
     public GameObject ItemPrefab;
     public InventoryItemType ItemType;
+    [Range(0,100)]
     public int dropChance;
-    public bool consumable;
+    public bool consumable = false;
 
 
     //Make new Script that inherites from inventory item data example weapons

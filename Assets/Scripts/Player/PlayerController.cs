@@ -228,7 +228,6 @@ public class PlayerController : MonoBehaviour
         {
             for (int i = 0; i < hits.Length; i++)
             {
-                Debug.Log("target found");
                 HitTarget(hits[i]);
             }
         }

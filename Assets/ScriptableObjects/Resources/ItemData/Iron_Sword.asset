@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cd058afa6ff7f4eb8c1acab7b41f6d, type: 3}
+  m_Name: Iron_Sword
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: 0643d5c29c4585942b584b3d577d869b, type: 3}
+  MaxStackSize: 1
+  ID: 13
+  DisplayName: Iron Sword
+  Description: 
+  ItemPrefab: {fileID: 4151237327226237660, guid: e4fa23bdb3baf2349acc29bbc3020123, type: 3}
+  ItemType: 5
+  dropChance: 0
+  consumable: 0
+  WeaponType: 0
+  DamageAmount: 20
+  WeaponRange: 1
+  weaponSwingSound: {fileID: 8300000, guid: 7923190c5e80b4d4d9396acc5d0b48cf, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: 11245d3945c564b45a1bafad5ecb70e5, type: 3}
+  hitEffect: {fileID: 0}
