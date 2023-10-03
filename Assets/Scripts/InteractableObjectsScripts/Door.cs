@@ -9,10 +9,12 @@ public class Door : MonoBehaviour, IInteractable
     [SerializeField] private string _prompt;
     Animator animator;
     public bool isExitDoor = false;
+    public Collider doorCollider;
 
 
     void Start()
     {
+        doorCollider = GetComponent<Collider>();
         animator = GetComponent<Animator>();
     }
     public UnityAction<IInteractable> OnInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
@@ -36,6 +38,25 @@ public class Door : MonoBehaviour, IInteractable
         {
             SceneManager.LoadScene("LoadNewMap");
         }
+
+    }
+
+
+    public void DoorColliderOff()
+
+    {
+
+        doorCollider.enabled = false;
+
+    }
+
+
+
+    public void DoorColliderOn()
+
+    {
+
+        doorCollider.enabled = true;
 
     }
 
