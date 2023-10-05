@@ -128,6 +128,8 @@ GameObject:
   - component: {fileID: 7721180006349215864}
   - component: {fileID: 6398079486899056734}
   - component: {fileID: 5153142642228784062}
+  - component: {fileID: -6774386209582057545}
+  - component: {fileID: -4365870406483715252}
   m_Layer: 11
   m_Name: gangHochRunter_origin
   m_TagString: Untagged
@@ -231,6 +233,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2179436473947815635, guid: f3a5e41c759c7d94087d2260989b7322, type: 3}
+--- !u!114 &-6774386209582057545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4902161685545519953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032bd59d38868499080e707e2ac529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  decorationPrefabs:
+  - {fileID: 1505688086998022471, guid: e4703add17eaa38458cb9a16fd6ca7a3, type: 3}
+  - {fileID: 7173021932998636536, guid: 13177bf8bb881ac419969494edcac316, type: 3}
+  roomLayoutPrefabs: []
+  numberOfDecorations: 2
+  isBossRoom: 0
+--- !u!114 &-4365870406483715252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4902161685545519953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaf5bdae18b2284e84c62e0faa578ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &4964131540267531421
 GameObject:
   m_ObjectHideFlags: 0

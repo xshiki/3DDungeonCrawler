@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8946210462164566771}
   - component: {fileID: 6612309331769767481}
   - component: {fileID: -5664327757425095559}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: "langerTischMitB\xE4nken1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}

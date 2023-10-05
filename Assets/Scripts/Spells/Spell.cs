@@ -25,7 +25,7 @@ public class Spell : MonoBehaviour
 
     private void Update()
     {
-        if(SpellToCast.Speed > 0)
+        if (SpellToCast.Speed > 0)
         {
             transform.Translate(Vector3.forward * SpellToCast.Speed * Time.deltaTime);
 
@@ -38,10 +38,14 @@ public class Spell : MonoBehaviour
         //Apply sound sfx, particle effects etc
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyManager>().TakeDamage((int) SpellToCast.DamageAmount);
+            other.GetComponent<EnemyManager>().TakeDamage((int)SpellToCast.DamageAmount);
             Destroy(this.gameObject);
         }
-       
+
+        if (other.gameObject.tag != "Player" || other.gameObject.tag != "Enemy")
+        {
+            Destroy(this.gameObject);
+        }
 
     }
 }

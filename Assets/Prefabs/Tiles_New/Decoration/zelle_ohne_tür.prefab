@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4590657783337897402}
   - component: {fileID: 6023038934643887813}
   - component: {fileID: 5339186777985278140}
+  - component: {fileID: -8537265955932710413}
   m_Layer: 0
   m_Name: "zelle_ohne_t\xFCr"
   m_TagString: Untagged
@@ -108,6 +109,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7506484935111680210, guid: 45c8f97434d01f3489b888b6d63f83c0, type: 3}
+--- !u!208 &-8537265955932710413
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6147685675833754601}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 4.5, y: 2, z: 4}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.14, y: 2.025, z: 3.1550002}
+  m_TimeToStationary: 0.5
 --- !u!1001 &5808774829668615035
 PrefabInstance:
   m_ObjectHideFlags: 0

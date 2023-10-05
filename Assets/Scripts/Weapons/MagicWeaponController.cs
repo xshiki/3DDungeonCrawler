@@ -68,7 +68,6 @@ public class MagicWeaponController : MonoBehaviour
             audioSource.PlayOneShot(weaponData.weaponSwingSound);
             playerRessource.currentMana -= spell.SpellToCast.ManaCost;
             InstantiateSpell();
-            Debug.Log("casting spell");
         }
         else { NotificationManager.Instance.SetNewNotification("The ability isn't ready yet.", new Color(255,0,0));
             return;

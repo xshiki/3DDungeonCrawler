@@ -15,7 +15,7 @@ public class PlayerRespawn : MonoBehaviour
     {
         Player = GameObject.Find("Player");
         respawnPoint = transform;
-        //respawnPoint.position += new Vector3(0, 2f, 0);
+        respawnPoint.position += new Vector3(0, 0.5f, 0);
         playerHealth = Player.GetComponent<PlayerRessource>();
         Player.transform.position = respawnPoint.position;
 

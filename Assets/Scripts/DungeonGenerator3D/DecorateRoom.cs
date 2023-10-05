@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.PlayerSettings;
 
 public class DecorateRoom : MonoBehaviour
 {
 
 
-    [SerializeField] public GameObject[] decorationPrefabs;
+    [SerializeField] public GameObject[] chestPrefabs;
     [SerializeField] public GameObject[] roomLayoutPrefabs;
     [SerializeField] public int numberOfDecorations = 5;
+    [Range(1f, 101f)]
+    public float chestSpawnChance = 15f;
     ProceduralDungeonGenerator dungeonGenerator;
-
+    public float chestToWallDistance = 2.0f;
     public bool isBossRoom = false;
     private bool isCompleted;
  
@@ -39,55 +42,130 @@ public class DecorateRoom : MonoBehaviour
 
     void SpawnRandomObjects()
     {
-        if(decorationPrefabs == null) { return; }
-        if (decorationPrefabs.Length <= 0) { return; }
-
-
-        grid = GetComponent<GridSystem>();
-        var renderer = GetComponent<Renderer>();
+        if (chestPrefabs == null) { return; }
+        if (chestPrefabs.Length <= 0) { return; }
         int spawnedDecorations = 0;
-        if (renderer != null )
+        if (chestSpawnChance > 0)
         {
-            var bounds = renderer.bounds;
-            
-
             while (spawnedDecorations < numberOfDecorations)
             {
-                Vector3 startPosition = transform.position;
-                Vector3 possiblePosition = new Vector3(
-                    Random.Range(startPosition.x - renderer.bounds.extents.x, startPosition.x + renderer.bounds.extents.x), 
-                    transform.localPosition.y, 
-                    Random.Range(startPosition.z - renderer.bounds.extents.z, startPosition.z + renderer.bounds.extents.z));
-               
-                Vector3 possibleGridCellPos = grid.GetNearestPointOnGrid(possiblePosition);
-                GameObject go = Instantiate(decorationPrefabs[0], possibleGridCellPos, Quaternion.identity);
-                go.transform.SetParent(transform);
-                Vector3 origin = go.transform.position;
-                Vector3 direction = go.transform.TransformDirection(Vector3.down);
-           
-                if (!Physics.Raycast(origin, direction, out RaycastHit hit, 1f,11))
+                int roll = Random.Range(1, 101);
+
+                if (roll <= chestSpawnChance)
                 {
+                    Bounds roomBounds = GetComponent<Collider>().bounds;
+                    Vector3 randomPoint = new Vector3(
+                    Random.Range(roomBounds.min.x + 2f, roomBounds.max.x - 2f),
+                    transform.position.y + 0.34f, // Assuming chests are placed at a height of 0.5 units
+                    Random.Range(roomBounds.min.z + 2f, roomBounds.max.z - 2f)
+                );
 
-                    go.transform.position = possibleGridCellPos + new Vector3(0, 0.4f, 0);
-                    float yRotation = Random.Range(0, 4) * 90f;
-                    go.transform.Rotate(0, yRotation, 0);
-                    
-                    spawnedDecorations++;
 
-
-                }
-                else
-                {
-                    Destroy(go);
+                    if (!IsPointTooCloseToDecoration(randomPoint) && !IsPointTooCloseToWall(randomPoint, roomBounds) && !IsPointTooCloseToChest(randomPoint))
+                    {
+                        // Instantiate the chest at the random point
+                        int chestIndex = Random.Range(0, chestPrefabs.Length);
+                        GameObject door = Instantiate(chestPrefabs[chestIndex], randomPoint, transform.rotation, transform);
+                        door.name = chestPrefabs[chestIndex].name;
+                        spawnedDecorations++;
+                    }
                 }
 
-
-               
             }
+
+
         }
-        
-      
+
+
+
+    
+
+
+
+
+
+
+
+
+    /*
+
+    grid = GetComponent<GridSystem>();
+    var renderer = GetComponent<Renderer>();
+    int spawnedDecorations = 0;
+
+    if (renderer != null )
+    {
+        var bounds = renderer.bounds;
+
+
+        while (spawnedDecorations < numberOfDecorations)
+        {
+            Vector3 startPosition = transform.position;
+            Vector3 possiblePosition = new Vector3(
+                Random.Range(startPosition.x - renderer.bounds.extents.x, startPosition.x + renderer.bounds.extents.x), 
+                transform.localPosition.y, 
+                Random.Range(startPosition.z - renderer.bounds.extents.z, startPosition.z + renderer.bounds.extents.z));
+
+            Vector3 possibleGridCellPos = grid.GetNearestPointOnGrid(possiblePosition);
+            GameObject go = Instantiate(decorationPrefabs[0], possibleGridCellPos, Quaternion.identity);
+            go.transform.SetParent(transform);
+            Vector3 origin = go.transform.position;
+            Vector3 direction = go.transform.TransformDirection(Vector3.down);
+
+            if (!Physics.Raycast(origin, direction, out RaycastHit hit, 1f,11))
+            {
+
+                go.transform.position = possibleGridCellPos + new Vector3(0, 0.4f, 0);
+                float yRotation = Random.Range(0, 4) * 90f;
+                go.transform.Rotate(0, yRotation, 0);
+
+                spawnedDecorations++;
+
+
+            }
+            else
+            {
+                Destroy(go);
+            }
+
+
+
+        }
+
+
     }
+
+    */
+
+
+}
+
+
+    bool IsPointTooCloseToDecoration(Vector3 point)
+    {
+        // Perform a sphere cast to check for nearby decoration objects
+        Collider[] hitColliders = Physics.OverlapSphere(point, 10, 13);
+        return hitColliders.Length > 0;
+    }
+
+
+
+    bool IsPointTooCloseToChest(Vector3 point)
+    {
+        // Perform a sphere cast to check for nearby decoration objects
+        Collider[] hitColliders = Physics.OverlapSphere(point, 10, 7);
+        return hitColliders.Length > 0;
+    }
+
+    bool IsPointTooCloseToWall(Vector3 point, Bounds roomBounds)
+    {
+        // Check if the point is too close to the room's boundaries
+        return point.x < roomBounds.min.x + chestToWallDistance ||
+                 point.x > roomBounds.max.x - chestToWallDistance ||
+                 point.z < roomBounds.min.z + chestToWallDistance ||
+                 point.z > roomBounds.max.z - chestToWallDistance;
+    }
+
     void SpawnRandomDecoration()
     {
         if (roomLayoutPrefabs == null) { return; }
