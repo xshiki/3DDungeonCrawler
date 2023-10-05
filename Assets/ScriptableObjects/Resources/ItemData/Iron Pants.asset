@@ -19,8 +19,7 @@ MonoBehaviour:
   Description: 
   ItemPrefab: {fileID: 8406446221045228075, guid: ad50ca9ced18ed44e98acb58bd79599a, type: 3}
   ItemType: 3
-  RigAnimatorController: {fileID: 0}
-  dropChance: 0
+  dropChance: 10
   consumable: 0
   stamina: 0
   strength: 0

@@ -14,43 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionHistory:
     _history:
-    - reference: {fileID: 102900000, guid: a519f0744e77d0a48ade10ab135e7610, type: 3}
+    - reference: {fileID: 11400000, guid: fb0e3971ec760be4ebcf6ddbd8bc40ed, type: 2}
       sceneName: 
       scenePath: 
       globalObjectId: 
-    - reference: {fileID: 102900000, guid: 4da0ad54c846e5b49bd72b3bf61fb5b7, type: 3}
+    - reference: {fileID: 3668964299040672114, guid: d954efc87785d2b4a86decf43a8aa9c2, type: 3}
       sceneName: 
       scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 1902337481364466734, guid: 0fcbdcd56bfde884382bf739701fea42, type: 3}
+      globalObjectId: GlobalObjectId_V1-1-d954efc87785d2b4a86decf43a8aa9c2-3668964299040672114-0
+    - reference: {fileID: 3668964299040672114, guid: fd336a28b819e18448bf9d8e3b28375c, type: 3}
       sceneName: 
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-0fcbdcd56bfde884382bf739701fea42-1902337481364466734-0
-    - reference: {fileID: 3139378983074981538, guid: 76fdc1acf6ee41c48a7db1282405463f, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-76fdc1acf6ee41c48a7db1282405463f-3139378983074981538-0
+      globalObjectId: GlobalObjectId_V1-1-fd336a28b819e18448bf9d8e3b28375c-3668964299040672114-0
     - reference: {fileID: 0}
-      sceneName: ZellenRaum
+      sceneName: raum_Exit
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-3139378983074981538-0
-    - reference: {fileID: 919132149155446097, guid: 9f2c1848f55898e4cbb000d91e3d2249, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-9f2c1848f55898e4cbb000d91e3d2249-919132149155446097-0
-    - reference: {fileID: 7167043415856508182, guid: 247c9981f22ef5741b4dd5676da6389d, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-247c9981f22ef5741b4dd5676da6389d-7167043415856508182-0
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-3668964299040672114-0
     - reference: {fileID: 0}
-      sceneName: ZellenRaum
+      sceneName: raum_Exit
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-919132149155446097-3275731464453707642
+      globalObjectId: GlobalObjectId_V1-0-00000000000000000000000000000000-0-0
     - reference: {fileID: 0}
-      sceneName: ZellenRaum
+      sceneName: raum_Exit
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-4991655923627987131-0
-    - reference: {fileID: 3898472181430205997, guid: 0269862b3b1d2e94a884d081dc6333eb, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-0269862b3b1d2e94a884d081dc6333eb-3898472181430205997-0
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-129927468984184954-2828342956147351810
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1326689173-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-3248212121775883612-6820797582453146417
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1445887040-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2139498976-0

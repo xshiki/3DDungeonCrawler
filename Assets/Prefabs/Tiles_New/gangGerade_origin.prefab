@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1715592877667927326}
   - component: {fileID: 5679328584779196139}
   - component: {fileID: 381023725538091021}
+  - component: {fileID: 330001708980730034}
+  - component: {fileID: 8614454049288084451}
   m_Layer: 11
   m_Name: gangGerade_origin
   m_TagString: Untagged
@@ -115,6 +117,40 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3482709935619401404, guid: d20cc4e5e250d8a40aaeb5ae06b866eb, type: 3}
+--- !u!114 &330001708980730034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176709817191311145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1032bd59d38868499080e707e2ac529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chestPrefabs: []
+  roomLayoutPrefabs:
+  - {fileID: 3629835536851314156, guid: bc61735225f01b7428b7ba60b6cb09a9, type: 3}
+  - {fileID: 4644301853114190338, guid: 839e5c74dba883f4c810cd5de2fb1140, type: 3}
+  - {fileID: 3329897373074905904, guid: b2055870d156c7441a2db699ee5c1280, type: 3}
+  numberOfDecorations: 5
+  chestSpawnChance: 15
+  chestToWallDistance: 2
+  isBossRoom: 0
+--- !u!114 &8614454049288084451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176709817191311145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deaf5bdae18b2284e84c62e0faa578ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 1
 --- !u!1 &570238699993112190
 GameObject:
   m_ObjectHideFlags: 0

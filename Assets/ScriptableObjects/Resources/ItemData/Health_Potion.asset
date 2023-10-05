@@ -19,7 +19,7 @@ MonoBehaviour:
   Description: 'Use: Restores 25 Health'
   ItemPrefab: {fileID: 4403784676850671829, guid: 05a5f229dd1123b44b2a98578dd7803d, type: 3}
   ItemType: 0
-  dropChance: 10
+  dropChance: 15
   consumable: 1
   _healthToReplenish: 25
   _manaToReplenish: 0

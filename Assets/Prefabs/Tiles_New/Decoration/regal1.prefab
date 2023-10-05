@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6409225146508083701}
   - component: {fileID: 9157738999938118975}
   - component: {fileID: 6569045577130809956}
+  - component: {fileID: 4399362185245006235}
   m_Layer: 0
   m_Name: regal1
   m_TagString: Untagged
@@ -105,3 +106,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.7085176, y: 2.2780232, z: 0.5283756}
   m_Center: {x: 0, y: -0.00000029802322, z: 0.0070939064}
+--- !u!208 &4399362185245006235
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7212003985386034410}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.85400003, y: 1.139, z: 0.264}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0.007}
+  m_TimeToStationary: 0.5

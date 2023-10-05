@@ -19,8 +19,7 @@ MonoBehaviour:
   Description: testseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststest
   ItemPrefab: {fileID: 3259654094862974064, guid: 0e6ba93298885c444b5f64b14823ba24, type: 3}
   ItemType: 1
-  RigAnimatorController: {fileID: 0}
-  dropChance: 0
+  dropChance: 10
   consumable: 0
   stamina: 0
   strength: 0

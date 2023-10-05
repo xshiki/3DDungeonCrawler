@@ -165,10 +165,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1032bd59d38868499080e707e2ac529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decorationPrefabs: []
+  chestPrefabs: []
   roomLayoutPrefabs:
   - {fileID: 7975638219792787698, guid: cf64326d5e64c8043847252b3d6587bd, type: 3}
+  - {fileID: 8451359967226216554, guid: 08788543affc727408f7c8342bffabdf, type: 3}
+  - {fileID: 3329897373074905904, guid: b2055870d156c7441a2db699ee5c1280, type: 3}
   numberOfDecorations: 5
+  chestSpawnChance: 15
+  chestToWallDistance: 2
   isBossRoom: 0
 --- !u!1001 &504771239060033435
 PrefabInstance:

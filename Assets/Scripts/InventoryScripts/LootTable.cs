@@ -18,7 +18,6 @@ public class LootTable : MonoBehaviour
             databaseGO = GameObject.Find("Database");
             List<InventoryItemData> allItemList = databaseGO.GetComponent<LoadDatabase>().database.GetInventoryItemData();
             int lootListSize = Random.Range(0, allItemList.Count);
-            lootListSize = 5;
             if (allItemList != null)
             {
 
@@ -64,7 +63,6 @@ public class LootTable : MonoBehaviour
         InventoryItemData droppedItem = getDroppedItem();
         if(droppedItem != null) {
             GameObject lootGameObject = Instantiate(droppedItem.ItemPrefab.gameObject, spawnPosition, Quaternion.identity);
-            //lootGameObject.GetComponent<
         }
 
     }

@@ -22,9 +22,7 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-       
-
-     
+      
     }
     private void Update()
     {
@@ -41,10 +39,12 @@ public class InventoryManager : MonoBehaviour
         {
             inventorySlots[selectedSlot].Deselect();
         }
-        if(inventorySlots.Length < 10) { return; }
-        inventorySlots[newValue].Select();
-        selectedSlot = newValue;
-        GetSelectedItem(true);
+        if(inventorySlots.Length >= 10) {
+            inventorySlots[newValue].Select();
+            selectedSlot = newValue;
+            GetSelectedItem(true);
+        }
+      
     }
     public bool AddItem(InventoryItemData item)
     {

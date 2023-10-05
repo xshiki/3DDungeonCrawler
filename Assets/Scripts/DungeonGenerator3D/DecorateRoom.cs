@@ -53,23 +53,15 @@ public class DecorateRoom : MonoBehaviour
 
                 if (roll <= chestSpawnChance)
                 {
-                    Bounds roomBounds = GetComponent<Collider>().bounds;
-                    Vector3 randomPoint = new Vector3(
-                    Random.Range(roomBounds.min.x + 2f, roomBounds.max.x - 2f),
-                    transform.position.y + 0.34f, // Assuming chests are placed at a height of 0.5 units
-                    Random.Range(roomBounds.min.z + 2f, roomBounds.max.z - 2f)
-                );
 
+                    // Instantiate the chest at the random point
+                    int chestIndex = Random.Range(0, chestPrefabs.Length);
+                    GameObject door = Instantiate(chestPrefabs[chestIndex], transform.position, transform.rotation, transform);
+                    door.name = chestPrefabs[chestIndex].name;
+                    spawnedDecorations++;
 
-                    if (!IsPointTooCloseToDecoration(randomPoint) && !IsPointTooCloseToWall(randomPoint, roomBounds) && !IsPointTooCloseToChest(randomPoint))
-                    {
-                        // Instantiate the chest at the random point
-                        int chestIndex = Random.Range(0, chestPrefabs.Length);
-                        GameObject door = Instantiate(chestPrefabs[chestIndex], randomPoint, transform.rotation, transform);
-                        door.name = chestPrefabs[chestIndex].name;
-                        spawnedDecorations++;
-                    }
                 }
+
 
             }
 
@@ -140,31 +132,6 @@ public class DecorateRoom : MonoBehaviour
 
 }
 
-
-    bool IsPointTooCloseToDecoration(Vector3 point)
-    {
-        // Perform a sphere cast to check for nearby decoration objects
-        Collider[] hitColliders = Physics.OverlapSphere(point, 10, 13);
-        return hitColliders.Length > 0;
-    }
-
-
-
-    bool IsPointTooCloseToChest(Vector3 point)
-    {
-        // Perform a sphere cast to check for nearby decoration objects
-        Collider[] hitColliders = Physics.OverlapSphere(point, 10, 7);
-        return hitColliders.Length > 0;
-    }
-
-    bool IsPointTooCloseToWall(Vector3 point, Bounds roomBounds)
-    {
-        // Check if the point is too close to the room's boundaries
-        return point.x < roomBounds.min.x + chestToWallDistance ||
-                 point.x > roomBounds.max.x - chestToWallDistance ||
-                 point.z < roomBounds.min.z + chestToWallDistance ||
-                 point.z > roomBounds.max.z - chestToWallDistance;
-    }
 
     void SpawnRandomDecoration()
     {
