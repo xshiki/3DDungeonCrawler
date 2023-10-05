@@ -146,8 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1032bd59d38868499080e707e2ac529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decorationPrefabs:
-  - {fileID: 7173021932998636536, guid: 13177bf8bb881ac419969494edcac316, type: 3}
+  decorationPrefabs: []
   roomLayoutPrefabs:
   - {fileID: 1902337481364466734, guid: 0fcbdcd56bfde884382bf739701fea42, type: 3}
   - {fileID: 3139378983074981538, guid: 76fdc1acf6ee41c48a7db1282405463f, type: 3}

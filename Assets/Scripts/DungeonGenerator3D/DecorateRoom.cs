@@ -95,7 +95,7 @@ public class DecorateRoom : MonoBehaviour
 
         int layoutIndex = Random.Range(0, roomLayoutPrefabs.Length);
 
-        GameObject goLayout = Instantiate(roomLayoutPrefabs[layoutIndex],transform.position, Quaternion.identity, transform) as GameObject;
+        GameObject goLayout = Instantiate(roomLayoutPrefabs[layoutIndex],transform.position, transform.rotation, transform) as GameObject;
         goLayout.name = roomLayoutPrefabs[layoutIndex].name;
     }
 }

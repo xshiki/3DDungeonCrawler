@@ -7,6 +7,7 @@ using System.Net.NetworkInformation;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using UnityEditor;
+using UnityEngine.UIElements;
 
 public enum DungeonState { inactive, generatingMain, generatingBranches, cleanup, completed}
 public class ProceduralDungeonGenerator : MonoBehaviour
@@ -310,20 +311,25 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
     void CollisionCheck()
     {
-        BoxCollider box = tileTo.GetComponent<BoxCollider>();
+        //BoxCollider box = tileTo.GetComponent<BoxCollider>();
+        Collider collider = tileTo.GetComponent<Collider>();
 
+        /*
         if (box == null)
         {
             box = tileTo.gameObject.AddComponent<BoxCollider>();
             box.isTrigger = true;
         }
+        
 
         //offset = position in space. halfExtents = volumes of space from the center of that point
-        Vector3 offset = (tileTo.right * box.center.x) + (tileTo.up * box.center.y) + (tileTo.forward * box.center.z);
+       
         Vector3 halfExtents = box.bounds.extents;
         List<Collider> hits = Physics.OverlapBox(tileTo.position + offset, halfExtents, Quaternion.identity, LayerMask.GetMask("Tiles")).ToList();
-       
-        if(hits.Count > 0)
+        */
+        Vector3 offset = (tileTo.right * collider.bounds.center.x) + (tileTo.up * collider.bounds.center.y) + (tileTo.forward * collider.bounds.center.z);
+        List<Collider> hits = Physics.OverlapBox(tileTo.position + offset, collider.bounds.extents, Quaternion.identity, LayerMask.GetMask("Tiles")).ToList();
+        if (hits.Count > 0)
         {
             //hit something other than tielFrom and tileTo
             if(hits.Exists(x => x.transform != tileFrom && x.transform != tileTo))

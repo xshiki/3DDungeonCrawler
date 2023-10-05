@@ -14,43 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionHistory:
     _history:
-    - reference: {fileID: 11400000, guid: 64b0fc756a9aafd40aa5c2a2a842667f, type: 2}
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-5235496461055061743-3885117638135338864
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-3183302702436258453-3885117638135338864
+    - reference: {fileID: 0}
+      sceneName: Spell_Fireball
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-4926278196937914294-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-4720758667093851247-4980963029137312808
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2543110259538375738-713366953
+    - reference: {fileID: 11400000, guid: ee44c8cb4dd351f46b9f37ebe4b57d01, type: 2}
       sceneName: 
       scenePath: 
       globalObjectId: 
-    - reference: {fileID: 11400000, guid: f6cb2e35984faf048bc73744b4ced882, type: 2}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 11400000, guid: 9542ef2b7e0993f42a2151ab45e3e2a4, type: 2}
+    - reference: {fileID: 11400000, guid: fb0e3971ec760be4ebcf6ddbd8bc40ed, type: 2}
       sceneName: 
       scenePath: 
       globalObjectId: 
     - reference: {fileID: 0}
-      sceneName: MainGame
-      scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-7755853874753063078-2953727511703884285
-    - reference: {fileID: 0}
-      sceneName: MainGame
-      scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-8105255081365012450-2524703811539428579
-    - reference: {fileID: 0}
-      sceneName: MainGame
-      scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-4151237327226237660-3313395711062264366
-    - reference: {fileID: 102900000, guid: b76be259daa5d8049a0faba425c18540, type: 3}
+      sceneName: Spell_Fireball
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-4926278196937914294-0
+    - reference: {fileID: 4926278196937914294, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}
       sceneName: 
       scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 102900000, guid: 9c70c5e5ff44afb41abf5cfe1433e2b1, type: 3}
+      globalObjectId: GlobalObjectId_V1-1-1d8524e8e71733e4795a4181ed4e9486-4926278196937914294-0
+    - reference: {fileID: 4926278196937914294, guid: 0b1d3b16414ad85499dafebf14a2e0d8, type: 3}
       sceneName: 
       scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 102900000, guid: ed29ef936cf7ef14ebe6561d71377632, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 4151237327226237660, guid: e4fa23bdb3baf2349acc29bbc3020123, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-e4fa23bdb3baf2349acc29bbc3020123-4151237327226237660-0
+      globalObjectId: GlobalObjectId_V1-1-0b1d3b16414ad85499dafebf14a2e0d8-4926278196937914294-0

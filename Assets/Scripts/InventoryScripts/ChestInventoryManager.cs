@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
+
+[RequireComponent(typeof(LootTable))]
 public class ChestInventoryManager : InventoryManager, IInteractable
 {
     //[SerializeField] public int InventorySize;

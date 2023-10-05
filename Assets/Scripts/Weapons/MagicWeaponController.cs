@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(AudioSource))]
 public class MagicWeaponController : MonoBehaviour
 {
-    [SerializeField] public Spell spellToCast;
+    [SerializeField] public Spell spell;
     [SerializeField] private float timeBetweenCast = 2.5f;
 
     MagicWeaponItemData weaponData;
@@ -30,10 +32,15 @@ public class MagicWeaponController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         ItemDataProvider dataProvider = GetComponent<ItemDataProvider>();
-        weaponData = dataProvider.Item as MagicWeaponItemData;
+
+
+        if (weaponData == null)
+        {
+            weaponData = GetComponent<ItemDataProvider>().Item as MagicWeaponItemData;
+        }
         weaponAnimator = GetComponent<Animator>();
       
-        spellToCast = weaponData.spellToCast;
+        spell = weaponData.spellToCast;
         playerTransform= GameObject.Find("SpellCastPoint").GetComponent<Transform>();
         _castPoint = playerTransform;
        
@@ -52,14 +59,14 @@ public class MagicWeaponController : MonoBehaviour
     public void CastSpell()
     {
        
-        bool hasEnoughMana = playerRessource.currentMana - spellToCast.SpellToCast.ManaCost > 0f;
+        bool hasEnoughMana = playerRessource.currentMana - spell.SpellToCast.ManaCost > 0f;
         if (!castingMagic && hasEnoughMana)
         {
            
             castingMagic = true;
             playerController.PlayAnimation("Ranged");
             audioSource.PlayOneShot(weaponData.weaponSwingSound);
-            playerRessource.currentMana -= spellToCast.SpellToCast.ManaCost;
+            playerRessource.currentMana -= spell.SpellToCast.ManaCost;
             InstantiateSpell();
             Debug.Log("casting spell");
         }
@@ -77,7 +84,7 @@ public class MagicWeaponController : MonoBehaviour
     }
     void InstantiateSpell()
     {
-        Instantiate(spellToCast, _castPoint.position, _castPoint.rotation);
+        Instantiate(spell, _castPoint.position, _castPoint.rotation);
     }
 
 }

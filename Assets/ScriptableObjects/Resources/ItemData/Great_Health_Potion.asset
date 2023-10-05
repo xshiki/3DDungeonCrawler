@@ -17,7 +17,7 @@ MonoBehaviour:
   ID: 1
   DisplayName: Great Health Potion
   Description: 'Use: Restores 50 Health'
-  ItemPrefab: {fileID: 5879215179458826242, guid: 174e0c5903d7cb94c94027d6526999fb, type: 3}
+  ItemPrefab: {fileID: 4403784676850671829, guid: 3ccb17d624b4f804abcfd2cb998c25ef, type: 3}
   ItemType: 0
   dropChance: 5
   consumable: 1

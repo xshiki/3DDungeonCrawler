@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 460819946113624836}
   - component: {fileID: 7741790397625282034}
   - component: {fileID: -4995882216326847834}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: raum_Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

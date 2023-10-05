@@ -19,7 +19,7 @@ MonoBehaviour:
   Description: 'Use: Restores 10 Mana
 
 '
-  ItemPrefab: {fileID: 5879215179458826242, guid: 174e0c5903d7cb94c94027d6526999fb, type: 3}
+  ItemPrefab: {fileID: 4301887068394928815, guid: 2d17339a32c54c64a843a06890011f11, type: 3}
   ItemType: 0
   dropChance: 20
   consumable: 1

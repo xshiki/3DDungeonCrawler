@@ -41,6 +41,7 @@ public class InventoryManager : MonoBehaviour
         {
             inventorySlots[selectedSlot].Deselect();
         }
+        if(inventorySlots.Length < 10) { return; }
         inventorySlots[newValue].Select();
         selectedSlot = newValue;
         GetSelectedItem(true);
