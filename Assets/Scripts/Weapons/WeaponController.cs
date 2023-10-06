@@ -16,6 +16,7 @@ public class WeaponController : MonoBehaviour
 
     public PlayerController playerController;
     public PlayerEquipment playerEquipment;
+    public PlayerRessource playerRessource;
 
     [SerializeField] private Transform playerOrientation;
     [SerializeField] private float timeBetweenSwing = 0.5f;
@@ -39,6 +40,7 @@ public class WeaponController : MonoBehaviour
         playerController = FindObjectOfType<PlayerController>();
         playerEquipment = FindObjectOfType<PlayerEquipment>();
         playerOrientation = GameObject.Find("Orientation").transform;
+        playerRessource = FindAnyObjectByType<PlayerRessource>();
     }
 
 
@@ -125,7 +127,9 @@ public class WeaponController : MonoBehaviour
     {
         if (hit.collider.GetComponent<EnemyManager>())
         {
-            hit.collider.GetComponent<EnemyManager>().TakeDamage(weaponData.DamageAmount);
+            int damage = 0;
+            damage = weaponData.DamageAmount * (1 + playerRessource.strength.GetValue() / 100);
+            hit.collider.GetComponent<EnemyManager>().TakeDamage(damage);
             audioSource.PlayOneShot(weaponData.weaponHitSound);
             if(weaponData.hitEffect != null)
             {

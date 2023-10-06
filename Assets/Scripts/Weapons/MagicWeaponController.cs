@@ -83,7 +83,8 @@ public class MagicWeaponController : MonoBehaviour
     }
     void InstantiateSpell()
     {
-        Instantiate(spell, _castPoint.position, _castPoint.rotation);
+        var spellGO = Instantiate(spell, _castPoint.position, _castPoint.rotation);
+        spellGO.ModifySpellDamage(1+ playerRessource.intelligence.GetValue()/100);
     }
 
 }

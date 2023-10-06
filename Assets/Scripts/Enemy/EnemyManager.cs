@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,6 +19,7 @@ public class EnemyManager : MonoBehaviour
     public int attackDamage = 10;
     public int experiencePoints = 10;
     public FloorTextOverlay floor;
+    public GameObject floatingText;
     Animator animator;
     NavMeshAgent enemy;
     public UnityAction OnDie;
@@ -64,7 +66,11 @@ public class EnemyManager : MonoBehaviour
     public bool TakeDamage(int damage)
     {   
         currentHealth -= damage;
-
+        if(floatingText != null)
+        {
+            ShowFloatingText(damage);
+        }
+      
         gotHit = true;
         if (currentHealth <= 0)
         {
@@ -72,6 +78,14 @@ public class EnemyManager : MonoBehaviour
         }
 
         return true;
+    }
+
+
+    void ShowFloatingText(int damage)
+    {
+    
+        var floatGO = Instantiate(floatingText, transform.position, Quaternion.identity, transform);
+        floatGO.GetComponent<TextMeshPro>().text = damage.ToString();
     }
 
     // Function to trigger death

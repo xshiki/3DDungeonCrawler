@@ -44,6 +44,8 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
         Transform playerUI = GameObject.Find("PlayerUI").transform;
+        Transform throwAway = GameObject.Find("ThrowAway").transform;
+        throwAway.GetChild(0).gameObject.SetActive(true);
         transform.SetParent(playerUI);
       
       
@@ -78,6 +80,9 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
             image.raycastTarget = true;
             transform.SetParent(parentAfterDrag);
         }
+
+        Transform throwAway = GameObject.Find("ThrowAway").transform;
+        throwAway.GetChild(0).gameObject.SetActive(false);
     }
 
 

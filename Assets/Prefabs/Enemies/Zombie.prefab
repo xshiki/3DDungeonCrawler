@@ -3369,6 +3369,7 @@ MonoBehaviour:
   attackDamage: 10
   experiencePoints: 10
   floor: {fileID: 0}
+  floatingText: {fileID: 574858650843175943, guid: a76c4f2e6b1caa84a8d3cb8b8d574ab1, type: 3}
   experienceManager: {fileID: 0}
 --- !u!114 &850481511420517882
 MonoBehaviour:

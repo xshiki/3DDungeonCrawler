@@ -11,6 +11,8 @@ public class Spell : MonoBehaviour
     private SphereCollider myCollider;
     private Rigidbody myRigidbody;
 
+    float damageModifier = 1f;
+
     private void Awake()
     {
         myCollider = GetComponent<SphereCollider>();
@@ -32,13 +34,18 @@ public class Spell : MonoBehaviour
         }
     }
 
+    public void ModifySpellDamage(float damage)
+    {
+        damageModifier = damage;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
 
         //Apply sound sfx, particle effects etc
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.GetComponent<EnemyManager>().TakeDamage((int)SpellToCast.DamageAmount);
+            other.GetComponent<EnemyManager>().TakeDamage((int)(SpellToCast.DamageAmount * damageModifier));
             Destroy(this.gameObject);
         }
 

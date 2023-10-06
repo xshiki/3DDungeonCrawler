@@ -16,5 +16,5 @@ EditorBuildSettings:
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
     path: Assets/Scenes/LoadNewMap.unity
-    guid: 78dfbf87c20e2ae46961b7101dbc9b1e
+    guid: f380d191865231643b65c8d540275ae6
   m_configObjects: {}

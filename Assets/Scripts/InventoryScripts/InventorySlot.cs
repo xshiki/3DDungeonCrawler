@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
@@ -9,8 +10,21 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 {
     public InventoryItemType itemType = InventoryItemType.None;
     public PlayerEquipment playerEquipment;
-
     public event EventHandler<OnItemDroppedEventArgs> OnItemDropped;
+
+
+    public Image image;
+    public Color selectedHighlightColor, notSelectedColor;
+
+
+
+    private void Awake()
+    {
+       
+    }
+
+
+
     public class OnItemDroppedEventArgs : EventArgs
     {
         public InventoryItem item;
@@ -19,8 +33,15 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
 
 
-    public void Select() { }
-    public void Deselect() { }
+    public void Select() 
+    {
+        image.color = selectedHighlightColor;
+    
+    }
+    public void Deselect()
+    { 
+        image.color = notSelectedColor;
+    }
 
 
     public void SlotChanged(InventoryItem item) {
