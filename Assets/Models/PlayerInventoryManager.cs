@@ -15,7 +15,6 @@ public class PlayerInventoryManager : InventoryManager
     private void Awake()
     {
         Instance = this;
-        ChangeSelectedSlot(0);
         if(weaponSlot == null)
         {
             weaponSlot = GameObject.Find("Weapon Slot").GetComponent<InventorySlot>();
@@ -40,7 +39,10 @@ public class PlayerInventoryManager : InventoryManager
         {
             inventorySlots[selectedSlot].Deselect();
         }
-        
+        if(newValue == 0)
+        {
+            newValue = 9;
+        }
         inventorySlots[newValue].Select();
         selectedSlot = newValue;
         GetSelectedItem(true);
@@ -74,7 +76,7 @@ public class PlayerInventoryManager : InventoryManager
                     itemInSlot.transform.SetParent(weaponSlot.transform, false);
                     weaponSlot.SlotChanged(itemInSlot);
                 }
-
+                inventorySlots[selectedSlot].Deselect();
             }
             else
             if (use && itemInSlot.item.consumable)

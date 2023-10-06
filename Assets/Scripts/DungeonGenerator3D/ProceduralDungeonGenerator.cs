@@ -46,7 +46,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     public FloorTextOverlay counter;
 
     public BakeNavMesh navMesh;
-    GameObject overheadCamera, playerCam;
+    GameObject playerCam;
     Color startLightColor = Color.white;
 
     Transform tileFrom, tileTo, tileRoot;
@@ -61,8 +61,6 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     {
         GameObject floorText = GameObject.Find("Floor Counter");
         counter = floorText.GetComponent<FloorTextOverlay>();
-        overheadCamera = GameObject.Find("OverheadCamera");
-        overheadCamera.SetActive(false);
         playerCam = GameObject.FindWithTag("Player");
         if (useSeed)
         {
@@ -80,21 +78,10 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         {
             SceneManager.LoadScene("MainGame");
         }
-        if (Input.GetKeyDown(toggleMapKey))
-        {
-            overheadCamera.SetActive(!overheadCamera.activeInHierarchy);
-            playerCam.SetActive(!playerCam.activeInHierarchy);  
-        }
+        
     }
     IEnumerator DungeonGenerator()
     {
-
-
-
-
-
-        //playerCam.SetActive(false);
-        //overheadCamera.SetActive(true);
         GameObject goContainer = new GameObject("Main Path");
         container = goContainer.transform;
         container.SetParent(transform);
@@ -179,7 +166,6 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
         }
 
-        //overheadCamera.SetActive(false);
         dungeonState = DungeonState.cleanup;
         LightReset();
         DestroyBoxColliders();
@@ -188,12 +174,10 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
         yield return null; //wait 1 frame
         dungeonState = DungeonState.completed;
-     
-        playerCam.SetActive(true);
+
         navMesh.BuildNavMesh();
         OnFinishBuilding?.Invoke();
         counter.SetFloorText();
-
         navMesh.BuildNavMesh();
 
     }
@@ -329,6 +313,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         */
         Vector3 offset = (tileTo.right * collider.bounds.center.x) + (tileTo.up * collider.bounds.center.y) + (tileTo.forward * collider.bounds.center.z);
         List<Collider> hits = Physics.OverlapBox(tileTo.position + offset, collider.bounds.extents, Quaternion.identity, LayerMask.GetMask("Tiles")).ToList();
+        hits.AddRange(Physics.OverlapBox(tileTo.position + offset, collider.bounds.extents, Quaternion.identity, LayerMask.GetMask("Boundary")).ToList());
         if (hits.Count > 0)
         {
             //hit something other than tielFrom and tileTo

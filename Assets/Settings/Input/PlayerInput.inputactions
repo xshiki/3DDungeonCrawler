@@ -121,6 +121,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "OpenMap",
+                    "type": "Button",
+                    "id": "41e988b7-969d-4453-aca3-83c0cf88885e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -251,6 +260,17 @@
                     "path": "<Keyboard>/9",
                     "interactions": "",
                     "processors": "Scale(factor=9)",
+                    "groups": "",
+                    "action": "HotbarSelection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "97417705-e141-4302-992d-052b4c9e554f",
+                    "path": "<Keyboard>/0",
+                    "interactions": "",
+                    "processors": "",
                     "groups": "",
                     "action": "HotbarSelection",
                     "isComposite": false,
@@ -418,6 +438,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "503042e0-f8a7-46a6-83fa-e8bf8ba03fbd",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenMap",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

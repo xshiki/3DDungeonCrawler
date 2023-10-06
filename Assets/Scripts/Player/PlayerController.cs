@@ -48,6 +48,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource audioSource;
 
 
+    [Header("Map Camera")]
+    public GameObject mapCamera;
+    bool mapOpen = false;
     bool attacking = false;
     int attackCount = 0;
     public const string PUNCH1 = "Punch 1";
@@ -66,6 +69,10 @@ public class PlayerController : MonoBehaviour
         playerInventory.SetActive(false);
         animator = GetComponentInChildren<Animator>();
         input = playerInput.Player;
+        mapCamera = GameObject.Find("OverheadCamera");
+        mapCamera.SetActive(false);
+
+
         AssignInputs();
     }
 
@@ -75,9 +82,15 @@ public class PlayerController : MonoBehaviour
         SetAnimations();
     }
 
+    void AssignInputs()
+    {
+        openInventory.action.performed += OpenInventory;
+        //hotbarSelection.action.performed += UseItem;
+        input.Attack.performed += OnAttackPerformed;
+        input.OpenMap.performed += OnOpenMapPerformed;
+    }
 
-
-
+   
 
     private void OnEnable()
     {
@@ -93,6 +106,7 @@ public class PlayerController : MonoBehaviour
         //hotbarSelection.action.performed -= UseItem;
         input.Attack.performed -= OnAttackPerformed;
         input.Pause.performed -= OpenInventory;
+        input.OpenMap.performed -= OnOpenMapPerformed;
     }
 
 
@@ -136,12 +150,6 @@ public class PlayerController : MonoBehaviour
 
 
 
-    void AssignInputs()
-    {
-        openInventory.action.performed += OpenInventory;
-        //hotbarSelection.action.performed += UseItem;
-        input.Attack.performed += OnAttackPerformed;
-    }
 
 
     public void SetCurrentWeapon(WeaponController equippedWeapon)
@@ -249,7 +257,12 @@ public class PlayerController : MonoBehaviour
 
 
 
-
+    private void OnOpenMapPerformed(InputAction.CallbackContext context)
+    {
+        mapOpen = !mapOpen;
+        mapCamera.SetActive(mapOpen);
+        GameObject.Find("UI").GetComponent<CanvasGroup>().alpha = mapOpen ? 0 : 1;
+    }
 
 
     private void OpenInventory(InputAction.CallbackContext context)
@@ -270,4 +283,7 @@ public class PlayerController : MonoBehaviour
             firstPersonController.enabled = false;
         }
     }
+
+
+   
 }
