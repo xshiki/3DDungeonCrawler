@@ -1997,7 +1997,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &184339768
 Transform:
   m_ObjectHideFlags: 0
@@ -5539,7 +5539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &544311238
 Transform:
   m_ObjectHideFlags: 0
@@ -6253,6 +6253,10 @@ PrefabInstance:
     - target: {fileID: 1340103644774038627, guid: 9913f659b02926a4fbbeb8365a0fbbf2, type: 3}
       propertyPath: m_Name
       value: Door.arch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1340103644774038627, guid: 9913f659b02926a4fbbeb8365a0fbbf2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8516908117481381912, guid: 9913f659b02926a4fbbeb8365a0fbbf2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7782,6 +7786,10 @@ PrefabInstance:
     - target: {fileID: 2543110259538375738, guid: 3249a2342f85b8545904df164980c80e, type: 3}
       propertyPath: m_Name
       value: Fire Staff
+      objectReference: {fileID: 0}
+    - target: {fileID: 2543110259538375738, guid: 3249a2342f85b8545904df164980c80e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3861859921966806382, guid: 3249a2342f85b8545904df164980c80e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9744,37 +9752,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951164808}
   m_CullTransparentMesh: 1
---- !u!1 &965230727
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 965230728}
-  m_Layer: 0
-  m_Name: RespawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &965230728
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965230727}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.27, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1326689174}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &974355824
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13072,7 +13049,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 965230728}
   - {fileID: 1920394548}
   - {fileID: 456649956}
   - {fileID: 153851890}
@@ -20105,6 +20081,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c852f0866a7ab4aa763f854d44f2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1970064025 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2772837344910852553, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+  m_PrefabInstance: {fileID: 6820797582453146417}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1970300430 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6271755079462222459, guid: 6e557d9133b2f464e9805037439a7308, type: 3}
@@ -22555,11 +22536,11 @@ PrefabInstance:
       objectReference: {fileID: 1648295681}
     - target: {fileID: 4334929555834806952, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.09
+      value: -17.77
       objectReference: {fileID: 0}
     - target: {fileID: 4334929555834806952, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.87
+      value: 4.26
       objectReference: {fileID: 0}
     - target: {fileID: 4334929555834806952, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22602,8 +22583,12 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
-      propertyPath: maxHealth
-      value: 1000000
+      propertyPath: speed.baseValue
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: armor.statModified
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6837979674926909912, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: playerInventory
@@ -22637,6 +22622,10 @@ PrefabInstance:
     - target: {fileID: 8105255081365012450, guid: 00989f9130ee66247b67519704185f66, type: 3}
       propertyPath: m_Name
       value: Goldschwert
+      objectReference: {fileID: 0}
+    - target: {fileID: 8105255081365012450, guid: 00989f9130ee66247b67519704185f66, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9057835534218674372, guid: 00989f9130ee66247b67519704185f66, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22791,6 +22780,10 @@ PrefabInstance:
     - target: {fileID: 7755853874753063078, guid: 9ce65c0afa615da46ac848bab85980fe, type: 3}
       propertyPath: m_Name
       value: Stahlschwert
+      objectReference: {fileID: 0}
+    - target: {fileID: 7755853874753063078, guid: 9ce65c0afa615da46ac848bab85980fe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8915659944693553288, guid: 9ce65c0afa615da46ac848bab85980fe, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22950,6 +22943,10 @@ PrefabInstance:
     - target: {fileID: 4151237327226237660, guid: e4fa23bdb3baf2349acc29bbc3020123, type: 3}
       propertyPath: m_Name
       value: Eisenschwert
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151237327226237660, guid: e4fa23bdb3baf2349acc29bbc3020123, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8490562895997522011, guid: e4fa23bdb3baf2349acc29bbc3020123, type: 3}
       propertyPath: weaponData
@@ -23368,6 +23365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice Staff
       objectReference: {fileID: 0}
+    - target: {fileID: 4720758667093851247, guid: c55e738e8cfcc294f9d42feee7b9e988, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4911114729280153715, guid: c55e738e8cfcc294f9d42feee7b9e988, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -23522,6 +23523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth Staff
       objectReference: {fileID: 0}
+    - target: {fileID: 3147951742137512912, guid: 8ceea57de990d134ba551304e3d17eb7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9110918849428811853, guid: 8ceea57de990d134ba551304e3d17eb7, type: 3}
       propertyPath: item
       value: 
@@ -23542,6 +23547,10 @@ PrefabInstance:
     - target: {fileID: 874669238217280544, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 874669238217280544, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1558132646500794347, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23582,6 +23591,10 @@ PrefabInstance:
     - target: {fileID: 1558132646500794347, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1769830039084491180, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: m_LayerMask.m_Bits
+      value: 14336
       objectReference: {fileID: 0}
     - target: {fileID: 2842875084806052922, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: m_Layer
@@ -23641,7 +23654,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: tilePrefabs.Array.size
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: startPrefabs.Array.size
@@ -23860,7 +23873,7 @@ PrefabInstance:
     - target: {fileID: 7525747415677844557, guid: 6381ddabc72d2e2428ac07edcfc1c558, type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 965230728}
+      objectReference: {fileID: 1970064025}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

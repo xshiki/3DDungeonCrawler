@@ -66,9 +66,10 @@ public class PlayerUIManager : MonoBehaviour
         lerpSpeed = 3f * Time.deltaTime;
         _healthMeter.fillAmount = Mathf.Lerp(_healthMeter.fillAmount, _playerRessource.currentHealth / _playerRessource.maxHealth, lerpSpeed);
         _manaMeter.fillAmount = Mathf.Lerp(_manaMeter.fillAmount, _playerRessource.currentMana/_playerRessource.maxMana, lerpSpeed);
-        _healthMeterValue.text = (Mathf.Round((_playerRessource.currentHealth/ _playerRessource.maxHealth) *100)).ToString() + " %";
-        _manaMeterValue.text = (Mathf.Round(_playerRessource.currentManaPercent * 100)).ToString() + " %";
-
+        //_healthMeterValue.text = (Mathf.Round((_playerRessource.currentHealth/ _playerRessource.maxHealth) *100)).ToString() + " %";
+        //_manaMeterValue.text = (Mathf.Round(_playerRessource.currentManaPercent * 100)).ToString() + " %";
+        _healthMeterValue.text = Mathf.Round(_playerRessource.currentHealth).ToString() + "/" + Mathf.Round(_playerRessource.maxHealth).ToString();
+        _manaMeterValue.text = Mathf.Round(_playerRessource.currentMana).ToString() + "/" + Mathf.Round(_playerRessource.maxMana).ToString();
         _healthValue.text = _playerRessource.maxHealth.ToString();
         _manaValue.text = _playerRessource.maxMana.ToString();
         _strValue.text = _playerRessource.strength.GetValue().ToString();

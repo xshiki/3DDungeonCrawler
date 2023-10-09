@@ -58,7 +58,7 @@ public class EnemyManager : MonoBehaviour
         _enemyPool = pool;
     }
 
-    public void ResetGotGit()
+    public void ResetGotHit()
     {
         gotHit = false;
     }

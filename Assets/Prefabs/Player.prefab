@@ -2480,8 +2480,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 100
+  healthRechargeRate: 0.1
+  healthRechargeDelay: 10
   maxMana: 100
-  currentMana: 0
+  currentMana: 100
   manaRechargeRate: 2
   manaRechargeDelay: 4
   maxStamina: 100
@@ -2962,14 +2964,14 @@ MonoBehaviour:
   zoomFOV: 40
   zoomStepTime: 5
   playerCanMove: 1
-  walkSpeed: 5
+  walkSpeed: 3
   maxVelocityChange: 10
   enableSprint: 1
   unlimitedSprint: 0
   sprintKey: 304
-  sprintSpeed: 8
+  sprintSpeed: 5
   sprintDuration: 5
-  sprintCooldown: 0.5
+  sprintCooldown: 5
   sprintFOV: 90
   sprintFOVStepTime: 10
   useSprintBar: 1

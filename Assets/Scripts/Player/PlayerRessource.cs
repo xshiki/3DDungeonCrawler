@@ -11,6 +11,9 @@ public class PlayerRessource : MonoBehaviour
     public float maxHealth = 100f;
     public float currentHealth;
     public float healthPercent => currentHealth / maxHealth;
+    [SerializeField] private float healthRechargeRate = 1f;
+    [SerializeField] private float healthRechargeDelay = 10f;
+    private float currentHealthDelayCounter;
 
 
 
@@ -20,7 +23,7 @@ public class PlayerRessource : MonoBehaviour
     public float currentMana; // Current ressource of the player
     public float currentManaPercent => currentMana / maxMana;
     [SerializeField] private float manaRechargeRate = 2f;
-    [SerializeField] private float manaRechargeDelay = 1f;
+    [SerializeField] private float manaRechargeDelay = 2.5f;
     private float currentManaDelayCounter;
 
 
@@ -142,6 +145,7 @@ public class PlayerRessource : MonoBehaviour
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        var player = GameObject.Find("Player").GetComponent<FirstPersonController>().enabled = currentHealth <=0 ? false : true;
         FindAnyObjectByType<AudioManager>().Play("Death");
         GOScreen.SetActive(true);
     }
@@ -169,7 +173,24 @@ public class PlayerRessource : MonoBehaviour
         }
 
 
-        if(currentHealth <= 0)
+        if (currentHealth < maxHealth)
+        {
+
+            if (currentHealthDelayCounter < healthRechargeDelay)
+            {
+                currentHealthDelayCounter += Time.deltaTime;
+            }
+
+            if (currentHealthDelayCounter >= healthRechargeDelay)
+            {
+                currentHealth += healthRechargeRate * Time.deltaTime;
+                if (currentHealth > maxHealth) { currentHealth = maxHealth; }
+            }
+
+        }
+
+
+        if (currentHealth <= 0)
         {
             currentHealth = 0;
 

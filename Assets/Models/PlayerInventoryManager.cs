@@ -26,7 +26,8 @@ public class PlayerInventoryManager : InventoryManager
     {
         if (hotbarSelection.action.triggered)
         {
-            ChangeSelectedSlot((int)hotbarSelection.action.ReadValue<float>() - 1);
+            Debug.Log((int)hotbarSelection.action.ReadValue<float>());
+            ChangeSelectedSlot((int)hotbarSelection.action.ReadValue<float>()-1);
 
         }
     }
@@ -39,7 +40,7 @@ public class PlayerInventoryManager : InventoryManager
         {
             inventorySlots[selectedSlot].Deselect();
         }
-        if(newValue == 0)
+        if(newValue == -1)
         {
             newValue = 9;
         }
@@ -83,7 +84,13 @@ public class PlayerInventoryManager : InventoryManager
             {
                 Debug.Log("consumed item");
 
-                itemInSlot.item.UseItem();
+                var consum = itemInSlot.item as ConsumableItemData;
+
+                var health = consum._healthToReplenish;
+                var mana = consum._manaToReplenish;
+
+
+                GameObject.Find("Player").GetComponent<PlayerRessource>().ReplenshHealthMana(health, mana);
                 itemInSlot.count--;
                 if (itemInSlot.count <= 0)
                 {

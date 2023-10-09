@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6499873366585044544}
   - component: {fileID: 9065965035083405962}
   - component: {fileID: 1199792253487182211}
+  - component: {fileID: -7434195966317156749}
   m_Layer: 0
   m_Name: kaminOhneHolz1
   m_TagString: Untagged
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4299840379876182452, guid: 2cfc2c4e2f17aaa47b9d82f5a8eb2697, type: 3}
+--- !u!208 &-7434195966317156749
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7408486645846883167}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 3.5000002, y: 1.8000001, z: 1.5000001}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.055000003, z: -0.59000003}
+  m_TimeToStationary: 0.5

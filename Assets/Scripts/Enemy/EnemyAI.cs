@@ -33,8 +33,8 @@ public class EnemyAI : MonoBehaviour
 
 
     public List<Vector3> wayPoints = new List<Vector3>();
-    public int numberOfWayPoints = 2;
-    int currentWaypointIndex;
+    public int numberOfWayPoints = 8;
+    public int currentWaypointIndex;
 
     public float startWaitTime = 2;
     public float timeToRotate = 2;
@@ -101,6 +101,9 @@ public class EnemyAI : MonoBehaviour
             animator.SetFloat("Speed", 1);
         }
         //if (!playerInSightRange && !playerInAttackRange) Patroling();
+
+
+
         if (!isPatrol)
         {
             ChasePlayer();
@@ -108,7 +111,7 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            enemyManager.ResetGotGit();
+            enemyManager.ResetGotHit();
             Patroling();
         }
         

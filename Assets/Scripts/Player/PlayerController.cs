@@ -95,7 +95,10 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         input.Enable();
-
+        openInventory.action.performed += OpenInventory;
+        //hotbarSelection.action.performed += UseItem;
+        input.Attack.performed += OnAttackPerformed;
+        input.OpenMap.performed += OnOpenMapPerformed;
     }
 
 

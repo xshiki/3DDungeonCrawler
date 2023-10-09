@@ -292,7 +292,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""id"": ""97417705-e141-4302-992d-052b4c9e554f"",
                     ""path"": ""<Keyboard>/0"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""Scale(factor=0)"",
                     ""groups"": """",
                     ""action"": ""HotbarSelection"",
                     ""isComposite"": false,

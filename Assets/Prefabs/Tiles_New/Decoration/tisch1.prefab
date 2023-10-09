@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 792120004913720114}
   - component: {fileID: 3250151679224193016}
   - component: {fileID: 3393782884006778460}
+  - component: {fileID: -6239460007895712387}
   m_Layer: 13
   m_Name: tisch1
   m_TagString: Untagged
@@ -106,3 +107,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7245038797952995278, guid: 480eae5fb3806e447a5bac2c1d4239d0, type: 3}
+--- !u!208 &-6239460007895712387
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3898472181430205997}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 1.5000001, y: 0.563, z: 0.75000006}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.075, z: 0}
+  m_TimeToStationary: 0.5

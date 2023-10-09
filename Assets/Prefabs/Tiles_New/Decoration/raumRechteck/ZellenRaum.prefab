@@ -115,6 +115,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &518795840586619401
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,6 +233,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &736945582989407921
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,6 +351,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &874095184026436055
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +469,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1072518623369232349
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,6 +660,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1318685304713008793
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +778,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1339088109839006035
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,7 +897,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b44284d3f813d848870976aedba1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotbarSelection: {fileID: -6332451638518686388, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
   inventorySlots:
   - {fileID: 570210269079717453}
   - {fileID: 389094669254966356}
@@ -892,7 +909,6 @@ MonoBehaviour:
   - {fileID: 81977263662547981}
   - {fileID: 1596069256582036704}
   inventoryItemPrefab: {fileID: 2594040351653272254, guid: 7b91c61ff73742a409c3a86fe924025a, type: 3}
-  weaponSlot: {fileID: 0}
   _prompt: Open Chest
   PlayerInventory: {fileID: 0}
   DynamicInventory: {fileID: 5109224635204770624, guid: 72612c2202327b246839b509bdb3ae30, type: 3}
@@ -1056,6 +1072,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1899309303047497870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1158,7 +1177,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b44284d3f813d848870976aedba1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotbarSelection: {fileID: -6332451638518686388, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
   inventorySlots:
   - {fileID: 2685438559524405698}
   - {fileID: 7319961755014832031}
@@ -1166,7 +1184,6 @@ MonoBehaviour:
   - {fileID: 8380257998733668807}
   - {fileID: 4151713273223952660}
   inventoryItemPrefab: {fileID: 2594040351653272254, guid: 7b91c61ff73742a409c3a86fe924025a, type: 3}
-  weaponSlot: {fileID: 0}
   _prompt: Open barrel
   PlayerInventory: {fileID: 0}
   DynamicInventory: {fileID: 0}
@@ -1449,6 +1466,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2618582123432680207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1600,6 +1620,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2933681300335176855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,6 +1738,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3139378983074981538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1867,6 +1893,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3473622974254517415
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +2011,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3543329126442498967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,6 +2170,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5175861374147525353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2253,6 +2288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5431663173366672746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2368,6 +2406,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5452135992155640045
 GameObject:
   m_ObjectHideFlags: 0
@@ -2483,6 +2524,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5860866912853886659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,6 +2642,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6005529838505436565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2713,6 +2760,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6031682538318198592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,6 +2878,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6388823114542224353
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +2996,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6890567296510239256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,6 +3146,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &7748907380209272740
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,6 +3264,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8212702738913001301
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,7 +3383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b44284d3f813d848870976aedba1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotbarSelection: {fileID: -6332451638518686388, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
   inventorySlots:
   - {fileID: 533194104927587063}
   - {fileID: 6471435983190550360}
@@ -3334,7 +3395,6 @@ MonoBehaviour:
   - {fileID: 3054984087142392927}
   - {fileID: 8951239217965557144}
   inventoryItemPrefab: {fileID: 2594040351653272254, guid: 7b91c61ff73742a409c3a86fe924025a, type: 3}
-  weaponSlot: {fileID: 0}
   _prompt: Open Chest
   PlayerInventory: {fileID: 0}
   DynamicInventory: {fileID: 5109224635204770624, guid: 72612c2202327b246839b509bdb3ae30, type: 3}
@@ -3498,6 +3558,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &8862032590789906688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3613,6 +3676,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &9001544183565460459
 GameObject:
   m_ObjectHideFlags: 0
@@ -3728,6 +3794,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemType: 0
   playerEquipment: {fileID: 0}
+  image: {fileID: 0}
+  selectedHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  notSelectedColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &9201207797293263776
 GameObject:
   m_ObjectHideFlags: 0
@@ -3771,6 +3840,10 @@ PrefabInstance:
     - target: {fileID: 6147685675833754601, guid: 7ffb61356801bf54abad29fbc132e837, type: 3}
       propertyPath: m_Name
       value: "zelle_ohne_t\xFCr"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147685675833754601, guid: 7ffb61356801bf54abad29fbc132e837, type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7852113386955025476, guid: 7ffb61356801bf54abad29fbc132e837, type: 3}
       propertyPath: m_LocalPosition.x

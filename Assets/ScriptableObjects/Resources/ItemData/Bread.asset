@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ebe390d6f0a45f44934eaf2efdc0112, type: 3}
   m_Name: Bread
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 63a823b27239c9e4a98663eaef2e4396, type: 3}
+  Icon: {fileID: 21300000, guid: 9c73b6e70dfc2b146bec16ad5d85ca7d, type: 3}
   MaxStackSize: 1
   ID: 10
   DisplayName: Bread

@@ -10,6 +10,5 @@ public class RespawnPlayer : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         other.transform.position = spawnPoint.position;
-        Console.WriteLine("Player respawned");
     }
 }

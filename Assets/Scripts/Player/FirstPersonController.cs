@@ -153,7 +153,7 @@ public class FirstPersonController : MonoBehaviour
     public void SetSpeed()
     {
         walkSpeed = _playerRessource.speed.GetValue();
-        sprintSpeed = walkSpeed + 3;
+        sprintSpeed = walkSpeed + 2;
     }
     void Start()
     {

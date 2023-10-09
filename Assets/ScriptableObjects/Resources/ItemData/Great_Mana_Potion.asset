@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ebe390d6f0a45f44934eaf2efdc0112, type: 3}
   m_Name: Great_Mana_Potion
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: fdfbc077c23cee0489fd71586110329e, type: 3}
+  Icon: {fileID: 21300000, guid: c0b46f524c6c41848bffdab6a4c6b9b2, type: 3}
   MaxStackSize: 3
   ID: 2
   DisplayName: Great Mana Potion
