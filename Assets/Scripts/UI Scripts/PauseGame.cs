@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PauseGame : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public GameObject settingsMenuUI;
 
     [SerializeField]
     private PlayerInput playerInput;
@@ -16,6 +17,8 @@ public class PauseGame : MonoBehaviour
     private void Awake()
     {
         playerInput =  new PlayerInput();
+        settingsMenuUI = GameObject.Find("Settings Panel");
+        settingsMenuUI.SetActive(false);
         input = playerInput.Player;
 
         input.Pause.performed += PauseResume;
@@ -45,6 +48,7 @@ public class PauseGame : MonoBehaviour
         player.enabled = true;
         playerController.enabled = true;
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;
@@ -71,6 +75,7 @@ public class PauseGame : MonoBehaviour
         player.enabled = true;
         playerController.enabled = true;
         pauseMenuUI.SetActive(false);
+        settingsMenuUI.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Time.timeScale = 1f;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lesser_Health_Potion
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 3932333f6eaf8c749bf8f728cd16b987, type: 3}
-  MaxStackSize: 3
+  MaxStackSize: 25
   ID: 10
   DisplayName: Lesser Health Potion
   Description: 'Use: Restores 10 Health'

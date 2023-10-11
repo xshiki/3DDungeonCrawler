@@ -16,10 +16,10 @@ MonoBehaviour:
   MaxStackSize: 0
   ID: -1
   DisplayName: Iron Helmet
-  Description: testseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststesttestseteststest
+  Description: 
   ItemPrefab: {fileID: 3259654094862974064, guid: 0e6ba93298885c444b5f64b14823ba24, type: 3}
   ItemType: 1
-  dropChance: 10
+  dropChance: 25
   consumable: 0
   stamina: 0
   strength: 0

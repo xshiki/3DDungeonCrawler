@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing.Text;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerRessource : MonoBehaviour
 {
@@ -50,10 +53,12 @@ public class PlayerRessource : MonoBehaviour
     public Stat armor;
     public Stat speed;
 
-
+    Volume volume;
+    UnityEngine.Rendering.Universal.Vignette vignette;
     private void Awake()
     {
-     
+        volume = GameObject.Find("Global Volume").GetComponent<Volume>();
+
         currentHealth = maxHealth;
         currentMana = maxMana;
         currentStamina = maxStamina;
@@ -188,7 +193,21 @@ public class PlayerRessource : MonoBehaviour
             }
 
         }
+         if((currentHealth/maxHealth) * 100 <= 33) {
 
+            if (volume.profile.TryGet(out vignette))
+            {
+                vignette.active = true;
+            }
+
+        }
+        else
+        {
+            if (volume.profile.TryGet(out vignette))
+            {
+                vignette.active = false;
+            }
+        }
 
         if (currentHealth <= 0)
         {

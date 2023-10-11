@@ -16,7 +16,7 @@ public class EnemyManager : MonoBehaviour
 {
     public int maxHealth = 10; // Maximum health of the enemy
     public int currentHealth = 10; // Current health of the enemy
-    public int attackDamage = 10;
+    public int attackDamage = 5;
     public int experiencePoints = 10;
     public FloorTextOverlay floor;
     public GameObject floatingText;

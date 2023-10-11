@@ -19,7 +19,7 @@ public class WeaponController : MonoBehaviour
     public PlayerRessource playerRessource;
 
     [SerializeField] private Transform playerOrientation;
-    [SerializeField] private float timeBetweenSwing = 0.5f;
+
     private bool attacking = false;
     public bool isAttacking => attacking;
 
@@ -27,6 +27,8 @@ public class WeaponController : MonoBehaviour
     public const string ATTACK2 = "Attack 2";
 
 
+
+    float timeBetweenSwing = 2.5f;
     int attackCount = 0;
     private void Awake()
     {
@@ -36,6 +38,7 @@ public class WeaponController : MonoBehaviour
         if(weaponData == null)
         {
             weaponData = GetComponent<ItemDataProvider>().Item as WeaponItemData;
+            timeBetweenSwing = weaponData.timeBetweenSwing;
         }
         playerController = FindObjectOfType<PlayerController>();
         playerEquipment = FindObjectOfType<PlayerEquipment>();

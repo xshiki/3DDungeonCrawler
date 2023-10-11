@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currentHealth: 10
-  attackDamage: 10
+  attackDamage: 2
   experiencePoints: 10
   floor: {fileID: 0}
   floatingText: {fileID: 574858650843175943, guid: a76c4f2e6b1caa84a8d3cb8b8d574ab1, type: 3}
@@ -336,7 +336,7 @@ MonoBehaviour:
   walkSpeed: 4
   runSpeed: 6
   pushForce: 5
-  attackDamage: 2
+  attackDamage: 5
   wayPointRange: 10
   viewRadius: 15
   viewAngle: 90

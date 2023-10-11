@@ -15,42 +15,42 @@ MonoBehaviour:
   selectionHistory:
     _history:
     - reference: {fileID: 0}
-      sceneName: raum_Spawn
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-7090528954019993912-4873559287999197616
-    - reference: {fileID: 9028552922947832847, guid: 5f90f55d5ea2ac748943d8ccd697b680, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-5f90f55d5ea2ac748943d8ccd697b680-9028552922947832847-0
+      sceneName: LoadNewMap
+      scenePath: Assets/Scenes/LoadNewMap.unity
+      globalObjectId: GlobalObjectId_V1-2-cc43f3e89e62d7741b7ab9f28fb055cb-1326689173-0
     - reference: {fileID: 0}
-      sceneName: raumQuadrat3Tore
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-9028552922947832847-0
+      sceneName: LoadNewMap
+      scenePath: Assets/Scenes/LoadNewMap.unity
+      globalObjectId: GlobalObjectId_V1-2-cc43f3e89e62d7741b7ab9f28fb055cb-681934179-0
     - reference: {fileID: 0}
-      sceneName: raumQuadrat3Tore
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-8637558082826372796-5114844643057498838
+      sceneName: LoadNewMap
+      scenePath: Assets/Scenes/LoadNewMap.unity
+      globalObjectId: GlobalObjectId_V1-2-cc43f3e89e62d7741b7ab9f28fb055cb-544311237-0
     - reference: {fileID: 0}
-      sceneName: raumQuadrat3Tore
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-8637558082826372796-1417974946574459884
+      sceneName: LoadNewMap
+      scenePath: Assets/Scenes/LoadNewMap.unity
+      globalObjectId: GlobalObjectId_V1-2-cc43f3e89e62d7741b7ab9f28fb055cb-504554400-0
     - reference: {fileID: 0}
-      sceneName: raumQuadrat3Tore
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-4666670662055401452-3810357247845160259
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-6680102841255842074-4893195
     - reference: {fileID: 0}
-      sceneName: raumQuadrat3Tore
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-7975638219792787698-2590469121811106124
-    - reference: {fileID: 919132149155446097, guid: 057bfc07e579b4a49a0154c3641df2fd, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-057bfc07e579b4a49a0154c3641df2fd-919132149155446097-0
-    - reference: {fileID: 7212003985386034410, guid: 3120e2e5520f94444b9869678f13226b, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-3120e2e5520f94444b9869678f13226b-7212003985386034410-0
-    - reference: {fileID: 8543933912272043980, guid: 6e231872767d67e42b12fe730077b412, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-6e231872767d67e42b12fe730077b412-8543933912272043980-0
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1023927292-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-5240573749984859827-1567074182853205988
+    - reference: {fileID: 0}
+      sceneName: LoadNewMap
+      scenePath: Assets/Scenes/LoadNewMap.unity
+      globalObjectId: GlobalObjectId_V1-2-cc43f3e89e62d7741b7ab9f28fb055cb-548544832-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-681934179-0
+    - reference: {fileID: 0}
+      sceneName: LoadNewMap
+      scenePath: Assets/Scenes/LoadNewMap.unity
+      globalObjectId: GlobalObjectId_V1-2-cc43f3e89e62d7741b7ab9f28fb055cb-1938879534-0

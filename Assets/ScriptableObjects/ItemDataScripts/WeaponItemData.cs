@@ -13,6 +13,7 @@ public class WeaponItemData : InventoryItemData
     public Weapons WeaponType;
     public int DamageAmount;
     public float WeaponRange = 1f;
+    public float timeBetweenSwing = 2.5f;
     public enum Weapons { Sword, Axe, Polearm, Staff };
    
 

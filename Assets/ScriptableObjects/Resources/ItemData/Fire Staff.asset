@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 5947092f8bf58a24f8eb3a093675d161, type: 3}
   MaxStackSize: 0
-  ID: -1
-  DisplayName: 
+  ID: 6
+  DisplayName: Fire Staff
   Description: 
   ItemPrefab: {fileID: 2543110259538375738, guid: 3249a2342f85b8545904df164980c80e, type: 3}
   ItemType: 5

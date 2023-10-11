@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour
     public float walkSpeed = 3f; // Speed at which the enemy moves towards the player
     public float runSpeed = 5f;
     public float pushForce = 5f;
-    public int attackDamage;
+    public int attackDamage = 5;
 
     EnemyManager enemyManager;
 
