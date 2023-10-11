@@ -8,6 +8,8 @@ public class RangedEnemyAI : EnemyAI
 
     public Projectile projectile;
     public Spell spellToCast;
+ 
+    public GameObject aim;
   
 
 
@@ -17,10 +19,19 @@ public class RangedEnemyAI : EnemyAI
         transform.LookAt(player);
         enemy.speed = 0;
         if (!alreadyAttacked)
-        {
-            Instantiate(projectile, transform.position, transform.rotation);
-            alreadyAttacked = true;
+        {   
 
+            if(aim != null)
+            {
+                Instantiate(projectile, aim.transform.position, transform.rotation);
+            }
+            else
+            {
+                Instantiate(projectile, transform.position, transform.rotation);
+            }
+           
+            alreadyAttacked = true;
+            animator.Play("Ranged Attack");
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
     }

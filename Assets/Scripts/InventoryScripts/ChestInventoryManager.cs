@@ -40,7 +40,15 @@ public class ChestInventoryManager : InventoryManager, IInteractable
         fillChest();
     }
 
+    private void OnEnable()
+    {
+        playerController.OnInventoryClosed += Close;
+    }
 
+    private void OnDisable()
+    {
+        playerController.OnInventoryClosed -= Close;
+    }
     void fillChest()
     {
       
@@ -111,6 +119,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     }
     void ClearDynamicInventory()
     {
+        if(inventorySlots.Length <= 0) { return; }
         foreach (InventorySlot slot in inventorySlots)
         {
             slot.transform.SetParent(this.transform, false);
@@ -118,6 +127,11 @@ public class ChestInventoryManager : InventoryManager, IInteractable
 
     }
 
+
+    private void OnDestroy()
+    {
+        playerController.OnInventoryClosed -= Close;
+    }
 
     void Close()
     {

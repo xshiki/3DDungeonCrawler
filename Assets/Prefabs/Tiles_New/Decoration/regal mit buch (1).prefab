@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4071841645514869471}
   - component: {fileID: 1594442260153306714}
   - component: {fileID: 4951797106419705157}
-  - component: {fileID: 5399347437226731966}
   - component: {fileID: 5154726668106566058}
+  - component: {fileID: 6961444626667672243}
   m_Layer: 0
   m_Name: regal mit buch (1)
   m_TagString: Untagged
@@ -90,27 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &5399347437226731966
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8543933912272043980}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.7085176, y: 2.2780232, z: 0.5283756}
-  m_Center: {x: 0, y: -0.00000029802322, z: 0.0070939064}
 --- !u!208 &5154726668106566058
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -127,6 +106,28 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.007}
   m_TimeToStationary: 0.5
+--- !u!64 &6961444626667672243
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8543933912272043980}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3749380468981313546, guid: 057bfc07e579b4a49a0154c3641df2fd, type: 3}
 --- !u!1001 &1682015918270974177
 PrefabInstance:
   m_ObjectHideFlags: 0

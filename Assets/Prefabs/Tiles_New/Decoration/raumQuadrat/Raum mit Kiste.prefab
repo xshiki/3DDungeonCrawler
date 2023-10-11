@@ -601,6 +601,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lesser Mana Potion
       objectReference: {fileID: 0}
+    - target: {fileID: 4620766964144080498, guid: 2d17339a32c54c64a843a06890011f11, type: 3}
+      propertyPath: _id
+      value: 3ec1e784-e4ba-4949-bd43-fe597e4c9d78
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1177,6 +1181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8835185035428338803}
     m_Modifications:
+    - target: {fileID: 754658523394157998, guid: 95e645f794a77774b8f9d4a3ccae33b4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b89fe982997b8a548bee33cb21898de2, type: 2}
     - target: {fileID: 1259294433678888059, guid: 95e645f794a77774b8f9d4a3ccae33b4, type: 3}
       propertyPath: m_Name
       value: buch1 (1)
@@ -1187,11 +1195,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1887634076735559361, guid: 95e645f794a77774b8f9d4a3ccae33b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.13996458
+      value: 0.106
       objectReference: {fileID: 0}
     - target: {fileID: 1887634076735559361, guid: 95e645f794a77774b8f9d4a3ccae33b4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.9654891
+      value: -6.131
       objectReference: {fileID: 0}
     - target: {fileID: 1887634076735559361, guid: 95e645f794a77774b8f9d4a3ccae33b4, type: 3}
       propertyPath: m_LocalRotation.w

@@ -31,13 +31,16 @@ public class ExperienceManager : MonoBehaviour
     public AudioClip levelUpSound;
     private void Awake()
     {
+
+        totalExperience = (int) experienceCurve.Evaluate(currentLevel);
         audioSource = GetComponent<AudioSource>();
+        UpdateLevel();
     }
     void Start()
     {
-        UpdateLevel();
+      
     }
-
+  
     public void AddExperience(int amount)
     {
         totalExperience += amount;
@@ -78,5 +81,6 @@ public class ExperienceManager : MonoBehaviour
         levelText.text = currentLevel.ToString();
         experienceText.text = start + " exp / " + end + " exp ";
         experienceFill.fillAmount = (float)start / (float)end;
+        if(totalExperience >= nextLevelExperience) { CheckForLevelUp(); }
     }
 }

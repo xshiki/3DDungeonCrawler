@@ -27,4 +27,4 @@ MonoBehaviour:
   weaponSwingSound: {fileID: 8300000, guid: 875f802663c7984429d4c252cbf707cf, type: 3}
   weaponHitSound: {fileID: 8300000, guid: fb730152920aa6d4a8bcab0b4b7e4a3b, type: 3}
   hitEffect: {fileID: 0}
-  spellToCast: {fileID: 3970265404137374070, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}
+  spellToCast: {fileID: 8582905920541781156, guid: 96cc2ddfe95f7d249b1e51dc7d31b153, type: 3}

@@ -22,6 +22,7 @@ public class FloatingText : MonoBehaviour
 
     private void LateUpdate()
     {
+        if(mainCamera == null) {  return; } 
         transform.LookAt(mainCamera.transform);
         transform.rotation = Quaternion.LookRotation(mainCamera.transform.forward);
     }

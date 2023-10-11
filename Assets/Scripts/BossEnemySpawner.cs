@@ -11,6 +11,7 @@ public class BossEnemySpawner : MonoBehaviour
     public LoadDatabase database;
     public ScalingScriptableObject scaler;
     public int floorCounter;
+    public int bossFloor = 5;
     public GameObject bossRoom;
 
     public bool isSpawned = false;
@@ -31,14 +32,14 @@ public class BossEnemySpawner : MonoBehaviour
     //spawn boss every 5th floor
     void SpawnBoss()
     {   
-        if(floorCounter % 5 != 0) { return; }
+        if(floorCounter % bossFloor != 0) { return; }
         bossRoom = GameObject.Find("Boss Room");
         int spawnIndex = UnityEngine.Random.Range(0, enemyPrefabs.Count);
         GameObject boss = Instantiate(enemyPrefabs[spawnIndex], bossRoom.transform);
         isSpawned = true;
         boss.GetComponent<EnemyAI>().SetBossSpawnPoint(bossRoom.transform.position);
         boss.GetComponent<EnemyManager>().EnemyScaler(scaler, floorCounter*floorCounter + 3);
-        Vector3 scaleChange = new Vector3(2, 2, 2);
+        Vector3 scaleChange = new Vector3(1.75f, 1.75f, 1.75f);
         boss.transform.localScale = Vector3.Scale(boss.transform.localScale, scaleChange);
         boss.transform.rotation = bossRoom.transform.rotation;
 

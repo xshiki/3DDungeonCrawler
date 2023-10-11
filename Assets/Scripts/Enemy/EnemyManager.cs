@@ -115,6 +115,14 @@ public class EnemyManager : MonoBehaviour
     
     public void OnDeathAnimationFinished()
     {
+        if (_enemyPool != null)
+        {
         _enemyPool.Release(gameObject);
+
+        }
+        else
+        {
+            Destroy(gameObject, 2f);
+        }
     }
 }
