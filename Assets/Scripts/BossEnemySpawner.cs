@@ -38,7 +38,7 @@ public class BossEnemySpawner : MonoBehaviour
         GameObject boss = Instantiate(enemyPrefabs[spawnIndex], bossRoom.transform);
         isSpawned = true;
         boss.GetComponent<EnemyAI>().SetBossSpawnPoint(bossRoom.transform.position);
-        boss.GetComponent<EnemyManager>().EnemyScaler(scaler, floorCounter*floorCounter + 3);
+        boss.GetComponent<EnemyManager>().EnemyScaler(scaler, floorCounter+10);
         Vector3 scaleChange = new Vector3(1.75f, 1.75f, 1.75f);
         boss.transform.localScale = Vector3.Scale(boss.transform.localScale, scaleChange);
         boss.transform.rotation = bossRoom.transform.rotation;

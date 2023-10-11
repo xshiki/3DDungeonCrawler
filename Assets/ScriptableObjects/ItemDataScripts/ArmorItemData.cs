@@ -10,5 +10,7 @@ public class ArmorItemData : InventoryItemData
     public int armor;
     public int speed;
 
+    public Material armorColor;
+
    
 }

@@ -23,6 +23,12 @@ public class UI_CharacterEquipment : MonoBehaviour
     public Transform pantsSocket;
     public Transform bootsSocket;
 
+
+    public SkinnedMeshRenderer helmet;
+    public SkinnedMeshRenderer chest;
+    public SkinnedMeshRenderer pants;
+    public SkinnedMeshRenderer boots;
+
     private ChangeNotifier weaponNotifier;
     private ChangeNotifier helmetNotifier;
     private ChangeNotifier chestNotifier;
@@ -184,12 +190,23 @@ public class UI_CharacterEquipment : MonoBehaviour
         foreach (Transform child in helmetSocket)
         {
             Destroy(child.gameObject);
+            helmet.enabled = false;
 
         }
 
         InventoryItemData helmetItem = playerEquipment.GetHelmetItem();
         if (helmetItem != null)
         {
+            helmet.enabled = true;
+
+
+            Material mat = helmetItem.ItemPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+            if (mat != null) { helmet.material = mat; }
+        
+            
+            
+
+
             GameObject helmetObject = Instantiate(helmetItem.ItemPrefab, helmetSocket);
             //Once instantiated equipment should only be cosmetic / change playerstats
             SetLayerRecursively(helmetObject.transform, 9);
@@ -204,7 +221,7 @@ public class UI_CharacterEquipment : MonoBehaviour
         foreach (Transform child in chestSocket)
         {
             Destroy(child.gameObject);
-
+            chest.enabled = false;
         }
 
 
@@ -212,6 +229,10 @@ public class UI_CharacterEquipment : MonoBehaviour
         InventoryItemData chestItem = playerEquipment.GetChestItem();
         if (chestItem != null)
         {
+            chest.enabled = true;
+            Material mat = chestItem.ItemPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+            if (mat != null) { chest.material = mat; }
+
             GameObject chestObject = Instantiate(chestItem.ItemPrefab, chestSocket);
             SetLayerRecursively(chestObject.transform, 9);
             DisableColliders(chestObject);
@@ -224,13 +245,17 @@ public class UI_CharacterEquipment : MonoBehaviour
         foreach (Transform child in pantsSocket)
         {
             Destroy(child.gameObject);
-
+            pants.enabled = false;
         }
 
 
         InventoryItemData pantsItem = playerEquipment.GetPantsItem();
         if (pantsItem != null)
         {
+            pants.enabled = true;
+            Material mat = pantsItem.ItemPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+            if (mat != null) { pants.material = mat; }
+
             GameObject pantsObject = Instantiate(pantsItem.ItemPrefab, pantsSocket);
             SetLayerRecursively(pantsObject.transform, 9);
             DisableColliders(pantsObject);
@@ -244,6 +269,7 @@ public class UI_CharacterEquipment : MonoBehaviour
         foreach (Transform child in bootsSocket)
         {
             Destroy(child.gameObject);
+            boots.enabled = false;
 
         }
 
@@ -252,6 +278,11 @@ public class UI_CharacterEquipment : MonoBehaviour
         InventoryItemData bootsItem = playerEquipment.GetBootsItem();
         if (bootsItem != null)
         {
+            boots.enabled = true;
+            boots.sharedMesh = bootsItem.ItemPrefab.GetComponent<MeshFilter>().sharedMesh;
+            Material mat = bootsItem.ItemPrefab.GetComponent<MeshRenderer>().sharedMaterial;
+            if (mat != null) { boots.material = mat; }
+
             GameObject bootsObject = Instantiate(bootsItem.ItemPrefab, bootsSocket);
             SetLayerRecursively(bootsObject.transform, 9);
             DisableColliders(bootsObject);
