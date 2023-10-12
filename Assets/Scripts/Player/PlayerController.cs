@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public Transform playerOrientation;
     public Button exitInventoryButton;
     public FirstPersonController firstPersonController;
+    public PlayerRessource playerRessource;
 
     public UnityAction OnInventoryClosed;
     // Start is called before the first frame update
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
     public MagicWeaponController currentMagicWeapon;
 
     [Header("Punch")]
-    public int punchDamage = 2;
+    public float punchDamage = 5f;
     public float punchRange = 1f;
     public float timeBetweenAttack = 2.5f;
     public AudioClip punchAudioClip, punchSwingAudioClip;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
         playerInput = new PlayerInput();
         audioSource = GetComponent<AudioSource>();
 
+        playerRessource = GetComponent<PlayerRessource>();
         playerOrientation = GameObject.Find("Orientation").transform;
         playerInventory = GameObject.Find("PlayerInventory");
         pauseScreen = GameObject.Find("Pause Panel");
@@ -252,8 +254,12 @@ public class PlayerController : MonoBehaviour
     {
         if (hit.collider.GetComponent<EnemyManager>())
         {
-            hit.collider.GetComponent<EnemyManager>().TakeDamage(punchDamage);
-            audioSource.pitch = Random.Range(0.8f, 1.3f);
+
+            float damage = 0;
+            float damageModifier = (1f + ((float)playerRessource.strength.GetValue() / 100f));
+            damage = punchDamage * damageModifier;
+            hit.collider.GetComponent<EnemyManager>().TakeDamage((int)damage);
+            audioSource.pitch = Random.Range(0.6f, 1.3f);
             audioSource.PlayOneShot(punchAudioClip);
         }
     }

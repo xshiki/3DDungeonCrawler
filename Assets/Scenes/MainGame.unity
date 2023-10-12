@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
@@ -1812,10 +1812,10 @@ MonoBehaviour:
   spawnDelay: 0
   enemyPrefabs:
   - {fileID: 3016661192569463579, guid: d2f463d6e013ea9419e3b7789e497ab2, type: 3}
-  - {fileID: 7829508620188821602, guid: c8fc22a7fbc239c47b68bd9dfb0358d3, type: 3}
   - {fileID: 9116878530559892166, guid: eeb6c495d5231c944b77166849a68bd3, type: 3}
   - {fileID: 7886429155632569799, guid: c4bf1f4f9979bd1429e11f8d6e8599dd, type: 3}
   - {fileID: 6675219413097096519, guid: abe8c0d20bc44c44fb347f8f63fb2890, type: 3}
+  - {fileID: 7886429155632569799, guid: 09d41afbada0eda4e954b03675cf8556, type: 3}
   enemySpawnMethod: 1
   database: {fileID: 0}
   scaler: {fileID: 0}
@@ -3851,13 +3851,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Death
-    audioClip: {fileID: 8300000, guid: b23a92c2985ce244bbbcaf9d68a21e3d, type: 3}
+    audioClip: {fileID: 8300000, guid: 7ccfa0f3d968b35468281c3f5beefa2f, type: 3}
     volume: 0.34
     pitch: 1.17
     loop: 0
     audiosource: {fileID: 0}
   - name: Hit
-    audioClip: {fileID: 8300000, guid: 969858ed9b3424840a7748b496f6b1ef, type: 3}
+    audioClip: {fileID: 8300000, guid: e29725dd93ef92544bd2c0f7c42eef3c, type: 3}
+    volume: 0.406
+    pitch: 0.53
+    loop: 0
+    audiosource: {fileID: 0}
+  - name: Magic hit
+    audioClip: {fileID: 8300000, guid: 4242fd5a95ee9e143a6364db9a7b812d, type: 3}
+    volume: 0.406
+    pitch: 0.53
+    loop: 0
+    audiosource: {fileID: 0}
+  - name: Mob Death
+    audioClip: {fileID: 8300000, guid: 0d49d85a557e43e44a447a7fbd75a972, type: 3}
+    volume: 0.406
+    pitch: 0.53
+    loop: 0
+    audiosource: {fileID: 0}
+  - name: Item dropped
+    audioClip: {fileID: 8300000, guid: e472ae692cf9f9444a6fd981b32a43b5, type: 3}
     volume: 0.406
     pitch: 0.53
     loop: 0
@@ -3865,8 +3883,8 @@ MonoBehaviour:
   loopSounds:
   - name: Footsteps
     audioClip: {fileID: 8300000, guid: fb730152920aa6d4a8bcab0b4b7e4a3b, type: 3}
-    volume: 0.109
-    pitch: 0.83
+    volume: 0.079
+    pitch: 0.68
     loop: 1
     audiosource: {fileID: 0}
   - name: Sprint
@@ -22698,6 +22716,30 @@ PrefabInstance:
     - target: {fileID: 5240573749984859827, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: armor.baseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: speed.baseValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: healthRechargeRate
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6837979674926909912, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: punchDamage
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6837979674926909912, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: playerInventory

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b422678c33d42ec46acc7c77345e639b, type: 3}
   m_Name: Icicle
   m_EditorClassIdentifier: 
+  element: 1
   ManaCost: 15
   LifeTime: 2
   Speed: 25
-  DamageAmount: 10
+  DamageAmount: 25
   timeBetweenCast: 1
   SpellRadius: 0.5

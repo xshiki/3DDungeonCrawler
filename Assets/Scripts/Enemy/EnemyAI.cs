@@ -88,7 +88,7 @@ public class EnemyAI : MonoBehaviour
     {
         //CheckForPlayer
         if (enemyManager.IsDead) {  return; }
-        if (enemyManager.GotHit) { transform.LookAt(player); }
+        if (enemyManager.GotHit) { transform.LookAt(player); enemy.SetDestination(player.position); }
         if (player == null) { return; }
         float dstToPlayer = Vector3.Distance(transform.position, player.position);
         playerInAttackRange = dstToPlayer < attackRange ? true : false;
@@ -275,7 +275,7 @@ public class EnemyAI : MonoBehaviour
             {
                 Stop();
                 waitTime -= Time.deltaTime;
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 360, 0), 2f * Time.deltaTime);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 360, 0), Time.deltaTime);
         }
     }
 
@@ -288,7 +288,7 @@ public class EnemyAI : MonoBehaviour
     {
 
         /*
-      transform.LookAt(player);
+     
         enemy.speed = runSpeed;
         enemy.SetDestination(player.position);
 
@@ -297,7 +297,7 @@ public class EnemyAI : MonoBehaviour
         */
 
         lastSeenPlayerPositon = Vector3.zero;
-
+        //transform.LookAt(player);
 
         //ChasePlayer
         if (caughtPlayer)

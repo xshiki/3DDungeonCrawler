@@ -8,4 +8,7 @@ public class MagicWeaponItemData : WeaponItemData
 {
     [Header("Magic")]
     public Spell spellToCast;
+    public SpellScriptableObject spellSO;
+
+
 }

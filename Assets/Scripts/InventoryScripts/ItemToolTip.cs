@@ -49,8 +49,21 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
 
         string description = "";
-        description += weaponItem.WeaponType.ToString() + "\n"
-                    + weaponItem.DamageAmount.ToString() + " Damage\n";
+        description += weaponItem.WeaponType.ToString() + "\n";
+
+        if(weaponItem is not MagicWeaponItemData)
+        {
+            description += weaponItem.DamageAmount.ToString() + " Damage\n";
+        }
+        else
+        {
+            MagicWeaponItemData magicItem = weaponItem as MagicWeaponItemData;
+            description += "Element: " + magicItem.spellSO.element.ToString() + "\n";
+            description += magicItem.spellSO.DamageAmount.ToString() + " Damage\n";
+
+
+        }
+           
 
         return description;
     }

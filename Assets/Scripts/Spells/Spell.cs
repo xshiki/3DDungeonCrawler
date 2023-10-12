@@ -45,8 +45,11 @@ public class Spell : MonoBehaviour
         //Apply sound sfx, particle effects etc
         if (other.gameObject.CompareTag("Enemy"))
         {
+
+            print(damageModifier);
             other.GetComponent<EnemyManager>().TakeDamage((int)(SpellToCast.DamageAmount * damageModifier));
             Destroy(this.gameObject);
+            FindAnyObjectByType<AudioManager>().Play("Magic hit");
         }
 
         if (other.gameObject.tag != "Player" || other.gameObject.tag != "Enemy")

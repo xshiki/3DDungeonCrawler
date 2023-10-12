@@ -62,7 +62,9 @@ public class LootTable : MonoBehaviour
 
         InventoryItemData droppedItem = getDroppedItem();
         if(droppedItem != null) {
+            FindAnyObjectByType<AudioManager>().Play("Item dropped");
             GameObject lootGameObject = Instantiate(droppedItem.ItemPrefab.gameObject, spawnPosition, Quaternion.identity);
+            lootGameObject.AddComponent<Rigidbody>();
         }
 
     }

@@ -157,7 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b44284d3f813d848870976aedba1364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hotbarSelection: {fileID: -6332451638518686388, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
   inventorySlots:
   - {fileID: 8116997484631860971}
   - {fileID: 1939409807411012195}
@@ -170,7 +169,6 @@ MonoBehaviour:
   - {fileID: 8881934317567239045}
   - {fileID: 7326486813097138251}
   inventoryItemPrefab: {fileID: 2594040351653272254, guid: 7b91c61ff73742a409c3a86fe924025a, type: 3}
-  weaponSlot: {fileID: 0}
   _prompt: Open Chest
   PlayerInventory: {fileID: 0}
   DynamicInventory: {fileID: 5109224635204770624, guid: 72612c2202327b246839b509bdb3ae30, type: 3}
@@ -217,8 +215,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4, y: 2, z: 4}
-  m_Center: {x: -0.0076541305, y: 0.61, z: -0.39054444}
+  m_Size: {x: 3, y: 1, z: 3}
+  m_Center: {x: -0.0076541305, y: 0.34, z: -0.39054444}
 --- !u!1001 &2244790302473578874
 PrefabInstance:
   m_ObjectHideFlags: 0

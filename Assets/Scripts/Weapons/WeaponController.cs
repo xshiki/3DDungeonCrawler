@@ -35,7 +35,8 @@ public class WeaponController : MonoBehaviour
         
         audioSource = GetComponent<AudioSource>();
         weaponAnimator = GetComponent<Animator>();
-        if(weaponData == null)
+
+        if (weaponData == null)
         {
             weaponData = GetComponent<ItemDataProvider>().Item as WeaponItemData;
             timeBetweenSwing = weaponData.timeBetweenSwing;
@@ -130,9 +131,10 @@ public class WeaponController : MonoBehaviour
     {
         if (hit.collider.GetComponent<EnemyManager>())
         {
-            int damage = 0;
-            damage = weaponData.DamageAmount * (1 + playerRessource.strength.GetValue() / 100);
-            hit.collider.GetComponent<EnemyManager>().TakeDamage(damage);
+            float damage = 0;
+            float damageModifier = (1f + ((float)playerRessource.strength.GetValue() / 100f));
+            damage = (float) weaponData.DamageAmount * damageModifier;
+            hit.collider.GetComponent<EnemyManager>().TakeDamage((int) damage);
             audioSource.PlayOneShot(weaponData.weaponHitSound);
             if(weaponData.hitEffect != null)
             {

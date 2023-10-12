@@ -101,15 +101,18 @@ public class EnemyManager : MonoBehaviour
         GetComponent<LootTable>().InstantiateLoot(transform.position);
         experienceManager.AddExperience(experiencePoints);
         animator.SetTrigger("OnDeath");
-      
+        animator.CrossFade("Death", 0f);
+        FindAnyObjectByType<AudioManager>().PlayRandomized("Mob Death", 0.4f, 0.6f, 0.6f, 1.2f);
+
         //_enemyPool.Release(gameObject);
+        gameObject.GetComponent<Collider>().enabled = false;
         StartCoroutine(wait());
     }
 
     IEnumerator wait()
     {
         
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         OnDeathAnimationFinished();
     }
     

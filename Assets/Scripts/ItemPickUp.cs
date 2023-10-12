@@ -11,6 +11,7 @@ public class ItemPickUp : MonoBehaviour
     [SerializeField] private ItemDataProvider dataProvider;
     [HideInInspector]
     [SerializeField] private InventoryItemData ItemData;
+    private Rigidbody rb;
     private BoxCollider myCollider;
     private BoxCollider myCollider2;
     [SerializeField] private ItemPickUpSaveData itemSaveData;
@@ -20,6 +21,7 @@ public class ItemPickUp : MonoBehaviour
     {
 
         myCollider = gameObject.AddComponent<BoxCollider>();
+        myCollider.size = myCollider.size + new Vector3(0.3f, 0.3f, 0.3f);
         myCollider.isTrigger = true;
         myCollider2= gameObject.AddComponent<BoxCollider>();
     
@@ -45,6 +47,7 @@ public class ItemPickUp : MonoBehaviour
     
     private void OnDestroy()
     {
+    
         //if (SaveGameManager.data.activeItems.ContainsKey(id))
         //{
         //    SaveGameManager.data.activeItems.Remove(id);    
@@ -62,7 +65,8 @@ public class ItemPickUp : MonoBehaviour
             {
                 //Debug.Log(ItemData.DisplayName +" added to inventory");
                 NotificationManager.Instance.SetNewNotification("Picked up " + ItemData.DisplayName);
-      
+                
+ 
                 Destroy(this.gameObject);
             }
         }

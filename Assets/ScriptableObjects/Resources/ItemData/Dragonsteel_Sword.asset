@@ -24,6 +24,7 @@ MonoBehaviour:
   WeaponType: 0
   DamageAmount: 100
   WeaponRange: 1.5
+  timeBetweenSwing: 1.5
   weaponSwingSound: {fileID: 8300000, guid: 7923190c5e80b4d4d9396acc5d0b48cf, type: 3}
   weaponHitSound: {fileID: 8300000, guid: 11245d3945c564b45a1bafad5ecb70e5, type: 3}
   hitEffect: {fileID: 0}

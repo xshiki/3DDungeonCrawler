@@ -33,7 +33,6 @@ public class MagicWeaponController : MonoBehaviour
 
         ItemDataProvider dataProvider = GetComponent<ItemDataProvider>();
 
-
         if (weaponData == null)
         {
             weaponData = GetComponent<ItemDataProvider>().Item as MagicWeaponItemData;
@@ -84,7 +83,7 @@ public class MagicWeaponController : MonoBehaviour
     void InstantiateSpell()
     {
         var spellGO = Instantiate(spell, _castPoint.position, _castPoint.rotation);
-        spellGO.ModifySpellDamage(1+ playerRessource.intelligence.GetValue()/100);
+        spellGO.ModifySpellDamage( 1f+ ((float) playerRessource.intelligence.GetValue()/100f));
     }
 
 }
