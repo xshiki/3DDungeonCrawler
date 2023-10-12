@@ -8,6 +8,7 @@ public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] private string _prompt;
     Animator animator;
+    public Animator transition;
     public bool isExitDoor = false;
     public Collider doorCollider;
 
@@ -16,6 +17,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         doorCollider = GetComponent<Collider>();
         animator = GetComponent<Animator>();
+        transition = GameObject.Find("CrossFade").GetComponent<Animator>();
     }
     public UnityAction<IInteractable> OnInteractionComplete { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
@@ -36,12 +38,19 @@ public class Door : MonoBehaviour, IInteractable
         animator.SetBool("isOpen", !isOpen);
         if (isExitDoor)
         {
-            SceneManager.LoadScene("LoadNewMap");
+            StartCoroutine(LoadLevel());
+           
         }
 
     }
 
+    IEnumerator LoadLevel() 
+    {
+        transition.Play("Crossfade_Start");
+        yield return new WaitForSeconds(0.9f);
 
+        SceneManager.LoadScene("LoadNewMap");
+    }
     public void DoorColliderOff()
 
     {

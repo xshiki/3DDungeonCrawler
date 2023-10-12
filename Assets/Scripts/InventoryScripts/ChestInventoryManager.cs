@@ -56,19 +56,10 @@ public class ChestInventoryManager : InventoryManager, IInteractable
         {
          
             InventoryItemData randomItem = lootTable.getDroppedItem();
-
-            if(gameObject.name == "fass")
-            {
-                print("fass is here");
-            }
-
             if(randomItem != null)
             {
                 fillInventorySlot(randomItem, slot);
-                if (gameObject.name == "fass")
-                {
-                    print("fass is here2");
-                }
+               
             }
            
 
