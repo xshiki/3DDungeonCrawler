@@ -123,13 +123,47 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &38185323
+--- !u!1 &98679741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 98679742}
+  m_Layer: 0
+  m_Name: -----------------Dungeon Generator-----------------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &98679742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98679741}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2067341957}
+  - {fileID: 310922080}
+  - {fileID: 1147084397}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &310922079
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 504554401}
+    m_TransformParent: {fileID: 98679742}
     m_Modifications:
     - target: {fileID: 874669238217280544, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: m_Layer
@@ -241,7 +275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: tilePrefabs.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: startPrefabs.Array.size
@@ -300,6 +334,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1475714421372454727, guid: 7fede144068b48347a68f3158ca550fe, type: 3}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.data[7]
+      value: 
+      objectReference: {fileID: 1475714421372454727, guid: 9a0b789fc1d738943844ee561fa1ad6f, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: bossRoomPrefabs.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -352,15 +390,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
---- !u!4 &38185324 stripped
+--- !u!4 &310922080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1558132646500794347, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
-  m_PrefabInstance: {fileID: 38185323}
+  m_PrefabInstance: {fileID: 310922079}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &38185325 stripped
+--- !u!4 &310922081 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2772837344910852553, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
-  m_PrefabInstance: {fileID: 38185323}
+  m_PrefabInstance: {fileID: 310922079}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &386451916
 GameObject:
@@ -411,40 +449,6 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
---- !u!1 &504554400
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 504554401}
-  m_Layer: 0
-  m_Name: -----------------Dungeon Generator-----------------
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &504554401
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 504554400}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2102299575}
-  - {fileID: 38185324}
-  - {fileID: 1792497097}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548544832
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +498,7 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: b2e544e712ffaf446a81758e4464197a, type: 2}
---- !u!1 &1792497096
+--- !u!1 &1147084396
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -502,9 +506,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1792497097}
-  - component: {fileID: 1792497099}
-  - component: {fileID: 1792497098}
+  - component: {fileID: 1147084397}
+  - component: {fileID: 1147084399}
+  - component: {fileID: 1147084398}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -512,28 +516,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1792497097
+--- !u!4 &1147084397
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792497096}
+  m_GameObject: {fileID: 1147084396}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 504554401}
+  m_Father: {fileID: 98679742}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1792497098
+--- !u!114 &1147084398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792497096}
+  m_GameObject: {fileID: 1147084396}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c8ca5ed111842a4fab67c760f92f071, type: 3}
@@ -549,13 +553,13 @@ MonoBehaviour:
   bossFloor: 5
   bossRoom: {fileID: 0}
   isSpawned: 0
---- !u!114 &1792497099
+--- !u!114 &1147084399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1792497096}
+  m_GameObject: {fileID: 1147084396}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88ee3547f644ff147812d0d45a721346, type: 3}
@@ -565,10 +569,10 @@ MonoBehaviour:
   spawnDelay: 0
   enemyPrefabs:
   - {fileID: 3016661192569463579, guid: d2f463d6e013ea9419e3b7789e497ab2, type: 3}
-  - {fileID: 7829508620188821602, guid: c8fc22a7fbc239c47b68bd9dfb0358d3, type: 3}
   - {fileID: 9116878530559892166, guid: eeb6c495d5231c944b77166849a68bd3, type: 3}
   - {fileID: 7886429155632569799, guid: c4bf1f4f9979bd1429e11f8d6e8599dd, type: 3}
   - {fileID: 6675219413097096519, guid: abe8c0d20bc44c44fb347f8f63fb2890, type: 3}
+  - {fileID: 7886429155632569799, guid: 09d41afbada0eda4e954b03675cf8556, type: 3}
   enemySpawnMethod: 1
   database: {fileID: 0}
   scaler: {fileID: 0}
@@ -610,13 +614,13 @@ Transform:
   - {fileID: 548544833}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2102299574
+--- !u!1001 &2067341956
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 504554401}
+    m_TransformParent: {fileID: 98679742}
     m_Modifications:
     - target: {fileID: 1032166760860020749, guid: 6381ddabc72d2e2428ac07edcfc1c558, type: 3}
       propertyPath: m_LocalScale.x
@@ -673,20 +677,20 @@ PrefabInstance:
     - target: {fileID: 7525747415677844557, guid: 6381ddabc72d2e2428ac07edcfc1c558, type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 38185325}
+      objectReference: {fileID: 310922081}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6381ddabc72d2e2428ac07edcfc1c558, type: 3}
---- !u!4 &2102299575 stripped
+--- !u!4 &2067341957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1032166760860020749, guid: 6381ddabc72d2e2428ac07edcfc1c558, type: 3}
-  m_PrefabInstance: {fileID: 2102299574}
+  m_PrefabInstance: {fileID: 2067341956}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 504554401}
   - {fileID: 1938879535}
+  - {fileID: 98679742}

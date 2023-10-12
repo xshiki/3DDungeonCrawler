@@ -15,42 +15,42 @@ MonoBehaviour:
   selectionHistory:
     _history:
     - reference: {fileID: 0}
-      sceneName: Zombie
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-7829508620188821602-0
-    - reference: {fileID: 0}
-      sceneName: Zombie
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-1836222560762259224-0
-    - reference: {fileID: 0}
-      sceneName: Zombie
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-87739027145923149-0
-    - reference: {fileID: 0}
-      sceneName: Skeleton_Melee 1
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-3680218458714164751-0
-    - reference: {fileID: 0}
-      sceneName: Skeleton_Melee 1
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-0-00000000000000000000000000000000-0-0
-    - reference: {fileID: 0}
-      sceneName: Skeleton_Melee 1
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-7648309595505052136-0
-    - reference: {fileID: 0}
-      sceneName: Zombie_betterquest
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-7886429155632569799-0
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1790298253-0
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-153851889-0
-    - reference: {fileID: 7829508620188821602, guid: c8fc22a7fbc239c47b68bd9dfb0358d3, type: 3}
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-983371869-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2074013294-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-1430444036-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-702170932-0
+    - reference: {fileID: 7173021932998636536, guid: 13177bf8bb881ac419969494edcac316, type: 3}
       sceneName: 
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-c8fc22a7fbc239c47b68bd9dfb0358d3-7829508620188821602-0
-    - reference: {fileID: 7886429155632569799, guid: 09d41afbada0eda4e954b03675cf8556, type: 3}
+      globalObjectId: GlobalObjectId_V1-1-13177bf8bb881ac419969494edcac316-7173021932998636536-0
+    - reference: {fileID: 0}
+      sceneName: Kiste
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-7173021932998636536-0
+    - reference: {fileID: 1505688086998022471, guid: e4703add17eaa38458cb9a16fd6ca7a3, type: 3}
       sceneName: 
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-09d41afbada0eda4e954b03675cf8556-7886429155632569799-0
+      globalObjectId: GlobalObjectId_V1-1-e4703add17eaa38458cb9a16fd6ca7a3-1505688086998022471-0
+    - reference: {fileID: 0}
+      sceneName: fass
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-1505688086998022471-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-736182907-0

@@ -136,6 +136,8 @@ MonoBehaviour:
   - {fileID: 7167043415856508182, guid: 247c9981f22ef5741b4dd5676da6389d, type: 3}
   - {fileID: 8466296788225647471, guid: 807379537fe549347beb50582669ec6d, type: 3}
   - {fileID: 3329897373074905904, guid: b2055870d156c7441a2db699ee5c1280, type: 3}
+  - {fileID: 3477406002875407891, guid: aecbfef652ff278438eb0c4ce93237ad, type: 3}
+  - {fileID: 7233971855839608201, guid: 529c799169f69d44aa2c43adb73af238, type: 3}
   numberOfDecorations: 5
   chestSpawnChance: 15
   chestToWallDistance: 2

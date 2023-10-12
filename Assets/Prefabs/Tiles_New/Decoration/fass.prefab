@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1717762650775502271}
   - component: {fileID: 2380441453270733892}
   - component: {fileID: 2046205543583733487}
-  - component: {fileID: 3128152659306753112}
   - component: {fileID: 9048791013688176250}
   - component: {fileID: 2390625805243951850}
   - component: {fileID: 1952625702247428380}
+  - component: {fileID: 3128152659306753112}
   m_Layer: 7
   m_Name: fass
   m_TagString: Untagged
@@ -89,33 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3128152659306753112
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505688086998022471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b44284d3f813d848870976aedba1364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hotbarSelection: {fileID: -6332451638518686388, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
-  inventorySlots:
-  - {fileID: 6477715176609344581}
-  - {fileID: 3096006084571539054}
-  - {fileID: 993541826907563012}
-  - {fileID: 6317197577383957047}
-  - {fileID: 5763118784320808126}
-  inventoryItemPrefab: {fileID: 2594040351653272254, guid: 7b91c61ff73742a409c3a86fe924025a, type: 3}
-  weaponSlot: {fileID: 0}
-  _prompt: Open barrel
-  PlayerInventory: {fileID: 0}
-  DynamicInventory: {fileID: 0}
-  firstPersonController: {fileID: 0}
-  lootList: []
-  lootTable: {fileID: 0}
 --- !u!65 &9048791013688176250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -172,6 +145,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootList: []
   databaseGO: {fileID: 0}
+--- !u!114 &3128152659306753112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505688086998022471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b44284d3f813d848870976aedba1364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventorySlots:
+  - {fileID: 6477715176609344581}
+  - {fileID: 3096006084571539054}
+  - {fileID: 993541826907563012}
+  - {fileID: 6317197577383957047}
+  - {fileID: 5763118784320808126}
+  inventoryItemPrefab: {fileID: 2594040351653272254, guid: 7b91c61ff73742a409c3a86fe924025a, type: 3}
+  _prompt: Open barrel
+  PlayerInventory: {fileID: 0}
+  DynamicInventory: {fileID: 0}
+  firstPersonController: {fileID: 0}
+  lootList: []
+  lootTable: {fileID: 0}
 --- !u!1 &3091942419636313432
 GameObject:
   m_ObjectHideFlags: 0
