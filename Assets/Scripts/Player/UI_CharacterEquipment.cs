@@ -273,8 +273,6 @@ public class UI_CharacterEquipment : MonoBehaviour
 
         }
 
-
-
         InventoryItemData bootsItem = playerEquipment.GetBootsItem();
         if (bootsItem != null)
         {

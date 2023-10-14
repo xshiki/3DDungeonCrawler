@@ -60,6 +60,7 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             MagicWeaponItemData magicItem = weaponItem as MagicWeaponItemData;
             description += "Element: " + magicItem.spellSO.element.ToString() + "\n";
             description += magicItem.spellSO.DamageAmount.ToString() + " Damage\n";
+            description += "Mana Cost: " + magicItem.spellSO.ManaCost.ToString() + "\n";
 
 
         }

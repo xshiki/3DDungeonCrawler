@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   element: 2
-  ManaCost: 5
+  ManaCost: 10
   LifeTime: 2
   Speed: 15
-  DamageAmount: 10
+  DamageAmount: 25
   timeBetweenCast: 1
   SpellRadius: 0.5

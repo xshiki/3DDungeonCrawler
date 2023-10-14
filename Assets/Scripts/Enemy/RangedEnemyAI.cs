@@ -1,6 +1,7 @@
 ﻿using UnityEngine.AI;
 using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 [RequireComponent(typeof(NavMeshAgent))]
 public class RangedEnemyAI : EnemyAI
@@ -23,7 +24,11 @@ public class RangedEnemyAI : EnemyAI
 
             if(aim != null)
             {
-                Instantiate(projectile, aim.transform.position, transform.rotation);
+                Vector3 direction = player.transform.position - aim.transform.position;
+                projectile.GetComponent<Rigidbody>().velocity = direction;
+                Quaternion rotation = Quaternion.LookRotation(direction);
+                Instantiate(projectile, aim.transform.position, rotation);
+             
             }
             else
             {

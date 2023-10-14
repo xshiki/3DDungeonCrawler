@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf65f00adf18f23449abd2d164d96949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spellToCast: {fileID: 0}
+  spell: {fileID: 0}
   timeBetweenCast: 2.5
 --- !u!114 &6678965155495400782
 MonoBehaviour:
@@ -170,7 +170,7 @@ AudioSource:
   m_GameObject: {fileID: 4720758667093851247}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1777022341358445616, guid: 76a66f267da66854bb4a804143743f30, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1

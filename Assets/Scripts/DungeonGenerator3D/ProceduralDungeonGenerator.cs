@@ -64,6 +64,8 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         playerCam = GameObject.FindWithTag("Player");
         if (useSeed)
         {
+            //seed = System.DateTime.Now.Millisecond;
+            Debug.Log(seed);
             Random.InitState(seed);
         }
         
@@ -238,9 +240,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
             }
 
         }
-        
 
-        
     }
 
     void LightReset()
@@ -320,6 +320,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
             if(hits.Exists(x => x.transform != tileFrom && x.transform != tileTo))
             {
                 attempts++;
+
                 int index = generatedTiles.FindIndex(x => x.tile == tileTo);
                 if (generatedTiles[index].connector != null)
                 {
@@ -474,6 +475,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         int index = Random.Range(0, bossRoomPrefabs.Length);
 
         GameObject tile = Instantiate(bossRoomPrefabs[index], Vector3.zero, Quaternion.identity, container) as GameObject;
+        Debug.Log(tile.name);
         tile.name = "Boss Room";
         Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
 

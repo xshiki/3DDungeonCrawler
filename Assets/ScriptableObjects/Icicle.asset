@@ -16,6 +16,6 @@ MonoBehaviour:
   ManaCost: 15
   LifeTime: 2
   Speed: 25
-  DamageAmount: 25
+  DamageAmount: 35
   timeBetweenCast: 1
   SpellRadius: 0.5

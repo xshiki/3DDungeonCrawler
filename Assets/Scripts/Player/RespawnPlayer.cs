@@ -9,6 +9,7 @@ public class RespawnPlayer : MonoBehaviour
     public Transform spawnPoint;
     void OnTriggerEnter(Collider other)
     {
-        other.transform.position = spawnPoint.position;
+        spawnPoint = GameObject.Find("Player Start Room").transform;
+        other.transform.position = spawnPoint.position + new Vector3(0, 1f, 0); ;
     }
 }

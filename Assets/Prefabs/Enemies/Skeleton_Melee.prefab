@@ -1627,7 +1627,7 @@ NavMeshAgent:
   m_Height: 1.5
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 2
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &8772757777065092202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1652,7 +1652,7 @@ MonoBehaviour:
   timeBetweenAttacks: 4
   alreadyAttacked: 0
   sightRange: 0
-  attackRange: 2
+  attackRange: 2.5
   playerInSightRange: 0
   playerInAttackRange: 0
   currentPlayerPosition: {x: 0, y: 0, z: 0}

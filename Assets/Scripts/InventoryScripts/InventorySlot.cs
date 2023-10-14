@@ -55,8 +55,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         InventoryItem draggedItem = eventData.pointerDrag.GetComponent<InventoryItem>();
         InventoryItemType tag = draggedItem.myType;
 
-
-
+     
         if (transform.childCount == 0)
         {
 
@@ -74,18 +73,33 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             Debug.Log("Swap items)");
 
             GameObject dropped = eventData.pointerDrag;
+            InventoryItem itemInSlotData = transform.GetChild(0).GetComponent<InventoryItem>();
+            Debug.Log(itemInSlotData.item.DisplayName);
+
+            
 
             if (tag == this.itemType || this.itemType == InventoryItemType.None)
             {
 
-                Transform originalParent = draggedItem.parentAfterDrag;
-                // Swap  
-                Transform itemInSlot = transform.GetChild(0);
-                draggedItem.parentAfterDrag = transform;
-                itemInSlot.SetParent(originalParent);
-                dropped.transform.SetParent(transform);
-                itemInSlot.SetAsLastSibling();
-                OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { item = draggedItem });
+                //unused code for stacking item that are already in the inventory, not working correctly
+                if (draggedItem.item == itemInSlotData.item)
+                {
+                    //InventoryManager.Instance.AddItem(draggedItem.item);
+                    //Destroy(eventData.pointerDrag);
+                }
+                else
+                {
+                    Transform originalParent = draggedItem.parentAfterDrag;
+                    // Swap  
+                    Transform itemInSlot = transform.GetChild(0);
+                    draggedItem.parentAfterDrag = transform;
+                    itemInSlot.SetParent(originalParent);
+                    dropped.transform.SetParent(transform);
+                    itemInSlot.SetAsLastSibling();
+                    OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { item = draggedItem });
+                }
+
+          
             }
 
 
