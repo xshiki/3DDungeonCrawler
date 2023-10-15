@@ -152,6 +152,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ThrowAway"",
+                    ""type"": ""Button"",
+                    ""id"": ""d4db5239-5244-4298-a843-c0b7361c8e51"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -473,6 +482,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""OpenMap"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8ace1dcb-3e94-4322-a742-b96350e5b789"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThrowAway"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -495,6 +515,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_OpenMap = m_Player.FindAction("OpenMap", throwIfNotFound: true);
+        m_Player_ThrowAway = m_Player.FindAction("ThrowAway", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -570,6 +591,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_OpenMap;
+    private readonly InputAction m_Player_ThrowAway;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -588,6 +610,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @OpenMap => m_Wrapper.m_Player_OpenMap;
+        public InputAction @ThrowAway => m_Wrapper.m_Player_ThrowAway;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -639,6 +662,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @OpenMap.started += instance.OnOpenMap;
             @OpenMap.performed += instance.OnOpenMap;
             @OpenMap.canceled += instance.OnOpenMap;
+            @ThrowAway.started += instance.OnThrowAway;
+            @ThrowAway.performed += instance.OnThrowAway;
+            @ThrowAway.canceled += instance.OnThrowAway;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -685,6 +711,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @OpenMap.started -= instance.OnOpenMap;
             @OpenMap.performed -= instance.OnOpenMap;
             @OpenMap.canceled -= instance.OnOpenMap;
+            @ThrowAway.started -= instance.OnThrowAway;
+            @ThrowAway.performed -= instance.OnThrowAway;
+            @ThrowAway.canceled -= instance.OnThrowAway;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -718,5 +747,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnRun(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnOpenMap(InputAction.CallbackContext context);
+        void OnThrowAway(InputAction.CallbackContext context);
     }
 }

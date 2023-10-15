@@ -8,6 +8,8 @@ public class PlayerInventoryManager : InventoryManager
 
     [SerializeField]
     private InputActionReference hotbarSelection;
+    [SerializeField]
+    private InputActionReference throwAwayItem;
 
     [HideInInspector]
     public InventorySlot weaponSlot;
@@ -30,9 +32,37 @@ public class PlayerInventoryManager : InventoryManager
             ChangeSelectedSlot((int)hotbarSelection.action.ReadValue<float>()-1);
 
         }
+
+        if(throwAwayItem.action.triggered && selectedSlot != -1)
+        {
+            ThrowAwaySelectedItem();
+        }
     }
 
+    void ThrowAwaySelectedItem()
+    {
+        InventorySlot slot = inventorySlots[selectedSlot];
+        InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
 
+        if (itemInSlot != null)
+        {
+            // Remove the item from the slot
+            itemInSlot.count--;
+            GameObject prefabInstance = Instantiate(itemInSlot.item.ItemPrefab,transform.position + transform.forward * 2f, Quaternion.identity);
+            prefabInstance.layer = 7;
+            prefabInstance.AddComponent<Rigidbody>();
+            if (itemInSlot.count <= 0)
+            {
+                // Destroy the item if the count is zero or less
+                Destroy(itemInSlot.gameObject);
+            }
+            else
+            {
+                // Refresh the item to update the UI with the new count
+                itemInSlot.Refresh();
+            }
+        }
+    }
 
     void ChangeSelectedSlot(int newValue)
     {

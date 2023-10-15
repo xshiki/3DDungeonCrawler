@@ -35,10 +35,10 @@ public class EnemyManager : MonoBehaviour
     {
       experienceManager = GameObject.Find("Player").GetComponent<ExperienceManager>();
       floor = GameObject.Find("Floor Counter").GetComponent<FloorTextOverlay>();
-       animator = GetComponent<Animator>();
+      animator = GetComponent<Animator>();
       currentHealth = maxHealth;
-        gotHit = false;
-     enemy = GetComponent<NavMeshAgent>();
+      gotHit = false;
+      enemy = GetComponent<NavMeshAgent>();
     }
 
 
@@ -49,7 +49,7 @@ public class EnemyManager : MonoBehaviour
 
         maxHealth = Mathf.FloorToInt(maxHealth * Scaling.healthCurve.Evaluate(level));
         attackDamage = Mathf.FloorToInt(attackDamage * Scaling.damageCurve.Evaluate(level));
-        experiencePoints = Mathf.FloorToInt(attackDamage * Scaling.experienceCurve.Evaluate(level));
+        experiencePoints = Mathf.FloorToInt(experiencePoints * Scaling.experienceCurve.Evaluate(level));
         currentHealth = maxHealth;
     }
 

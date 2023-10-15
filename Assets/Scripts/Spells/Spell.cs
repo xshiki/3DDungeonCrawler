@@ -52,7 +52,7 @@ public class Spell : MonoBehaviour
             FindAnyObjectByType<AudioManager>().Play("Magic hit");
         }
 
-        if (other.gameObject.tag != "Player" || other.gameObject.tag != "Enemy")
+        if (other.gameObject.tag != "Player" && other.gameObject.tag != "Enemy")
         {
             Destroy(this.gameObject);
         }

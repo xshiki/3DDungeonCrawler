@@ -18,13 +18,6 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
 
 
-    private void Awake()
-    {
-       
-    }
-
-
-
     public class OnItemDroppedEventArgs : EventArgs
     {
         public InventoryItem item;
@@ -70,7 +63,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         }
         else
         {
-            Debug.Log("Swap items)");
+           
 
             GameObject dropped = eventData.pointerDrag;
             InventoryItem itemInSlotData = transform.GetChild(0).GetComponent<InventoryItem>();
@@ -94,18 +87,29 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                         Transform throwAway = GameObject.Find("ThrowAway").transform;
                         throwAway.GetChild(0).gameObject.SetActive(false);
                         OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { item = draggedItem });
+                        Debug.Log("combine stacks");
                     }
                 }
                 else
                 {
-                    Transform originalParent = draggedItem.parentAfterDrag;
-                    // Swap  
-                    Transform itemInSlot = transform.GetChild(0);
-                    draggedItem.parentAfterDrag = transform;
-                    itemInSlot.SetParent(originalParent);
-                    dropped.transform.SetParent(transform);
-                    itemInSlot.SetAsLastSibling();
-                    OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { item = draggedItem });
+                    //Dont swap a split stack with different item 
+                    if (draggedItem.isSplit)
+                    {
+                        Debug.Log("is split no swap");
+                    }
+                    else
+                    {
+                        Debug.Log("Swap items)");
+                        Transform originalParent = draggedItem.parentAfterDrag;
+                        // Swap  
+                        Transform itemInSlot = transform.GetChild(0);
+                        draggedItem.parentAfterDrag = transform;
+                        itemInSlot.SetParent(originalParent);
+                        dropped.transform.SetParent(transform);
+                        itemInSlot.SetAsLastSibling();
+                        OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { item = draggedItem });
+                    }
+                 
                 }
 
           

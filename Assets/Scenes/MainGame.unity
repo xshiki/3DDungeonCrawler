@@ -2523,7 +2523,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 100
+          m_IntArgument: 1232
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -20921,6 +20921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Arch
       objectReference: {fileID: 0}
+    - target: {fileID: 6680102841255842074, guid: 73a468b90f1ad064c980c2a6c31011b7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22277,6 +22281,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1100396332}
     - target: {fileID: 25404066101201998, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: throwAwayItem
+      value: 
+      objectReference: {fileID: -8622076328871139363, guid: 9770e174811b7ff49b1e2a23d078599e, type: 3}
+    - target: {fileID: 25404066101201998, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: inventorySlots.Array.data[0]
       value: 
       objectReference: {fileID: 1815365192}
@@ -22717,6 +22725,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1658594289}
     - target: {fileID: 8847307247789029208, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: currentLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847307247789029208, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: experienceFill
       value: 
       objectReference: {fileID: 525862022}
@@ -22724,6 +22736,18 @@ PrefabInstance:
       propertyPath: experienceText
       value: 
       objectReference: {fileID: 1155934573}
+    - target: {fileID: 8847307247789029208, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: manaCurve.m_Curve.Array.data[1].value
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847307247789029208, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: healthCurve.m_Curve.Array.data[1].value
+      value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8847307247789029208, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: experienceCurve.m_Curve.Array.data[2].value
+      value: 1000000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

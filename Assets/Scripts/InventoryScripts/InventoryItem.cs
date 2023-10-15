@@ -20,7 +20,15 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     [HideInInspector] public Transform parentAfterDrag;
     private Transform playerTransform;
     public float dropOffset = 3f;
-  
+
+    public bool isSplit = false;
+    InventoryItem newItemData;
+
+    private void Awake()
+    {
+        playerTransform = GameObject.Find("Orientation").GetComponent<Transform>();
+    }
+
     public void InitialiseItem(InventoryItemData newItem)
     {   
         item = newItem;
@@ -41,6 +49,33 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (eventData.button == PointerEventData.InputButton.Right)
+        {
+            if(count > 1)
+            {
+               
+                // Calculate the split amount (half of the current count)
+                int splitAmount = Mathf.CeilToInt(count / 2f);
+
+                if (splitAmount >= 1)
+                {
+                    // Create a new item with the split amount
+                    newItemData = Instantiate(this, transform.parent);
+                    newItemData.count = splitAmount;
+                    newItemData.Refresh();
+
+                    // Reduce the count of the original item
+                    count -= splitAmount;
+                    Refresh();
+                    isSplit = true;
+
+                }
+            }
+         
+        }
+     
+
+        
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
         Transform playerUI = GameObject.Find("PlayerUI").transform;
@@ -64,9 +99,10 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
         if (dropTarget != null && dropTarget.CompareTag("OutSideInventory"))
         {
             Debug.Log("destroying dragged item");
-            for(int i = 0; i < this.count; i++)
+            for(int i = 0; i < count; i++)
             {
-                GameObject prefabInstance = Instantiate(this.item.ItemPrefab, playerTransform.position + playerTransform.forward * dropOffset, Quaternion.identity);
+                
+                GameObject prefabInstance = Instantiate(item.ItemPrefab, playerTransform.position + playerTransform.forward * dropOffset, Quaternion.identity);
                 prefabInstance.layer = 7;
                 prefabInstance.AddComponent<Rigidbody>();
             }
@@ -75,10 +111,25 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
         }
         else
         {
-            // Item was dropped inside the inventory, reset position
-            Debug.Log("dropped here");
+            if (isSplit)
+            {
+                // The split stack wasn't dropped in a different slot, so combine it with the original stack.
+                if (parentAfterDrag != null)
+                {
+                    InventoryItem originalItem = parentAfterDrag.GetComponentInChildren<InventoryItem>();
+                    if (originalItem != null && originalItem.item == item)
+                    {
+                       
+                        originalItem.count += count;
+                        originalItem.Refresh();
+                        isSplit = false;
+                        Destroy(gameObject); // Destroy the dragged split stack
+                    }
+                }
+            }
             image.raycastTarget = true;
             transform.SetParent(parentAfterDrag);
+            isSplit = false;
         }
 
         Transform throwAway = GameObject.Find("ThrowAway").transform;
