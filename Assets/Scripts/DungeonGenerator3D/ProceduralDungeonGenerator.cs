@@ -475,7 +475,6 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         int index = Random.Range(0, bossRoomPrefabs.Length);
 
         GameObject tile = Instantiate(bossRoomPrefabs[index], Vector3.zero, Quaternion.identity, container) as GameObject;
-        Debug.Log(tile.name);
         tile.name = "Boss Room";
         Transform origin = generatedTiles[generatedTiles.FindIndex(x => x.tile == tileFrom)].tile; //set the origin to the previous tile
 

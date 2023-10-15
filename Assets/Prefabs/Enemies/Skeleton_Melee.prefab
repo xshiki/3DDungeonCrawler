@@ -1557,10 +1557,10 @@ GameObject:
   - component: {fileID: 5336556299753264396}
   - component: {fileID: 6226322864496186823}
   - component: {fileID: 1369694888194398119}
-  - component: {fileID: 8772757777065092202}
   - component: {fileID: 6382584555639622028}
   - component: {fileID: 4769483400574588474}
   - component: {fileID: 5654406261490768867}
+  - component: {fileID: 8772757777065092202}
   m_Layer: 0
   m_Name: Skeleton_Melee
   m_TagString: Untagged
@@ -1628,47 +1628,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &8772757777065092202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7886429155632569799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abed692a5ec7a7047bdab2d6dea39516, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  enemy: {fileID: 0}
-  walkSpeed: 2
-  runSpeed: 3
-  pushForce: 5
-  attackDamage: 5
-  wayPointRange: 10
-  viewRadius: 20
-  viewAngle: 90
-  timeBetweenAttacks: 4
-  alreadyAttacked: 0
-  sightRange: 0
-  attackRange: 2.5
-  playerInSightRange: 0
-  playerInAttackRange: 0
-  currentPlayerPosition: {x: 0, y: 0, z: 0}
-  lastSeenPlayerPositon: {x: 0, y: 0, z: 0}
-  playerLM:
-    serializedVersion: 2
-    m_Bits: 0
-  obstaclesLM:
-    serializedVersion: 2
-    m_Bits: 0
-  wayPoints: []
-  numberOfWayPoints: 5
-  currentWaypointIndex: 0
-  startWaitTime: 2
-  timeToRotate: 2
-  isPatrol: 0
 --- !u!65 &6382584555639622028
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1723,6 +1682,47 @@ MonoBehaviour:
   floor: {fileID: 0}
   floatingText: {fileID: 574858650843175943, guid: a76c4f2e6b1caa84a8d3cb8b8d574ab1, type: 3}
   experienceManager: {fileID: 0}
+--- !u!114 &8772757777065092202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886429155632569799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abed692a5ec7a7047bdab2d6dea39516, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemy: {fileID: 0}
+  walkSpeed: 2
+  runSpeed: 3
+  pushForce: 5
+  attackDamage: 5
+  wayPointRange: 10
+  viewRadius: 20
+  viewAngle: 90
+  timeBetweenAttacks: 4
+  alreadyAttacked: 0
+  sightRange: 0
+  attackRange: 2.5
+  playerInSightRange: 0
+  playerInAttackRange: 0
+  currentPlayerPosition: {x: 0, y: 0, z: 0}
+  lastSeenPlayerPositon: {x: 0, y: 0, z: 0}
+  playerLM:
+    serializedVersion: 2
+    m_Bits: 0
+  obstaclesLM:
+    serializedVersion: 2
+    m_Bits: 0
+  wayPoints: []
+  numberOfWayPoints: 5
+  currentWaypointIndex: 0
+  startWaitTime: 2
+  timeToRotate: 2
+  isPatrol: 0
 --- !u!1 &8960368774275147340
 GameObject:
   m_ObjectHideFlags: 0

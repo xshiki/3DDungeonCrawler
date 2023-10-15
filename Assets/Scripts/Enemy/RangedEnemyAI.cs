@@ -27,8 +27,8 @@ public class RangedEnemyAI : EnemyAI
                 Vector3 direction = player.transform.position - aim.transform.position;
                 projectile.GetComponent<Rigidbody>().velocity = direction;
                 Quaternion rotation = Quaternion.LookRotation(direction);
-                Instantiate(projectile, aim.transform.position, rotation);
-             
+                var projectileGO = Instantiate(projectile, aim.transform.position, rotation);
+                projectileGO.SetDamage(attackDamage);
             }
             else
             {

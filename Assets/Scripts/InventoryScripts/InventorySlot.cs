@@ -81,11 +81,20 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             if (tag == this.itemType || this.itemType == InventoryItemType.None)
             {
 
-                //unused code for stacking item that are already in the inventory, not working correctly
+               
                 if (draggedItem.item == itemInSlotData.item)
                 {
-                    //InventoryManager.Instance.AddItem(draggedItem.item);
-                    //Destroy(eventData.pointerDrag);
+                    int totalItemCount = itemInSlotData.count + draggedItem.count;
+
+                    if(totalItemCount <= itemInSlotData.maxStacks)
+                    {
+                        itemInSlotData.count = totalItemCount;
+                        itemInSlotData.Refresh();
+                        Destroy(eventData.pointerDrag);
+                        Transform throwAway = GameObject.Find("ThrowAway").transform;
+                        throwAway.GetChild(0).gameObject.SetActive(false);
+                        OnItemDropped?.Invoke(this, new OnItemDroppedEventArgs { item = draggedItem });
+                    }
                 }
                 else
                 {

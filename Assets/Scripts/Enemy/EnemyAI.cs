@@ -50,8 +50,11 @@ public class EnemyAI : MonoBehaviour
     bool caughtPlayer;
 
 
+    private void Start()
+    {
+        attackDamage = GetComponent<EnemyManager>().attackDamage;
+    }
 
-   
     private void Awake()
     {
 
@@ -71,6 +74,8 @@ public class EnemyAI : MonoBehaviour
         playerLM |= 0x1 << 9;
         obstaclesLM |= 0x1 << 11;
         animator = GetComponent<Animator>();
+
+      
 
     }
     public void SetBossSpawnPoint(Vector3 position)

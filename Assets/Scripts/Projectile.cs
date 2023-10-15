@@ -13,7 +13,7 @@ public class Projectile: MonoBehaviour
     private SphereCollider myCollider;
     private Rigidbody myRigidbody;
     public Transform enemyTransform;
-
+    public int damage;
 private void Awake()
 {
     myCollider = GetComponent<SphereCollider>();
@@ -22,7 +22,7 @@ private void Awake()
 
     myRigidbody = GetComponent<Rigidbody>();
     myRigidbody.isKinematic = true;
-
+        damage = (int)SpellToCast.DamageAmount;
     Destroy(this.gameObject, SpellToCast.LifeTime);
 }
 
@@ -35,13 +35,18 @@ private void Update()
     }
 }
 
+   public void SetDamage(int damage)
+    {
+        this.damage = damage;
+    }
+
 private void OnTriggerEnter(Collider other)
 {
 
     //Apply sound sfx, particle effects etc
     if (other.gameObject.CompareTag("Player"))
     {
-        other.GetComponent<PlayerRessource>().TakeDamage((int)SpellToCast.DamageAmount);
+        other.GetComponent<PlayerRessource>().TakeDamage(damage);
         Destroy(this.gameObject);
     }
 
