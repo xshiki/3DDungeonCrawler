@@ -17,6 +17,7 @@ public class ProceduralDungeonGenerator : MonoBehaviour
     [Header("Generation options")]
      public int seed;
     [SerializeField] public bool useSeed = false;
+    [SerializeField] public bool randomSeed = false;
     [SerializeField] public GameObject[] startPrefabs; //Playerspawn room
     [SerializeField] public GameObject[] tilePrefabs;
     [SerializeField] public GameObject[] hallwayPrefabs;
@@ -64,8 +65,11 @@ public class ProceduralDungeonGenerator : MonoBehaviour
         playerCam = GameObject.FindWithTag("Player");
         if (useSeed)
         {
-            //seed = System.DateTime.Now.Millisecond;
-            Debug.Log(seed);
+            if (randomSeed)
+            {
+                seed = System.DateTime.Now.Millisecond;
+                Debug.Log(seed);
+            }
             Random.InitState(seed);
         }
         

@@ -15,42 +15,42 @@ MonoBehaviour:
   selectionHistory:
     _history:
     - reference: {fileID: 0}
-      sceneName: Throne Room 2
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-8423677594443828797-0
-    - reference: {fileID: 4504468004523407538, guid: ddb2bb06add931a4cadd911e51992868, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-ddb2bb06add931a4cadd911e51992868-4504468004523407538-0
-    - reference: {fileID: 0}
-      sceneName: Throne Room
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-4504468004523407538-0
-    - reference: {fileID: 0}
-      sceneName: Throne Room
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-0-00000000000000000000000000000000-0-0
-    - reference: {fileID: 0}
-      sceneName: Throne Room
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-8816550790390708631-6974205136943809920
-    - reference: {fileID: 11400000, guid: 257004971f637c447b58e6402d693de2, type: 2}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
-    - reference: {fileID: 919132149155446097, guid: 30c8d8b513637134ba137199400375b9, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-30c8d8b513637134ba137199400375b9-919132149155446097-0
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-4403784676850671829-1274765022
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-919132149155446097-1769064038
-    - reference: {fileID: 102900000, guid: b76be259daa5d8049a0faba425c18540, type: 3}
-      sceneName: 
-      scenePath: 
-      globalObjectId: 
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-4403784676850671829-1844627869
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-8005985364057983166-1905467996
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-4403784676850671829-2009169573
+    - reference: {fileID: 4403784676850671829, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      sceneName: 
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-1-9c399601b17c4cb46906c8ee50c44ef2-4403784676850671829-0
+    - reference: {fileID: 11400000, guid: c712fb6f0e0d2eb4f880c3d11417abbc, type: 2}
+      sceneName: 
+      scenePath: 
+      globalObjectId: 
+    - reference: {fileID: 102900000, guid: 00000000000000001000000000000000, type: 3}
+      sceneName: 
+      scenePath: 
+      globalObjectId: 
+    - reference: {fileID: -4113540440624358573, guid: 75872a8c655bb154496df17e112705e3, type: 3}
+      sceneName: 
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-1-75872a8c655bb154496df17e112705e3-14333203633085193043-0
+    - reference: {fileID: 919132149155446097, guid: 75872a8c655bb154496df17e112705e3, type: 3}
+      sceneName: 
+      scenePath: 
+      globalObjectId: GlobalObjectId_V1-1-75872a8c655bb154496df17e112705e3-919132149155446097-0
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-4403784676850671829-1760634308
+    - reference: {fileID: 0}
+      sceneName: MainGame
+      scenePath: Assets/Scenes/MainGame.unity
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-4403784676850671829-210038753

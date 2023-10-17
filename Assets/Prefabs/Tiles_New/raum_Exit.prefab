@@ -327,7 +327,6 @@ GameObject:
   - component: {fileID: 1844499773943714781}
   - component: {fileID: 460819946113624836}
   - component: {fileID: 7741790397625282034}
-  - component: {fileID: -4995882216326847834}
   m_Layer: 11
   m_Name: raum_Exit
   m_TagString: Untagged
@@ -438,21 +437,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2179436473947815635, guid: 271ced3fce7065d4a924a82b69989e53, type: 3}
---- !u!114 &-4995882216326847834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3668964299040672114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38bcb2c02e2ce0a4b81c163fd3270dc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 0}
-  playerHealth: {fileID: 0}
-  Player: {fileID: 0}
 --- !u!1 &3747010786065686255
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +603,7 @@ Transform:
   m_GameObject: {fileID: 5847683891012844996}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.721, z: 2.37}
+  m_LocalPosition: {x: 0.18, y: 1.87, z: 2.37}
   m_LocalScale: {x: 4, y: 4.02, z: 8.96}
   m_ConstrainProportionsScale: 0
   m_Children: []

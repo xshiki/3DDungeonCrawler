@@ -23639,7 +23639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: seed
-      value: 966
+      value: 950
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: counter
@@ -23652,6 +23652,10 @@ PrefabInstance:
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: roomCount
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: randomSeed
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: branchCount
@@ -23691,7 +23695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: tilePrefabs.Array.size
-      value: 13
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: startPrefabs.Array.size
@@ -23779,6 +23783,18 @@ PrefabInstance:
       objectReference: {fileID: 4877161796287231817, guid: 52c2878c9cc39054a964de299427e056, type: 3}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: tilePrefabs.Array.data[12]
+      value: 
+      objectReference: {fileID: 4877161796287231817, guid: 52c2878c9cc39054a964de299427e056, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.data[13]
+      value: 
+      objectReference: {fileID: 4877161796287231817, guid: 52c2878c9cc39054a964de299427e056, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.data[14]
+      value: 
+      objectReference: {fileID: 4877161796287231817, guid: 52c2878c9cc39054a964de299427e056, type: 3}
+    - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
+      propertyPath: tilePrefabs.Array.data[15]
       value: 
       objectReference: {fileID: 4877161796287231817, guid: 52c2878c9cc39054a964de299427e056, type: 3}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
