@@ -17,7 +17,8 @@ public class MeleeEnemyAI : EnemyAI
         enemy.speed = 0;
         transform.LookAt(player);
         //find the vector pointing from our position to the target
-        Vector3 direction = (transform.position - player.position).normalized;
+        Vector3 direction = (player.position - transform.position).normalized;
+        direction.y = 0.2f;
 
         //create the rotation we need to be in to look at the target
         Quaternion _lookRotation = Quaternion.LookRotation(direction);
