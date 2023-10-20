@@ -30,10 +30,15 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                  description += SetDescriptionArmor(hoveredItem.item as ArmorItemData);
 
                 }else if(hoveredItem.item is WeaponItemData)
-            {
+                {
                 description += SetDescriptionWeapon(hoveredItem.item as WeaponItemData);
-            }
-            tooltip.SetItemDescription(description);
+                }
+
+                if(hoveredItem.maxStacks > 1)
+                {
+                    description += "Stack Size: "+ hoveredItem.maxStacks.ToString() + "\n";
+                }
+                tooltip.SetItemDescription(description);
                 itemToolTipPanel.SetActive(true);
                 LayoutRebuilder.ForceRebuildLayoutImmediate(popUpObject);
                 
