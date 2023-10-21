@@ -15,10 +15,8 @@ public class InteractScript : MonoBehaviour
     private Camera _playerCam;
     [SerializeField]
     private float distance = 1f;
-    private void Start()
-    {
-       
-    }
+
+    private Highlight highlight;
     private void Update()
     {
         Ray ray = new Ray(_playerCam.transform.position, _playerCam.transform.forward);
@@ -28,18 +26,35 @@ public class InteractScript : MonoBehaviour
         {
             if(hitInfo.collider.GetComponent<IInteractable>() != null)
             {
-              
+                
                 _interactable = hitInfo.collider.GetComponent<IInteractable>();
+              
                 if (!_interactionPromptUI.IsDisplayed)
                 {
                     _interactionPromptUI.SetUp(_interactable.InterActionPrompt);
-
+                    highlight = hitInfo.collider.GetComponent<Highlight>();
+                    hitInfo.collider.GetComponent<Highlight>()?.ToggleHighlight(true);
                 }
                 if (Keyboard.current.fKey.wasPressedThisFrame) { _interactable.Interact(this, out bool interactSucessful); }
             }
-         
+
+        }
+        else
+        {
+
+            if (_interactable != null)
+            {
+                if(highlight != null)
+                {
+                    highlight.ToggleHighlight(false);
+                    highlight = null;
+                }
+               
+                _interactable = null;
+            }
         }
       
+
 
         /*
         _numFound = Physics.OverlapSphereNonAlloc(_interactionPoint.position, _interactionPointRadius, _colliders, _interactableMask);
@@ -70,13 +85,13 @@ public class InteractScript : MonoBehaviour
 
         interactable.Interact(this, out bool interactSuccesful);
         IsInteracting = true;
-        //disable movement ex
+        //disable movement etc
     }
 
 
     void EndInteraction()
     {
-        //
+
         IsInteracting = false;
     }
 

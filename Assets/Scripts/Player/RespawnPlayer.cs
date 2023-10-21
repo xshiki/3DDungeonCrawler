@@ -10,6 +10,11 @@ public class RespawnPlayer : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         spawnPoint = GameObject.Find("Player Start Room").transform;
-        other.transform.position = spawnPoint.position + new Vector3(0, 1f, 0); ;
+        if (other.CompareTag("Player"))
+        {
+            other.transform.position = spawnPoint.position + new Vector3(0, 1f, 0); ;
+        }
+       
+     
     }
 }

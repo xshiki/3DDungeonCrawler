@@ -20,6 +20,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     [SerializeField] public List<InventoryItemData> lootList = new List<InventoryItemData>();
 
     [SerializeField] public LootTable lootTable;
+    [SerializeField] public Highlight highlighter;
 
 
     bool isOpen = false;
@@ -30,7 +31,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     {
         PlayerInventory = GameObject.Find("PlayerUI");
         DynamicInventory = GameObject.Find("DynamicInventory");
-
+        highlighter = GetComponent<Highlight>();
         firstPersonController= GameObject.Find("Player").GetComponent<FirstPersonController>();
         playerController = GameObject.Find("Player").GetComponent<PlayerController>();
         playerController.OnInventoryClosed += Close;

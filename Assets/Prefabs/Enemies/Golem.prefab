@@ -324,7 +324,7 @@ MonoBehaviour:
   maxHealth: 25
   currentHealth: 10
   attackDamage: 12
-  experiencePoints: 25
+  experiencePoints: 75
   floor: {fileID: 0}
   floatingText: {fileID: 574858650843175943, guid: a76c4f2e6b1caa84a8d3cb8b8d574ab1, type: 3}
   experienceManager: {fileID: 0}

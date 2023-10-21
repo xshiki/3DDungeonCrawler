@@ -5,6 +5,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(ItemPickUp))]
 [RequireComponent(typeof(ItemPickUpInteractable))]
+[RequireComponent(typeof(Highlight))]
 public class ItemDataProvider : MonoBehaviour
 {
     // Start is called before the first frame update

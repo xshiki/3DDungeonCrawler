@@ -175,6 +175,7 @@ MonoBehaviour:
   firstPersonController: {fileID: 0}
   lootList: []
   lootTable: {fileID: 0}
+  highlighter: {fileID: 0}
 --- !u!65 &6384165740024535674
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -194,8 +195,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 2}
-  m_Center: {x: -0.0076541305, y: -0.00004467368, z: -0.39054444}
+  m_Size: {x: 2, y: 1, z: 1}
+  m_Center: {x: 0, y: -0.00004467368, z: 0}
 --- !u!65 &7458058098895821818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -216,7 +217,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 3, y: 1, z: 3}
-  m_Center: {x: -0.0076541305, y: 0.34, z: -0.39054444}
+  m_Center: {x: -0.0076541305, y: 0.34, z: 0.02}
 --- !u!1001 &2244790302473578874
 PrefabInstance:
   m_ObjectHideFlags: 0
