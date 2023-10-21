@@ -23639,7 +23639,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: seed
-      value: 950
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: counter
@@ -23647,7 +23647,7 @@ PrefabInstance:
       objectReference: {fileID: 95131717}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: useSeed
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: roomCount
@@ -23655,7 +23655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: randomSeed
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: branchCount
@@ -23832,7 +23832,7 @@ PrefabInstance:
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: bossRoomPrefabs.Array.data[5]
       value: 
-      objectReference: {fileID: 8478457018748640854, guid: 2957d037cf9b5fd42a819ef407c39800, type: 3}
+      objectReference: {fileID: 3152419515658589471, guid: 2c46de993a9206a42b827cf834b280b9, type: 3}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: bossRoomPrefabs.Array.data[6]
       value: 
