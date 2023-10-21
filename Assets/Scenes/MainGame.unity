@@ -23647,7 +23647,7 @@ PrefabInstance:
       objectReference: {fileID: 95131717}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: useSeed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: roomCount
@@ -23655,7 +23655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: randomSeed
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5260909565351691833, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
       propertyPath: branchCount
