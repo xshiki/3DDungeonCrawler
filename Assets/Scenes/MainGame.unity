@@ -13003,7 +13003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1326689174}
   m_Layer: 0
-  m_Name: -----------------Dungeon Generator-----------------
+  m_Name: =========Dungeon Generator=============
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18321,7 +18321,7 @@ GameObject:
   - component: {fileID: 1811876855}
   - component: {fileID: 1811876856}
   m_Layer: 0
-  m_Name: ==============DONTDESTROYONSCENE==================
+  m_Name: ==============Load to next scene==================
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20085,11 +20085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c852f0866a7ab4aa763f854d44f2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1970064025 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2772837344910852553, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
-  m_PrefabInstance: {fileID: 6820797582453146417}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1970300430 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6271755079462222459, guid: 6e557d9133b2f464e9805037439a7308, type: 3}
@@ -23862,7 +23857,8 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 874669238217280544, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37b0d4fd5b2a8bf41bf632bc01ed5e14, type: 3}
@@ -23998,7 +23994,7 @@ PrefabInstance:
     - target: {fileID: 7525747415677844557, guid: 6381ddabc72d2e2428ac07edcfc1c558, type: 3}
       propertyPath: spawnPoint
       value: 
-      objectReference: {fileID: 1970064025}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7525747415677844557, guid: 6381ddabc72d2e2428ac07edcfc1c558, type: 3}
     m_RemovedGameObjects: []
