@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c299e629ec2a7c42af1ec8c923e1507, type: 3}
+  m_Name: ArmorBuff
+  m_EditorClassIdentifier: 
+  Icon: {fileID: 21300000, guid: ac12c6dcf09c4fe498f43881d54a598d, type: 3}
+  MaxStackSize: 0
+  ID: -1
+  DisplayName: 
+  Description: 
+  rarity: 0
+  ItemPrefab: {fileID: 0}
+  ItemType: 0
+  dropChance: 0
+  consumable: 0
+  isAbility: 1
+  element: 4
+  ManaCost: 50
+  LifeTime: 2
+  Speed: 15
+  DamageAmount: 10
+  timeBetweenCast: 1
+  SpellRadius: 0.5
+  supportType: 3
+  icon: {fileID: 21300000, guid: ac12c6dcf09c4fe498f43881d54a598d, type: 3}
+  duration: 180
+  buffAmount: 50

@@ -264,6 +264,8 @@ public class PlayerRessource : MonoBehaviour
             HealSpellScriptableObject heal = supportSpell as HealSpellScriptableObject;
             UseMana((int)heal.ManaCost);
             ReplenshHealthMana(heal.healAmount, 0);
+            Debug.Log("has healed");
+            return;
         }
 
         BuffScriptableObject buff = supportSpell as BuffScriptableObject;
@@ -272,7 +274,7 @@ public class PlayerRessource : MonoBehaviour
         {
             if (!hasSpeedBuff)
             {
-                speed.AddModifier(5);
+                speed.AddModifier(modifier);
                 StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
                 CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
                 hasSpeedBuff = true;
@@ -283,7 +285,7 @@ public class PlayerRessource : MonoBehaviour
         {
             if (!hasArmorBuff)
         {
-            armor.AddModifier(10);
+            armor.AddModifier(modifier);
             StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
             CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
             hasArmorBuff = true;
@@ -295,8 +297,8 @@ public class PlayerRessource : MonoBehaviour
         {
             if (!hasArmorBuff)
             {
-                strength.AddModifier(10);
-                intelligence.AddModifier(10);
+                strength.AddModifier(modifier);
+                intelligence.AddModifier(modifier);
                 StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
                 CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
                 hasArmorBuff = true;
