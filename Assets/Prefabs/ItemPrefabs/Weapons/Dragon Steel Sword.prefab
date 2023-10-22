@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7800157312899575399}
   - component: {fileID: 2968283302092644383}
   - component: {fileID: 6095353126757838844}
+  - component: {fileID: 3357393774892990677}
   m_Layer: 0
   m_Name: Dragon Steel Sword
   m_TagString: Untagged
@@ -263,3 +264,17 @@ MonoBehaviour:
   playerEquipment: {fileID: 0}
   playerRessource: {fileID: 0}
   playerOrientation: {fileID: 0}
+--- !u!114 &3357393774892990677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105255081365012450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

@@ -133,8 +133,24 @@ public class WeaponController : MonoBehaviour
         {
             float damage = 0;
             float damageModifier = (1f + ((float)playerRessource.strength.GetValue() / 100f));
-            damage = (float) weaponData.DamageAmount * damageModifier;
-            hit.collider.GetComponent<EnemyManager>().TakeDamage((int) damage);
+            damage = (float)weaponData.DamageAmount * damageModifier;
+            if (IsCriticalHit())
+            {
+                damage *= weaponData.critDamageMultiplier;
+                Debug.Log("crit");
+            }
+
+            if (weaponData.lifeStealChance > 0f)
+            {
+                float lifestealAmount = CalculateLifesteal(damage);
+                playerRessource.ReplenshHealthMana(lifestealAmount, 0);
+                hit.collider.GetComponent<EnemyManager>().TakeDamage(Mathf.RoundToInt(damage + lifestealAmount));
+            }
+            else
+            {
+                hit.collider.GetComponent<EnemyManager>().TakeDamage((int)damage);
+            }
+       
             audioSource.PlayOneShot(weaponData.weaponHitSound);
             if(weaponData.hitEffect != null)
             {
@@ -144,5 +160,19 @@ public class WeaponController : MonoBehaviour
             }
            
         }
+    }
+
+    float CalculateLifesteal(float damage)
+    {
+        return damage * weaponData.lifeStealPercentage;
+    }
+
+    bool IsLifeStealHit()
+    {
+        return Random.value < weaponData.lifeStealChance;
+    }
+    bool IsCriticalHit()
+    {
+        return Random.value < weaponData.critRate;
     }
 }

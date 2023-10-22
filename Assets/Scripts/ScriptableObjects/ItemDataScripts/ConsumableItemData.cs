@@ -5,6 +5,7 @@ using UnityEngine;
 public class ConsumableItemData : InventoryItemData
 {
     public float _healthToReplenish, _manaToReplenish;
+    public SupportSpellSO supportSpell;
     public AudioClip consumSoundClip;
     //[SerializeField] private Animator playerAnimator;
  

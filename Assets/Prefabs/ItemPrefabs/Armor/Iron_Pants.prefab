@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 707620225965326677}
   - component: {fileID: 5657018979962180590}
   - component: {fileID: 4853468395824132230}
+  - component: {fileID: 2090429460837130068}
   m_Layer: 0
   m_Name: Iron_Pants
   m_TagString: Untagged
@@ -145,3 +146,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataProvider: {fileID: 0}
+--- !u!114 &2090429460837130068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406446221045228075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

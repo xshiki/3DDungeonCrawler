@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Spell", menuName = "Spells")]
+[CreateAssetMenu(fileName = "New Spell", menuName = "Spells/Damage")]
 
 
-public class SpellScriptableObject : ScriptableObject
+public class SpellScriptableObject : InventoryItemData
 {
     public enum Element {Fire, Ice, Earth, Wind, Normal};
     // Start is called before the first frame update

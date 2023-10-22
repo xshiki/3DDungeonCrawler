@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 917648429043566509}
   - component: {fileID: 2570605778885126855}
   - component: {fileID: 8750778923216394429}
+  - component: {fileID: 675917939445193116}
   m_Layer: 0
   m_Name: Lesser Mana Potion
   m_TagString: Untagged
@@ -147,3 +148,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 85d1758ee97e68a478b73d71f8680fee, type: 2}
+--- !u!114 &675917939445193116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4301887068394928815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

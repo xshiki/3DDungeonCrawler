@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5951706197495953379}
   - component: {fileID: 3742992552140282780}
   - component: {fileID: 893013453387576001}
+  - component: {fileID: 1364671861188936048}
   m_Layer: 0
   m_Name: Diamond Pants
   m_TagString: Untagged
@@ -145,3 +146,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataProvider: {fileID: 0}
+--- !u!114 &1364671861188936048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905087998015588196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

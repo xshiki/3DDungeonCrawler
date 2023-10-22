@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8422277831013505693}
   - component: {fileID: 1888438982847280123}
   - component: {fileID: 74533641682810087}
+  - component: {fileID: 8710678940497079926}
   m_Layer: 0
   m_Name: Iron_Chestplate
   m_TagString: Untagged
@@ -145,3 +146,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 5ab8ad34c5bebf14682b5d2e1e484364, type: 2}
+--- !u!114 &8710678940497079926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4526653460503873776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

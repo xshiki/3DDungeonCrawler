@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6937962626850767205}
   - component: {fileID: 3639907821556982099}
   - component: {fileID: 5422314612313351426}
+  - component: {fileID: 6007565050874134239}
   m_Layer: 0
   m_Name: Golden_Chestplate
   m_TagString: Untagged
@@ -145,3 +146,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: ddee661882c39874caf245f3a24c6995, type: 2}
+--- !u!114 &6007565050874134239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6774590013152974665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

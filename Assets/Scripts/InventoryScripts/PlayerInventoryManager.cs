@@ -119,6 +119,7 @@ public class PlayerInventoryManager : InventoryManager
                 var health = consum._healthToReplenish;
                 var mana = consum._manaToReplenish;
 
+             
 
                 GameObject.Find("Player").GetComponent<PlayerRessource>().ReplenshHealthMana(health, mana);
                 itemInSlot.count--;
@@ -131,6 +132,10 @@ public class PlayerInventoryManager : InventoryManager
                 {
                     itemInSlot.Refresh();
                 }
+            }else if(use && itemInSlot.item.isAbility)
+            {
+                var consum = itemInSlot.item as SupportSpellSO;
+                GameObject.Find("Player").GetComponent<PlayerRessource>().ApplySupport(consum);
             }
 
 

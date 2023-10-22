@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2640640702046670128}
   - component: {fileID: 9110918849428811853}
   - component: {fileID: 8228903233076456223}
+  - component: {fileID: 3692603327716845835}
   m_Layer: 0
   m_Name: Earth Staff
   m_TagString: Untagged
@@ -257,3 +258,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3692603327716845835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3147951742137512912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

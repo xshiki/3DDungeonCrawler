@@ -53,6 +53,12 @@ public class PlayerRessource : MonoBehaviour
     public Stat armor;
     public Stat speed;
 
+
+    bool hasSpeedBuff = false;
+    bool hasArmorBuff = false;
+    bool hasDamageBuff = false;
+    bool hasHealOverTime = false;
+
     Volume volume;
     UnityEngine.Rendering.Universal.Vignette vignette;
     private void Awake()
@@ -251,8 +257,95 @@ public class PlayerRessource : MonoBehaviour
     }
 
 
+    public void ApplySupport(SupportSpellSO supportSpell)
+    {
+        if (supportSpell.supportType == SupportSpellSO.SupportType.Heal)
+        {
+            HealSpellScriptableObject heal = supportSpell as HealSpellScriptableObject;
+            UseMana((int)heal.ManaCost);
+            ReplenshHealthMana(heal.healAmount, 0);
+        }
+
+        BuffScriptableObject buff = supportSpell as BuffScriptableObject;
+        int modifier = buff.buffAmount;
+        if (supportSpell.supportType == SupportSpellSO.SupportType.SpeedBuff)
+        {
+            if (!hasSpeedBuff)
+            {
+                speed.AddModifier(5);
+                StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
+                CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
+                hasSpeedBuff = true;
+            }
+        }
+
+        if (supportSpell.supportType == SupportSpellSO.SupportType.ArmorBuff)
+        {
+            if (!hasArmorBuff)
+        {
+            armor.AddModifier(10);
+            StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
+            CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
+            hasArmorBuff = true;
+        }
+
+        }
+
+        if (supportSpell.supportType == SupportSpellSO.SupportType.DamageBuff)
+        {
+            if (!hasArmorBuff)
+            {
+                strength.AddModifier(10);
+                intelligence.AddModifier(10);
+                StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
+                CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
+                hasArmorBuff = true;
+            }
+
+        }
 
 
+
+    }
+    void RemoveSpeedBuff(int speed)
+    {
+        this.speed.RemoveModifier(speed);
+        hasSpeedBuff = false;
+    }
+
+    void RemoveArmorBuff(int armor)
+    {
+
+        this.armor.RemoveModifier(armor);
+        hasSpeedBuff = false;
+    }
+
+    void RemoveDamageBuff(int damage)
+    {
+
+        this.strength.RemoveModifier(damage);
+        this.intelligence.RemoveModifier(damage);
+        hasSpeedBuff = false;
+    }
+
+    private IEnumerator RemoveBuffAfterDuration(SupportSpellSO supportSpell, float duration, int modifier)
+    {
+        yield return new WaitForSeconds(duration);
+        if (supportSpell.supportType == SupportSpellSO.SupportType.SpeedBuff)
+        {
+            RemoveSpeedBuff(modifier);
+        }
+        else if (supportSpell.supportType == SupportSpellSO.SupportType.ArmorBuff)
+        {
+            RemoveArmorBuff(modifier);
+        }
+        else if (supportSpell.supportType == SupportSpellSO.SupportType.DamageBuff)
+        {
+            RemoveDamageBuff(modifier);
+        }
+
+
+    }
 
 
 }

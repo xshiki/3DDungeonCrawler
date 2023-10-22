@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6368090607002460655}
   - component: {fileID: 1301796194130981252}
   - component: {fileID: 1269132577382296543}
+  - component: {fileID: 2286851909182196076}
   m_Layer: 0
   m_Name: Diamond Chest
   m_TagString: Untagged
@@ -145,3 +146,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: b51bb452c44b9c449853ee057921943d, type: 2}
+--- !u!114 &2286851909182196076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7934339469993335590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

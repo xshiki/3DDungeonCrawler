@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6023038934643887813}
   - component: {fileID: 5339186777985278140}
   - component: {fileID: -8537265955932710413}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: "zelle_ohne_t\xFCr"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6147685675833754601}
-  m_Mesh: {fileID: 7506484935111680210, guid: 45c8f97434d01f3489b888b6d63f83c0, type: 3}
+  m_Mesh: {fileID: 7506484935111680210, guid: fba0fb62d154e914eb286dd8ee754d7b, type: 3}
 --- !u!23 &6023038934643887813
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,8 +64,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6478536213147159724, guid: 45c8f97434d01f3489b888b6d63f83c0, type: 3}
+  - {fileID: -6478536213147159724, guid: fba0fb62d154e914eb286dd8ee754d7b, type: 3}
   - {fileID: 2100000, guid: b9b14f326f4e1e147803bfc6c9530d9b, type: 2}
+  - {fileID: 7498461928983958705, guid: fba0fb62d154e914eb286dd8ee754d7b, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

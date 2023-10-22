@@ -18,8 +18,7 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        Debug.Log(inventorySlots.Length);
-      
+  
     }
 
     public bool AddItem(InventoryItemData item)

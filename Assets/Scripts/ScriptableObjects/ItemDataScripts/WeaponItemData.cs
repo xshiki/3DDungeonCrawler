@@ -14,6 +14,14 @@ public class WeaponItemData : InventoryItemData
     public int DamageAmount;
     public float WeaponRange = 1f;
     public float timeBetweenSwing = 2.5f;
+    [Range(0f, 100f)]
+    public float lifeStealChance = 0f;
+    [Range(0f, 1f)]
+    public float lifeStealPercentage = 0.05f;
+
+    [Range(0f, 1f)]
+    public float critRate = 0f;
+    public float critDamageMultiplier = 1f;
     public enum Weapons { Sword, Axe, Polearm, Staff };
    
 

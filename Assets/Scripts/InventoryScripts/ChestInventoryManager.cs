@@ -24,8 +24,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
 
 
     bool isOpen = false;
- 
-
+    PlayerInsideColliderChecker playerInsideColliderChecker;
 
     private void Awake()
     {
@@ -37,18 +36,21 @@ public class ChestInventoryManager : InventoryManager, IInteractable
         playerController.OnInventoryClosed += Close;
         lootTable = GetComponent<LootTable>();  
         lootList = lootTable.lootList;
-
+        playerInsideColliderChecker = GetComponentInChildren<PlayerInsideColliderChecker>();
+      
         fillChest();
     }
 
     private void OnEnable()
     {
         playerController.OnInventoryClosed += Close;
+        playerInsideColliderChecker.onPlayerOutside += Close;
     }
 
     private void OnDisable()
     {
         playerController.OnInventoryClosed -= Close;
+        playerInsideColliderChecker.onPlayerOutside -= Close;
     }
     void fillChest()
     {
@@ -103,11 +105,14 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     
     private void OnTriggerExit(Collider other)
     {
+
+        /*
         if (other.tag == "Player")
         {
             Close();
           
         }
+        */
     }
     void DisplayDynamicInventory()
     {
@@ -132,6 +137,7 @@ public class ChestInventoryManager : InventoryManager, IInteractable
     private void OnDestroy()
     {
         playerController.OnInventoryClosed -= Close;
+        playerInsideColliderChecker.onPlayerOutside -= Close;
     }
 
     void Close()

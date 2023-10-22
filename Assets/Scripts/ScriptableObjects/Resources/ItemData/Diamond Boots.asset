@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Icon: {fileID: 21300000, guid: 719593cd9babc5b4d83a19b57fbe505e, type: 3}
   MaxStackSize: 0
-  ID: -1
+  ID: 5
   DisplayName: Diamond Boots
   Description: 
   ItemPrefab: {fileID: 6068816882967082511, guid: a3dce229cfe70d345897cfc67c9544d5, type: 3}
   ItemType: 4
-  dropChance: 0
+  dropChance: 5
   consumable: 0
   stamina: 7
   strength: 6

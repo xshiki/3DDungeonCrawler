@@ -25,6 +25,10 @@ MonoBehaviour:
   DamageAmount: 25
   WeaponRange: 1
   timeBetweenSwing: 2.5
+  lifeStealChance: 0
+  lifeStealPercentage: 0.05
+  critRate: 0.05
+  critDamageMultiplier: 1
   weaponSwingSound: {fileID: 8300000, guid: 714ba2b8ff44b424fa9fc2b756c946a2, type: 3}
   weaponHitSound: {fileID: 8300000, guid: 714ba2b8ff44b424fa9fc2b756c946a2, type: 3}
   hitEffect: {fileID: 0}

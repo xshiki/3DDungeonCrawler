@@ -59,6 +59,9 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if(weaponItem is not MagicWeaponItemData)
         {
             description += weaponItem.DamageAmount.ToString() + " Damage\n";
+
+
+
         }
         else
         {
@@ -69,7 +72,11 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 
         }
-           
+        if(weaponItem.lifeStealChance > 0f)
+        {
+            //description += (Mathf.RoundToInt(weaponItem.lifeStealChance * 100)).ToString()+"% chance to steal life from enemy and give "+ (Mathf.RoundToInt(weaponItem.lifeStealPercentage * 100)).ToString() + "% of the damage dealt as HP to the wielder"+ "\n";
+            description += "Lifesteal: Give "+ (Mathf.RoundToInt(weaponItem.lifeStealPercentage * 100)).ToString() + "% of the damage dealt as healthpoints to the wielder"+ "\n";
+        }
 
         return description;
     }

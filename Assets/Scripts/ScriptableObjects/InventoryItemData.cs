@@ -10,7 +10,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Create Items/Item")]
 public class InventoryItemData : ScriptableObject
 {
-
+    public enum Rarity {Common, Uncommon, Rare, Epic, Legendary };
     [Header("Set UI Attributes")]
     public Sprite Icon;
     public int MaxStackSize;
@@ -19,13 +19,15 @@ public class InventoryItemData : ScriptableObject
     [TextArea(4, 4)]
     public string Description;
 
-
+    public Rarity rarity = Rarity.Common;
     [Header("Set Item Attributes")]
     public GameObject ItemPrefab;
     public InventoryItemType ItemType;
+
     [Range(0,100)]
     public int dropChance;
     public bool consumable = false;
+    public bool isAbility =false;
 
 
     //Make new Script that inherites from inventory item data example weapons

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8666909931002425868}
   - component: {fileID: 7713762579822532321}
   - component: {fileID: 3776196321855770142}
+  - component: {fileID: 8868846039034701435}
   m_Layer: 0
   m_Name: Steel Sword
   m_TagString: Untagged
@@ -263,3 +264,17 @@ MonoBehaviour:
   playerEquipment: {fileID: 0}
   playerRessource: {fileID: 0}
   playerOrientation: {fileID: 0}
+--- !u!114 &8868846039034701435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7755853874753063078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

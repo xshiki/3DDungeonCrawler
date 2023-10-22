@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 86369274981436929}
   - component: {fileID: 6465283138092619768}
   - component: {fileID: -3690860411540609525}
+  - component: {fileID: 1659710965710538187}
   m_Layer: 0
   m_Name: Fleischkeule
   m_TagString: Untagged
@@ -147,3 +148,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: ddcbcb815f8a7574b92356fa9d547501, type: 2}
+--- !u!114 &1659710965710538187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 986074985545733237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

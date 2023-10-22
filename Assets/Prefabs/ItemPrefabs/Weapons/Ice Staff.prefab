@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1254391520409678007}
   - component: {fileID: 6281525749918902764}
   - component: {fileID: 3002716807518831821}
+  - component: {fileID: 4072769503670598676}
   m_Layer: 0
   m_Name: Ice Staff
   m_TagString: Untagged
@@ -257,3 +258,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4072769503670598676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4720758667093851247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d1fb9a1309dee14fb3017dae279d71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderers: []
+  color: {r: 1, g: 1, b: 1, a: 1}

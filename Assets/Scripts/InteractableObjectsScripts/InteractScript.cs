@@ -22,6 +22,17 @@ public class InteractScript : MonoBehaviour
         Ray ray = new Ray(_playerCam.transform.position, _playerCam.transform.forward);
         RaycastHit hitInfo;
         if (_interactionPromptUI.IsDisplayed) { _interactionPromptUI.Close(); }
+        if (_interactable != null)
+        {
+            if (highlight != null)
+            {
+                highlight.ToggleHighlight(false);
+                highlight = null;
+            }
+
+            _interactable = null;
+        }
+
         if (Physics.Raycast(ray, out hitInfo, distance, _interactableMask))
         {
             if(hitInfo.collider.GetComponent<IInteractable>() != null)
@@ -39,21 +50,8 @@ public class InteractScript : MonoBehaviour
             }
 
         }
-        else
-        {
 
-            if (_interactable != null)
-            {
-                if(highlight != null)
-                {
-                    highlight.ToggleHighlight(false);
-                    highlight = null;
-                }
-               
-                _interactable = null;
-            }
-        }
-      
+    
 
 
         /*

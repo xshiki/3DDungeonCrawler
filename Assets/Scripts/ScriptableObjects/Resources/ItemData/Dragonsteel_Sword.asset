@@ -17,14 +17,19 @@ MonoBehaviour:
   ID: 4
   DisplayName: Dragonsteel Sword
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 8105255081365012450, guid: 00989f9130ee66247b67519704185f66, type: 3}
   ItemType: 5
-  dropChance: 5
+  dropChance: 1
   consumable: 0
   WeaponType: 0
-  DamageAmount: 100
-  WeaponRange: 3
-  timeBetweenSwing: 1.5
+  DamageAmount: 150
+  WeaponRange: 4
+  timeBetweenSwing: 1
+  lifeStealChance: 0.05
+  lifeStealPercentage: 0.1
+  critRate: 0.1
+  critDamageMultiplier: 2
   weaponSwingSound: {fileID: 8300000, guid: 7923190c5e80b4d4d9396acc5d0b48cf, type: 3}
   weaponHitSound: {fileID: 8300000, guid: 11245d3945c564b45a1bafad5ecb70e5, type: 3}
   hitEffect: {fileID: 0}
