@@ -7,8 +7,6 @@ public class PlayerMagicSystem : MonoBehaviour
 
 
     [SerializeField] private Spell spellToCast;
-    public HealSpellScriptableObject healSpell;
-    public BuffScriptableObject buffSpell;
     // Start is called before the first frame update
     [SerializeField] private PlayerRessource _playerRessource;
     [SerializeField] private Transform _castPoint;
@@ -63,31 +61,7 @@ public class PlayerMagicSystem : MonoBehaviour
     void CastSpell()
     {
 
-        if (!hasSpeedBuff)
-        {
-            _playerRessource.speed.AddModifier(buffSpell.buffAmount);
-            StartCoroutine(RemoveBuffAfterDuration(buffSpell, buffSpell.duration));
-            CooldownUIManager.Instance.SetNewCoolDown(buffSpell.icon, buffSpell.duration);
-            hasSpeedBuff = true;
-        }
-
-
-        if (!hasArmorBuff)
-        {
-            _playerRessource.speed.AddModifier(buffSpell.buffAmount);
-            StartCoroutine(RemoveBuffAfterDuration(buffSpell, 20));
-            CooldownUIManager.Instance.SetNewCoolDown(buffSpell.icon, 20);
-            hasArmorBuff = true;
-        }
-
-
-        if (!hasDamageBuff)
-        {
-            _playerRessource.speed.AddModifier(buffSpell.buffAmount);
-            StartCoroutine(RemoveBuffAfterDuration(buffSpell, 10));
-            CooldownUIManager.Instance.SetNewCoolDown(buffSpell.icon, 10);
-            hasDamageBuff = true;
-        }
+      
 
     }
 
@@ -108,21 +82,9 @@ public class PlayerMagicSystem : MonoBehaviour
     }
 
 
-    private IEnumerator RemoveBuffAfterDuration(SupportSpellSO supportSpell, float duration)
+    private IEnumerator RemoveBuffAfterDuration(SupportSpell supportSpell, float duration)
     {
         yield return new WaitForSeconds(duration);
-        if(supportSpell.supportType == SupportSpellSO.SupportType.SpeedBuff)
-        {
-            Debug.Log("removing speed");
-            RemoveSpeedBuff(buffSpell.buffAmount);
-        }
-        else if(supportSpell.supportType == SupportSpellSO.SupportType.DamageBuff)
-        {
-            RemoveDamageBuff(buffSpell.buffAmount);
-        }else if (supportSpell.supportType == SupportSpellSO.SupportType.ArmorBuff)
-        {
-            RemoveArmorBuff(buffSpell.buffAmount);
-        }
       
     }
 }

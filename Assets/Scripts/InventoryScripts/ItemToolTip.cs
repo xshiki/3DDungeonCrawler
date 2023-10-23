@@ -32,12 +32,21 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 }else if(hoveredItem.item is WeaponItemData)
                 {
                 description += SetDescriptionWeapon(hoveredItem.item as WeaponItemData);
+                }else if(hoveredItem.item is ConsumableItemData)
+                { 
+                    var consum = hoveredItem.item as ConsumableItemData;
+                    if(consum.supportEffect != null)
+                {
+                    description += SetDescriptionEffect(consum.supportEffect);
+                }
                 }
 
                 if(hoveredItem.maxStacks > 1)
                 {
                     description += "Stack Size: "+ hoveredItem.maxStacks.ToString() + "\n";
                 }
+
+                
                 tooltip.SetItemDescription(description);
                 itemToolTipPanel.SetActive(true);
                 LayoutRebuilder.ForceRebuildLayoutImmediate(popUpObject);
@@ -107,7 +116,15 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         return description;
     }
 
+    string SetDescriptionEffect(SupportSpell effect)
+    {
+        string description = "";
 
+        description += "Use: Increases " + effect.supportType.ToString().Replace("Buff","") + " by " + effect.amount + " for " + effect.duration + " seconds. \n";
+
+
+        return description;
+    }
     public void OnPointerExit(PointerEventData eventData)
     {
 

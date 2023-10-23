@@ -52,6 +52,8 @@ Transform:
   - {fileID: 4529234176987946876}
   - {fileID: 328794009275229473}
   - {fileID: 1660033564904101017}
+  - {fileID: 7568102289620073662}
+  - {fileID: 1446434082983935003}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &22796849511938145
@@ -301,6 +303,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1887634076735559361, guid: 95e645f794a77774b8f9d4a3ccae33b4, type: 3}
   m_PrefabInstance: {fileID: 608356912383397203}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1081837331684946870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6738104695905983734}
+    m_Modifications:
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 9.661926
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.502
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403784676850671829, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+      propertyPath: m_Name
+      value: Crazy Alchemists Potion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+--- !u!4 &1446434082983935003 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1950535211587473325, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
+  m_PrefabInstance: {fileID: 1081837331684946870}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1817374544562475259
 PrefabInstance:
@@ -584,6 +648,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8977105606978296838, guid: dc2738cf1f90e7047920912b6bd653ec, type: 3}
   m_PrefabInstance: {fileID: 2808213208828769840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3232562307433456529
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6738104695905983734}
+    m_Modifications:
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4418857
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.116
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.61784935
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059992964860016038, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+      propertyPath: m_Name
+      value: Elixir of Speed
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+--- !u!4 &7568102289620073662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5033637512228937519, guid: 6e6eedc9da89534488f0f0afcab766be, type: 3}
+  m_PrefabInstance: {fileID: 3232562307433456529}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3422400468043708641
 PrefabInstance:

@@ -20,8 +20,9 @@ MonoBehaviour:
   rarity: 0
   ItemPrefab: {fileID: 727856413134759310, guid: ec8754c517040b34389109fda2f967dc, type: 3}
   ItemType: 5
-  dropChance: 5
+  dropChance: 3
   consumable: 0
+  isAbility: 0
   WeaponType: 0
   DamageAmount: 100
   WeaponRange: 4

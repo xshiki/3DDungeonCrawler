@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: 0
   DisplayName: Crazy Alchemis's Potion
   Description: 'Use: Restores 500 Health and 500 Mana'
+  rarity: 0
   ItemPrefab: {fileID: 4403784676850671829, guid: 9c399601b17c4cb46906c8ee50c44ef2, type: 3}
   ItemType: 0
   dropChance: 1
   consumable: 1
+  isAbility: 0
   _healthToReplenish: 500
   _manaToReplenish: 500
+  supportEffect: {fileID: 11400000, guid: 326c56279b46e864c912c0b7229426ca, type: 2}
   consumSoundClip: {fileID: 0}

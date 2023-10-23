@@ -54,10 +54,14 @@ public class PlayerRessource : MonoBehaviour
     public Stat speed;
 
 
-    bool hasSpeedBuff = false;
-    bool hasArmorBuff = false;
-    bool hasDamageBuff = false;
-    bool hasHealOverTime = false;
+
+    int currentSpeedBuff = 0;
+    int currentArmorBuff = 0;
+    int currentDamageBuff = 0;
+
+    Coroutine speedCO, armorCO, damageCO;
+
+
 
     Volume volume;
     UnityEngine.Rendering.Universal.Vignette vignette;
@@ -257,69 +261,83 @@ public class PlayerRessource : MonoBehaviour
     }
 
 
-    public void ApplySupport(SupportSpellSO supportSpell)
+    public void ApplySupport(SupportSpell supportSpell)
     {
-        if (supportSpell.supportType == SupportSpellSO.SupportType.Heal)
+        if (supportSpell.supportType == SupportSpell.SupportEffect.Heal)
         {
-            HealSpellScriptableObject heal = supportSpell as HealSpellScriptableObject;
-            UseMana((int)heal.ManaCost);
-            ReplenshHealthMana(heal.healAmount, 0);
+            UseMana((int)supportSpell.ManaCost);
+            ReplenshHealthMana(supportSpell.amount, 0);
             Debug.Log("has healed");
             return;
         }
 
-        BuffScriptableObject buff = supportSpell as BuffScriptableObject;
-        int modifier = buff.buffAmount;
-        if (supportSpell.supportType == SupportSpellSO.SupportType.SpeedBuff)
+
+
+
+        SupportSpell buff = supportSpell;
+        int modifier =(int) buff.amount;
+        if (supportSpell.supportType == SupportSpell.SupportEffect.SpeedBuff)
         {
-            if (!hasSpeedBuff)
+            if (currentSpeedBuff > 0)
             {
-                speed.AddModifier(modifier);
-                StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
-                CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
-                hasSpeedBuff = true;
+            
+                RemoveSpeedBuff(currentSpeedBuff);
+                CooldownUIManager.Instance.RemoveCooldown(supportSpell.supportType.ToString());
+                StopCoroutine(speedCO);
             }
+            speed.AddModifier(modifier);
+            currentSpeedBuff = modifier;
+            speedCO = StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
+            CooldownUIManager.Instance.SetNewCoolDown(supportSpell, supportSpell.icon, supportSpell.duration);
+
         }
 
-        if (supportSpell.supportType == SupportSpellSO.SupportType.ArmorBuff)
+        if (supportSpell.supportType == SupportSpell.SupportEffect.ArmorBuff)
         {
-            if (!hasArmorBuff)
-        {
+            if (currentArmorBuff > 0)
+            {
+
+                RemoveArmorBuff(currentArmorBuff);
+                CooldownUIManager.Instance.RemoveCooldown(supportSpell.supportType.ToString());
+                StopCoroutine(armorCO);
+            }
             armor.AddModifier(modifier);
-            StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
-            CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
-            hasArmorBuff = true;
-        }
+            currentArmorBuff = modifier;
+            armorCO = StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
+            CooldownUIManager.Instance.SetNewCoolDown(supportSpell, supportSpell.icon, supportSpell.duration);
 
         }
 
-        if (supportSpell.supportType == SupportSpellSO.SupportType.DamageBuff)
+        if (supportSpell.supportType == SupportSpell.SupportEffect.DamageBuff)
         {
-            if (!hasArmorBuff)
+            if (currentDamageBuff > 0)
             {
-                strength.AddModifier(modifier);
-                intelligence.AddModifier(modifier);
-                StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
-                CooldownUIManager.Instance.SetNewCoolDown(supportSpell.icon, supportSpell.duration);
-                hasArmorBuff = true;
+
+                RemoveDamageBuff(currentDamageBuff);
+                CooldownUIManager.Instance.RemoveCooldown(supportSpell.supportType.ToString());
+                StopCoroutine(damageCO);
             }
+            strength.AddModifier(modifier);
+            intelligence.AddModifier(modifier);
+            currentDamageBuff = modifier;
+            damageCO = StartCoroutine(RemoveBuffAfterDuration(supportSpell, supportSpell.duration, modifier));
+            CooldownUIManager.Instance.SetNewCoolDown(supportSpell, supportSpell.icon, supportSpell.duration);
 
         }
-
 
 
     }
     void RemoveSpeedBuff(int speed)
     {
         this.speed.RemoveModifier(speed);
-        hasSpeedBuff = false;
+        currentSpeedBuff = 0;
     }
 
     void RemoveArmorBuff(int armor)
     {
 
         this.armor.RemoveModifier(armor);
-        hasSpeedBuff = false;
+        currentArmorBuff = 0;
     }
 
     void RemoveDamageBuff(int damage)
@@ -327,21 +345,23 @@ public class PlayerRessource : MonoBehaviour
 
         this.strength.RemoveModifier(damage);
         this.intelligence.RemoveModifier(damage);
-        hasSpeedBuff = false;
+        currentDamageBuff = 0;
     }
 
-    private IEnumerator RemoveBuffAfterDuration(SupportSpellSO supportSpell, float duration, int modifier)
+    private IEnumerator RemoveBuffAfterDuration(SupportSpell supportSpell, float duration, int modifier)
     {
         yield return new WaitForSeconds(duration);
-        if (supportSpell.supportType == SupportSpellSO.SupportType.SpeedBuff)
+
+
+        if (supportSpell.supportType == SupportSpell.SupportEffect.SpeedBuff)
         {
             RemoveSpeedBuff(modifier);
         }
-        else if (supportSpell.supportType == SupportSpellSO.SupportType.ArmorBuff)
+        else if (supportSpell.supportType == SupportSpell.SupportEffect.ArmorBuff)
         {
             RemoveArmorBuff(modifier);
         }
-        else if (supportSpell.supportType == SupportSpellSO.SupportType.DamageBuff)
+        else if (supportSpell.supportType == SupportSpell.SupportEffect.DamageBuff)
         {
             RemoveDamageBuff(modifier);
         }

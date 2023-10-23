@@ -31,7 +31,6 @@ public class ItemPickUpInteractable : MonoBehaviour, IInteractable
         if (interactor.CompareTag("Player"))
         {
            
-            Debug.Log("is player");
             if (inventory.AddItem(_item))
             {
                 NotificationManager.Instance.SetNewNotification("Picked up " + _item.DisplayName);

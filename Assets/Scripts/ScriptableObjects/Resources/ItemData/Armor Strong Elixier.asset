@@ -10,22 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ebe390d6f0a45f44934eaf2efdc0112, type: 3}
-  m_Name: Great_Mana_Potion
+  m_Name: Armor Strong Elixier
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: c0b46f524c6c41848bffdab6a4c6b9b2, type: 3}
+  Icon: {fileID: 21300000, guid: 47fef746f49561d45b69d100c10d065d, type: 3}
   MaxStackSize: 5
-  ID: 2
-  DisplayName: Great Mana Potion
-  Description: 'Use: Restores 100 Mana
-
-'
+  ID: -1
+  DisplayName: Strong Elixir of Armor
+  Description: 
   rarity: 0
-  ItemPrefab: {fileID: 4301887068394928815, guid: 286f2190da1529b4caf1dee99e6946df, type: 3}
+  ItemPrefab: {fileID: 1559184237498574181, guid: d82ffc6569937904ab441daef86721e7, type: 3}
   ItemType: 0
-  dropChance: 5
+  dropChance: 1
   consumable: 1
   isAbility: 0
   _healthToReplenish: 0
-  _manaToReplenish: 100
-  supportEffect: {fileID: 0}
+  _manaToReplenish: 0
+  supportEffect: {fileID: 11400000, guid: de0884efe1849be4d965c9aa47e43ac5, type: 2}
   consumSoundClip: {fileID: 0}

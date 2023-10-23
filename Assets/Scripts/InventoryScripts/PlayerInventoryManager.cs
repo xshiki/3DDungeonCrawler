@@ -109,8 +109,7 @@ public class PlayerInventoryManager : InventoryManager
                 }
                 inventorySlots[selectedSlot].Deselect();
             }
-            else
-            if (use && itemInSlot.item.consumable)
+            else if (use && itemInSlot.item.consumable)
             {
                 Debug.Log("consumed item");
 
@@ -122,7 +121,16 @@ public class PlayerInventoryManager : InventoryManager
              
 
                 GameObject.Find("Player").GetComponent<PlayerRessource>().ReplenshHealthMana(health, mana);
+
+                if(consum.supportEffect != null)
+                {
+                    Debug.Log("was here");
+                    GameObject.Find("Player").GetComponent<PlayerRessource>().ApplySupport(consum.supportEffect);
+                }
                 itemInSlot.count--;
+
+
+
                 if (itemInSlot.count <= 0)
                 {
                     Destroy(itemInSlot.gameObject);
@@ -132,10 +140,11 @@ public class PlayerInventoryManager : InventoryManager
                 {
                     itemInSlot.Refresh();
                 }
+                NotificationManager.Instance.SetNewNotification(itemInSlot.item.DisplayName + " used");
+
             }else if(use && itemInSlot.item.isAbility)
             {
-                var consum = itemInSlot.item as SupportSpellSO;
-                GameObject.Find("Player").GetComponent<PlayerRessource>().ApplySupport(consum);
+              
             }
 
 

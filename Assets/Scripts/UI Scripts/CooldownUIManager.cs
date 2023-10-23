@@ -37,13 +37,35 @@ public class CooldownUIManager : MonoBehaviour
     [SerializeField] protected GameObject cooldownPrefab;
 
 
-    public void SetNewCoolDown(Sprite icon, float duration)
-    {
-        GameObject cdObject = Instantiate(cooldownPrefab, cdPanel);
-        cdObject.GetComponent<Image>().sprite = icon;
-        cdObject.GetComponentInChildren<TextMeshProUGUI>().text = duration.ToString();
 
-        StartCoroutine(StartCooldownTimer(cdObject, duration));
+    private Dictionary<string, Coroutine> activeCoroutines = new Dictionary<string, Coroutine>();
+    private Dictionary<string, GameObject> cooldownObjects = new Dictionary<string, GameObject>();
+    public void RemoveCooldown(string cooldownName)
+    {
+        if (activeCoroutines.ContainsKey(cooldownName))
+        {
+            // Stop the coroutine associated with this cooldown and remove it from the dictionary.
+            StopCoroutine(activeCoroutines[cooldownName]);
+            activeCoroutines.Remove(cooldownName);
+        }
+
+        if (cooldownObjects.ContainsKey(cooldownName))
+        {
+            // Destroy the GameObject associated with this cooldown and remove it from the dictionary.
+            Destroy(cooldownObjects[cooldownName]);
+            cooldownObjects.Remove(cooldownName);
+        }
+    }
+
+    public void SetNewCoolDown(SupportSpell supportSpell, Sprite icon, float duration)
+    {
+        GameObject coolDownGO = Instantiate(cooldownPrefab, cdPanel);
+        coolDownGO.name = supportSpell.supportType.ToString();
+        coolDownGO.GetComponent<Image>().sprite = icon;
+        coolDownGO.GetComponentInChildren<TextMeshProUGUI>().text = duration.ToString();
+        Coroutine newCoroutine = StartCoroutine(StartCooldownTimer(coolDownGO, duration));
+        activeCoroutines[coolDownGO.name] = newCoroutine;
+        cooldownObjects[coolDownGO.name] = coolDownGO;
     }
 
 

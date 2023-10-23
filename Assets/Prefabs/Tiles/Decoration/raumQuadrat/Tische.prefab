@@ -50,6 +50,8 @@ Transform:
   - {fileID: 529746164169198213}
   - {fileID: 765122676517430891}
   - {fileID: 8791311225742172142}
+  - {fileID: 4992318701109549285}
+  - {fileID: 6159668022465374995}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &207101965231741727
@@ -475,6 +477,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1466179895532670444}
     m_Modifications:
+    - target: {fileID: -7240124185935254572, guid: f7f92af7a80381c45be64f7f081383bd, type: 3}
+      propertyPath: _id
+      value: 9081e679-4a8d-454e-ac5e-b0a66bff4fd4
+      objectReference: {fileID: 0}
     - target: {fileID: 496782808411950799, guid: f7f92af7a80381c45be64f7f081383bd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.587
@@ -921,6 +927,72 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8491026441933122261, guid: 08df194eb9025524893ecfa7fb6dfb6f, type: 3}
   m_PrefabInstance: {fileID: 4780304059480945981}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4970619676801368751
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1466179895532670444}
+    m_Modifications:
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5172194
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1100352
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.8373294
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347134622759526310, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: _id
+      value: 8f1ec642-a990-4bee-9560-e37a0d28095e
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531404317410376412, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_Name
+      value: Elixir of Armor_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+--- !u!4 &6159668022465374995 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+  m_PrefabInstance: {fileID: 4970619676801368751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5058155796212452686
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1176,6 +1248,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7348141336142109778, guid: beab17b80f9a03d4e8d49783d937f5e5, type: 3}
   m_PrefabInstance: {fileID: 5965907691073394475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6109412464302829913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1466179895532670444}
+    m_Modifications:
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.7512492
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1100351
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.58178926
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531404317410376412, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_Name
+      value: Elixir of Armor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+--- !u!4 &4992318701109549285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+  m_PrefabInstance: {fileID: 6109412464302829913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6387451889900978575
 PrefabInstance:

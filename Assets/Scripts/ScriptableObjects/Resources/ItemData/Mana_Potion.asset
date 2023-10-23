@@ -16,13 +16,16 @@ MonoBehaviour:
   MaxStackSize: 10
   ID: 12
   DisplayName: Mana Potion
-  Description: 'Use: Restores 25 Mana
+  Description: 'Use: Restores 50 Mana
 
 '
+  rarity: 0
   ItemPrefab: {fileID: 4301887068394928815, guid: 121cb2250ad2caf46bca894d7c4f6356, type: 3}
   ItemType: 0
   dropChance: 10
   consumable: 1
+  isAbility: 0
   _healthToReplenish: 0
-  _manaToReplenish: 25
+  _manaToReplenish: 50
+  supportEffect: {fileID: 0}
   consumSoundClip: {fileID: 0}

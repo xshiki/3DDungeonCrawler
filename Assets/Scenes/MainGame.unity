@@ -2010,7 +2010,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &184339768
 Transform:
   m_ObjectHideFlags: 0
@@ -23614,8 +23614,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spellToCast: {fileID: 3970265404137374070, guid: 1d8524e8e71733e4795a4181ed4e9486, type: 3}
-  healSpell: {fileID: 0}
-  buffSpell: {fileID: 0}
   _playerRessource: {fileID: 0}
   _castPoint: {fileID: 0}
   timeBetweenCast: 0.25

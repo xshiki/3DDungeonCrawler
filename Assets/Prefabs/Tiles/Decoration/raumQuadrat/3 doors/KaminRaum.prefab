@@ -42,6 +42,8 @@ Transform:
   - {fileID: 7125049941685428466}
   - {fileID: 7430097074979797644}
   - {fileID: 1854864725424376765}
+  - {fileID: 4033335977897304908}
+  - {fileID: 3029355141284976199}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &89698928592944826
@@ -296,6 +298,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8977105606978296838, guid: dc2738cf1f90e7047920912b6bd653ec, type: 3}
   m_PrefabInstance: {fileID: 1983857699100370570}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2772511611958495984
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6565996660663491100}
+    m_Modifications:
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8245125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2501647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.2294564
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531404317410376412, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_Name
+      value: Elixir of Armor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+--- !u!4 &4033335977897304908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+  m_PrefabInstance: {fileID: 2772511611958495984}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3448508334749256200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -428,6 +492,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6565996660663491100}
     m_Modifications:
+    - target: {fileID: -2152039991451120271, guid: 9bd00a677c8cd464080f89aca7017a76, type: 3}
+      propertyPath: _id
+      value: 84ef3319-0db8-4698-9088-9c2dc6372bd2
+      objectReference: {fileID: 0}
     - target: {fileID: 1174676925584053983, guid: 9bd00a677c8cd464080f89aca7017a76, type: 3}
       propertyPath: m_Name
       value: Bread
@@ -543,6 +611,72 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8545976481272078049, guid: 73e05511368aded4784e46e4a086749f, type: 3}
   m_PrefabInstance: {fileID: 4195363229962565861}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4290478400444497915
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6565996660663491100}
+    m_Modifications:
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.8391876
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2501647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.9444563
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347134622759526310, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: _id
+      value: 8b284f58-4057-43c4-95e5-aecd2e7eb49d
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531404317410376412, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: m_Name
+      value: Elixir of Armor_1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+--- !u!4 &3029355141284976199 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+  m_PrefabInstance: {fileID: 4290478400444497915}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5742521855042460165
 PrefabInstance:
@@ -738,6 +872,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6565996660663491100}
     m_Modifications:
+    - target: {fileID: -2152039991451120271, guid: 9bd00a677c8cd464080f89aca7017a76, type: 3}
+      propertyPath: _id
+      value: bd9fe767-cbb1-4118-9c0d-1079950b8fb6
+      objectReference: {fileID: 0}
     - target: {fileID: 1174676925584053983, guid: 9bd00a677c8cd464080f89aca7017a76, type: 3}
       propertyPath: m_Name
       value: Bread (1)
@@ -800,6 +938,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6565996660663491100}
     m_Modifications:
+    - target: {fileID: -2152039991451120271, guid: 9bd00a677c8cd464080f89aca7017a76, type: 3}
+      propertyPath: _id
+      value: 4e4b1c6c-19b3-4868-854a-66b908c9bc11
+      objectReference: {fileID: 0}
     - target: {fileID: 1174676925584053983, guid: 9bd00a677c8cd464080f89aca7017a76, type: 3}
       propertyPath: m_Name
       value: Bread (2)

@@ -16,11 +16,14 @@ MonoBehaviour:
   MaxStackSize: 5
   ID: 10
   DisplayName: Lesser Health Potion
-  Description: 'Use: Restores 10 Health'
+  Description: 'Use: Restores 25 Health'
+  rarity: 0
   ItemPrefab: {fileID: 4403784676850671829, guid: 2c0ae487d96fef14cb093c0c780e2062, type: 3}
   ItemType: 0
   dropChance: 20
   consumable: 1
-  _healthToReplenish: 10
+  isAbility: 0
+  _healthToReplenish: 25
   _manaToReplenish: 0
+  supportEffect: {fileID: 0}
   consumSoundClip: {fileID: 0}

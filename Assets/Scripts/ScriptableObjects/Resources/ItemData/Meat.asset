@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: 10
   DisplayName: Meat
   Description: 'Use: Restores 5 Health'
+  rarity: 0
   ItemPrefab: {fileID: 986074985545733237, guid: f7f92af7a80381c45be64f7f081383bd, type: 3}
   ItemType: 0
   dropChance: 20
   consumable: 1
+  isAbility: 0
   _healthToReplenish: 5
   _manaToReplenish: 0
+  supportEffect: {fileID: 0}
   consumSoundClip: {fileID: 0}
