@@ -29,6 +29,7 @@ public class InventoryItemData : ScriptableObject
     public bool consumable = false;
     public bool isAbility =false;
 
+    public float goldValue = 1;
 
     //Make new Script that inherites from inventory item data example weapons
     public virtual void UseItem()

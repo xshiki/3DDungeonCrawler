@@ -47,6 +47,7 @@ Transform:
   - {fileID: 875221256283591100}
   - {fileID: 7596949254962122206}
   - {fileID: 6446880652992498709}
+  - {fileID: 7854633001083796507}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &434922256481505385
@@ -655,6 +656,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6347134622759526310, guid: 064d37fac5266d94bacc98d659920757, type: 3}
+      propertyPath: _id
+      value: 40d44cb1-c7c1-46ae-b759-293538e47e1f
+      objectReference: {fileID: 0}
     - target: {fileID: 6531404317410376412, guid: 064d37fac5266d94bacc98d659920757, type: 3}
       propertyPath: m_Name
       value: Elixir of Armor
@@ -668,6 +673,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1261211498189007292, guid: 064d37fac5266d94bacc98d659920757, type: 3}
   m_PrefabInstance: {fileID: 5257762242451301801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5620223268711854048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1925138629624478759}
+    m_Modifications:
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5230265
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.037
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2558229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7142107590963253371, guid: 723498999afaa89468ff429998f6391b, type: 3}
+      propertyPath: m_Name
+      value: goldBarren
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 723498999afaa89468ff429998f6391b, type: 3}
+--- !u!4 &7854633001083796507 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2377417163601122299, guid: 723498999afaa89468ff429998f6391b, type: 3}
+  m_PrefabInstance: {fileID: 5620223268711854048}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6071994529544654139
 PrefabInstance:

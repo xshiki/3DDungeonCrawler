@@ -1689,6 +1689,37 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_IsOn: 1
+--- !u!1 &149662573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149662574}
+  m_Layer: 6
+  m_Name: WeaponSocket.L
+  m_TagString: Untagged
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &149662574
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149662573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.51730347, y: 0.48387468, z: 0.49171078, w: 0.50644153}
+  m_LocalPosition: {x: -0.109, y: -0.04, z: 0.076}
+  m_LocalScale: {x: 0.98344034, y: 0.9834308, z: 0.98343074}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 807897436}
+  m_LocalEulerAnglesHint: {x: 2.76, y: -90, z: 89.83}
 --- !u!224 &152380197 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4137360915437024574, guid: 6e557d9133b2f464e9805037439a7308, type: 3}
@@ -7983,6 +8014,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c852f0866a7ab4aa763f854d44f2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &807897436 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8439802698497089147, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+  m_PrefabInstance: {fileID: 1567074182853205988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &833189121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22730,7 +22766,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4334929555834806952, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.355
       objectReference: {fileID: 0}
     - target: {fileID: 4334929555834806952, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -22858,6 +22894,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4334929555834806952, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1279329453}
+    - targetCorrespondingSourceObject: {fileID: 8439802698497089147, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 149662574}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5240573749984859827, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       insertIndex: -1
