@@ -14,43 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectionHistory:
     _history:
-    - reference: {fileID: 0}
-      sceneName: MainGame
-      scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-8688106927890710360-746907177
-    - reference: {fileID: 7208184299324887042, guid: e578fbf316554d542a29fb6911ce9761, type: 3}
+    - reference: {fileID: 2018810241728932115, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
       sceneName: 
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-e578fbf316554d542a29fb6911ce9761-7208184299324887042-0
-    - reference: {fileID: 0}
-      sceneName: DontDestroyOnLoad
-      scenePath: DontDestroyOnLoad
-      globalObjectId: GlobalObjectId_V1-2-00000000000000000000000000000000-1811876854-0
-    - reference: {fileID: 0}
-      sceneName: MainGame
-      scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-6680102841695026288-0
-    - reference: {fileID: 919132149155446097, guid: 8ff830c322738c44bb310395857786c2, type: 3}
+      globalObjectId: 
+    - reference: {fileID: -5924040320334467127, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
       sceneName: 
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-8ff830c322738c44bb310395857786c2-919132149155446097-0
-    - reference: {fileID: 8688106927890710360, guid: 764b36c9e5f73e64d90c6723313b2d86, type: 3}
+      globalObjectId: 
+    - reference: {fileID: 613248806745534301, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
       sceneName: 
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-764b36c9e5f73e64d90c6723313b2d86-8688106927890710360-0
-    - reference: {fileID: 2149295012931282805, guid: dde4c60abb99a154cacd1a6130a79f1f, type: 3}
+      globalObjectId: 
+    - reference: {fileID: 2662644163147949401, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
       sceneName: 
       scenePath: 
-      globalObjectId: GlobalObjectId_V1-1-dde4c60abb99a154cacd1a6130a79f1f-2149295012931282805-0
-    - reference: {fileID: 2100000, guid: f1bdefc00275174468c91f62f6c4e133, type: 2}
+      globalObjectId: 
+    - reference: {fileID: -8031855240506472852, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
+      sceneName: 
+      scenePath: 
+      globalObjectId: 
+    - reference: {fileID: 5380834048342707821, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
+      sceneName: 
+      scenePath: 
+      globalObjectId: 
+    - reference: {fileID: 7670336232116609094, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
+      sceneName: 
+      scenePath: 
+      globalObjectId: 
+    - reference: {fileID: 6781587090252186735, guid: bda5d3d3248455544810c8d4203f5613, type: 2}
       sceneName: 
       scenePath: 
       globalObjectId: 
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-7208184299324887042-298436074
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-8688106927890710360-2138965166
     - reference: {fileID: 0}
       sceneName: MainGame
       scenePath: Assets/Scenes/MainGame.unity
-      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2149295012931282805-1179883469
+      globalObjectId: GlobalObjectId_V1-2-9fc0d4010bbf28b4594072e72b8655ab-2543110259538375738-1309909363

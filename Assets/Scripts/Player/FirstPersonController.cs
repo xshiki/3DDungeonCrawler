@@ -382,7 +382,6 @@ public class FirstPersonController : MonoBehaviour
 
         SetSpeed();
         #region Movement
-        animator.SetFloat("Speed", 0f, 0.2f, Time.deltaTime);
         if (playerCanMove)
         {
             // Calculate how fast we should be moving
@@ -393,7 +392,6 @@ public class FirstPersonController : MonoBehaviour
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true;                
-                animator.SetFloat("Speed", 0.5f, 0.2f, Time.deltaTime);
               
 
             }
@@ -420,7 +418,7 @@ public class FirstPersonController : MonoBehaviour
                 if (velocityChange.x != 0 || velocityChange.z != 0)
                 {
                     isSprinting = true;
-                    animator.SetFloat("Speed", 1f, 0.2f, Time.deltaTime);
+                   
  
                     if (isCrouched)
                     {
@@ -461,6 +459,7 @@ public class FirstPersonController : MonoBehaviour
         if(isWalking && !isSprinting)
         {
             FindAnyObjectByType<AudioManager>().EnableAudioSource("Footsteps");
+            animator.SetFloat("Speed", 0.5f, 0.2f, Time.deltaTime);
         }
         else
         {
@@ -469,7 +468,9 @@ public class FirstPersonController : MonoBehaviour
 
         if(isSprinting)
         {
+
             FindAnyObjectByType<AudioManager>().EnableAudioSource("Sprint");
+            animator.SetFloat("Speed", 1f, 0.2f, Time.deltaTime);
         }
         else
         {
