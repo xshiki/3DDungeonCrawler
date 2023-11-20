@@ -17,13 +17,16 @@ MonoBehaviour:
   ID: 14
   DisplayName: Steel Sword
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 7755853874753063078, guid: 9ce65c0afa615da46ac848bab85980fe, type: 3}
   ItemType: 5
   dropChance: 10
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   WeaponType: 0
   DamageAmount: 50
-  WeaponRange: 4
+  WeaponRange: 5
   timeBetweenSwing: 1.2
   lifeStealChance: 0
   lifeStealPercentage: 0.05

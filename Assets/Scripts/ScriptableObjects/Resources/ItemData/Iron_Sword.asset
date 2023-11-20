@@ -17,13 +17,16 @@ MonoBehaviour:
   ID: 13
   DisplayName: Iron Sword
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 4151237327226237660, guid: e4fa23bdb3baf2349acc29bbc3020123, type: 3}
   ItemType: 5
   dropChance: 25
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   WeaponType: 0
   DamageAmount: 20
-  WeaponRange: 3
+  WeaponRange: 5
   timeBetweenSwing: 1.5
   lifeStealChance: 0
   lifeStealPercentage: 0.05

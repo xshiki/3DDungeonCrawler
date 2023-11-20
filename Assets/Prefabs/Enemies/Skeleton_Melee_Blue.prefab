@@ -1702,7 +1702,7 @@ MonoBehaviour:
   attackDamage: 5
   wayPointRange: 10
   viewRadius: 20
-  viewAngle: 90
+  viewAngle: 100
   timeBetweenAttacks: 4
   alreadyAttacked: 0
   sightRange: 0

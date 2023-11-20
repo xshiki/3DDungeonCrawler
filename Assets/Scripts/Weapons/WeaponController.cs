@@ -29,6 +29,9 @@ public class WeaponController : MonoBehaviour
     public const string DAGGER1 = "Dagger 1";
     public const string DAGGER2 = "Dagger 2";
 
+    public const string POLEARM1 = "PoleArm 1";
+    public const string POLEARM2 = "PoleArm 2";
+
 
 
     float timeBetweenSwing = 2.5f;
@@ -70,6 +73,9 @@ public class WeaponController : MonoBehaviour
             if(weaponData.WeaponType == WeaponItemData.Weapons.Daggers)
             {
                 playerController.PlayAnimation(DAGGER1);
+            }else if(weaponData.WeaponType == WeaponItemData.Weapons.Polearm)
+            {
+                playerController.PlayAnimation(POLEARM1);
             }
             else
             {
@@ -84,6 +90,10 @@ public class WeaponController : MonoBehaviour
             {
                 playerController.PlayAnimation(DAGGER2);
             }
+            else if (weaponData.WeaponType == WeaponItemData.Weapons.Polearm)
+            {
+                playerController.PlayAnimation(POLEARM2);
+            }
             else
             {
                 playerController.PlayAnimation(ATTACK2);
@@ -91,9 +101,6 @@ public class WeaponController : MonoBehaviour
             attackCount = 0;
         }
        
-      
-        //weaponAnimator.Play(ATTACK1);
-
     }
 
     void ResetAttack()
@@ -107,7 +114,7 @@ public class WeaponController : MonoBehaviour
        
         RaycastHit[] hits;
 
-        hits = Physics.RaycastAll(playerOrientation.transform.position, playerOrientation.transform.forward,2);
+        hits = Physics.RaycastAll(playerOrientation.transform.position, playerOrientation.transform.forward, weaponData.WeaponRange);
         Debug.Log(hits);
         if (hits.Length > 0)
         {
