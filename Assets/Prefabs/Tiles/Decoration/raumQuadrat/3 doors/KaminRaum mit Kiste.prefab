@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 2114672158644769507}
   - component: {fileID: 3095952660161961286}
   - component: {fileID: 942377962122111372}
-  - component: {fileID: 2966989243702249175}
   - component: {fileID: 5694942758233179432}
+  - component: {fileID: 6865850274870203832}
   m_Layer: 0
   m_Name: regal mit buch
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1590619161982027865}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9, y: 1.3, z: 2.83}
+  m_LocalPosition: {x: -1.563, y: 1.3, z: 2.83}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -91,27 +91,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2966989243702249175
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590619161982027865}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.7085176, y: 2.2780232, z: 0.5283756}
-  m_Center: {x: 0, y: -0.00000029802322, z: 0.0070939064}
 --- !u!208 &5694942758233179432
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -128,6 +107,28 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0.007}
   m_TimeToStationary: 0.5
+--- !u!64 &6865850274870203832
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590619161982027865}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3749380468981313546, guid: 057bfc07e579b4a49a0154c3641df2fd, type: 3}
 --- !u!1 &8451359967226216554
 GameObject:
   m_ObjectHideFlags: 0

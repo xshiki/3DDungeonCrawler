@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -120,8 +121,16 @@ public class PlayerController : MonoBehaviour
 
         if (currentWeapon != null)
         {
-
-            animator.SetInteger("WeaponType", 1);
+            if(currentWeapon.weaponData.WeaponType == WeaponItemData.Weapons.Sword)
+            {
+                animator.SetInteger("WeaponType", 1);
+            }
+            else if (currentWeapon.weaponData.WeaponType == WeaponItemData.Weapons.Sword)
+            {
+                animator.SetInteger("WeaponType", 3);
+                Debug.Log("Dagger equipped");
+            }
+           
         }
         else if (currentMagicWeapon != null)
         {

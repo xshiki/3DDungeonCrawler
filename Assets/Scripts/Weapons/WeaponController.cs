@@ -26,6 +26,9 @@ public class WeaponController : MonoBehaviour
     public const string ATTACK1 = "Attack 1";
     public const string ATTACK2 = "Attack 2";
 
+    public const string DAGGER1 = "Dagger 1";
+    public const string DAGGER2 = "Dagger 2";
+
 
 
     float timeBetweenSwing = 2.5f;
@@ -62,12 +65,29 @@ public class WeaponController : MonoBehaviour
 
         if (attackCount == 0)
         {
-            playerController.PlayAnimation(ATTACK1);
+
+          
+            if(weaponData.WeaponType == WeaponItemData.Weapons.Daggers)
+            {
+                playerController.PlayAnimation(DAGGER1);
+            }
+            else
+            {
+                playerController.PlayAnimation(ATTACK1);
+            }
             attackCount++;
         }
         else
         {
-            playerController.PlayAnimation(ATTACK2);
+
+            if (weaponData.WeaponType == WeaponItemData.Weapons.Daggers)
+            {
+                playerController.PlayAnimation(DAGGER2);
+            }
+            else
+            {
+                playerController.PlayAnimation(ATTACK2);
+            }
             attackCount = 0;
         }
        

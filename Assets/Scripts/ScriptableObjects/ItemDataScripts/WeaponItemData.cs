@@ -22,7 +22,7 @@ public class WeaponItemData : InventoryItemData
     [Range(0f, 1f)]
     public float critRate = 0f;
     public float critDamageMultiplier = 1f;
-    public enum Weapons { Sword, Axe, Polearm, Staff };
+    public enum Weapons { Sword, Axe, Polearm, Staff, Daggers };
    
 
     [Header("Audio")]

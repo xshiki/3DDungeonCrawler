@@ -2434,6 +2434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c852f0866a7ab4aa763f854d44f2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &235034176 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8598663297753903065, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+  m_PrefabInstance: {fileID: 1567074182853205988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &237479562 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6323174067141393586, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
@@ -18896,6 +18901,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83c852f0866a7ab4aa763f854d44f2a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1818136139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1818136140}
+  m_Layer: 6
+  m_Name: WeaponSocket.L
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1818136140
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1818136139}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.26839712, y: -0.6060667, z: -0.09723485, w: -0.7424228}
+  m_LocalPosition: {x: -0.155, y: 0.005, z: 0.052}
+  m_LocalScale: {x: 0.98344016, y: 0.98343027, z: 0.9834307}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 235034176}
+  m_LocalEulerAnglesHint: {x: 16.3, y: -277.26, z: 29.3}
 --- !u!1 &1818462523
 GameObject:
   m_ObjectHideFlags: 0
@@ -23278,6 +23314,10 @@ PrefabInstance:
       propertyPath: m_Data.m_SourceObjects.m_Item0.transform
       value: 
       objectReference: {fileID: 387485879}
+    - target: {fileID: 7322498768749921228, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 8345733974221935637, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7667705
@@ -23320,7 +23360,10 @@ PrefabInstance:
       objectReference: {fileID: 1155934573}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8598663297753903065, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1818136140}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1709031651568495495, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       insertIndex: -1
@@ -24797,6 +24840,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 4379493646615741042}
+    - target: {fileID: 9186089795869149877, guid: 6e9e4547e8329ab408b0088a5aa9127f, type: 3}
+      propertyPath: weaponSocketLeft
+      value: 
+      objectReference: {fileID: 1818136140}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

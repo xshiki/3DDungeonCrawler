@@ -8,6 +8,7 @@ public class UI_CharacterEquipment : MonoBehaviour
 {
     [Header("InventorySlot of Equipment")]
     public InventorySlot weaponSlot;
+    public InventorySlot weaponSlotLeft;
     public InventorySlot helmetSlot;
     public InventorySlot chestSlot;
     public InventorySlot pantsSlot;
@@ -18,6 +19,7 @@ public class UI_CharacterEquipment : MonoBehaviour
 
     [Header("Sockets for Equipment")] //Places equipment on the correct position
     public Transform weaponSocket;
+    public Transform weaponSocketLeft;
     public Transform helmetSocket;
     public Transform chestSocket;
     public Transform pantsSocket;
@@ -154,6 +156,12 @@ public class UI_CharacterEquipment : MonoBehaviour
           
         }
 
+        foreach (Transform child in weaponSocketLeft)
+        {
+            Destroy(child.gameObject);
+
+        }
+
 
         playerController.UnequipWeapon();
         Invoke("EquipWeapon", 1f);
@@ -162,10 +170,19 @@ public class UI_CharacterEquipment : MonoBehaviour
 
     void EquipWeapon()
     {
-        InventoryItemData weaponItem = playerEquipment.GetWeaponItem();
+        WeaponItemData weaponItem = playerEquipment.GetWeaponItem() as WeaponItemData;
         if (weaponItem != null)
         {
             GameObject weaponObject = Instantiate(weaponItem.ItemPrefab, weaponSocket);
+            
+            if(weaponItem.WeaponType == WeaponItemData.Weapons.Daggers)
+            {
+                GameObject weaponObjectOffHand = Instantiate(weaponItem.ItemPrefab, weaponSocketLeft);
+                ItemPickUp itemPickUpOffHand = weaponObjectOffHand.GetComponent<ItemPickUp>();
+                itemPickUpOffHand.enabled = false;
+                weaponObjectOffHand.layer = 6;
+            }
+
           
             ItemPickUp itemPickUp = weaponObject.GetComponent<ItemPickUp>();
             itemPickUp.enabled = false;
