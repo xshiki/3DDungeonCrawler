@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f83783f2e5c6542a4a2061eda77efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 25
+  maxHealth: 80
   currentHealth: 10
   attackDamage: 12
   experiencePoints: 75
