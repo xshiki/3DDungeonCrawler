@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: -1
   DisplayName: Diamond Pants
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 8905087998015588196, guid: c7fdf5dcb810150459026fa178725876, type: 3}
   ItemType: 3
-  dropChance: 5
+  dropChance: 8
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   stamina: 2
   strength: 7
   intelligence: 9

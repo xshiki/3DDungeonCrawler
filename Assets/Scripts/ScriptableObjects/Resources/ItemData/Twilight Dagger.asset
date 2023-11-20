@@ -18,7 +18,7 @@ MonoBehaviour:
   DisplayName: Twilight Dagger
   Description: 
   rarity: 0
-  ItemPrefab: {fileID: 8266783099974799319, guid: 221dffa9671b72f468aef6ce2f5030ea, type: 3}
+  ItemPrefab: {fileID: 4874852187646870239, guid: 221dffa9671b72f468aef6ce2f5030ea, type: 3}
   ItemType: 5
   dropChance: 10
   consumable: 0

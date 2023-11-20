@@ -18,7 +18,7 @@ MonoBehaviour:
   DisplayName: Iron Dagger
   Description: 
   rarity: 0
-  ItemPrefab: {fileID: 8266783099974799319, guid: 37fd779eff2a4f648b6b8ed612c3b45b, type: 3}
+  ItemPrefab: {fileID: 7781532486064406120, guid: 37fd779eff2a4f648b6b8ed612c3b45b, type: 3}
   ItemType: 5
   dropChance: 20
   consumable: 0

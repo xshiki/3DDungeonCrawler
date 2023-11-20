@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: 17
   DisplayName: Golden Helmet
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 5872863617982740138, guid: 32fc628d29a424d4e9b30075f47ca404, type: 3}
   ItemType: 1
-  dropChance: 10
+  dropChance: 12
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   stamina: 2
   strength: 0
   intelligence: 2

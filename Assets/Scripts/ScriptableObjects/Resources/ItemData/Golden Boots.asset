@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: 7
   DisplayName: Golden Boots
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 5590084560501739677, guid: 267a8475db1bdb945b30c61cd3a7fa16, type: 3}
   ItemType: 4
-  dropChance: 10
+  dropChance: 12
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   stamina: 2
   strength: 3
   intelligence: 3

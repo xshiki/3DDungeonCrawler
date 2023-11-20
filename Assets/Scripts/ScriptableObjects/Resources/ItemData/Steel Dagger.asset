@@ -15,10 +15,10 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 1c9368f90a39ee640b3f17765e5598f7, type: 3}
   MaxStackSize: 0
   ID: 30
-  DisplayName: Iron Dagger
+  DisplayName: Steel Dagger
   Description: 
   rarity: 0
-  ItemPrefab: {fileID: 8266783099974799319, guid: c45df64768b4bfc4cbda96be4d0b4776, type: 3}
+  ItemPrefab: {fileID: 1750422021883989130, guid: c45df64768b4bfc4cbda96be4d0b4776, type: 3}
   ItemType: 5
   dropChance: 10
   consumable: 0

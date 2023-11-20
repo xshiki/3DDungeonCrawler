@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: 18
   DisplayName: Golden Pants
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 4400299888208876346, guid: 0e102d2b9fea80941a302ece44b5e697, type: 3}
   ItemType: 3
-  dropChance: 10
+  dropChance: 12
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   stamina: 2
   strength: 1
   intelligence: 2

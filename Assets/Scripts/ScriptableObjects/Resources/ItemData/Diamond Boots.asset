@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: 5
   DisplayName: Diamond Boots
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 6068816882967082511, guid: a3dce229cfe70d345897cfc67c9544d5, type: 3}
   ItemType: 4
-  dropChance: 5
+  dropChance: 8
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   stamina: 7
   strength: 6
   intelligence: 0

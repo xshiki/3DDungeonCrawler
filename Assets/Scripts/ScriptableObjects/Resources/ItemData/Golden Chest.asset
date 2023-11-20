@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: 15
   DisplayName: Golden Chest
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 6774590013152974665, guid: f9509eb3d7a6d274fadc356cbf3783e8, type: 3}
   ItemType: 2
-  dropChance: 10
+  dropChance: 12
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   stamina: 3
   strength: 1
   intelligence: 3

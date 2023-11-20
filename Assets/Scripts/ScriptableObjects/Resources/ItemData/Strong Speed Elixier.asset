@@ -20,9 +20,10 @@ MonoBehaviour:
   rarity: 0
   ItemPrefab: {fileID: 5163408437119072572, guid: 740609cda30da234080e702f16605edf, type: 3}
   ItemType: 0
-  dropChance: 1
+  dropChance: 5
   consumable: 1
   isAbility: 0
+  goldValue: 1
   _healthToReplenish: 0
   _manaToReplenish: 0
   supportEffect: {fileID: 11400000, guid: 871b15afe13d8724f997989003a83b7c, type: 2}

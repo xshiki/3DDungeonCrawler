@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: -1
   DisplayName: Diamond Helmet
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 8510446453913892171, guid: e97c2ab47df08f74294a1541ab77d6d5, type: 3}
   ItemType: 1
-  dropChance: 5
+  dropChance: 8
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   stamina: 2
   strength: 8
   intelligence: 7

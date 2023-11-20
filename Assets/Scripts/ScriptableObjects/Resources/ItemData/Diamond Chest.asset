@@ -17,10 +17,13 @@ MonoBehaviour:
   ID: -1
   DisplayName: Diamond Chest
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 7934339469993335590, guid: 1aed51094db5b2a45b2fa7f6aee97e3d, type: 3}
   ItemType: 2
-  dropChance: 5
+  dropChance: 8
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   stamina: 9
   strength: 3
   intelligence: 0
