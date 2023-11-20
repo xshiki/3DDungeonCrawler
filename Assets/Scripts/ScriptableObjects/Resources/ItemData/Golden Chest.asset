@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22efe6289b0a3f8469efe0d50714b4b0, type: 3}
   m_Name: Golden Chest
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 3df5c8ae162265d42b96f888c5c63dde, type: 3}
+  Icon: {fileID: 21300000, guid: 50510715738b1394296fa7f68c05f803, type: 3}
   MaxStackSize: 0
   ID: 15
   DisplayName: Golden Chest

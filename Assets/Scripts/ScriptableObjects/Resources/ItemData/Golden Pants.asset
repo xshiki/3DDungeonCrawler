@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22efe6289b0a3f8469efe0d50714b4b0, type: 3}
   m_Name: Golden Pants
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: d2f6b0a1e2b89bc41a4dce05c1f042d8, type: 3}
+  Icon: {fileID: 21300000, guid: d917685f8b9e81c4bb12e9106df44ebb, type: 3}
   MaxStackSize: 0
   ID: 18
   DisplayName: Golden Pants

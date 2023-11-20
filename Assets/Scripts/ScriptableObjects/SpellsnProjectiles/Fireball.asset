@@ -12,10 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b422678c33d42ec46acc7c77345e639b, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
+  Icon: {fileID: 0}
+  MaxStackSize: 0
+  ID: -1
+  DisplayName: 
+  Description: 
+  rarity: 0
+  ItemPrefab: {fileID: 0}
+  ItemType: 0
+  dropChance: 0
+  consumable: 0
+  isAbility: 0
+  goldValue: 1
   element: 0
-  ManaCost: 10
+  ManaCost: 12
   LifeTime: 2
   Speed: 15
-  DamageAmount: 20
-  timeBetweenCast: 0.7
+  DamageAmount: 35
+  timeBetweenCast: 0.5
   SpellRadius: 0.5

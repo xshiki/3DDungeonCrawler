@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22efe6289b0a3f8469efe0d50714b4b0, type: 3}
   m_Name: Golden Helmet
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 9750605eda4502f459aee3d7d631797b, type: 3}
+  Icon: {fileID: 21300000, guid: 0e12400e3765bef4c8ee5a77c92aaa9e, type: 3}
   MaxStackSize: 0
   ID: 17
   DisplayName: Golden Helmet

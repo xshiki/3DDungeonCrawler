@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    void SetAnimations()
+    public void SetAnimations()
     {
 
         if (currentWeapon != null)
@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour
             {
                 animator.SetInteger("WeaponType", 1);
             }
-            else if (currentWeapon.weaponData.WeaponType == WeaponItemData.Weapons.Sword)
+            else if (currentWeapon.weaponData.WeaponType == WeaponItemData.Weapons.Daggers)
             {
                 animator.SetInteger("WeaponType", 3);
                 Debug.Log("Dagger equipped");
@@ -139,10 +139,11 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            Debug.Log("is here");
             animator.SetInteger("WeaponType", 0);
 
         }
-
+     
 
     }
 
@@ -168,7 +169,6 @@ public class PlayerController : MonoBehaviour
 
     public void SetCurrentWeapon(WeaponController equippedWeapon)
     {
-
         this.currentWeapon = equippedWeapon;
     }
 
@@ -181,10 +181,13 @@ public class PlayerController : MonoBehaviour
     public void UnequipWeapon()
     {
         animator.SetTrigger("unequipWeapon");
+        SetAnimations();
     }
 
     public void PlayAnimation(string newState)
-    { animator.Play(newState); }
+    {
+        animator.Play(newState); 
+    }
 
     private void OnAttackPerformed(InputAction.CallbackContext context)
     {

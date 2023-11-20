@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cc157ff4e9d814ba5efce6b01c23b9, type: 3}
   m_Name: Earth Staff
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 5947092f8bf58a24f8eb3a093675d161, type: 3}
+  Icon: {fileID: 21300000, guid: 2b91d51ecc192644ab88f0b0492284bf, type: 3}
   MaxStackSize: 0
   ID: -1
   DisplayName: Earth Staff
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 3147951742137512912, guid: 8ceea57de990d134ba551304e3d17eb7, type: 3}
   ItemType: 5
   dropChance: 10
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   WeaponType: 3
   DamageAmount: 0
   WeaponRange: 1

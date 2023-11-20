@@ -13,7 +13,7 @@ public class MousePosition3D : MonoBehaviour
         Ray ray = new Ray(mainCamera.transform.position, mainCamera.transform.forward);
         if(Physics.Raycast(ray, out RaycastHit hitInfo, Mathf.Infinity,layerMask))
         {
-            print(hitInfo.collider.gameObject.layer);
+           
             if (layerMask != 6)
             {
                

@@ -67,7 +67,7 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
         if(weaponItem is not MagicWeaponItemData)
         {
-            description += weaponItem.DamageAmount.ToString() + " Damage\n";
+            description += weaponItem.DamageAmount.ToString() + " Base Damage\n";
 
 
 
@@ -84,7 +84,13 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         if(weaponItem.lifeStealChance > 0f)
         {
             //description += (Mathf.RoundToInt(weaponItem.lifeStealChance * 100)).ToString()+"% chance to steal life from enemy and give "+ (Mathf.RoundToInt(weaponItem.lifeStealPercentage * 100)).ToString() + "% of the damage dealt as HP to the wielder"+ "\n";
-            description += "Lifesteal: Give "+ (Mathf.RoundToInt(weaponItem.lifeStealPercentage * 100)).ToString() + "% of the damage dealt as healthpoints to the wielder"+ "\n";
+            description += "Lifesteal: Give "+ (Mathf.RoundToInt(weaponItem.lifeStealPercentage * 100)).ToString() + "% of the damage dealt as healthpoints to the wielder."+ "\n";
+        }
+
+        description += "\n";
+        if(weaponItem.critRate > 0f && weaponItem.critDamageMultiplier > 1f)
+        {
+            description += "Critikal strike: "+ Mathf.RoundToInt(weaponItem.critRate * 100) + "% chance to deal " + weaponItem.critDamageMultiplier + "x more damage. " + "\n";
         }
 
         return description;

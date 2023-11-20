@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cc157ff4e9d814ba5efce6b01c23b9, type: 3}
   m_Name: Ice Staff
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 5947092f8bf58a24f8eb3a093675d161, type: 3}
+  Icon: {fileID: 21300000, guid: 67df0672ce9af6744a1f8bfebbd321f4, type: 3}
   MaxStackSize: 0
   ID: -1
   DisplayName: Ice Staff
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 4720758667093851247, guid: c55e738e8cfcc294f9d42feee7b9e988, type: 3}
   ItemType: 5
   dropChance: 10
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   WeaponType: 3
   DamageAmount: 25
   WeaponRange: 1

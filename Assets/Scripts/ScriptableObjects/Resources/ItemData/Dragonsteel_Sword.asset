@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cd058afa6ff7f4eb8c1acab7b41f6d, type: 3}
   m_Name: Dragonsteel_Sword
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 285a2a385312d8d4096e02523eb7e8e0, type: 3}
+  Icon: {fileID: 21300000, guid: 0643d5c29c4585942b584b3d577d869b, type: 3}
   MaxStackSize: 1
   ID: 4
   DisplayName: Dragonsteel Sword

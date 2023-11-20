@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22efe6289b0a3f8469efe0d50714b4b0, type: 3}
   m_Name: Golden Boots
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 36277f708c703144a9e4c38c97a361c1, type: 3}
+  Icon: {fileID: 21300000, guid: 6ddea9ba56169684e8f737625c2eeaee, type: 3}
   MaxStackSize: 0
   ID: 7
   DisplayName: Golden Boots

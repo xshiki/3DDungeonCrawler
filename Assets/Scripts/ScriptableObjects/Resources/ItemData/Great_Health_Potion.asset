@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ebe390d6f0a45f44934eaf2efdc0112, type: 3}
   m_Name: Great_Health_Potion
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 3932333f6eaf8c749bf8f728cd16b987, type: 3}
+  Icon: {fileID: 21300000, guid: 8048db39f202eff49ae6a90110d45d6f, type: 3}
   MaxStackSize: 5
   ID: 1
   DisplayName: Great Health Potion

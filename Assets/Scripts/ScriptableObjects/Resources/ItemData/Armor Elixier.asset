@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ebe390d6f0a45f44934eaf2efdc0112, type: 3}
   m_Name: Armor Elixier
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 47fef746f49561d45b69d100c10d065d, type: 3}
+  Icon: {fileID: 21300000, guid: 8c90c6998b031564284aa270baf282d0, type: 3}
   MaxStackSize: 10
   ID: -1
   DisplayName: Elixir of Armor

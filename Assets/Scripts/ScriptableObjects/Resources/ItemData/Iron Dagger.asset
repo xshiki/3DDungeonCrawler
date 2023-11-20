@@ -25,7 +25,7 @@ MonoBehaviour:
   isAbility: 0
   goldValue: 1
   WeaponType: 4
-  DamageAmount: 10
+  DamageAmount: 15
   WeaponRange: 5
   timeBetweenSwing: 1.3
   lifeStealChance: 0

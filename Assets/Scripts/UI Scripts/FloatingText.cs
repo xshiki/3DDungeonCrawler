@@ -7,7 +7,7 @@ public class FloatingText : MonoBehaviour
 
     public Camera mainCamera;
     public float DestroyTime = 1f;
-    public Vector3 Offset = new Vector3(0, 1, 0);
+    public Vector3 Offset = new Vector3(0, 0.3f, 0);
     public Vector3 RandomOffset = new Vector3(1f, 2f, 0);
 
 

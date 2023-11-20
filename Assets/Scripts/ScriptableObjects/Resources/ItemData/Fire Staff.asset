@@ -12,15 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51cc157ff4e9d814ba5efce6b01c23b9, type: 3}
   m_Name: Fire Staff
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: 5947092f8bf58a24f8eb3a093675d161, type: 3}
+  Icon: {fileID: 21300000, guid: ab89977e717c80b44b791b6fdd95f165, type: 3}
   MaxStackSize: 0
   ID: 6
   DisplayName: Fire Staff
   Description: 
+  rarity: 0
   ItemPrefab: {fileID: 2543110259538375738, guid: 3249a2342f85b8545904df164980c80e, type: 3}
   ItemType: 5
   dropChance: 20
   consumable: 0
+  isAbility: 0
+  goldValue: 1
   WeaponType: 3
   DamageAmount: 0
   WeaponRange: 1

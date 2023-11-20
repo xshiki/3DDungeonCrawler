@@ -344,7 +344,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   walkSpeed: 2
   runSpeed: 4
-  pushForce: 20
+  pushForce: 10
   attackDamage: 0
   wayPointRange: 10
   viewRadius: 20
