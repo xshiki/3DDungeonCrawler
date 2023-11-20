@@ -26,14 +26,10 @@ public class ExperienceManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI experienceText;
     [SerializeField] Image experienceFill;
 
-    [Header("Audio")]
-    public AudioSource audioSource;
-    public AudioClip levelUpSound;
     private void Awake()
     {
 
         totalExperience = (int) experienceCurve.Evaluate(currentLevel);
-        audioSource = GetComponent<AudioSource>();
         UpdateLevel();
     }
     void Start()
@@ -59,7 +55,7 @@ public class ExperienceManager : MonoBehaviour
             _playerRessource.speed.SetValue((int) spdCurve.Evaluate(currentLevel));
 
             //Start level up sequence, VFX or sound
-            audioSource.PlayOneShot(levelUpSound);
+            GameObject.Find("AudioManager").GetComponent<AudioManager>().Play("Level Up");
 
         }
     }

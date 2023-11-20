@@ -19,6 +19,7 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     public int maxStacks = 1;
     [HideInInspector] public Transform parentAfterDrag;
     private Transform playerTransform;
+    private Camera mainCamera;
     public float dropOffset = 3f;
 
     public bool isSplit = false;
@@ -27,6 +28,7 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
     private void Awake()
     {
         playerTransform = GameObject.Find("Orientation").GetComponent<Transform>();
+        mainCamera = Camera.main;
     }
 
     public void InitialiseItem(InventoryItemData newItem)
@@ -101,10 +103,22 @@ public class InventoryItem : MonoBehaviour,IBeginDragHandler , IDragHandler, IEn
             Debug.Log("destroying dragged item");
             for(int i = 0; i < count; i++)
             {
-                
-                GameObject prefabInstance = Instantiate(item.ItemPrefab, playerTransform.position + playerTransform.forward * dropOffset, Quaternion.identity);
-                prefabInstance.layer = 7;
-                prefabInstance.AddComponent<Rigidbody>();
+                Ray ray = new Ray(mainCamera.transform.position, mainCamera.transform.forward);
+                if (Physics.Raycast(ray, out RaycastHit hitInfo, 5f))
+                {
+     
+                    GameObject prefabInstance = Instantiate(item.ItemPrefab, hitInfo.point, Quaternion.identity);
+                    prefabInstance.layer = 7;
+                    prefabInstance.AddComponent<Rigidbody>();
+                    Debug.Log("dropped with raycast");
+                }
+                else
+                {
+                    GameObject prefabInstance = Instantiate(item.ItemPrefab, playerTransform.position + playerTransform.forward * dropOffset, Quaternion.identity);
+                    prefabInstance.layer = 7;
+                    prefabInstance.AddComponent<Rigidbody>();
+                }
+              
             }
             
             Destroy(gameObject); // Destroy the dragged item if dropped outside
