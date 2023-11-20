@@ -17,6 +17,7 @@ public class FirstPersonController : MonoBehaviour
     public Animator animator;
 
 
+
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -228,8 +229,10 @@ public class FirstPersonController : MonoBehaviour
             // Clamp pitch between lookAngle
             pitch = Mathf.Clamp(pitch, -maxLookAngle, maxLookAngle);
 
+
             transform.localEulerAngles = new Vector3(0, yaw, 0);
             playerCamera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
+           
         }
 
         #region Camera Zoom
@@ -277,6 +280,10 @@ public class FirstPersonController : MonoBehaviour
 
         #endregion
         #endregion
+
+
+      
+
 
         #region Sprint
 
@@ -469,6 +476,10 @@ public class FirstPersonController : MonoBehaviour
             FindAnyObjectByType<AudioManager>().DisableAudioSource("Sprint");
         }
         #endregion
+    }
+    private void LateUpdate()
+    {
+      
     }
 
     // Sets isGrounded based on a raycast sent straigth down from the player object

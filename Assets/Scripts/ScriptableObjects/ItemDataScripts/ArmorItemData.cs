@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+
 [CreateAssetMenu(menuName = "Create Items/Armor Item")]
 public class ArmorItemData : InventoryItemData
 {

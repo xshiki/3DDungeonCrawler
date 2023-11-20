@@ -27,7 +27,7 @@ public class InventoryItemData : ScriptableObject
     [Range(0,100)]
     public int dropChance;
     public bool consumable = false;
-    public bool isAbility =false;
+    public bool isAbility = false;
 
     public float goldValue = 1;
 
