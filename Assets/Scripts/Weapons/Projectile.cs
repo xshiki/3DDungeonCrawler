@@ -49,6 +49,11 @@ private void OnTriggerEnter(Collider other)
         other.GetComponent<PlayerRessource>().TakeDamage(damage);
         Destroy(this.gameObject);
     }
+        if (other.gameObject.layer == 11 || other.gameObject.layer == 12 || other.gameObject.layer == 13)
+        {
+            Debug.Log("dadas");
+            Destroy(this.gameObject);
+        }
 
 
 }
