@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
 
         if (currentWeapon != null)
         {
-            if(currentWeapon.weaponData.WeaponType == WeaponItemData.Weapons.Sword)
+            if(currentWeapon.weaponData.WeaponType == WeaponItemData.Weapons.Sword || currentWeapon.weaponData.WeaponType == WeaponItemData.Weapons.Axe)
             {
                 animator.SetInteger("WeaponType", 1);
             }

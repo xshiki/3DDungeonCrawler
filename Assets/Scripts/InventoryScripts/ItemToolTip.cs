@@ -90,7 +90,7 @@ public class ItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         description += "\n";
         if(weaponItem.critRate > 0f && weaponItem.critDamageMultiplier > 1f)
         {
-            description += "Critical strike: "+ Mathf.RoundToInt(weaponItem.critRate * 100) + "% chance to deal " + weaponItem.critDamageMultiplier + "x more damage. " + "\n";
+            description += "Critical strike: "+ Mathf.RoundToInt(weaponItem.critRate * 100) + "% chance to multiply damage by " + weaponItem.critDamageMultiplier + " times. " + "\n";
         }
 
         return description;

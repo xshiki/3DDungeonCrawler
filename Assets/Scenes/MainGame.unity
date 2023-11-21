@@ -23358,9 +23358,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1648295681}
     - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: jumpPower
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: sprintBar
       value: 
       objectReference: {fileID: 3936407535494444804}
+    - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: enableJump
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: sprintBarBG
       value: 
@@ -23370,9 +23378,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3936407535542682962}
     - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: enableHeadBob
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: crosshairObject
       value: 
       objectReference: {fileID: 3936407536210204155}
+    - target: {fileID: 58756667573323605, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: maxVelocityChange
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 2482218156788419252, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_Data.m_SourceObjects.m_Item0.transform
       value: 
@@ -23616,6 +23632,10 @@ PrefabInstance:
     - target: {fileID: 6323174067141393586, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0.556
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428285710432940700, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
+      propertyPath: speed.baseValue
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6837979674926909912, guid: 3e997dd1a1dbc2f43ad0e7317e4f3f7e, type: 3}
       propertyPath: playerInventory

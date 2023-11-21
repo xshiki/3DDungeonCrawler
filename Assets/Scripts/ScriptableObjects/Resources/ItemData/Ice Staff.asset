@@ -20,7 +20,7 @@ MonoBehaviour:
   rarity: 0
   ItemPrefab: {fileID: 4720758667093851247, guid: c55e738e8cfcc294f9d42feee7b9e988, type: 3}
   ItemType: 5
-  dropChance: 10
+  dropChance: 6
   consumable: 0
   isAbility: 0
   goldValue: 1

@@ -24,7 +24,7 @@ MonoBehaviour:
   consumable: 0
   isAbility: 0
   goldValue: 1
-  WeaponType: 0
+  WeaponType: 1
   DamageAmount: 50
   WeaponRange: 5
   timeBetweenSwing: 2
