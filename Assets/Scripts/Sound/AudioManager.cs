@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public Sound[] sounds;
     public Sound[] loopSounds;
     public Sound[] bgm;
+    public Sound[] footSteps;
     public AudioMixerGroup BGMMixer, SFXMixer;
     private void Awake()
     {
@@ -39,6 +40,14 @@ public class AudioManager : MonoBehaviour
         {
             s.audiosource = gameObject.AddComponent<AudioSource>();
             s.audiosource.outputAudioMixerGroup = BGMMixer;
+            s.audiosource.clip = s.audioClip;
+            s.audiosource.loop = s.loop;
+        }
+
+        foreach (Sound s in footSteps)
+        {
+            s.audiosource = gameObject.AddComponent<AudioSource>();
+            s.audiosource.outputAudioMixerGroup = SFXMixer;
             s.audiosource.clip = s.audioClip;
             s.audiosource.loop = s.loop;
         }
@@ -129,9 +138,27 @@ public class AudioManager : MonoBehaviour
         sound.audiosource.enabled = false;
     }
 
-   
+    public void PlayFootSteps()
+    {
+        if (footSteps.Length == 0)
+        {
+            Debug.LogWarning("No footstep sounds found!");
+            return;
+        }
+        foreach (Sound s in footSteps)
+        {
+           if(s.audiosource.isPlaying)
+            {
+                return;
+            }
+        }
+        Debug.Log(footSteps.Length);
+        Sound sound = footSteps[Random.Range(0, footSteps.Length)];
+        sound.audiosource.pitch = Random.Range(0.9f, 1.05f);
+        sound.audiosource.Play();
+    }
     public void AnimationEvent_FootStep()
     {
-        Play("Footsteps");
+        //Play("Footsteps");
     }
 }

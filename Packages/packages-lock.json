@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.gemserk.selectionhistory": {
-      "version": "https://github.com/acoppes/unity-history-window.git#1.1.13",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "e57c0b1d6da317a4eacaa47815478cc773694b91"
-    },
     "com.singularitygroup.hotreload": {
       "version": "git+https://gitlab.hotreload.net/root/hot-reload-releases.git#1.12.5",
       "depth": 0,

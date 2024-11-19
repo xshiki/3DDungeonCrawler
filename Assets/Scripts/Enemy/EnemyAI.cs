@@ -126,19 +126,6 @@ public class EnemyAI : MonoBehaviour
     public void CreateNewWayPoint()
     {
 
-        /*
-        float randomZ = Random.Range(-wayPointRange, wayPointRange);
-        float randomX = Random.Range(-wayPointRange, wayPointRange);
-
-        Vector3 walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-
-
-        while (Physics.Raycast(walkPoint, -transform.up, 2f, 11))
-        {
-            walkPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
-        }
-        */
-
         NavMeshTriangulation triangulation = NavMesh.CalculateTriangulation();
        
         NavMeshHit Hit;
@@ -150,11 +137,7 @@ public class EnemyAI : MonoBehaviour
                 wayPoints.Add(Hit.position);
 
             }
-        }
-     
-       
-
-       
+        }  
     }
 
     private IEnumerator CheckForPlayer()

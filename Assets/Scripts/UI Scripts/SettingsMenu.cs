@@ -12,6 +12,10 @@ public class SettingsMenu : MonoBehaviour
 
     public TMP_Dropdown resolutionDropdown;
 
+    public Slider volumeSlider;
+    public Slider bgmSlider;
+    public Slider sfxSlider;
+
     private List<string> commonResolutions = new List<string>
     {
         "1920x1080",
@@ -50,6 +54,7 @@ public class SettingsMenu : MonoBehaviour
         }
        
         ResolutionSetup();
+        InitializeVolumeSliders();
         
 
     }
@@ -58,22 +63,40 @@ public class SettingsMenu : MonoBehaviour
     {
         QualitySettings.SetQualityLevel(qualityIndex);
     }
-    
+
+    private void InitializeVolumeSliders()
+    {
+        float currentVolume;
+        float currentBGM;
+        float currentSFX;
+
+        audioMixer.GetFloat("volume", out currentVolume);
+        audioMixer.GetFloat("BGM", out currentBGM);
+        audioMixer.GetFloat("SFX", out currentSFX);
+
+        // Convert from decibels back to slider value (0-1 range)
+        volumeSlider.value = (currentVolume + 80f) / 80f;
+        bgmSlider.value = (currentBGM + 80f) / 80f;
+        sfxSlider.value = (currentSFX + 80f) / 80f;
+    }
+
+
     public void SetVolume(float volume)
     {
-        audioMixer.SetFloat("volume", Mathf.Log10(volume) * 20);
+        float dB = Mathf.Lerp(-80f, 0f, volume);
+        audioMixer.SetFloat("volume", dB);
     }
 
     public void SetBGMVolume(float volume)
     {
-
-        audioMixer.SetFloat("BGM", Mathf.Log10(volume) * 20);
+        float dB = Mathf.Lerp(-80f, 0f, volume);
+        audioMixer.SetFloat("BGM", dB);
     }
-
 
     public void SetSFXVolume(float volume)
     {
-        audioMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
+        float dB = Mathf.Lerp(-80f, 0f, volume);
+        audioMixer.SetFloat("SFX", dB);
     }
 
 

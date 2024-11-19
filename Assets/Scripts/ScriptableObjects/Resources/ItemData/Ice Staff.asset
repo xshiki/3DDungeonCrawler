@@ -32,8 +32,8 @@ MonoBehaviour:
   lifeStealPercentage: 0.05
   critRate: 0.05
   critDamageMultiplier: 1
-  weaponSwingSound: {fileID: 8300000, guid: 714ba2b8ff44b424fa9fc2b756c946a2, type: 3}
-  weaponHitSound: {fileID: 8300000, guid: 714ba2b8ff44b424fa9fc2b756c946a2, type: 3}
+  weaponSwingSound: {fileID: 8300000, guid: d669c1ccc5f098440b3262e1c55506e2, type: 3}
+  weaponHitSound: {fileID: 8300000, guid: e0a4dce0a8ac97542a12b9aeec2bb6dd, type: 3}
   hitEffect: {fileID: 0}
   spellToCast: {fileID: 3970265404137374070, guid: 0b1d3b16414ad85499dafebf14a2e0d8, type: 3}
   spellSO: {fileID: 11400000, guid: fb0e3971ec760be4ebcf6ddbd8bc40ed, type: 2}

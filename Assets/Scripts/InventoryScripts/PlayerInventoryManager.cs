@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PlayerInventoryManager : InventoryManager
@@ -20,6 +21,7 @@ public class PlayerInventoryManager : InventoryManager
         if(weaponSlot == null)
         {
             weaponSlot = GameObject.Find("Weapon Slot").GetComponent<InventorySlot>();
+           
         }
 
     }
