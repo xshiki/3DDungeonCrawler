@@ -20,8 +20,8 @@ Gain experience to increase your stat points.
 
 ## Technologies
 - C# for scripting
-- Unity3D
-- Blender for modelling and animation
+- Unity3D (2022.3.6f1)
+- Blender(3.5) for modelling and animation
 
 
 ## Credits
