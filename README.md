@@ -1,6 +1,8 @@
 # 3D Dungeon Crawler
-
 A procedurally generated dungeon crawler game developed in Unity with modular dungeon generation and a item system.
+
+## About the Project
+This project was created as part of a **Praktikum (internship)** to explore and apply modelling techniques using Blender and game development techniques using Unity.
 
 ## Features
 -  **Dungeon Generation**: Modular system ensuring unique layouts every playthrough.
