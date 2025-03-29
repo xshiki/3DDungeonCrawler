@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['pants_0',['pants',['../class_u_i___character_equipment.html#afd4356d96b4a30be6e297b86a02af5ec',1,'UI_CharacterEquipment']]],
-  ['pantsslot_1',['pantsSlot',['../class_u_i___character_equipment.html#ac8e64ac69aff9e6ad502c01fe79232fc',1,'UI_CharacterEquipment']]],
-  ['pantssocket_2',['pantsSocket',['../class_u_i___character_equipment.html#ac180d60fd1dc75a5c7ffca7602c4590f',1,'UI_CharacterEquipment']]],
+  ['pants_0',['pants',['../class_player_equipment_manager.html#ac74db4f215b61054cdffd899a557ef9c',1,'PlayerEquipmentManager']]],
+  ['pantsslot_1',['pantsSlot',['../class_player_equipment_manager.html#a3bdb75416c1044855e3a187280bc85a5',1,'PlayerEquipmentManager']]],
+  ['pantssocket_2',['pantsSocket',['../class_player_equipment_manager.html#a333bb9b81fe44d35164be4a4744e5d37',1,'PlayerEquipmentManager']]],
   ['parentafterdrag_3',['parentAfterDrag',['../class_inventory_item.html#a4718b5a0a41e03fa7fa4578db245ff98',1,'InventoryItem']]],
   ['pausemenuui_4',['pauseMenuUI',['../class_pause_game.html#a3b3d6b652f2057b594dd887958c836d8',1,'PauseGame']]],
   ['pausescreen_5',['pauseScreen',['../class_player_controller.html#a2f4adb96eb8008c4a5999067ebf367b0',1,'PlayerController']]],
@@ -11,8 +11,8 @@ var searchData=
   ['player_8',['player',['../class_enemy_a_i.html#ab6101ccd3416a21525b27c88aa84c064',1,'EnemyAI']]],
   ['playercamera_9',['playerCamera',['../class_first_person_controller.html#a5f6024f82c0a87d8c6c64f8d7eca72ed',1,'FirstPersonController']]],
   ['playercanmove_10',['playerCanMove',['../class_first_person_controller.html#a5e64b67f3405cf0afb255ce573079cbf',1,'FirstPersonController']]],
-  ['playercontroller_11',['playerController',['../class_u_i___character_equipment.html#a8715c9c731cf579423585c94772b4137',1,'UI_CharacterEquipment.playerController'],['../class_weapon_controller.html#ad19263ed383e56a8405db7131ea16385',1,'WeaponController.playerController']]],
-  ['playerequipment_12',['playerEquipment',['../class_inventory_slot.html#a28f35647ec090b24a3fb587548aae793',1,'InventorySlot.playerEquipment'],['../class_player_controller.html#a927b3a3bf8ec523f0ac52eb16353c30e',1,'PlayerController.playerEquipment'],['../class_player_ressource.html#afd059d7988b281edab66949c6a9b7ba8',1,'PlayerRessource.playerEquipment'],['../class_u_i___character_equipment.html#ab201df32ce7bda2ce882e1571643e798',1,'UI_CharacterEquipment.playerEquipment'],['../class_weapon_controller.html#a6d4e7ff8ce564fb487da6249ed7794b6',1,'WeaponController.playerEquipment']]],
+  ['playercontroller_11',['playerController',['../class_player_equipment_manager.html#a2e41db24dc33c52a8d510778397769dd',1,'PlayerEquipmentManager.playerController'],['../class_weapon_controller.html#ad19263ed383e56a8405db7131ea16385',1,'WeaponController.playerController']]],
+  ['playerequipment_12',['playerEquipment',['../class_inventory_slot.html#a28f35647ec090b24a3fb587548aae793',1,'InventorySlot.playerEquipment'],['../class_player_controller.html#a927b3a3bf8ec523f0ac52eb16353c30e',1,'PlayerController.playerEquipment'],['../class_player_equipment_manager.html#a1bac91fb2f8e80dc0ff8d63e46cb7e1a',1,'PlayerEquipmentManager.playerEquipment'],['../class_player_ressource.html#afd059d7988b281edab66949c6a9b7ba8',1,'PlayerRessource.playerEquipment'],['../class_weapon_controller.html#a6d4e7ff8ce564fb487da6249ed7794b6',1,'WeaponController.playerEquipment']]],
   ['playerhealth_13',['playerHealth',['../class_player_respawn.html#ad2029b7892923466158cd6de4e938226',1,'PlayerRespawn']]],
   ['playerinattackrange_14',['playerInAttackRange',['../class_enemy_a_i.html#a4338b3228745944f9156447506231cf2',1,'EnemyAI']]],
   ['playerinsightrange_15',['playerInSightRange',['../class_enemy_a_i.html#aa2b5a9610442ddfa860b21e1255b88ce',1,'EnemyAI']]],

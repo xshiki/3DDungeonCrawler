@@ -28,7 +28,7 @@ var searchData=
   ['setnewnotification_25',['SetNewNotification',['../class_notification_manager.html#a989fb1b3c8531e30185a68f220de3d64',1,'NotificationManager.SetNewNotification(string message)'],['../class_notification_manager.html#af736068b12ea47e15eb1bab2a2f366b6',1,'NotificationManager.SetNewNotification(string message, Color color)']]],
   ['setnewtextoverlay_26',['SetNewTextOverlay',['../class_text_overlay_manager.html#aa3b2151df953b421c943f234e6e2f73c',1,'TextOverlayManager.SetNewTextOverlay(string message)'],['../class_text_overlay_manager.html#a4c48015aa0caf83a22e413c7b463dd18',1,'TextOverlayManager.SetNewTextOverlay(string message, Color color)']]],
   ['setpantsitem_27',['SetPantsItem',['../class_player_equipment.html#aad2d2039a7b4d6c1343d701ea267581e',1,'PlayerEquipment']]],
-  ['setplayerequipment_28',['SetPlayerEquipment',['../class_u_i___character_equipment.html#a09758669827baf2fdee9f8e599734e88',1,'UI_CharacterEquipment']]],
+  ['setplayerequipment_28',['SetPlayerEquipment',['../class_player_equipment_manager.html#afe69cb9294ac65169edc29ffd34fce2b',1,'PlayerEquipmentManager']]],
   ['setpool_29',['SetPool',['../class_enemy_manager.html#a77673892ef8ebe6403ddf33f5e569583',1,'EnemyManager']]],
   ['setquality_30',['SetQuality',['../class_settings_menu.html#a5753942ee3ea0847ae8caf099282542f',1,'SettingsMenu']]],
   ['setresolution_31',['SetResolution',['../class_settings_menu.html#ae1a101f20fa5dd16dc00b881c112ac14',1,'SettingsMenu']]],

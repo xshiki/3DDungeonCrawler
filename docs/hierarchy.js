@@ -81,6 +81,7 @@ var hierarchy =
       [ "PauseGame", "class_pause_game.html", null ],
       [ "PlayerController", "class_player_controller.html", null ],
       [ "PlayerEquipment", "class_player_equipment.html", null ],
+      [ "PlayerEquipmentManager", "class_player_equipment_manager.html", null ],
       [ "PlayerHealth", "class_player_health.html", null ],
       [ "PlayerInsideColliderChecker", "class_player_inside_collider_checker.html", null ],
       [ "PlayerMagicSystem", "class_player_magic_system.html", null ],
@@ -97,7 +98,6 @@ var hierarchy =
       [ "SettingsMenu", "class_settings_menu.html", null ],
       [ "Spell", "class_spell.html", null ],
       [ "TextOverlayManager", "class_text_overlay_manager.html", null ],
-      [ "UI_CharacterEquipment", "class_u_i___character_equipment.html", null ],
       [ "UniqueID", "class_unique_i_d.html", null ],
       [ "WeaponController", "class_weapon_controller.html", null ]
     ] ],

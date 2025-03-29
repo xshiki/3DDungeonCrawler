@@ -9,10 +9,10 @@ var searchData=
   ['weaponhitsound_6',['weaponHitSound',['../class_weapon_item_data.html#aa47049377e62e7a0ba40e97f6c95be8f',1,'WeaponItemData']]],
   ['weaponholderposition_7',['weaponHolderPosition',['../class_player_controller.html#a9cbaabe65d87ebeccfd80e118337af03',1,'PlayerController']]],
   ['weaponrange_8',['WeaponRange',['../class_weapon_item_data.html#a795fd915da0a34c27bfabe16935497cc',1,'WeaponItemData']]],
-  ['weaponslot_9',['weaponSlot',['../class_player_inventory_manager.html#a8eb2bb747a850660cbdc062f5ccfe546',1,'PlayerInventoryManager.weaponSlot'],['../class_u_i___character_equipment.html#ae9beacafd246bc69c61f81d23078e038',1,'UI_CharacterEquipment.weaponSlot']]],
-  ['weaponslotleft_10',['weaponSlotLeft',['../class_u_i___character_equipment.html#ad854efcc62b711375e0bc9fba4d458ac',1,'UI_CharacterEquipment']]],
-  ['weaponsocket_11',['weaponSocket',['../class_u_i___character_equipment.html#af9408827d97a8a10aba32dd48ad6e1f6',1,'UI_CharacterEquipment']]],
-  ['weaponsocketleft_12',['weaponSocketLeft',['../class_u_i___character_equipment.html#a5beb33385d2d25697ec7e5d35e51bbf3',1,'UI_CharacterEquipment']]],
+  ['weaponslot_9',['weaponSlot',['../class_player_inventory_manager.html#a8eb2bb747a850660cbdc062f5ccfe546',1,'PlayerInventoryManager.weaponSlot'],['../class_player_equipment_manager.html#a11c8078b7943c3c5804a6e1501c39548',1,'PlayerEquipmentManager.weaponSlot']]],
+  ['weaponslotleft_10',['weaponSlotLeft',['../class_player_equipment_manager.html#a8d53a4d6e663e97771fd067ccc8ff13a',1,'PlayerEquipmentManager']]],
+  ['weaponsocket_11',['weaponSocket',['../class_player_equipment_manager.html#a42e1e28a47d30481fa084338fa51e80d',1,'PlayerEquipmentManager']]],
+  ['weaponsocketleft_12',['weaponSocketLeft',['../class_player_equipment_manager.html#a3d57e57957aac1b0b6bcda9e7847eaad',1,'PlayerEquipmentManager']]],
   ['weaponswingsound_13',['weaponSwingSound',['../class_weapon_item_data.html#a43e6bb6f861dba632284fbbd2644d8f8',1,'WeaponItemData']]],
   ['weapontype_14',['WeaponType',['../class_weapon_item_data.html#afb6bdef0e41f8a7abec866031001c2ea',1,'WeaponItemData']]]
 ];

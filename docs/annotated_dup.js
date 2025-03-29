@@ -49,6 +49,7 @@ var annotated_dup =
     [ "PauseGame", "class_pause_game.html", "class_pause_game" ],
     [ "PlayerController", "class_player_controller.html", "class_player_controller" ],
     [ "PlayerEquipment", "class_player_equipment.html", "class_player_equipment" ],
+    [ "PlayerEquipmentManager", "class_player_equipment_manager.html", "class_player_equipment_manager" ],
     [ "PlayerHealth", "class_player_health.html", "class_player_health" ],
     [ "PlayerInsideColliderChecker", "class_player_inside_collider_checker.html", "class_player_inside_collider_checker" ],
     [ "PlayerInventoryManager", "class_player_inventory_manager.html", "class_player_inventory_manager" ],
@@ -75,7 +76,6 @@ var annotated_dup =
     [ "SupportSpell", "class_support_spell.html", "class_support_spell" ],
     [ "TextOverlayManager", "class_text_overlay_manager.html", "class_text_overlay_manager" ],
     [ "Tile", "class_tile.html", "class_tile" ],
-    [ "UI_CharacterEquipment", "class_u_i___character_equipment.html", "class_u_i___character_equipment" ],
     [ "UniqueID", "class_unique_i_d.html", "class_unique_i_d" ],
     [ "WeaponController", "class_weapon_controller.html", "class_weapon_controller" ],
     [ "WeaponItemData", "class_weapon_item_data.html", "class_weapon_item_data" ]

@@ -139,7 +139,6 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("is here");
             animator.SetInteger("WeaponType", 0);
 
         }

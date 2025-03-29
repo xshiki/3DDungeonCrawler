@@ -1,10 +1,10 @@
 var searchData=
 [
   ['cameracanmove_0',['cameraCanMove',['../class_first_person_controller.html#a5a65981121adb3a87f0b745497c25102',1,'FirstPersonController']]],
-  ['chest_1',['chest',['../class_u_i___character_equipment.html#a82c3565c749eba9e2282bbfe7542715a',1,'UI_CharacterEquipment']]],
+  ['chest_1',['chest',['../class_player_equipment_manager.html#a04f6972b0b5f2638edf4e4bfdd138172',1,'PlayerEquipmentManager']]],
   ['chestprefabs_2',['chestPrefabs',['../class_decorate_room.html#ae2df33ba92bc2880089ae818319d314a',1,'DecorateRoom']]],
-  ['chestslot_3',['chestSlot',['../class_u_i___character_equipment.html#ab0fd574eb59d21646122dabc92270023',1,'UI_CharacterEquipment']]],
-  ['chestsocket_4',['chestSocket',['../class_u_i___character_equipment.html#a4a34550581de79c6775566adce99bba9',1,'UI_CharacterEquipment']]],
+  ['chestslot_3',['chestSlot',['../class_player_equipment_manager.html#ab43110fb104a458591c208b0ac82daa5',1,'PlayerEquipmentManager']]],
+  ['chestsocket_4',['chestSocket',['../class_player_equipment_manager.html#a6dc6bb53ec852ff9cc7185f58632acfe',1,'PlayerEquipmentManager']]],
   ['chestspawnchance_5',['chestSpawnChance',['../class_decorate_room.html#a8c04060c8f07a8277ea245af0da01c96',1,'DecorateRoom']]],
   ['chesttowalldistance_6',['chestToWallDistance',['../class_decorate_room.html#a7c213ba47c2f9d7e1d1942f298ae6c8e',1,'DecorateRoom']]],
   ['connector_7',['connector',['../class_tile.html#a942d484990694e3bab2995f8101dc20d',1,'Tile']]],

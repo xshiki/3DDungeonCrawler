@@ -52,9 +52,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_a_sync_loader_8cs.html",
-"class_experience_manager.html#ab6c273f3b388f7c417e6fb05b8198f8f",
-"class_player_respawn.html#a49362d693d11099e7f83f774c5bf5010",
-"functions_enum.html"
+"class_first_person_controller.html#a110f6bb643dda16b838ca5156d316310",
+"class_player_equipment_manager.html#afe69cb9294ac65169edc29ffd34fce2b",
+"functions_u.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

@@ -15,7 +15,6 @@ var class_player_controller =
     [ "exitInventoryButton", "class_player_controller.html#a3ed749dccc966eb1fa21b16792be5322", null ],
     [ "firstPersonController", "class_player_controller.html#aa9b427df4980ecf3356769ff3229ba42", null ],
     [ "gameOverScreen", "class_player_controller.html#a61ef381b9954bec5548df868d3d76649", null ],
-    [ "IDLE", "class_player_controller.html#a57e1eeb54ec80d572e76118fff384030", null ],
     [ "mapCamera", "class_player_controller.html#a31aecb68823c1db5671138659a79a756", null ],
     [ "OnInventoryClosed", "class_player_controller.html#aa6dc9e69171b4e4a8205d24f875aede2", null ],
     [ "pauseScreen", "class_player_controller.html#a2f4adb96eb8008c4a5999067ebf367b0", null ],
@@ -23,14 +22,10 @@ var class_player_controller =
     [ "playerInventory", "class_player_controller.html#a962a7c42111d1a7be7dc242337ab3d77", null ],
     [ "playerOrientation", "class_player_controller.html#a2ca0fc5e9b4754968584dfbb69728617", null ],
     [ "playerRessource", "class_player_controller.html#adc3649876d6468b96202df3194126bb8", null ],
-    [ "PUNCH1", "class_player_controller.html#ab443acd77b742ee02696c0d0d50b670a", null ],
-    [ "PUNCH2", "class_player_controller.html#a56cb20e7dd41d4e0d2f1fd1c6ab9ebee", null ],
-    [ "PUNCH3", "class_player_controller.html#ab608b424cd73aa5a1772e0dc9a1fae44", null ],
     [ "punchAudioClip", "class_player_controller.html#a5ff1af033df8829f8700b03de91410ac", null ],
     [ "punchDamage", "class_player_controller.html#a02fe33b6360a4deafdd6f7f31b52b621", null ],
     [ "punchRange", "class_player_controller.html#ad6091f2fe3e02468b7b8b92570e6fad0", null ],
     [ "punchSwingAudioClip", "class_player_controller.html#ad050f7cad207319ceaba21db1dad0597", null ],
     [ "timeBetweenAttack", "class_player_controller.html#a3a4f815c7c85f00027ca673aca4c216e", null ],
-    [ "WALK", "class_player_controller.html#adee3aba6c65846cf447040dfd310976f", null ],
     [ "weaponHolderPosition", "class_player_controller.html#a9cbaabe65d87ebeccfd80e118337af03", null ]
 ];
