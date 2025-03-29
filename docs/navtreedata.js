@@ -54,7 +54,7 @@ var NAVTREEINDEX =
 "_a_sync_loader_8cs.html",
 "class_first_person_controller.html#a110f6bb643dda16b838ca5156d316310",
 "class_player_equipment_manager.html#afe69cb9294ac65169edc29ffd34fce2b",
-"functions_u.html"
+"functions_vars.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';
