@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Events;
 using UnityEditor;
 using UnityEngine.UIElements;
+using UnityEngine.AI;
 
 public enum DungeonState { inactive, generatingMain, generatingBranches, cleanup, completed}
 public class ProceduralDungeonGenerator : MonoBehaviour
@@ -545,5 +546,28 @@ public class ProceduralDungeonGenerator : MonoBehaviour
 
 
         return null;
+    }
+
+
+    void OnDrawGizmos()
+    {
+        return;
+        // Get the NavMesh triangulation
+        NavMeshTriangulation navMeshData = NavMesh.CalculateTriangulation();
+
+        // Draw the triangles
+        Gizmos.color = Color.green;
+        for (int i = 0; i < navMeshData.indices.Length; i += 3)
+        {
+            // Get the vertices of the triangle
+            Vector3 v1 = navMeshData.vertices[navMeshData.indices[i]];
+            Vector3 v2 = navMeshData.vertices[navMeshData.indices[i + 1]];
+            Vector3 v3 = navMeshData.vertices[navMeshData.indices[i + 2]];
+
+            // Draw lines between the vertices
+            Gizmos.DrawLine(v1, v2);
+            Gizmos.DrawLine(v2, v3);
+            Gizmos.DrawLine(v3, v1);
+        }
     }
 }
