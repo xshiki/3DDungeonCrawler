@@ -29,6 +29,3 @@ Gain experience to increase your stat points.
 ## Credits
 Algorithm inspired by [Bake Your Own 3D Dungeons - Tuts+](https://gamedevelopment.tutsplus.com/bake-your-own-3d-dungeons-with-procedural-recipes--gamedev-14360t)
 
-
-## License
-
